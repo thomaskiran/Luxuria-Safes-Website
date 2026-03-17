@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxuria Safes - Contact</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        .contact-form {
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 1rem;
+            background-color: var(--color-black);
+            color: var(--color-text-light);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-family: var(--font-primary);
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--color-gold);
+        }
+
+        .contact-form textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="masthead" class="site-header scrolled">
+        <div class="header-inner container">
+            <div class="site-branding">
+                <h1 class="site-title"><a href="index.html" style="color:var(--color-text-light);">Luxuria Safes</a>
+                </h1>
+            </div>
+            <nav class="main-navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="collections.html">The Collections</a></li>
+                    <li><a href="story.html">Our Story</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-header pt-xl bg-black">
+        <div class="container reveal-up">
+            <span class="eyebrow gold-text">Inquiries</span>
+            <h1 class="page-title">Contact Us</h1>
+        </div>
+    </main>
+
+    <section class="section-padding bg-dark">
+        <div class="container reveal-up text-center">
+            <p class="mb-xl" style="color: var(--color-silver); font-size: 1.125rem;">To begin the bespoke design
+                process or consult with our security architects, please reach out via the form below.</p>
+
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent placeholder.');">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email Address" required>
+                <input type="text" placeholder="Subject / Model of Interest" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn btn-primary btn-gold" style="border: none;">Send Inquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <footer id="colophon" class="site-footer">
+        <div class="site-info container text-center">
+            <p>&copy; 2026 Luxuria Safes. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
