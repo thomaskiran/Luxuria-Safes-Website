@@ -2,6 +2,19 @@
  * Luxuria Safes - Static JS
  */
 document.addEventListener('DOMContentLoaded', () => {
+    // Mobile Menu Toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNav = document.querySelector('.main-navigation');
+    
+    if (menuToggle && mainNav) {
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            mainNav.classList.toggle('nav-open');
+            // Prevent scrolling when menu is open
+            document.body.style.overflow = mainNav.classList.contains('nav-open') ? 'hidden' : '';
+        });
+    }
+
     // Sticky Header
     const header = document.getElementById('masthead');
     if (header) {
@@ -60,3 +73,28 @@ btn.innerHTML = "View Full Specifications";
 });
 
 });
+
+// Compartment Slider Logic
+let currentSlideIndex = 0;
+function slideCompartments(direction) {
+    const track = document.getElementById('compartmentTrack');
+    if (!track) return;
+    
+    const items = track.querySelectorAll('.slider-item');
+    if (items.length === 0) return;
+    
+    const totalItems = items.length;
+    const itemsToShow = window.innerWidth <= 767 ? 2 : 4;
+    const maxIndex = Math.max(0, totalItems - itemsToShow);
+    
+    currentSlideIndex += direction * itemsToShow;
+    
+    if (currentSlideIndex < 0) currentSlideIndex = 0;
+    if (currentSlideIndex > maxIndex) currentSlideIndex = maxIndex;
+    
+    const itemWidth = items[0].offsetWidth;
+    const gap = 10;
+    const movePx = currentSlideIndex * (itemWidth + gap);
+    
+    track.style.transform = `translateX(-${movePx}px)`;
+}

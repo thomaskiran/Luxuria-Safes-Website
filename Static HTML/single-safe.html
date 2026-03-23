@@ -19,6 +19,11 @@
                 <h1 class="site-title"><a href="index.html" style="color:var(--color-text-light);">Luxuria Safes</a>
                 </h1>
             </div>
+            <div class="menu-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <nav class="main-navigation">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -260,57 +265,44 @@
             </div>
         </section>
  
-        <!-- CONFIGURATOR SECTION -->
-        <section class="configurator-section section-padding bg-black border-top-gold">
-            <div class="container reveal-up">
-                
-
-                <div class="configurator-grid grid grid-2">
-                    <div class="text-center flex-center mb-xl">
-                        <!--span class="eyebrow gold-text">Total Operational Control</span-->
-                        <h2 class="accent-title" style="font-size: 3rem;">Bespoke Customization</h2>
-                        <p style="color: var(--color-silver); max-width: 600px; margin: 0 auto;">Preserve the legacy of your family, protect your most meaningful pieces, and enjoy lasting peace of mind with a safe designed for what you treasure most.</p>
-                    </div>
+                <div class="configurator-wrapper">
                     
-                    <div class="product-gallery flex-1 flex-center bg-darker">
-                        <!-- Interior Drawer Color Image -->
-                        <div class="main-image-display mb-md">
-                            <img id="colorGalleryImage" src="../Products/Luxury Safes/Minitreasure/Photoshoot/LeatherSafeOpenDrawers.jpeg" alt="MiniTreasure Safe" style="width:100%; height:auto; object-fit: cover;">
+                    <!-- Pair 1: Bespoke Customization -->
+                    <div class="configurator-row desktop-text-first">
+                        <div class="product-gallery flex-1 flex-center bg-darker">
+                            <!-- Interior Drawer Color Image -->
+                            <div class="main-image-display mb-md">
+                                <img id="colorGalleryImage" src="../Products/Luxury Safes/Minitreasure/Photoshoot/LeatherSafeOpenDrawers.jpeg" alt="MiniTreasure Safe" style="width:100%; height:auto; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="product-info flex-1 flex-center text-center">
+                            <!--span class="eyebrow gold-text">Total Operational Control</span-->
+                            <h2 class="accent-title" style="font-size: 3rem;">Bespoke Customization</h2>
+                            <p style="color: var(--color-silver); max-width: 600px; margin: 0 auto;">Preserve the legacy of your family, protect your most meaningful pieces, and enjoy lasting peace of mind with a safe designed for what you treasure most.</p>
                         </div>
                     </div>
                     
-                    <!-- Option 1: Exterior Finish -->
-                    <div class="product-gallery flex-1 flex-center bg-darker">
-                        <!-- Interior Drawer Color Image -->
-                        <div class="main-image-display mb-md" style="background-color: #ffffff;">
-                            <img id="color1GalleryImage" src="..\Products\Luxury Safes\Minitreasure\Product Photos\Colour Variants\Minitreasure HS90\Homesafe 90 Gold .png" alt="MiniTreasure Safe" style="width:100%; height:auto; object-fit: cover;">
+                    <!-- Pair 2: Exterior Finish -->
+                    <div class="configurator-row">
+                        <div class="product-gallery flex-1 flex-center bg-darker">
+                            <!-- Interior Drawer Color Image -->
+                            <div class="main-image-display mb-md" style="background-color: #ffffff;">
+                                <img id="color1GalleryImage" src="..\Products\Luxury Safes\Minitreasure\Product Photos\Colour Variants\Minitreasure HS90\Homesafe 90 Gold .png" alt="MiniTreasure Safe" style="width:100%; height:auto; object-fit: cover;">
+                            </div>
                         </div>
-                    </div>
-                    <div class="text-center flex-center mb-xl">
-                        <h2 class="accent-title" style="font-size: 3rem;">Exterior Finish</h2>
-                        <p>Choose from our premium powder-coated high gloss palette.</p>
-                            <div class="swatch-container">
-                                <div class="swatch" style="background-color: #d2af26;" title="Gold" onclick="updateGallery(document.getElementById('color1GalleryImage'), this, '../Products/Luxury Safes/Minitreasure/Product Photos/Colour Variants/Minitreasure HS90/Homesafe 90 Gold .png')">
-                                    <button class="swatch-button" style="opacity: 0;"></button>
-                                </div>
-                                <div class="swatch" style="background-color: #121A2F;" title="Royal Blue" onclick="updateGallery(document.getElementById('color1GalleryImage'), this, '../Products/Luxury Safes/Minitreasure/Product Photos/Colour Variants/Minitreasure HS90/Homesafe 90 Dark Blue .png')">
-                                    <button class="swatch-button" style="opacity: 0;"></button>
-                                </div>
-                                <div class="swatch" style="background-color: #8C1515;" title="Red" onclick="updateGallery(document.getElementById('color1GalleryImage'), this, '../Products/Luxury Safes/Minitreasure/Product Photos/Colour Variants/Minitreasure HS90/Homesafe 90 red .png')">
-                                    <button class="swatch-button" style="opacity: 0;"></button>
-                                </div>
-                                <div class="swatch" style="background-color: #CC5500;" title="Orange" onclick="updateGallery(document.getElementById('color1GalleryImage'), this, '../Products/Luxury Safes/Minitreasure/Product Photos/Colour Variants/Minitreasure HS90/Homesafe 90 orange .png')">
-                                    <button class="swatch-button" style="opacity: 0;"></button>
-                                </div>
-                                <div class="swatch" style="background-color: #FFFFFF;" title="White" onclick="updateGallery(document.getElementById('color1GalleryImage'), this, '../Products/Luxury Safes/Minitreasure/Product Photos/Colour Variants/Minitreasure HS90/Homesafe 90 white .png')">
-                                    <button class="swatch-button" style="opacity: 0;"></button>
-                                </div>
-                                <div class="swatch" style="background-color: #000000;" title="Black" onclick="updateGallery(document.getElementById('color1GalleryImage'), this, '../Products/Luxury Safes/Minitreasure/Product Photos/Colour Variants/Minitreasure HS90/Homesafe 90 black .png')">
-                                    <button class="swatch-button" style="opacity: 0;"></button>
-                                </div>
+                        <div class="product-info flex-1 flex-center text-center mb-xl">
+                            <h2 class="accent-title" style="font-size: 3rem;">Exterior Finish</h2>
+                            <p>Choose from our premium powder-coated high gloss palette.</p>
+                            <div class="swatch-container" style="justify-content: center;">
+                                <div class="swatch" style="background-color: #d2af26;" title="Gold" onclick="updateGallery(document.getElementById('color1GalleryImage'), this, '../Products/Luxury Safes/Minitreasure/Product Photos/Colour Variants/Minitreasure HS90/Homesafe 90 Gold .png')"><button class="swatch-button" style="opacity: 0;"></button></div>
+                                <div class="swatch" style="background-color: #121A2F;" title="Royal Blue" onclick="updateGallery(document.getElementById('color1GalleryImage'), this, '../Products/Luxury Safes/Minitreasure/Product Photos/Colour Variants/Minitreasure HS90/Homesafe 90 Dark Blue .png')"><button class="swatch-button" style="opacity: 0;"></button></div>
+                                <div class="swatch" style="background-color: #8C1515;" title="Red" onclick="updateGallery(document.getElementById('color1GalleryImage'), this, '../Products/Luxury Safes/Minitreasure/Product Photos/Colour Variants/Minitreasure HS90/Homesafe 90 red .png')"><button class="swatch-button" style="opacity: 0;"></button></div>
+                                <div class="swatch" style="background-color: #CC5500;" title="Orange" onclick="updateGallery(document.getElementById('color1GalleryImage'), this, '../Products/Luxury Safes/Minitreasure/Product Photos/Colour Variants/Minitreasure HS90/Homesafe 90 orange .png')"><button class="swatch-button" style="opacity: 0;"></button></div>
+                                <div class="swatch" style="background-color: #FFFFFF;" title="White" onclick="updateGallery(document.getElementById('color1GalleryImage'), this, '../Products/Luxury Safes/Minitreasure/Product Photos/Colour Variants/Minitreasure HS90/Homesafe 90 white .png')"><button class="swatch-button" style="opacity: 0;"></button></div>
+                                <div class="swatch" style="background-color: #000000;" title="Black" onclick="updateGallery(document.getElementById('color1GalleryImage'), this, '../Products/Luxury Safes/Minitreasure/Product Photos/Colour Variants/Minitreasure HS90/Homesafe 90 black .png')"><button class="swatch-button" style="opacity: 0;"></button></div>
                             </div>
                             <p style="padding-top: 1rem;">Opt for hand-stitched luxury leather full cladding.</p>
-                            <div class="swatch-container">
+                            <div class="swatch-container" style="justify-content: center;">
                                 <div class="swatch texture-leather" style="background-color: #98694F;" title="Golden Brown Leather"></div>
                                 <div class="swatch texture-leather" style="background-color: #1F1F1F;" title="Black Leather"></div>
                                 <div class="swatch texture-leather" style="background-color: #006039;" title="Green Leather"></div>
@@ -318,168 +310,99 @@
                                 <div class="swatch texture-leather" style="background-color: #808080;" title="Grey Leather"></div>
                                 <div class="swatch texture-leather" style="background-color: #8C1515;" title="Red Leather"></div>
                             </div>
-                        </ul>
-                    </div>
-                    
-                    
-                    <!-- Option 2: Wood Drawers -->
-                    
-                    <div class="product-info flex-1 flex-center section-padding pt-xl">
-                        <div class="info-inner reveal-up">
-                            <div class="product-specs mt-lg border-top-gold pt-md mb-lg">                    
-                                <h2 class="accent-title" style="font-size: 3rem;">The Collector's Choice</h2>
-                                <p class="text-sm pb-md">
-                                    For the collector who values beauty as much as security, the Minitreasure safe from Luxuria offers a sanctuary of elegance. Featuring advanced certified security technology and interiors that reflect your personal style, each safe is a curated space where treasured heirlooms and contemporary pieces are protected with grace and intention.
-                                </p>                               
-                            </div>
                         </div>
                     </div>
-                    <div class="product-gallery flex-1 flex-center bg-darker">
-                        <!-- Interior Drawer Color Image -->
-                        <div class="main-image-display mb-md">
-                            <img id="interiorGalleryImage" src="../Products/Luxury Safes/MiniGuard/Photoshoot/Collectors Choice 1a.jpeg" alt="MiniTreasure Safe" style="width:100%; height:auto; object-fit: cover;">
-                        </div>
-                        <!-- Thumbnails -->
-                        <div class="gallery-thumbnails grid" style="grid-template-columns: repeat(3, 1fr); gap: 10px; width: 100%;">
-
-                            <div class="thumbnail" onclick="updateGallery(document.getElementById('interiorGalleryImage'), this, '../Products/Luxury Safes/MiniGuard/Photoshoot/Collectors Choice 1a.jpeg')">
-                                <img src="../Products/Luxury Safes/MiniGuard/Photoshoot/Collectors Choice 1a.jpeg" alt="Thumb 1">
-                            </div>
-                            <div class="thumbnail" onclick="updateGallery(document.getElementById('interiorGalleryImage'), this, '../Products/Luxury Safes/MiniGuard/Photoshoot/Collectors Choice 2.jpg')">
-                                <img src="../Products/Luxury Safes/MiniGuard/Photoshoot/Collectors Choice 2.jpg" alt="Thumb 2">
-                            </div>
-                            <div class="thumbnail" onclick="updateGallery(document.getElementById('interiorGalleryImage'), this, '../Products/Luxury Safes/MiniTreasure/Photoshoot/Collectors Choice 3.jpg')">
-                                <img src="../Products/Luxury Safes/Minitreasure/Photoshoot/Collectors Choice 3.jpg" alt="Thumb 3">
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Option 3: Interior Velvet Finish -->
                     
-                    <div class="product-gallery flex-1 flex-center bg-darker">
-                        <!-- Interior Drawer Color Image -->
-                        <div class="main-image-display mb-md">
-                            <img id="velvetGalleryImage" src="../Products/Luxury Safes/Minitreasure/Photoshoot/Interior Finish1.jpeg" alt="MiniTreasure Safe" style="width:100%; height:auto; object-fit: cover;">
+                    <!-- Pair 3: The Collector's Choice -->
+                    <div class="configurator-row desktop-text-first">
+                        <div class="product-gallery flex-1 flex-center bg-darker">
+                            <!-- Interior Drawer Color Image -->
+                            <div class="main-image-display mb-md">
+                                <img id="interiorGalleryImage" src="../Products/Luxury Safes/MiniGuard/Photoshoot/Collectors Choice 1a.jpeg" alt="MiniTreasure Safe" style="width:100%; height:auto; object-fit: cover;">
+                            </div>
+                            <!-- Thumbnails -->
+                            <div class="gallery-thumbnails grid" style="grid-template-columns: repeat(3, 1fr); gap: 10px; width: 100%;">
+                                <div class="thumbnail" onclick="updateGallery(document.getElementById('interiorGalleryImage'), this, '../Products/Luxury Safes/MiniGuard/Photoshoot/Collectors Choice 1a.jpeg')">
+                                    <img src="../Products/Luxury Safes/MiniGuard/Photoshoot/Collectors Choice 1a.jpeg" alt="Thumb 1">
+                                </div>
+                                <div class="thumbnail" onclick="updateGallery(document.getElementById('interiorGalleryImage'), this, '../Products/Luxury Safes/MiniGuard/Photoshoot/Collectors Choice 2.jpg')">
+                                    <img src="../Products/Luxury Safes/MiniGuard/Photoshoot/Collectors Choice 2.jpg" alt="Thumb 2">
+                                </div>
+                                <div class="thumbnail" onclick="updateGallery(document.getElementById('interiorGalleryImage'), this, '../Products/Luxury Safes/MiniTreasure/Photoshoot/Collectors Choice 3.jpg')">
+                                    <img src="../Products/Luxury Safes/Minitreasure/Photoshoot/Collectors Choice 3.jpg" alt="Thumb 3">
+                                </div>
+                            </div>
                         </div>
-                        <!-- Thumbnails -->
-                        <div class="gallery-thumbnails grid" style="grid-template-columns: repeat(3, 1fr); gap: 10px; width: 100%;">
-
-                            <div class="thumbnail" onclick="updateGallery(document.getElementById('velvetGalleryImage'), this, '../Products/Luxury Safes/Minitreasure/Photoshoot/Interior Finish1.jpeg')">
-                                <img src="../Products/Luxury Safes/Minitreasure/Photoshoot/Interior Finish1.jpeg" alt="Thumb 1">
-                            </div>
-                            <div class="thumbnail" onclick="updateGallery(document.getElementById('velvetGalleryImage'), this, '../Products/Luxury Safes/Minitreasure/Photoshoot/image00023.jpeg')">
-                                <img src="../Products/Luxury Safes/Minitreasure/Photoshoot/image00023.jpeg" alt="Thumb 2">
-                            </div>
-                            <div class="thumbnail" onclick="updateGallery(document.getElementById('velvetGalleryImage'), this, '../Products/Luxury Safes/MiniGuard/Photoshoot/Interior Finish2.jpg')">
-                                <img src="../Products/Luxury Safes/MiniGuard/Photoshoot/Interior Finish2.jpg" alt="Thumb 3">
+                        <div class="product-info flex-1 flex-center section-padding pt-xl">
+                            <div class="info-inner reveal-up">
+                                <div class="product-specs mt-lg border-top-gold pt-md mb-lg">                    
+                                    <h2 class="accent-title" style="font-size: 3rem;">The Collector's Choice</h2>
+                                    <p class="text-sm pb-md">
+                                        For the collector who values beauty as much as security, the Minitreasure safe from Luxuria offers a sanctuary of elegance. Featuring advanced certified security technology and interiors that reflect your personal style, each safe is a curated space where treasured heirlooms and contemporary pieces are protected with grace and intention.
+                                    </p>                               
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="product-info flex-1 flex-center section-padding pt-xl">
-                        <div class="info-inner reveal-up">
-                            <div class="product-specs mt-lg border-top-gold pt-md mb-lg">
-                                <h2 class="accent-title" style="font-size: 3rem;">Interior Finish</h2> 
-                                <p class="text-sm pb-md">
-                                    The MiniTreasure offers customizable drawer dividers for effortless organization and elegant presentation of your collection. Designed for both security and ease, it keeps your cherished pieces neatly arranged in one refined space. Choose from a variety of thoughtfully designed layouts tailored to specific jewelry types—ensuring both seamless access and stylish protection.
-                                </p>
-                            </div>
-                         </div>
-                    <!-- Option 4: Compartments -->
                     
-                    
-                    <div class="product-gallery flex-1 flex-center bg-darker">
-
-                        <div class="compartment-gallery">
-                        
-                            <div class="gallery-thumbnails grid" style="grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(4, 1fr); gap: 10px; width: 100%; overflow-x: auto;">
-                                
-                                
-                                    <div class="thumbnail">
-                                        <img src="../Drawer Details/Small Safes/Home Safe Top 01.png">
-                                        <span class="caption">L1 – Plain Drawer</span>
-                                    </div>
-                                
-                                    <div class="thumbnail">
-                                        <img src="../Drawer Details/Small Safes/Home Safe Top 02.png">
-                                        <span class="caption">L2 – 2 Partitions</span>
-                                    </div>
-                                
-                                    <div class="thumbnail">
-                                        <img src="../Drawer Details/Small Safes/Home Safe Top 03.png">
-                                        <span class="caption">L3 – Ring and Plain Partition</span>
-                                    </div>
-                                
-                                    <div class="thumbnail">
-                                        <img src="../Drawer Details/Small Safes/Home Safe Top 04.png">
-                                        <span class="caption">L4 – Long Chains</span>
-                                    </div>
-                                
-                                    <div class="gallery-item">
-                                        <img src="../Drawer Details/Small Safes/Home Safe Top 05.png">
-                                        <span class="caption">L5 – Rings and Earrings</span>
-                                    </div>
-                                
-                                    <div class="gallery-item">
-                                        <img src="../Drawer Details/Small Safes/Home Safe Top 06.png">
-                                        <span class="caption">L6 – Necklace Set</span>
-                                    </div>
-
-                                    <div class="gallery-item">
-                                        <img src="../Drawer Details/Small Safes/Home Safe Top 07.png">
-                                        <span class="caption">L7 – Earrings</span>
-                                    </div>
-
-                                    <div class="gallery-item">
-                                        <img src="../Drawer Details/Small Safes/Home Safe Top 08.png">
-                                        <span class="caption">L8 – Rings</span>
-                                    </div>
-
-                                    <div class="gallery-item">
-                                        <img src="../Drawer Details/Small Safes/Home Safe Top 09.png">
-                                        <span class="caption">L9 – Bangles</span>
-                                    </div>
-
-                                    <div class="gallery-item">
-                                        <img src="../Drawer Details/Small Safes/Home Safe Top 17.png">
-                                        <span class="caption">L10 – Pens</span>
-                                    </div>
-
-                                    <div class="gallery-item">
-                                        <img src="../Drawer Details/Small Safes/Home Safe Top 11.png">
-                                        <span class="caption">L11 – Vertical Partition</span>
-                                    </div>
-
-                                    <div class="gallery-item">
-                                        <img src="../Drawer Details/Small Safes/Home Safe Top 12.png">
-                                        <span class="caption">L12 – 4 Partitions</span>
-                                    </div>
-
-                                    <div class="gallery-item">
-                                        <img src="../Drawer Details/Small Safes/Home Safe Top 13.png">
-                                        <span class="caption">L13 – Small Partitions</span>
-                                    </div>
-
-                                    <div class="gallery-item">
-                                        <img src="../Drawer Details/Small Safes/Home Safe Top 14.png">
-                                        <span class="caption">L14 – Pens</span>
-                                    </div>
-
-                                    <div class="gallery-item">
-                                        <img src="../Drawer Details/Small Safes/Home Safe Top 15.png">
-                                        <span class="caption">L15 – Watches</span>
-                                    </div>
-
-                                    <div class="gallery-item">
-                                        <img src="../Drawer Details/Small Safes/Home Safe Top 16.png">
-                                        <span class="caption">L16 – Medium Partitions</span>
-                                    </div>
-                                
+                    <!-- Pair 4: Interior Velvet Finish -->
+                    <div class="configurator-row">
+                        <div class="product-gallery flex-1 flex-center bg-darker">
+                            <!-- Interior Drawer Color Image -->
+                            <div class="main-image-display mb-md">
+                                <img id="velvetGalleryImage" src="../Products/Luxury Safes/Minitreasure/Photoshoot/Interior Finish1.jpeg" alt="MiniTreasure Safe" style="width:100%; height:auto; object-fit: cover;">
                             </div>
-                        
-                        
+                            <!-- Thumbnails -->
+                            <div class="gallery-thumbnails grid" style="grid-template-columns: repeat(3, 1fr); gap: 10px; width: 100%;">
+                                <div class="thumbnail" onclick="updateGallery(document.getElementById('velvetGalleryImage'), this, '../Products/Luxury Safes/Minitreasure/Photoshoot/Interior Finish1.jpeg')">
+                                    <img src="../Products/Luxury Safes/Minitreasure/Photoshoot/Interior Finish1.jpeg" alt="Thumb 1">
+                                </div>
+                                <div class="thumbnail" onclick="updateGallery(document.getElementById('velvetGalleryImage'), this, '../Products/Luxury Safes/Minitreasure/Photoshoot/image00023.jpeg')">
+                                    <img src="../Products/Luxury Safes/Minitreasure/Photoshoot/image00023.jpeg" alt="Thumb 2">
+                                </div>
+                                <div class="thumbnail" onclick="updateGallery(document.getElementById('velvetGalleryImage'), this, '../Products/Luxury Safes/MiniGuard/Photoshoot/Interior Finish2.jpg')">
+                                    <img src="../Products/Luxury Safes/MiniGuard/Photoshoot/Interior Finish2.jpg" alt="Thumb 3">
+                                </div>
+                            </div>
                         </div>
-                    
+                        <div class="product-info flex-1 flex-center section-padding pt-xl">
+                            <div class="info-inner reveal-up">
+                                <div class="product-specs mt-lg border-top-gold pt-md mb-lg">
+                                    <h2 class="accent-title" style="font-size: 3rem;">Interior Finish</h2> 
+                                    <p class="text-sm pb-md">
+                                        The MiniTreasure offers customizable drawer dividers for effortless organization and elegant presentation of your collection. Designed for both security and ease, it keeps your cherished pieces neatly arranged in one refined space. Choose from a variety of thoughtfully designed layouts tailored to specific jewelry types—ensuring both seamless access and stylish protection.
+                                    </p>
+                                    
+                                    <!-- Compartments Slider -->
+                                    <div class="compartment-slider-wrapper">
+                                        <button class="slider-btn prev-btn" onclick="slideCompartments(-1)" aria-label="Previous options">&lsaquo;</button>
+                                        <div class="compartment-slider-viewport">
+                                            <div class="compartment-slider-track" id="compartmentTrack">
+                                                <div class="slider-item"><img src="../Drawer Details/Small Safes/Home Safe Top 01.png"><span class="caption">L1 – Plain Drawer</span></div>
+                                                <div class="slider-item"><img src="../Drawer Details/Small Safes/Home Safe Top 02.png"><span class="caption">L2 – 2 Partitions</span></div>
+                                                <div class="slider-item"><img src="../Drawer Details/Small Safes/Home Safe Top 03.png"><span class="caption">L3 – Ring and Plain Partition</span></div>
+                                                <div class="slider-item"><img src="../Drawer Details/Small Safes/Home Safe Top 04.png"><span class="caption">L4 – Long Chains</span></div>
+                                                <div class="slider-item"><img src="../Drawer Details/Small Safes/Home Safe Top 05.png"><span class="caption">L5 – Rings and Earrings</span></div>
+                                                <div class="slider-item"><img src="../Drawer Details/Small Safes/Home Safe Top 06.png"><span class="caption">L6 – Necklace Set</span></div>
+                                                <div class="slider-item"><img src="../Drawer Details/Small Safes/Home Safe Top 07.png"><span class="caption">L7 – Earrings</span></div>
+                                                <div class="slider-item"><img src="../Drawer Details/Small Safes/Home Safe Top 08.png"><span class="caption">L8 – Rings</span></div>
+                                                <div class="slider-item"><img src="../Drawer Details/Small Safes/Home Safe Top 09.png"><span class="caption">L9 – Bangles</span></div>
+                                                <div class="slider-item"><img src="../Drawer Details/Small Safes/Home Safe Top 17.png"><span class="caption">L10 – Pens</span></div>
+                                                <div class="slider-item"><img src="../Drawer Details/Small Safes/Home Safe Top 11.png"><span class="caption">L11 – Vertical Partition</span></div>
+                                                <div class="slider-item"><img src="../Drawer Details/Small Safes/Home Safe Top 12.png"><span class="caption">L12 – 4 Partitions</span></div>
+                                                <div class="slider-item"><img src="../Drawer Details/Small Safes/Home Safe Top 13.png"><span class="caption">L13 – Small Partitions</span></div>
+                                                <div class="slider-item"><img src="../Drawer Details/Small Safes/Home Safe Top 14.png"><span class="caption">L14 – Pens</span></div>
+                                                <div class="slider-item"><img src="../Drawer Details/Small Safes/Home Safe Top 15.png"><span class="caption">L15 – Watches</span></div>
+                                                <div class="slider-item"><img src="../Drawer Details/Small Safes/Home Safe Top 16.png"><span class="caption">L16 – Medium Partitions</span></div>
+                                            </div>
+                                        </div>
+                                        <button class="slider-btn next-btn" onclick="slideCompartments(1)" aria-label="Next options">&rsaquo;</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
                 </div>
                 <!-- CTA -->
                 <div class="config-card flex-center mb-0" style="border: 1px solid var(--color-gold); background: rgba(212, 175, 55, 0.05);">
