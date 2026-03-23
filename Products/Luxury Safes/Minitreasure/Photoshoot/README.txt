@@ -1,1 +1,0 @@
-Minitreasure photoshoot images.

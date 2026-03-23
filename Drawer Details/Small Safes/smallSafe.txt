@@ -1,1 +1,0 @@
-Directory for all drawer layout images for small safes.
