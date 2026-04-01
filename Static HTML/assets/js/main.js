@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mobile Menu Toggle
     const menuToggle = document.querySelector('.menu-toggle');
     const mainNav = document.querySelector('.main-navigation');
-    
+
     if (menuToggle && mainNav) {
         menuToggle.addEventListener('click', () => {
             menuToggle.classList.toggle('active');
@@ -48,7 +48,7 @@ function updateGallery(mainImage, element, src) {
             mainImage.style.transition = 'opacity 0.3s ease';
         }, 150);
     }
-    
+
     document.querySelectorAll('.gallery-thumbnails .thumbnail').forEach(thumb => {
         thumb.classList.remove('active');
     });
@@ -57,20 +57,20 @@ function updateGallery(mainImage, element, src) {
 // Accordion Logic
 document.addEventListener("DOMContentLoaded", function () {
 
-const btn = document.getElementById("toggleTable");
-const accordion = document.getElementById("specAccordion");
+    const btn = document.getElementById("toggleTable");
+    const accordion = document.getElementById("specAccordion");
 
-btn.addEventListener("click", function () {
+    btn.addEventListener("click", function () {
 
-accordion.classList.toggle("open");
+        accordion.classList.toggle("open");
 
-if (accordion.classList.contains("open")) {
-btn.innerHTML = "Hide Specifications";
-} else {
-btn.innerHTML = "View Full Specifications";
-}
+        if (accordion.classList.contains("open")) {
+            btn.innerHTML = "Hide Specifications";
+        } else {
+            btn.innerHTML = "View Full Specifications";
+        }
 
-});
+    });
 
 });
 
@@ -79,22 +79,23 @@ let currentSlideIndex = 0;
 function slideCompartments(direction) {
     const track = document.getElementById('compartmentTrack');
     if (!track) return;
-    
+
     const items = track.querySelectorAll('.slider-item');
     if (items.length === 0) return;
-    
+
     const totalItems = items.length;
-    const itemsToShow = 4;
+    // Adapt itemsToShow based on window width to match CSS logic
+    const itemsToShow = window.innerWidth <= 768 ? 2 : 4;
     const maxIndex = Math.max(0, totalItems - itemsToShow);
-    
+
     currentSlideIndex += direction * itemsToShow;
-    
+
     if (currentSlideIndex < 0) currentSlideIndex = 0;
     if (currentSlideIndex > maxIndex) currentSlideIndex = maxIndex;
-    
+
     const itemWidth = items[0].offsetWidth;
     const gap = 10;
     const movePx = currentSlideIndex * (itemWidth + gap);
-    
+
     track.style.transform = `translateX(-${movePx}px)`;
 }

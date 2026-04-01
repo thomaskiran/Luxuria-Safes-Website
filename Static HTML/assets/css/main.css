@@ -105,10 +105,12 @@ a:hover {
 
 #gamme-icons {
     display: flex;
-    flex-direction: row;      /* This forces the groups to sit side-by-side */
+    flex-direction: row;
+    /* This forces the groups to sit side-by-side */
     justify-content: center;
     align-items: center;
-    gap: 100px;                /* Adds nice spacing between the groups */
+    gap: 100px;
+    /* Adds nice spacing between the groups */
 }
 
 .flex-center {
@@ -156,6 +158,7 @@ a:hover {
     .grid-2 {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .grid-3 {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -665,7 +668,7 @@ ul.spec-list li {
         flex-direction: row;
         align-items: center;
     }
-    
+
     .configurator-row.desktop-text-first {
         flex-direction: row-reverse;
     }
@@ -748,6 +751,30 @@ ul.spec-list li {
     margin-left: 15px;
 }
 
+@media (max-width: 768px) {
+    .compartment-slider-wrapper {
+        margin-top: 1rem;
+    }
+
+    .slider-item {
+        flex: 0 0 calc(50% - 5px);
+    }
+
+    .slider-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 1.5rem;
+    }
+
+    .slider-btn.prev-btn {
+        margin-right: 10px;
+    }
+
+    .slider-btn.next-btn {
+        margin-left: 10px;
+    }
+}
+
 .config-card {
     background: var(--color-darker);
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -786,12 +813,12 @@ ul.spec-list li {
 }
 
 .texture-leather {
-    background-image: radial-gradient(circle, rgba(0,0,0,0.2) 1px, transparent 1px);
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.2) 1px, transparent 1px);
     background-size: 4px 4px;
 }
 
 .texture-velvet {
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .option-list {
@@ -820,7 +847,7 @@ ul.spec-list li {
     border-collapse: collapse;
     font-family: var(--font-primary);
     margin-top: var(--spacing-md);
-    border: 1px solid rgba(255,255,255,0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     background: var(--color-darker);
 }
 
@@ -828,7 +855,7 @@ ul.spec-list li {
 .table-luxury th,
 .table-luxury td {
     padding: 1rem 1.5rem;
-    border: 1px solid rgba(255,255,255,0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     text-align: left;
 }
 
@@ -845,7 +872,7 @@ ul.spec-list li {
 .table-luxury tbody th {
     color: var(--color-text-light);
     font-weight: 500;
-    background: rgba(212,175,55,0.05);
+    background: rgba(212, 175, 55, 0.05);
 }
 
 /* Regular cells */
@@ -855,7 +882,7 @@ ul.spec-list li {
 
 /* Hover effect */
 .table-luxury tbody tr:hover td {
-    background: rgba(212,175,55,0.05);
+    background: rgba(212, 175, 55, 0.05);
 }
 
 /* Highlight intersection cell */
@@ -865,13 +892,13 @@ ul.spec-list li {
 
 /* Optional zebra rows */
 .table-luxury tbody tr:nth-child(even) td {
-    background: rgba(255,255,255,0.02);
+    background: rgba(255, 255, 255, 0.02);
 }
 
 /* Responsive scroll */
 .table-wrapper {
     overflow-x: auto;
-    border: 1px solid rgba(255,255,255,0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* Collapsible Table */
@@ -892,6 +919,7 @@ ul.spec-list li {
 .table-toggle-container {
     margin-top: var(--spacing-md);
 }
+
 .accordion-body {
     max-height: 0;
     overflow: hidden;
@@ -905,4 +933,3 @@ ul.spec-list li {
 .table-toggle-container {
     margin-top: 2rem;
 }
-
