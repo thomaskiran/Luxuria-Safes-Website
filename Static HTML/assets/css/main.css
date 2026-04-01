@@ -663,6 +663,12 @@ ul.spec-list li {
     gap: 2rem;
 }
 
+.product-info, .info-inner, .product-specs {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
 @media (min-width: 992px) {
     .configurator-row {
         flex-direction: row;
