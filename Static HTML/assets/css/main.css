@@ -183,6 +183,10 @@ a:hover {
     margin-bottom: 1rem;
 }
 
+.product-title {
+    font-size: clamp(2rem, 8vw, 4rem) !important;
+}
+
 .sub-title {
     font-family: var(--font-primary);
     font-weight: 300;
