@@ -106,11 +106,23 @@ a:hover {
 #gamme-icons {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     /* This forces the groups to sit side-by-side */
     justify-content: center;
     align-items: center;
     gap: 100px;
     /* Adds nice spacing between the groups */
+}
+
+@media (max-width: 768px) {
+    #gamme-icons {
+        gap: 30px;
+    }
+
+    #gamme-icons img {
+        height: 50px !important;
+        width: auto;
+    }
 }
 
 .flex-center {
@@ -511,6 +523,12 @@ a:hover {
     color: var(--color-silver);
 }
 
+.product-description.text-block {
+    padding-right: 0;
+    text-align: center;
+}
+
+
 /* Single Product */
 .product-hero {
     min-height: 100vh;
@@ -663,7 +681,9 @@ ul.spec-list li {
     gap: 2rem;
 }
 
-.product-info, .info-inner, .product-specs {
+.product-info,
+.info-inner,
+.product-specs {
     min-width: 0;
     max-width: 100%;
     box-sizing: border-box;
