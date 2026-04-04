@@ -85,7 +85,7 @@ function slideCompartments(direction) {
 
     const totalItems = items.length;
     // Adapt itemsToShow based on window width to match CSS logic
-    const itemsToShow = window.innerWidth <= 768 ? 2 : 4;
+    const itemsToShow = window.innerWidth <= 768 ? 1 : 4;
     const maxIndex = Math.max(0, totalItems - itemsToShow);
 
     currentSlideIndex += direction * itemsToShow;
