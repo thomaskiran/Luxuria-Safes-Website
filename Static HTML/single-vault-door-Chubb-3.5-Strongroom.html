@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxuria Safes - Chubb 3.5" Strongroom Door</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+
+    <header id="masthead" class="site-header scrolled">
+        <div class="header-inner container">
+            <div class="site-branding">
+                <a href="index.html" style="display: flex; align-items: center;">
+                    <img src="..\Luxuria-Safes-logo.svg" alt="Luxuria Safes Logo" style="height: 2rem; width: auto;">
+                </a>
+            </div>
+            <div class="menu-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="main-navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="collections.html">The Collections</a></li>
+                    <li><a href="story.html">Our Story</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-header pt-xl bg-black">
+        <section class="product-hero flex-split align-stretch">
+            <div class="product-gallery flex-1 flex-center bg-darker">
+                <!-- Main Image -->
+                <div class="main-image-display mb-md">
+                    <img id="mainGalleryImage" src="../Products/Vault Doors/3.5inch Strongroom Door/Product Photos/3.5inch-hero-img.png"
+                        alt="3.5inch Strongroom Door" style="width: 60%; height: auto; object-fit: cover;">
+                </div>
+                <!-- Thumbnails -->
+                <div class="gallery-thumbnails grid" style="grid-template-columns: repeat(3, 1fr); gap: 10px; width: 25%; height:25%; margin: auto;">
+                    <div class="thumbnail active" onclick="updateGallery(document.getElementById('mainGalleryImage'),this, '../Products/Vault Doors/3.5inch Strongroom Door/Product Photos/3.5inch-hero-img.png')">
+                        <img src="../Products/Vault Doors/3.5inch Strongroom Door/Product Photos/3.5inch-hero-img.png" alt="Thumb 1">
+                    </div>
+                    <div class="thumbnail" onclick="updateGallery(document.getElementById('mainGalleryImage'),this, '../Products/Vault Doors/3.5inch Strongroom Door/Product Photos/3.5inch-Strongroom-Door.png')">
+                        <img src="../Products/Vault Doors/3.5inch Strongroom Door/Product Photos/3.5inch-Strongroom-Door.png" alt="Thumb 2">
+                    </div>
+                    <div class="thumbnail" onclick="updateGallery(document.getElementById('mainGalleryImage'),this, '../Products/Vault Doors/3.5inch Strongroom Door/Product Photos/3.5inch-lock-img.png')">
+                        <img src="../Products/Vault Doors/3.5inch Strongroom Door/Product Photos/3.5inch-lock-img.png" alt="Thumb 3">
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-info flex-1 flex-center section-padding pt-xl">
+                <div class="info-inner reveal-up">
+                    <span class="eyebrow gold-text">Security Vault Doors</span>
+                    <h1 class="product-title accent-title" style="font-size: 4rem;">Chubb 3.5" Strongroom Door</h1>
+
+                    <div class="product-description mt-md text-block">
+                        <p>A higher-security solution engineered for environments requiring increased resistance against modern attack methods. It offers enhanced barrier thickness, stronger boltwork, and upgraded locking protection.</p>
+                    </div>
+
+                    <div class="container" id="gamme-icons">
+                        <div class="flex-center">
+                            <img class=""
+                                src="https://www.fichet-bauche.fr/wp-content/uploads/2022/12/effraction-light.png"
+                                alt="Certified burglary resistant">
+                            <span class="">
+                                Burglary</span>
+                        </div>
+                        <div class="flex-center">
+                            <img class=""
+                                src="https://www.fichet-bauche.fr/wp-content/uploads/2022/12/resistant-au-feu.png"
+                                alt="Certified fire resistant">
+                            <span class="">
+                                Fire</span>
+                        </div>
+                        <div class="flex-center">
+                            <img class="" src="../Ecb-s-logo-150x150.jpg" alt="ECB-S Certified" style="height: 70px;">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Features SECTION -->
+        <section id="collections" class="section-padding bg-dark">
+            <div class="container">
+                <div class="grid grid-3">
+                    <!-- Key Features -->
+                    <div class="collection-card reveal-up">
+                        <div class="card-content">
+                            <h3 class="gold-text"
+                                style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+                                <img src="https://www.fichet-bauche.fr/wp-content/uploads/2022/12/icon-shield.png"
+                                    alt="" style="height: 32px;">
+                                Key Features
+                            </h3>
+                            <ul class="option-list" style="text-align: left; padding-top: 1rem;">
+                                <li><strong class="gold-text">Modern Tool Resistance</strong><br>Designed specifically to resist high-speed drilling, mechanical force, and modern cutting tools.</li>
+                                <li><strong class="gold-text">Heavy-Duty Locking</strong><br>Upgraded 11-lever double-bitted key lock for higher manipulation resistance.</li>
+                                <li><strong class="gold-text">Redundant Safety</strong><br>Dual glass relockers provide enhanced anti-tamper protection.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--Construction-->
+                    <div class="collection-card reveal-up" style="transition-delay: 0.2s;">
+                        <div class="card-content">
+                            <h3 class="gold-text"
+                                style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+                                <img src="https://www.fichet-bauche.fr/wp-content/uploads/2022/12/icon-cube.png" alt=""
+                                    style="height: 32px;">
+                                Construction
+                            </h3>
+                            <ul class="option-list" style="text-align: left; padding-top: 1rem;">
+                                <li><strong class="gold-text">Enhanced Barrier</strong><br>Increased protective barrier thickness of 89 mm for superior physical defense.</li>
+                                <li><strong class="gold-text">Superior Bolt Strength</strong><br>Features larger 50 mm diameter bolts for massive resistance.</li>
+                                <li><strong class="gold-text">Reinforced Build</strong><br>Constructed with F80 barrier material plus steel fibers for increased density.</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <!-- Applications -->
+                    <div class="collection-card reveal-up" style="transition-delay: 0.2s;">
+                        <div class="card-content">
+                            <h3 class="gold-text"
+                                style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+                                <img src="https://www.fichet-bauche.fr/wp-content/uploads/2022/12/icon-diamond-2.png" alt=""
+                                    style="height: 32px;">
+                                Applications
+                            </h3>
+                            <ul class="option-list" style="text-align: left; padding-top: 1rem;">
+                                <li><strong class="gold-text">High Value Commercial Vaults</strong><br>Ideal for high-value retail, and commercial environments requiring secure storage solutions.</li>
+                                <li><strong class="gold-text">Bank & Financial Institutions</strong><br>Designed for the secure storage of cash, checks, and other high-value items in banking and financial environments.</li>
+                                <li><strong class="gold-text">Jewelry Stores</strong><br>Specifically engineered for the secure storage of high-value jewelry and accessories.</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <!-- Technical Specifications -->
+        <section id="specifications" class="section-padding bg-black">
+            <div class="container">
+                <div
+                    style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem;">
+                    <div>
+                        <h2 class="accent-title" style="font-size: 3rem;">Technical Specifications</h2>
+                    </div>
+                    <a href="#" class="btn btn-outline hover-fill">See Product Sheet</a>
+                </div>
+                <div class="table-wrapper">
+                    <table class="table-luxury">
+                        <thead>
+                            <tr>
+                                <th style="font-size: larger;">Features</th>
+                                <th style="font-size: larger; text-align: right;">Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th style="width: 50%; text-align: left; padding: 1rem;">Protective Barrier Thickness</th>
+                                <td style="width: 50%; text-align: right; padding: 1rem;">89 mm (3.5”)</td>
+                            </tr>
+                            <tr>
+                                <th style="width: 50%; text-align: left; padding: 1rem;">Total Door Thickness</th>
+                                <td style="width: 50%; text-align: right; padding: 1rem;">Approx. 226 mm</td>
+                            </tr>
+                            <tr>
+                                <th style="width: 50%; text-align: left; padding: 1rem;">Boltwork System</th>
+                                <td style="width: 50%; text-align: right; padding: 1rem;">Heavy duty 18-bolt multi-directional (7 front, 2 top, 2 bottom, 7 rear)</td>
+                            </tr>
+                            <tr>
+                                <th style="width: 50%; text-align: left; padding: 1rem;">Bolt Diameter</th>
+                                <td style="width: 50%; text-align: right; padding: 1rem;">Approx. 50 mm</td>
+                            </tr>
+                            <tr>
+                                <th style="width: 50%; text-align: left; padding: 1rem;">Standard Locking</th>
+                                <td style="width: 50%; text-align: right; padding: 1rem;">Certified combination lock + 11-lever double-bitted key lock </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <!-- CTA -->
+        <div class="config-card flex-center mb-0"
+            style="border: 1px solid var(--color-gold); background: rgba(212, 175, 55, 0.05);">
+            <h3 style="margin-bottom: 1rem;">Ready to Commission?</h3>
+            <p class="text-center" style="margin-bottom: 2rem;">Work directly with our artisans to review these finishes
+                via physical material samples.</p>
+            <a href="contact.html" class="btn btn-primary btn-gold">Contact Sales Advisor</a>
+        </div>
+        </div>
+        </section>
+
+        <!-- DRAWINGS SECTION>
+        <section class="product-hero flex-row align-stretch border-top-gold section-padding bg-darker">
+            <div class="product-gallery flex-1 flex-center bg-darker" style="width: 100%; height: 100%; margin: auto;">
+                <img src="../Products/Luxury Safes/Minitreasure/Product Photos/MiniTreasure Size Sketch.jpg"
+                    alt="MiniTreasure Size Sketch"
+                    style="width: 60%; height: 60%; margin: auto; overflow-clip-margin: content-box; border: 50px solid var(--color-text-light);">
+            </div>
+            <!--div class="product-gallery flex-1 flex-center bg-darker" style="width: 100%; height: 100%; margin: auto;">
+                <img src="../Products/Luxury Safes/Minitreasure/Product Photos/MiniTreasure Spec Chart.jpg"
+                    alt="MiniTreasure Specifications Chart"
+                    style="width: 60%; height: 60%; margin: auto; overflow-clip-margin: content-box; border: 50px solid var(--color-text-light);">
+            </div>
+        </section-->
+    </main>
+
+    <footer id="colophon" class="site-footer">
+        <div class="site-info container text-center">
+            <p>&copy; 2026 Luxuria Safes. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
