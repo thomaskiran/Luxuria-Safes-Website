@@ -99,3 +99,17 @@ function slideCompartments(direction) {
 
     track.style.transform = `translateX(-${movePx}px)`;
 }
+
+function openTab(evt, lockName) {
+  var i, tab_content, tab_btn;
+  tab_content = document.getElementsByClassName("tab_content");
+  for (i = 0; i < tab_content.length; i++) {
+    tab_content[i].style.display = "none";
+  }
+  tab_btn = document.getElementsByClassName("tab_btn");
+  for (i = 0; i < tab_btn.length; i++) {
+    tab_btn[i].className = tab_btn[i].className.replace(" active", "");
+  }
+  document.getElementById(lockName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
