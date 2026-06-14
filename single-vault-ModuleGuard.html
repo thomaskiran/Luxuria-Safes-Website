@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luxuria Safes - ModuleGuard Vault</title>
+    <title>Luxuria Safes - ModuleGuard Strongroom</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
@@ -16,12 +16,9 @@
     <header id="masthead" class="site-header scrolled">
         <div class="header-inner container">
             <div class="site-branding">
-                <h1 class="site-title">
-                    <a href="index.html" style="display: flex; align-items: center;">
-                        <img src="..\Luxuria-Safes-logo.svg" alt="Luxuria Safes Logo"
-                            style="height: 2rem; width: auto;">
-                    </a>
-                </h1>
+                <a href="index.html" style="display: flex; align-items: center;">
+                    <img src="Luxuria-Safes-logo.svg" alt="Luxuria Safes Logo" style="height: 2rem; width: auto;">
+                </a>
             </div>
             <div class="menu-toggle" aria-label="Toggle navigation">
                 <span></span>
@@ -40,34 +37,181 @@
     </header>
 
     <main class="page-header pt-xl bg-black">
-        <section class="product-hero flex-split align-stretch flex-row-reverse configurator-row">
+        <section class="product-hero flex-split align-stretch  configurator-row">
             <div class="product-gallery flex-1 flex-center bg-darker">
-                <div class="placeholder-img tall-img"
-                    style="background: url('Products/Vault rooms/ModuleGuard/Product Photos/ModuleGuard-room.jpg') center/cover;">
+                <!-- Main Image -->
+                <div class="main-image-display mb-md">
+                    <img id="mainGalleryImage" src="Products/Vault rooms/ModuleGuard/Product Photos/ModuleGuard-room.jpg"
+                        alt="ModuleGuard Room" style="width: 60%; height: auto; object-fit: cover;">
+                </div>
+                <!-- Thumbnails -->
+                <div class="gallery-thumbnails grid" style="grid-template-columns: repeat(3, 1fr); gap: 10px; width: 25%; height:25%; margin: auto;">
+                    <div class="thumbnail active" onclick="updateGallery(document.getElementById('mainGalleryImage'),this, 'Products/Vault rooms/ModuleGuard/Product Photos/ModuleGuard-room.jpg')">
+                        <img src="Products/Vault rooms/ModuleGuard/Product Photos/ModuleGuard-room.jpg" alt="Thumb 1">
+                    </div>
+                    <div class="thumbnail" onclick="updateGallery(document.getElementById('mainGalleryImage'),this, 'Products/Vault rooms/ModuleGuard/Product Photos/ModuleGuard-room-2.jpg')">
+                        <img src="Products/Vault rooms/ModuleGuard/Product Photos/ModuleGuard-room-2.jpg" alt="Thumb 2">
+                    </div>
+                    <div class="thumbnail" onclick="updateGallery(document.getElementById('mainGalleryImage'),this, 'Products/Vault rooms/ModuleGuard/Product Photos/ModuleGuard-room-3.jpg')">
+                        <img src="Products/Vault rooms/ModuleGuard/Product Photos/ModuleGuard-room-3.jpg" alt="Thumb 3">
+                    </div>
                 </div>
             </div>
 
             <div class="product-info flex-1 flex-center section-padding pt-xl">
                 <div class="info-inner reveal-up">
-                    <span class="eyebrow gold-text">Architectural Vaults</span>
-                    <h1 class="product-title accent-title" style="font-size: 4rem;">ModuleGuard Vault</h1>
+                    <span class="eyebrow gold-text">Security Vaults</span>
+                    <h1 class="product-title accent-title" style="font-size: 4rem;">ModuleGuard Strongroom</h1>
 
                     <div class="product-description mt-md text-block">
-                        <p>When it comes to securing your most valuable assets, Luxuria Safes offers a state-of-the-art
-                            solution through the construction of vault rooms fortified with 5mm or 10mm steel panels.
-                            Our vault rooms are meticulously engineered to create an impenetrable barrier, ensuring
-                            unparalleled security against potential threats.</p>
-                        <p>By integrating Tang Bars into the construction process, Luxuria Safes ensures that our
-                            high-security vault rooms offer unparalleled protection for your most prized possessions.
-                        </p>
+                        <p>The ModuleGuard Strongroom System is a modular, high-security enclosure designed for modern commercial environments requiring certified protection and installation flexibility. Its lightweight, panel-based design allows it to be installed in existing buildings, including upper floors with structural load limitations.</p>
                     </div>
 
-                    <div class="action-buttons mt-xl">
-                        <a href="contact.html" class="btn btn-primary btn-gold">Connect with our Architects</a>
+                    <div class="container" id="gamme-icons">
+                        <div class="flex-center">
+                            <img class=""
+                                src="https://www.fichet-bauche.fr/wp-content/uploads/2022/12/effraction-light.png"
+                                alt="Certified burglary resistant">
+                            <span class="">
+                                Burglary</span>
+                        </div>
+                        <div class="flex-center">
+                            <img class=""
+                                src="https://www.fichet-bauche.fr/wp-content/uploads/2022/12/resistant-au-feu.png"
+                                alt="Certified fire resistant">
+                            <span class="">
+                                Fire</span>
+                        </div>
+                        <div class="flex-center">
+                            <img class="" src="Ecb-s-logo-150x150.jpg" alt="ECB-S Certified" style="height: 70px;">
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Product Features SECTION -->
+        <section id="collections" class="section-padding bg-dark">
+            <div class="container">
+                <div class="grid grid-3">
+                    <!-- Key Features -->
+                    <div class="collection-card reveal-up">
+                        <div class="card-content">
+                            <h3 class="gold-text"
+                                style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+                                <img src="https://www.fichet-bauche.fr/wp-content/uploads/2022/12/icon-shield.png"
+                                    alt="" style="height: 32px;">
+                                Key Features
+                            </h3>
+                            <ul class="option-list" style="text-align: left; padding-top: 1rem;">
+                                <li><strong class="gold-text">Installation Flexibility </strong><br>Lightweight, bolt-together modular panels require no on-site welding and are ideal for retrofit projects in restricted-access buildings.</li>
+                                <li><strong class="gold-text">Tested Attack Resistance</strong><br>Certified to EN 1143-1 against hand tools, heavy mechanical tools, and thermal cutting equipment.</li>
+                                <li><strong class="gold-text">Sustainability-Focused</strong><br>Developed with reduced material weight and optimized manufacturing to minimize environmental impact.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--Construction-->
+                    <div class="collection-card reveal-up" style="transition-delay: 0.2s;">
+                        <div class="card-content">
+                            <h3 class="gold-text"
+                                style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+                                <img src="https://www.fichet-bauche.fr/wp-content/uploads/2022/12/icon-cube.png" alt=""
+                                    style="height: 32px;">
+                                Construction
+                            </h3>
+                            <ul class="option-list" style="text-align: left; padding-top: 1rem;">
+                                <li><strong class="gold-text">Rapid Deployment</strong><br>Modular architecture enables fast installation compared to traditional reinforced concrete vaults.</li>
+                                <li><strong class="gold-text">Comprehensive Secure Envelope</strong><br>Typically includes wall, ceiling, and floor panels integrated with certified strongroom doors.</li>
+                                <li><strong class="gold-text">Expandable & Relocatable</strong><br>The scalable structure allows for future expansion or complete relocation of the system rather than demolition.</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <!-- Applications -->
+                    <div class="collection-card reveal-up" style="transition-delay: 0.2s;">
+                        <div class="card-content">
+                            <h3 class="gold-text"
+                                style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+                                <img src="https://www.fichet-bauche.fr/wp-content/uploads/2022/12/icon-diamond-2.png" alt=""
+                                    style="height: 32px;">
+                                Applications
+                            </h3>
+                            <ul class="option-list" style="text-align: left; padding-top: 1rem;">
+                                <li><strong class="gold-text">Bank Strongrooms and Cash Handling Facilities</strong><br>Perfect for cash centers and facilities that require secure access control and fire protection.</li>
+                                <li><strong class="gold-text">Jewellery and Luxury Retail Vault Rooms</strong><br>Designed for high-security storage of valuable items in retail environments.</li>
+                                <li><strong class="gold-text">Government, Defence and Pharmaceutical Facilities</strong><br>Providing secure storage solutions for sensitive documents and valuables in various settings.</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <!-- Technical Specifications -->
+        <section id="specifications" class="section-padding bg-black">
+            <div class="container">
+                <div
+                    style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem;">
+                    <div>
+                        <h2 class="accent-title" style="font-size: 3rem;">Technical Specifications</h2>
+                    </div>
+                    <a href="#" class="btn btn-outline hover-fill">See Product Sheet</a>
+                </div>
+                <div class="table-wrapper">
+                    <table class="table-luxury">
+                        <thead>
+                            <tr>
+                                <th style="font-size: larger;">Features</th>
+                                <th style="font-size: larger; text-align: right;">Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th style="width: 50%; text-align: left; padding: 1rem;">Security Certification</th>
+                                <td style="width: 50%; text-align: right; padding: 1rem;">EN 1143-1 Grades I, III and IV (T2 variants available) </td>
+                            </tr>
+                            <tr>
+                                <th style="width: 50%; text-align: left; padding: 1rem;">Construction</th>
+                                <td style="width: 50%; text-align: right; padding: 1rem;">Prefabricated bolt-together steel-based panels  </td>
+                            </tr>
+                            <tr>
+                                <th style="width: 50%; text-align: left; padding: 1rem;">Locking Options</th>
+                                <td style="width: 50%; text-align: right; padding: 1rem;">Mechanical key, mechanical combination, or advanced electronic systems </td>
+                            </tr>
+                            <tr>
+                                <th style="width: 50%; text-align: left; padding: 1rem;">Optional Protection</th>
+                                <td style="width: 50%; text-align: right; padding: 1rem;">Ballistic protection and fire resistance (configuration dependent)  </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <!-- CTA -->
+        <div class="config-card flex-center mb-0"
+            style="border: 1px solid var(--color-gold); background: rgba(212, 175, 55, 0.05);">
+            <h3 style="margin-bottom: 1rem;">Ready to Commission?</h3>
+            <p class="text-center" style="margin-bottom: 2rem;">Work directly with our artisans to review these finishes
+                via physical material samples.</p>
+            <a href="contact.html" class="btn btn-primary btn-gold">Contact Sales Advisor</a>
+        </div>
+        </div>
+        </section>
+
+        <!-- DRAWINGS SECTION>
+        <section class="product-hero flex-row align-stretch border-top-gold section-padding bg-darker">
+            <div class="product-gallery flex-1 flex-center bg-darker" style="width: 100%; height: 100%; margin: auto;">
+                <img src="Products/Luxury Safes/Minitreasure/Product Photos/MiniTreasure Size Sketch.jpg"
+                    alt="MiniTreasure Size Sketch"
+                    style="width: 60%; height: 60%; margin: auto; overflow-clip-margin: content-box; border: 50px solid var(--color-text-light);">
+            </div>
+            <!--div class="product-gallery flex-1 flex-center bg-darker" style="width: 100%; height: 100%; margin: auto;">
+                <img src="Products/Luxury Safes/Minitreasure/Product Photos/MiniTreasure Spec Chart.jpg"
+                    alt="MiniTreasure Specifications Chart"
+                    style="width: 60%; height: 60%; margin: auto; overflow-clip-margin: content-box; border: 50px solid var(--color-text-light);">
+            </div>
+        </section-->
     </main>
 
     <footer id="colophon" class="site-footer">
