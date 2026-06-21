@@ -276,8 +276,13 @@ a:hover {
     transform-origin: left;
 }
 
+.responsive-tabs {
+    display: flex;
+    flex-direction: column;
+}
+
 .tab_btn {
-    padding: 0.5rem 1.5rem;
+    padding: 1rem;;
     font-family: var(--font-primary);
     color: var(--color-gold);
     font-size: 0.875rem;
@@ -287,6 +292,7 @@ a:hover {
     transition: all 0.4s ease;
     border: 1px solid transparent;
     background-color: transparent;
+    text-align: center;
 }
 
 .tab_btn.active {
@@ -413,15 +419,65 @@ a:hover {
 .tab_content {
     display: none;
     border: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 2rem;
+    padding: 1rem;
     background-color: var(--color-dark);
 }
 
 .tab_active {
     display: block;
     border: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 2rem;
+    padding: 1rem;
     background-color: var(--color-dark);
+}
+
+.tab_inner_content {
+    padding: 10px;
+}
+
+.tab_row {
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically on mobile */
+    gap: 15px;
+}
+
+.tab_row img {
+    height: 200px;
+    object-fit: contain;
+    align-self: flex-start;
+}
+
+.tab_text ul, .tab_text_full ul {
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+@media (min-width: 768px) {
+    .responsive-tabs {
+        display: grid;
+        /* Create a 6-column grid layout for your 6 buttons */
+        grid-template-columns: repeat(6, 1fr); 
+    }
+
+    .tab_container {
+        width: 100%; /* Forces the content envelope to match the full button row width */
+        margin-top: -1px; /* Prevents double borders between buttons and content */
+    }
+
+    .tab_btn {
+        grid-row: 1; /* Keep all buttons in the first row */
+        text-align: center;
+        border-bottom: none;
+    }
+
+    .tab_content {
+        grid-column: 1 / span 6; /* Content spans across all columns */
+        grid-row: 2; /* Content sits underneath the button row */
+        border: 1px solid #444;
+    }
+
+    .tab_row {
+        flex-direction: row; /* Side-by-side image and text on PC */
+    }
 }
 
 /* Mobile Navigation */

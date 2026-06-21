@@ -76,105 +76,174 @@
 
     <section class="section-padding bg-darker">
         <div class="container">
-            <div class="tab" >
-                <button class="tab_btn active" onclick="openTab(event, 'keyLock')">Key Lock</button>
-                <button class="tab_btn" onclick="openTab(event, 'combinationLock')">Combination Lock</button>
-                <button class="tab_btn" onclick="openTab(event, 'electronicLock')">Electronic Lock</button>
-            </div>
-            <div class="lock-card" style="transition-delay: 0.2s;">
+            <div class="responsive-tabs">
+                
+                <button class="tab_btn active" onclick="toggleTab(event, 'keyLock')">Key Lock</button>
                 <div id="keyLock" class="tab_content tab_active">
-                    <div style="display: flex; flex-direction: column;">
-                        <h3 style="margin-bottom:10px;">Key Locks (Grade A)</h3>
-                        <div style="display:inline-flex; flex-direction: row; align-items:flex-start">
-                            <img class=""
-                                src="Locks\keyLock.jpg"
-                                alt="Certified burglary resistant"
-                                style="height:200px;">
-                            <div style="margin: 10px;">
-                                <p style="margin-bottom:0px;">
-                                    <strong>Description:</strong>
-                                    <ul style="margin-left: 50px;">
-                                        <li>“Very high-security” electronic lock</li>
-                                        <li>User-friendly operation with a graphical screen</li>
-                                        <li>Allows the creation of up to 39 users by default, extendable to 99 users with the configuration software</li>
-                                    </ul>
+                    <div class="tab_inner_content">
+                        <h3>Key Locks (Grade A)</h3>
+                        <div class="tab_row">
+                            <img src="Locks/keyLock.jpg" alt="Certified burglary resistant">
+                            <div class="tab_text">
+                                <p><strong>Description:</strong></p>
+                                <p>
+                                    Crafted with precision engineering, this mechanical lock uses a uniquely designed double-bitted key, 
+                                    which provides a higher level of security than conventional single-bitted designs. The symmetrical, 
+                                    double-bladed key engages with multiple internal levers, making the lock resistant to common manipulation 
+                                    techniques such as picking or decoding.
                                 </p>
                             </div>
                         </div> 
-                        <div style="margin: 10px;">
-                                <p style="margin-bottom:0px;">
-                                    <strong >Security Feature:</strong>
-                                    <ul style="margin-left: 50px;">
-                                        <li>Option for delayed opening (from 0 to 99 minutes)</li>
-                                        <li>Temporary blockage in case of entering a wrong code</li>
-                                        <li>Safe locking in case of battery removal (unlocking with the code)</li>
-                                    </ul>
-                                </p>
+                        <div class="tab_text_full">
+                            <p><strong>Security Feature:</strong></p>
+                            <ul>
+                                <li>Option for delayed opening (from 0 to 99 minutes)</li>
+                                <li>Temporary blockage in case of entering a wrong code</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
+
+                <button class="tab_btn" onclick="toggleTab(event, 'combinationLock')">Combination Lock</button>
                 <div id="combinationLock" class="tab_content">
-                    <div style="display: flex; flex-direction: column;">
-                        <h3 style="margin-bottom:10px;">Combination Locks (Grade B)</h3>
-                        <div style="display:inline-flex; flex-direction: row; align-items:flex-start">
-                            <img class=""
-                                src="Locks\combinationLock.jpg"
-                                alt="Certified burglary resistant"
-                                style="height:200px;">
-                            <div style="margin: 10px;">
-                                <p style="margin-bottom:0px;">
-                                    <strong>Description:</strong>
-                                    <ul style="margin-left: 50px;">
-                                        <li>“Very high-security” electronic lock</li>
-                                        <li>User-friendly operation with a graphical screen</li>
-                                        <li>Allows the creation of up to 39 users by default, extendable to 99 users with the configuration software</li>
-                                    </ul>
+                    <div class="tab_inner_content">
+                        <h3>Combination Locks (Grade B)</h3>
+                        <div class="tab_row">
+                            <img src="Locks/combinationLock.jpg" alt="Certified burglary resistant">
+                            <div class="tab_text">
+                                <p><strong>Description:</strong></p>
+                                <p>
+                                    The 6700 Series Group 2 mechanical safe locks was designed to perform in high-security, high-traffic 
+                                    applications like ATMs, gun safes, bank locks and other demanding commercial settings. These UL-Group 2 
+                                    mechanical safe locks offer advanced security features to deter attacks and keep assets secure.
                                 </p>
                             </div>
                         </div> 
-                        <div style="margin: 10px;">
-                                <p style="margin-bottom:0px;">
-                                    <strong >Security Feature:</strong>
-                                    <ul style="margin-left: 50px;">
-                                        <li>Option for delayed opening (from 0 to 99 minutes)</li>
-                                        <li>Temporary blockage in case of entering a wrong code</li>
-                                        <li>Safe locking in case of battery removal (unlocking with the code)</li>
-                                    </ul>
-                                </p>
+                        <div class="tab_text_full">
+                            <p><strong>Security Feature:</strong></p>
+                            <ul>
+                                <li>Highly resistant to electronic tampering or EMP attacks</li>
+                                <li>Aluminum wheel cases.</li>
+                                <li>Left-right-left dialing.</li>
+                                <li>Key-changeable wheel design.</li>
+                                <li>Internal relock trigger.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
+
+                <button class="tab_btn" onclick="toggleTab(event, 'electronicLock')">Pulse Electronic Lock</button>
                 <div id="electronicLock" class="tab_content">
-                    <div style="display: flex; flex-direction: column;">
-                        <h3 style="margin-bottom:10px;">Electronic Locks (Grade B)</h3>
-                        <div style="display:inline-flex; flex-direction: row; align-items:flex-start">
-                            <img class=""
-                                src="Locks\electronicLock.jpg"
-                                alt="Certified burglary resistant"
-                                style="height:200px;">
-                            <div style="margin: 10px;">
-                                <p style="margin-bottom:0px;">
-                                    <strong>Description:</strong>
-                                    <ul style="margin-left: 50px;">
-                                        <li>“Very high-security” electronic lock</li>
-                                        <li>User-friendly operation with a graphical screen</li>
-                                        <li>Allows the creation of up to 39 users by default, extendable to 99 users with the configuration software</li>
-                                    </ul>
+                    <div class="tab_inner_content">
+                        <h3>Tecnosicurezza Pulse Electronic Locks (Grade B)</h3>
+                        <div class="tab_row">
+                            <img src="Locks/electronicLock.jpg" alt="Certified burglary resistant">
+                            <div class="tab_text">
+                                <p><strong>Description:</strong></p>
+                                <p>
+                                    A design that attracts attention. Simple, elegant, inexpensive.
+                                    The lock is equipped with a time delay that can be programmed by keypad and it can manage up to 10 different users.
+                                    The opening in dual mode, the Dallas key reader integrated in the keypad and the possibility of interfacing with an 
+                                    alarm system, complete the features.
                                 </p>
                             </div>
                         </div> 
-                        <div style="margin: 10px;">
-                                <p style="margin-bottom:0px;">
-                                    <strong >Security Feature:</strong>
-                                    <ul style="margin-left: 50px;">
-                                        <li>Option for delayed opening (from 0 to 99 minutes)</li>
-                                        <li>Temporary blockage in case of entering a wrong code</li>
-                                        <li>Safe locking in case of battery removal (unlocking with the code)</li>
-                                    </ul>
-                                </p>
+                        <div class="tab_text_full">
+                            <p><strong>Security Feature:</strong></p>
+                            <ul>
+                                <li>Option for delayed opening (from 1 to 99 minutes)</li>
+                                <li>Open window (1-19 minutes)</li>
+                                <li>Temporary penalty in case of entering a wrong code</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
+
+                <button class="tab_btn" onclick="toggleTab(event, 'biometricLock')">Keypad + Biometric Lock</button>
+                <div id="biometricLock" class="tab_content">
+                    <div class="tab_inner_content">
+                        <h3>SecuRam ScanLogic Basic Biometric Lock (Grade C)</h3>
+                        <div class="tab_row">
+                            <img src="Locks/ScanLogicBiometricLock.jpg" alt="Certified burglary resistant">
+                            <div class="tab_text">
+                                <p><strong>Description:</strong></p>
+                                <p>
+                                    The ScanLogic Basic combines advanced biometric access with simplicity and reliability. 
+                                    It supports up to 3 six-digit access codes, each accommodating up to 5 stored fingerprints—for 
+                                    a total of 15. The RF sensor reads fingerprints in approximately one second, ensuring fast, secure entry. 
+                                    After successful authentication, the user must manually operate the safe handle to open. 
+                                    Powered by a 9-volt battery, the lock offers around 4,000 openings. Its standard mounting footprint ensures 
+                                    compatibility with most safe installations.
+                                </p>
+                            </div>
+                        </div> 
+                        <div class="tab_text_full">
+                            <p><strong>Security Feature:</strong></p>
+                            <ul>
+                                <li>Stores up to 15 unique fingerprints and 3 different User Codes (1 Management Code and 2 User Codes).</li>
+                                <li>Runs on a single 9-volt alkaline battery, providing over 4,000+ openings.</li>
+                                <li>The battery compartment drops down directly below the keypad for quick and easy replacement.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="tab_btn" onclick="toggleTab(event, 'timeDelayLock')">Biometric Lock</button>
+                <div id="timeDelayLock" class="tab_content">
+                    <div class="tab_inner_content">
+                        <h3>Biometric Wittkopp FINKEY 7000 Lock</h3>
+                        <div class="tab_row">
+                            <img src="Locks/WittkoppBiometricLock.jpg" alt="Certified burglary resistant">
+                            <div class="tab_text">
+                                <p><strong>Description:</strong></p>
+                                <p>
+                                    The biometric FINKEY 7000 series combines precise fingerprint recognition with the latest 
+                                    generation of high-quality WITTKOPP locking technology. FINKEY 7000 not only enables effortless 
+                                    authentication with a single finger swipe but also integrates state-of-the-art, certified lock 
+                                    technology. The additional key function ensures fast access, especially in emergency situations.
+                                </p>
+                            </div>
+                        </div> 
+                        <div class="tab_text_full">
+                            <p><strong>Security Feature:</strong></p>
+                            <ul>
+                                <li>VdS 1 / ECB•S: 3 master fingers / 97 user fingers</li>
+                                <li>VdS 2: 3 master fingers / 97 user or alarm fingers</li>
+                                <li>FINKEY APP: 6 master fingers / 97 user fingers</li>
+                                <li>Fingerprint identification time: Approx. 10 ms per comparison</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="tab_btn" onclick="toggleTab(event, 'dualKeyLock')">Direct Drive Lock</button>
+                <div id="dualKeyLock" class="tab_content">
+                    <div class="tab_inner_content">
+                        <h3>SecuRam SafeLogic Basic Direct-Drive Locks</h3>
+                        <div class="tab_row">
+                            <img src="Locks/SafeLogicDDrive.jpg" alt="Certified burglary resistant">
+                            <div class="tab_text">
+                                <p><strong>Description:</strong></p>
+                                <p>
+                                    Ideal for safes with direct-drive boltwork, the SafeLogic Basic Direct Drive lock provides robust 
+                                    performance with minimal complexity. It supports one Manager code and one 6-digit User code. It 
+                                    features a powerful motorized bolt mechanism that retracts automatically after a valid code is 
+                                    entered. A no‑twist cable design enhances durability, and a single 9‑volt battery powers approximately 
+                                    10,000 openings. The lock is fully field-programmable and features a standard footprint for seamless 
+                                    retrofitting.
+                                </p>
+                            </div>
+                        </div> 
+                        <div class="tab_text_full">
+                            <p><strong>Security Feature:</strong></p>
+                            <ul>
+                                <li>Engages a 5-minute lockout penalty if the wrong combination is entered 4 consecutive times.</li>
+                                <li>Supports up to 2 codes (1 Manager Code and 1 User Code).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>

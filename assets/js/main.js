@@ -74,6 +74,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+function toggleTab(event, tabId) {
+    const isMobile = window.innerWidth < 768;
+    const clickedBtn = event.currentTarget;
+    const targetContent = document.getElementById(tabId);
+
+    if (isMobile) {
+        // MOBILE Accordion logic
+        if (clickedBtn.classList.contains('active')) {
+            clickedBtn.classList.remove('active');
+            targetContent.classList.remove('tab_active');
+        } else {
+            document.querySelectorAll('.tab_btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab_content').forEach(content => content.classList.remove('tab_active'));
+            
+            clickedBtn.classList.add('active');
+            targetContent.classList.add('tab_active');
+        }
+    } else {
+        // DESKTOP Tab logic (always leaves one active)
+        document.querySelectorAll('.tab_btn').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.tab_content').forEach(content => content.classList.remove('tab_active'));
+
+        clickedBtn.classList.add('active');
+        targetContent.classList.add('tab_active');
+    }
+}
+
 // Compartment Slider Logic
 let currentSlideIndex = 0;
 function slideCompartments(direction) {
