@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standards & Certifications | Luxuria Safes</title>
+    <meta name="description" content="Discover the rigorous international standards and certifications that every Luxuria Safe must meet — from burglary resistance to fire protection.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        /* ── Section anchors offset for fixed header ── */
+        .section-anchor {
+            display: block;
+            height: 100px;
+            margin-top: -100px;
+            visibility: hidden;
+        }
+
+        /* ── Sticky category nav ── */
+        .cert-nav {
+            position: sticky;
+            top: 72px;
+            z-index: 100;
+            background: rgba(10,10,10,0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(212,175,55,0.18);
+        }
+
+        .cert-nav-inner {
+            display: flex;
+            gap: 0;
+            max-width: var(--container-width);
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .cert-nav-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 1.1rem 2rem;
+            font-family: var(--font-primary);
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--color-text-main);
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .cert-nav-btn svg {
+            flex-shrink: 0;
+            opacity: 0.6;
+            transition: opacity 0.3s ease;
+        }
+
+        .cert-nav-btn:hover,
+        .cert-nav-btn.active {
+            color: var(--color-gold);
+            border-bottom-color: var(--color-gold);
+        }
+
+        .cert-nav-btn:hover svg,
+        .cert-nav-btn.active svg {
+            opacity: 1;
+        }
+
+        /* ── Intro strip ── */
+        .intro-strip {
+            background: var(--color-dark);
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+            padding: 4rem 0;
+        }
+
+        .intro-strip p {
+            font-size: 1.1rem;
+            color: var(--color-silver);
+            line-height: 1.8;
+            max-width: 820px;
+        }
+
+        /* ── Category section ── */
+        .cert-section {
+            padding: 5rem 0;
+        }
+
+        .cert-section:nth-child(odd) {
+            background: var(--color-darker);
+        }
+
+        .cert-section:nth-child(even) {
+            background: var(--color-dark);
+        }
+
+        .cert-section-header {
+            display: flex;
+            align-items: flex-end;
+            gap: 1.5rem;
+            margin-bottom: 3.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(212,175,55,0.2);
+        }
+
+        .cert-section-icon {
+            width: 56px;
+            height: 56px;
+            border: 1px solid rgba(212,175,55,0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .cert-section-header h2 {
+            font-size: clamp(1.8rem, 3vw, 2.8rem);
+            margin-bottom: 0.3rem;
+        }
+
+        .cert-section-header p {
+            color: var(--color-silver);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        /* ── Certification cards grid ── */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* ── Single cert card ── */
+        .cert-card {
+            background: var(--color-black);
+            border: 1px solid rgba(255,255,255,0.06);
+            display: flex;
+            flex-direction: column;
+            transition: border-color 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cert-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .cert-card:hover {
+            border-color: rgba(212,175,55,0.3);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .cert-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .cert-card-badge {
+            padding: 2rem 2rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .cert-logo {
+            width: 72px;
+            height: 72px;
+            border: 1px solid rgba(212,175,55,0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            background: rgba(212,175,55,0.04);
+        }
+
+        .cert-logo-text {
+            font-family: var(--font-secondary);
+            font-size: 0.85rem;
+            color: var(--color-gold);
+            text-align: center;
+            line-height: 1.3;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            padding: 0 4px;
+        }
+
+        .cert-badge-meta {
+            flex: 1;
+        }
+
+        .cert-standard-code {
+            font-family: var(--font-primary);
+            font-size: 0.72rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            margin-bottom: 0.4rem;
+            display: block;
+        }
+
+        .cert-card-badge h3 {
+            font-size: 1.1rem;
+            line-height: 1.3;
+            color: var(--color-text-light);
+        }
+
+        .cert-card-body {
+            padding: 1.5rem 2rem 2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .cert-card-body p {
+            font-size: 0.925rem;
+            color: var(--color-text-main);
+            line-height: 1.75;
+            margin: 0;
+        }
+
+        /* ── Grade pills ── */
+        .cert-grades {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: auto;
+        }
+
+        .cert-grades-label {
+            font-size: 0.72rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #666;
+            width: 100%;
+            margin-bottom: 0.2rem;
+        }
+
+        .grade-pill {
+            font-family: var(--font-primary);
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 0.3rem 0.75rem;
+            border: 1px solid rgba(212,175,55,0.35);
+            color: var(--color-gold);
+            background: rgba(212,175,55,0.06);
+        }
+
+        .grade-pill.highlight {
+            background: var(--color-gold);
+            color: var(--color-black);
+            border-color: var(--color-gold);
+        }
+
+        /* ── What our safes achieve ── */
+        .achieves-strip {
+            background: rgba(212,175,55,0.05);
+            border: 1px solid rgba(212,175,55,0.15);
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-top: 0.5rem;
+        }
+
+        .achieves-strip svg {
+            flex-shrink: 0;
+        }
+
+        .achieves-strip span {
+            font-size: 0.82rem;
+            color: var(--color-gold-hover);
+            line-height: 1.5;
+        }
+
+        /* ── Closing CTA ── */
+        .cert-cta {
+            background: var(--color-black);
+            padding: 6rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.04);
+        }
+
+        .cert-cta p {
+            color: var(--color-silver);
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin: 1.5rem auto 2.5rem;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            .cert-nav-btn {
+                padding: 0.9rem 1rem;
+                font-size: 0.7rem;
+                letter-spacing: 1px;
+            }
+
+            .cert-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cert-section-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            .intro-strip p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cert-nav-inner {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ══════════════════════════════════════════ HEADER -->
+    <header id="masthead" class="site-header scrolled">
+        <div class="header-inner container">
+            <div class="site-branding">
+                <h1 class="site-title">
+                    <a href="index.html" style="display:flex;align-items:center;">
+                        <img src="Luxuria-Safes-logo.svg" alt="Luxuria Safes Logo" style="height:2rem;width:auto;">
+                    </a>
+                </h1>
+            </div>
+            <div class="menu-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </div>
+            <nav class="main-navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="collections.html">The Collections</a></li>
+                    <li><a href="story.html">Our Story</a></li>
+                    <li><a href="standards.html" class="gold-text">Standards</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ══════════════════════════════════════════ PAGE HEADER -->
+    <main class="page-header bg-black pt-xl">
+        <div class="container reveal-up">
+            <span class="eyebrow gold-text">Quality Assurance</span>
+            <h1 class="page-title">Standards &amp; Certifications</h1>
+            <p style="color:var(--color-silver);max-width:640px;margin:1rem auto 0;font-size:1.05rem;line-height:1.8;">
+                Every Luxuria safe is engineered to meet and exceed the world's most demanding security standards. Independent, laboratory-tested, and certified — because trust must be earned.
+            </p>
+        </div>
+    </main>
+
+    <!-- ══════════════════════════════════════════ STICKY NAV -->
+    <nav class="cert-nav" aria-label="Certification categories">
+        <div class="cert-nav-inner">
+            <button class="cert-nav-btn active" onclick="scrollToSection('cambriolage')" id="nav-cambriolage">
+                <!-- shield icon -->
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+                Burglary Resistance
+            </button>
+            <button class="cert-nav-btn" onclick="scrollToSection('feu')" id="nav-feu">
+                <!-- flame icon -->
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 2c0 0-5 5.5-5 10a5 5 0 0010 0C17 7.5 12 2 12 2z"/>
+                    <path d="M12 12c0 0-2.5 2.5-2.5 4a2.5 2.5 0 005 0C14.5 14.5 12 12 12 12z"/>
+                </svg>
+                Fire Resistance
+            </button>
+            <button class="cert-nav-btn" onclick="scrollToSection('serrures')" id="nav-serrures">
+                <!-- lock icon -->
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                    <path d="M7 11V7a5 5 0 0110 0v4"/>
+                </svg>
+                Lock Standards
+            </button>
+        </div>
+    </nav>
+
+    <!-- ══════════════════════════════════════════ INTRO -->
+    <div class="intro-strip">
+        <div class="container">
+            <p>
+                Our certifications are issued by accredited, independent European and international testing laboratories.
+                Each standard defines precise attack scenarios, tools, and time thresholds — so when a Luxuria safe carries a grade, it is a guarantee backed by science, not marketing.
+            </p>
+        </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════ SECTION 1: BURGLARY -->
+    <span class="section-anchor" id="cambriolage"></span>
+    <section class="cert-section">
+        <div class="container">
+            <div class="cert-section-header reveal-up">
+                <div class="cert-section-icon">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="1.5">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2>Burglary Resistance</h2>
+                    <p>Laboratory-tested resistance against physical attack, tools, and forced entry.</p>
+                </div>
+            </div>
+
+            <div class="cert-grid">
+
+                <!-- EN 1143-1 -->
+                <div class="cert-card reveal-up">
+                    <div class="cert-card-badge">
+                        <div class="cert-logo">
+                            <div class="cert-logo-text">EN<br>1143-1</div>
+                        </div>
+                        <div class="cert-badge-meta">
+                            <span class="cert-standard-code">European Standard</span>
+                            <h3>EN 1143-1 — Secure Storage Units</h3>
+                        </div>
+                    </div>
+                    <div class="cert-card-body">
+                        <p>
+                            The cornerstone European standard for attack-resistant safes, strongrooms, and vault doors. It defines a series of grades based on resistance time against tool attack, measured in resistance units (RU). An independent, accredited laboratory carries out all tests under strict conditions.
+                        </p>
+                        <div class="achieves-strip">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Luxuria safes are certified to Grades <strong>I through IV</strong> depending on model.</span>
+                        </div>
+                        <div class="cert-grades">
+                            <span class="cert-grades-label">Available Grades</span>
+                            <span class="grade-pill">Grade 0</span>
+                            <span class="grade-pill highlight">Grade I</span>
+                            <span class="grade-pill highlight">Grade II</span>
+                            <span class="grade-pill highlight">Grade III</span>
+                            <span class="grade-pill highlight">Grade IV</span>
+                            <span class="grade-pill">Grade V</span>
+                            <span class="grade-pill">Grade VI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ECB-S -->
+                <div class="cert-card reveal-up" style="transition-delay:0.1s;">
+                    <div class="cert-card-badge">
+                        <div class="cert-logo">
+                            <div class="cert-logo-text">ECB·S</div>
+                        </div>
+                        <div class="cert-badge-meta">
+                            <span class="cert-standard-code">European Certification Board</span>
+                            <h3>ECB·S — Security Systems Certification</h3>
+                        </div>
+                    </div>
+                    <div class="cert-card-body">
+                        <p>
+                            The European Certification Board for Security Systems (ECB·S) is one of Europe's most respected independent certification bodies. ECB·S certifies products across the full EN 1143-1 grade range and is recognised by major insurance underwriters throughout the continent.
+                        </p>
+                        <div class="achieves-strip">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Select Luxuria models carry the <strong>ECB·S Grade II</strong> and <strong>Grade III</strong> marks.</span>
+                        </div>
+                        <div class="cert-grades">
+                            <span class="cert-grades-label">Certification Classes</span>
+                            <span class="grade-pill highlight">Grade I</span>
+                            <span class="grade-pill highlight">Grade II</span>
+                            <span class="grade-pill highlight">Grade III</span>
+                            <span class="grade-pill">Grade IV+</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VdS -->
+                <div class="cert-card reveal-up" style="transition-delay:0.2s;">
+                    <div class="cert-card-badge">
+                        <div class="cert-logo">
+                            <div class="cert-logo-text">VdS</div>
+                        </div>
+                        <div class="cert-badge-meta">
+                            <span class="cert-standard-code">German Institute</span>
+                            <h3>VdS — Vertrauen durch Sicherheit</h3>
+                        </div>
+                    </div>
+                    <div class="cert-card-body">
+                        <p>
+                            VdS Schadenverhütung is Germany's foremost institute for loss prevention. A VdS certificate is required by many German and European insurance companies when specifying approved security products. Their classification system mirrors EN 1143-1 grades while applying additional proprietary test protocols.
+                        </p>
+                        <div class="achieves-strip">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Our premium models are <strong>VdS Class II</strong> and <strong>Class III</strong> approved.</span>
+                        </div>
+                        <div class="cert-grades">
+                            <span class="cert-grades-label">VdS Classes</span>
+                            <span class="grade-pill">Class I</span>
+                            <span class="grade-pill highlight">Class II</span>
+                            <span class="grade-pill highlight">Class III</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- A2P -->
+                <div class="cert-card reveal-up" style="transition-delay:0.3s;">
+                    <div class="cert-card-badge">
+                        <div class="cert-logo">
+                            <div class="cert-logo-text">A2P<br>★★★</div>
+                        </div>
+                        <div class="cert-badge-meta">
+                            <span class="cert-standard-code">French Certification / CNPP</span>
+                            <h3>A2P — Assurance Prévention Protection</h3>
+                        </div>
+                    </div>
+                    <div class="cert-card-body">
+                        <p>
+                            Issued by the CNPP (National Centre for Prevention and Protection), A2P certification classifies safes into three star levels based on resistance to burglary attempts. It is mandatory for insurance-recognised security in France and widely adopted across French-speaking markets.
+                        </p>
+                        <div class="achieves-strip">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Our A2P-certified range holds the <strong>three-star (★★★)</strong> designation — the highest available level.</span>
+                        </div>
+                        <div class="cert-grades">
+                            <span class="cert-grades-label">Star Levels</span>
+                            <span class="grade-pill">★ One Star</span>
+                            <span class="grade-pill">★★ Two Stars</span>
+                            <span class="grade-pill highlight">★★★ Three Stars</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LPS 1183 -->
+                <div class="cert-card reveal-up" style="transition-delay:0.4s;">
+                    <div class="cert-card-badge">
+                        <div class="cert-logo">
+                            <div class="cert-logo-text">LPS<br>1183</div>
+                        </div>
+                        <div class="cert-badge-meta">
+                            <span class="cert-standard-code">Loss Prevention Standard — UK</span>
+                            <h3>LPS 1183 — Attack-Resistant Containers</h3>
+                        </div>
+                    </div>
+                    <div class="cert-card-body">
+                        <p>
+                            Developed by the Loss Prevention Certification Board (LPCB) in the United Kingdom, LPS 1183 specifies rigorous performance requirements for attack-resistant safes and cabinets. LPCB-listed products are recognised by insurers across the UK and Commonwealth markets.
+                        </p>
+                        <div class="achieves-strip">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Certain Luxuria models carry <strong>LPS 1183 Grade A &amp; B</strong> listing.</span>
+                        </div>
+                        <div class="cert-grades">
+                            <span class="cert-grades-label">LPCB Grades</span>
+                            <span class="grade-pill highlight">Grade A</span>
+                            <span class="grade-pill highlight">Grade B</span>
+                            <span class="grade-pill">Grade C</span>
+                            <span class="grade-pill">Grade D</span>
+                            <span class="grade-pill">Grade E</span>
+                            <span class="grade-pill">Grade F</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /.cert-grid -->
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════ SECTION 2: FIRE -->
+    <span class="section-anchor" id="feu"></span>
+    <section class="cert-section">
+        <div class="container">
+            <div class="cert-section-header reveal-up">
+                <div class="cert-section-icon">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="1.5">
+                        <path d="M12 2c0 0-5 5.5-5 10a5 5 0 0010 0C17 7.5 12 2 12 2z"/>
+                        <path d="M12 12c0 0-2.5 2.5-2.5 4a2.5 2.5 0 005 0C14.5 14.5 12 12 12 12z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2>Fire Resistance</h2>
+                    <p>Proven protection for documents, media, and valuables against extreme heat.</p>
+                </div>
+            </div>
+
+            <div class="cert-grid">
+
+                <!-- EN 1047-1 -->
+                <div class="cert-card reveal-up">
+                    <div class="cert-card-badge">
+                        <div class="cert-logo">
+                            <div class="cert-logo-text">EN<br>1047-1</div>
+                        </div>
+                        <div class="cert-badge-meta">
+                            <span class="cert-standard-code">European Standard</span>
+                            <h3>EN 1047-1 — Secure Storage Units (Fire)</h3>
+                        </div>
+                    </div>
+                    <div class="cert-card-body">
+                        <p>
+                            EN 1047-1 is the premier European standard for fire-resistant document cabinets and safes. Products are exposed to external furnace temperatures of up to 1,090 °C while the internal temperature must remain below 170 °C for paper and 52 °C for digital media. An impact drop and explosion test are also performed.
+                        </p>
+                        <div class="achieves-strip">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Our fire-rated range is certified to <strong>EN 1047-1 Class S60P and S120P</strong>.</span>
+                        </div>
+                        <div class="cert-grades">
+                            <span class="cert-grades-label">Protection Classes</span>
+                            <span class="grade-pill highlight">S 60 P</span>
+                            <span class="grade-pill highlight">S 120 P</span>
+                            <span class="grade-pill">S 60 DIS</span>
+                            <span class="grade-pill">S 120 DIS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EN 15659 -->
+                <div class="cert-card reveal-up" style="transition-delay:0.1s;">
+                    <div class="cert-card-badge">
+                        <div class="cert-logo">
+                            <div class="cert-logo-text">EN<br>15659</div>
+                        </div>
+                        <div class="cert-badge-meta">
+                            <span class="cert-standard-code">European Standard</span>
+                            <h3>EN 15659 — Light Fire Protection</h3>
+                        </div>
+                    </div>
+                    <div class="cert-card-body">
+                        <p>
+                            EN 15659 covers lighter-weight fire protection products for paper documents. Products are tested at furnace temperatures up to 1,049 °C with a post-fire cool-down period. This standard is particularly suited to office environments requiring accessible, everyday fire protection for important documents.
+                        </p>
+                        <div class="achieves-strip">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Entry-level Luxuria fire safes achieve <strong>LFS 30P and LFS 60P</strong> classification.</span>
+                        </div>
+                        <div class="cert-grades">
+                            <span class="cert-grades-label">Fire Classes</span>
+                            <span class="grade-pill highlight">LFS 30 P</span>
+                            <span class="grade-pill highlight">LFS 60 P</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NT Fire -->
+                <div class="cert-card reveal-up" style="transition-delay:0.2s;">
+                    <div class="cert-card-badge">
+                        <div class="cert-logo">
+                            <div class="cert-logo-text">NT<br>FIRE</div>
+                        </div>
+                        <div class="cert-badge-meta">
+                            <span class="cert-standard-code">Nordic / International</span>
+                            <h3>NT Fire — Nordic Fire Testing</h3>
+                        </div>
+                    </div>
+                    <div class="cert-card-body">
+                        <p>
+                            The NT Fire series (017, 032, etc.) are internationally recognised fire-resistance test methods published by Nordtest, widely accepted in Europe, North America, and Asia. NT Fire 017 is especially common for paper-rated safes, while NT Fire 032 covers magnetic and digital media protection.
+                        </p>
+                        <div class="achieves-strip">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Our digital media safes carry <strong>NT Fire 017 — 60 minutes</strong> and <strong>NT Fire 032</strong> approvals.</span>
+                        </div>
+                        <div class="cert-grades">
+                            <span class="cert-grades-label">Test Methods</span>
+                            <span class="grade-pill highlight">NT Fire 017</span>
+                            <span class="grade-pill highlight">NT Fire 032</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /.cert-grid -->
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════ SECTION 3: LOCKS -->
+    <span class="section-anchor" id="serrures"></span>
+    <section class="cert-section">
+        <div class="container">
+            <div class="cert-section-header reveal-up">
+                <div class="cert-section-icon">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="1.5">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                        <path d="M7 11V7a5 5 0 0110 0v4"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2>Lock Standards</h2>
+                    <p>Every locking mechanism certified to European high-security lock standards.</p>
+                </div>
+            </div>
+
+            <div class="cert-grid">
+
+                <!-- EN 1300 -->
+                <div class="cert-card reveal-up">
+                    <div class="cert-card-badge">
+                        <div class="cert-logo">
+                            <div class="cert-logo-text">EN<br>1300</div>
+                        </div>
+                        <div class="cert-badge-meta">
+                            <span class="cert-standard-code">European Standard</span>
+                            <h3>EN 1300 — High-Security Locks</h3>
+                        </div>
+                    </div>
+                    <div class="cert-card-body">
+                        <p>
+                            EN 1300 is the definitive European standard for evaluating and classifying high-security locks for safes and strongrooms. Locks are tested for manipulation, covert attack, and forced entry, and classified into four grades — A through D — with D representing the highest resistance.
+                        </p>
+                        <div class="achieves-strip">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>All Luxuria lock mechanisms are certified to <strong>EN 1300 Grade B and Grade C</strong>.</span>
+                        </div>
+                        <div class="cert-grades">
+                            <span class="cert-grades-label">Security Grades</span>
+                            <span class="grade-pill">Grade A</span>
+                            <span class="grade-pill highlight">Grade B</span>
+                            <span class="grade-pill highlight">Grade C</span>
+                            <span class="grade-pill">Grade D</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- A2P Locks -->
+                <div class="cert-card reveal-up" style="transition-delay:0.1s;">
+                    <div class="cert-card-badge">
+                        <div class="cert-logo">
+                            <div class="cert-logo-text">A2P<br>SERRURE</div>
+                        </div>
+                        <div class="cert-badge-meta">
+                            <span class="cert-standard-code">French Certification / CNPP</span>
+                            <h3>A2P — Certified Safe Locks</h3>
+                        </div>
+                    </div>
+                    <div class="cert-card-body">
+                        <p>
+                            Complementing the A2P safe certification, the A2P lock certificate specifically validates the locking mechanism in isolation. Tested by CNPP laboratories against manipulation and forced attack, A2P-certified locks are a prerequisite for any safe seeking the three-star A2P product mark.
+                        </p>
+                        <div class="achieves-strip">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>All Luxuria locks are individually <strong>A2P certified</strong> prior to integration.</span>
+                        </div>
+                        <div class="cert-grades">
+                            <span class="cert-grades-label">Certification</span>
+                            <span class="grade-pill highlight">A2P Certified</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /.cert-grid -->
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════ CTA -->
+    <section class="cert-cta">
+        <div class="container reveal-up">
+            <span class="eyebrow gold-text">Have Questions?</span>
+            <h2 style="font-size:clamp(2rem,4vw,3rem);">Speak With Our Security Experts</h2>
+            <p>
+                Our specialists can guide you to the right certified safe for your insurance requirements, valuables type, and threat environment.
+            </p>
+            <a href="contact.html" class="btn btn-primary btn-gold">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════ FOOTER -->
+    <footer id="colophon" class="site-footer">
+        <div class="site-info container text-center">
+            <p>&copy; 2026 Luxuria Safes. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Smooth scroll to section
+        function scrollToSection(id) {
+            const el = document.getElementById(id);
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Highlight active nav button on scroll
+        (function () {
+            const sections = ['cambriolage', 'feu', 'serrures'];
+            const navBtns = {
+                cambriolage: document.getElementById('nav-cambriolage'),
+                feu: document.getElementById('nav-feu'),
+                serrures: document.getElementById('nav-serrures'),
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.id;
+                        Object.values(navBtns).forEach(b => b && b.classList.remove('active'));
+                        if (navBtns[id]) navBtns[id].classList.add('active');
+                    }
+                });
+            }, { rootMargin: '-30% 0px -60% 0px', threshold: 0 });
+
+            sections.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) observer.observe(el);
+            });
+        })();
+    </script>
+</body>
+
+</html>
