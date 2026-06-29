@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wardrobe Friendly Safes | Luxury Safes Designed to Fit Your Wardrobe | Luxuria Safes</title>
+    <meta name="description" content="Luxuria's Wardrobe Friendly Estate Safes are engineered to fit standard residential wardrobes (under 50 cm depth, under 100 kg) without structural modification — luxury security seamlessly integrated into your home.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        .hero-img-full { width:100%; height:65vh; object-fit:cover; display:block; }
+        .feature-img { width:100%; height:520px; object-fit:cover; display:block; }
+        .specs-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1.5rem; margin:2rem 0; }
+        .spec-card { background:var(--color-darker); border:1px solid rgba(255,255,255,0.06); padding:2rem; }
+        .spec-card svg { color:var(--color-gold); margin-bottom:1rem; }
+        .spec-card h4 { font-size:1rem; color:var(--color-text-light); margin-bottom:0.75rem; }
+        .spec-card p { font-size:0.9rem; color:var(--color-silver); margin:0; line-height:1.7; }
+        .notice-box { display:flex; align-items:flex-start; gap:1rem; border:1px solid rgba(212,175,55,0.3); background:rgba(212,175,55,0.05); padding:1.5rem; margin-top:1.5rem; }
+        .notice-box svg { flex-shrink:0; color:var(--color-gold); margin-top:2px; }
+        .notice-box p { font-size:0.9rem; color:var(--color-silver); margin:0; line-height:1.7; }
+        .winder-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1.5rem; margin-top:2.5rem; }
+        .winder-card { background:var(--color-dark); border:1px solid rgba(255,255,255,0.06); border-top:2px solid var(--color-gold); padding:2.5rem; }
+        .winder-card h3 { font-size:1.4rem; margin-bottom:1rem; }
+        .winder-card p { font-size:0.925rem; color:var(--color-silver); line-height:1.75; margin:0; }
+        .mini-features { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:1.5rem; }
+        .mini-feature { text-align:center; padding:1rem; border:1px solid rgba(212,175,55,0.15); }
+        .mini-feature svg { color:var(--color-gold); }
+        .mini-feature span { font-size:0.78rem; letter-spacing:1.5px; text-transform:uppercase; color:var(--color-silver); display:block; margin-top:0.5rem; }
+        .custom-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin-top:2.5rem; }
+        .custom-card { background:var(--color-darker); border:1px solid rgba(212,175,55,0.15); padding:2rem; text-align:center; transition:border-color 0.3s; }
+        .custom-card:hover { border-color:rgba(212,175,55,0.5); }
+        .custom-card svg { color:var(--color-gold); margin-bottom:1rem; }
+        .custom-card h4 { font-size:1rem; margin-bottom:0.5rem; }
+        .custom-card p { font-size:0.875rem; color:var(--color-silver); margin:0; }
+        .model-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem; margin-top:2.5rem; }
+        .model-card { border:1px solid rgba(255,255,255,0.06); overflow:hidden; transition:all 0.35s ease; }
+        .model-card:hover { border-color:rgba(212,175,55,0.4); transform:translateY(-6px); }
+        .model-card img { width:100%; height:240px; object-fit:cover; object-position:top; display:block; }
+        .model-card-body { padding:1.5rem; }
+        .model-card-body h3 { font-size:1.3rem; margin-bottom:0.5rem; }
+        .model-card-body p { font-size:0.9rem; color:var(--color-silver); margin-bottom:1.2rem; }
+        .model-card-body a { font-size:0.8rem; letter-spacing:1.5px; text-transform:uppercase; color:var(--color-gold); }
+        .model-note { font-size:0.8rem; color:#666; margin-top:1rem; text-align:center; }
+        .gold-rule { width:60px; height:1px; background:var(--color-gold); margin:2rem auto; }
+        .cta-buttons { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-top:2rem; }
+        @media(max-width:768px) {
+            .model-grid { grid-template-columns:repeat(2,1fr); }
+            .specs-grid { grid-template-columns:1fr; }
+            .winder-grid { grid-template-columns:1fr; }
+            .custom-grid { grid-template-columns:1fr; }
+            .feature-img { height:320px; }
+        }
+        @media(max-width:480px) {
+            .model-grid { grid-template-columns:1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header id="masthead" class="site-header scrolled">
+    <div class="header-inner container">
+        <div class="site-branding">
+            <h1 class="site-title">
+                <a href="index.html" style="display:flex;align-items:center;">
+                    <img src="Luxuria-Safes-logo.svg" alt="Luxuria Safes Logo" style="height:2rem;width:auto;">
+                </a>
+            </h1>
+        </div>
+        <div class="menu-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="collections.html">The Collections</a></li>
+                <li><a href="standards.html">Standards</a></li>
+                <li><a href="locks.html">Locks</a></li>
+                <li><a href="story.html">Our Story</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- ===================== PAGE HERO ===================== -->
+<section class="page-header bg-black pt-xl">
+    <div class="container reveal-up" style="text-align:center; padding-bottom:3rem;">
+        <p class="eyebrow gold-text">Wardrobe Friendly Series</p>
+        <h1 class="page-title">Wardrobe Friendly Estate Safes</h1>
+        <p style="max-width:600px; margin:1.25rem auto 0; color:var(--color-silver); font-size:1.05rem; line-height:1.75;">
+            Intelligent security designed to integrate seamlessly into standard residential wardrobes — without compromise.
+        </p>
+    </div>
+</section>
+
+<!-- ===================== FULL-WIDTH HERO IMAGE ===================== -->
+<div class="reveal-up">
+    <img
+        src="Products/Luxury Safes/Brawny/Photoshoot/Brawny-Hero-img.jpg"
+        alt="Luxuria Wardrobe Friendly Safe — Hero"
+        class="hero-img-full"
+    >
+</div>
+
+<!-- ===================== SECTION 4: WHAT MAKES THEM WARDROBE FRIENDLY ===================== -->
+<section class="bg-dark section-padding">
+    <div class="container reveal-up" style="max-width:900px; margin:0 auto; text-align:center; padding:5rem 1rem;">
+        <h2 class="sub-title" style="margin-bottom:1rem;">Why They Are Called Wardrobe Friendly Safes</h2>
+        <p style="color:var(--color-silver); font-size:0.975rem; line-height:1.8; max-width:720px; margin:0 auto;">
+            Wardrobe Friendly Safes are specifically engineered to integrate effortlessly into standard residential wardrobes without requiring structural modification.
+        </p>
+        <div class="gold-rule"></div>
+
+        <!-- Specs grid -->
+        <div class="specs-grid" style="text-align:left;">
+            <!-- Card 1 — Depth -->
+            <div class="spec-card">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 3H3v4h18V3z"/><path d="M3 3v18"/><path d="M21 3v18"/><path d="M3 21h18"/><line x1="7" y1="8" x2="7" y2="21"/><line x1="12" y1="8" x2="12" y2="21"/><line x1="17" y1="8" x2="17" y2="21"/>
+                </svg>
+                <h4>Depth Requirement</h4>
+                <p>Most ready-made wardrobes are built with a standard depth of 55–60 cm. Accounting for door clearance (2–5 cm), the usable internal depth reduces accordingly. To ensure proper fit and usability, all Wardrobe Friendly Safes have a depth of less than 50 cm.</p>
+            </div>
+            <!-- Card 2 — Weight -->
+            <div class="spec-card">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="5" r="3"/><line x1="12" y1="8" x2="12" y2="12"/><path d="M3 20h18l-2-8H5L3 20z"/><line x1="8" y1="12" x2="16" y2="12"/>
+                </svg>
+                <h4>Weight Threshold</h4>
+                <p>Standard wardrobe shelving systems are typically designed to an average load of up to 100 kg. For safety and long-term durability, all Wardrobe Friendly Safes are designed within this weight threshold.</p>
+            </div>
+        </div>
+
+        <!-- Notice box -->
+        <div class="notice-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+            <p>For customers who prefer larger safes with higher capacity, we recommend a custom-built wardrobe solution with a depth of 65–70 cm, allowing for enhanced storage flexibility and accommodation of larger safe models.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== SECTION 5: ELEVATING STORAGE ===================== -->
+<section class="bg-darker section-padding">
+    <div class="container reveal-up">
+        <div class="configurator-row flex-split align-center" style="gap:0;">
+            <!-- Image RIGHT -->
+            <div class="flex-1">
+                <img
+                    src="Products/Luxury Safes/Brawny/Photoshoot/Collectors-Choice-1.jpg"
+                    alt="Luxuria Safe — Elevating Your Storage Experience"
+                    class="feature-img"
+                >
+            </div>
+            <!-- Text LEFT -->
+            <div class="flex-1 product-info" style="padding:3rem 3.5rem;">
+                <p class="eyebrow gold-text">Intelligent Design</p>
+                <h2 class="sub-title" style="margin-bottom:1.25rem;">Elevating Your Storage Experience</h2>
+                <p style="color:var(--color-silver); font-size:0.95rem; line-height:1.85;">
+                    Designed for individuals who value both luxury and practicality, the Wardrobe Friendly Estate Safe Series transforms everyday storage into a premium experience. Each safe combines compact form with advanced engineering, offering a secure yet elegant solution that integrates effortlessly into wardrobes without compromising interior aesthetics. From heirlooms to high-value collectibles, your belongings remain protected, organised, and easily accessible.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== SECTION 6: LUXURIOUS FEATURES ===================== -->
+<section class="bg-dark section-padding">
+    <div class="container reveal-up">
+        <div class="configurator-row flex-split align-center desktop-text-first" style="gap:0;">
+            <!-- Text RIGHT (desktop-text-first reverses order) -->
+            <div class="flex-1 product-info" style="padding:3rem 3.5rem;">
+                <p class="eyebrow gold-text">Bespoke Interiors</p>
+                <h2 class="sub-title" style="margin-bottom:1.25rem;">Luxurious Features for Discerning Collectors</h2>
+                <p style="color:var(--color-silver); font-size:0.95rem; line-height:1.85; margin-bottom:1.5rem;">
+                    Every Wardrobe Friendly Estate Safe is equipped with a range of advanced features tailored to meet the expectations of sophisticated users. From biometric fingerprint access to fully customisable interiors, each unit is intelligently designed for both security and convenience. Interiors are finished with premium Ultrasuede lining, complemented by optional features such as integrated watch winders, ambient LED lighting, and fabric-lined compartments. The result is a harmonious blend of functionality, elegance, and precision.
+                </p>
+                <!-- Mini 3-col icon grid -->
+                <div class="mini-features">
+                    <div class="mini-feature">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                        <span>Biometric Entry</span>
+                    </div>
+                    <div class="mini-feature">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        </svg>
+                        <span>Ultrasuede Interior</span>
+                    </div>
+                    <div class="mini-feature">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                        </svg>
+                        <span>LED Ambient Lighting</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Image LEFT -->
+            <div class="flex-1">
+                <img
+                    src="Products/Luxury Safes/Brawny/Photoshoot/Brawny-Details-img.jpg"
+                    alt="Luxuria Safe — Bespoke Interior Detail"
+                    class="feature-img"
+                >
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== SECTION 7: WINDING TECHNOLOGY ===================== -->
+<section class="bg-darker section-padding">
+    <div class="container reveal-up" style="max-width:1100px; margin:0 auto; padding:5rem 1rem; text-align:center;">
+        <h2 class="sub-title" style="margin-bottom:1rem;">Integrated Watch Winding Technology</h2>
+        <p style="color:var(--color-silver); font-size:0.95rem; max-width:620px; margin:0 auto;">
+            Wardrobe Friendly Safes support both premium winding systems — configured to your collection.
+        </p>
+        <div class="winder-grid" style="text-align:left;">
+            <!-- Card 1 — Chronovision -->
+            <div class="winder-card">
+                <p class="eyebrow gold-text" style="margin-bottom:0.5rem;">Chronovision</p>
+                <h3>The Pinnacle of Watch Winding</h3>
+                <p>Controlled seamlessly via a Bluetooth application, Chronovision allows users to manage multiple winding modules with exceptional precision. With individually adjustable motors and support for up to 64 modules, it offers unparalleled flexibility. Engineered with meticulous attention to detail, every timepiece is maintained with absolute accuracy and reliability.</p>
+            </div>
+            <!-- Card 2 — Heisse & Söhne -->
+            <div class="winder-card">
+                <p class="eyebrow gold-text" style="margin-bottom:0.5rem;">Heisse &amp; Söhne</p>
+                <h3>A Masterpiece of Precision</h3>
+                <p>The Heisse &amp; Söhne Basic Watch Winder combines German engineering with refined luxury. Designed for performance and customisation, it features up to 24 independently adjustable motors and a smooth, multi-bearing rotation system. Its telescopic watch holder ensures a secure and adaptable fit, preserving the integrity and performance of your timepieces.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== SECTION 8: TAILORED STORAGE ===================== -->
+<section class="bg-dark section-padding">
+    <div class="container reveal-up" style="max-width:860px; margin:0 auto; padding:5rem 1rem; text-align:center;">
+        <h2 class="sub-title" style="margin-bottom:1.25rem;">Tailored Storage Solutions</h2>
+        <p style="color:var(--color-silver); font-size:0.95rem; line-height:1.85; max-width:780px; margin:0 auto;">
+            Recognising that every collection is unique, Wardrobe Friendly Safes offer extensive customisation options. From dedicated jewellery compartments to modular storage configurations, each safe can be tailored to suit individual preferences — all while maintaining the compact dimensions required for wardrobe integration.
+        </p>
+
+        <!-- 3-col customisation cards -->
+        <div class="custom-grid">
+            <!-- Card 1 — Compact Dimensions -->
+            <div class="custom-card">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 3H3v4h18V3z"/><path d="M3 3v18"/><path d="M21 3v18"/><path d="M3 21h18"/>
+                    <line x1="7" y1="8" x2="7" y2="21"/><line x1="12" y1="8" x2="12" y2="21"/><line x1="17" y1="8" x2="17" y2="21"/>
+                </svg>
+                <h4>Compact Dimensions</h4>
+                <p>Engineered to fit within 50 cm depth — no wardrobe modification required</p>
+            </div>
+            <!-- Card 2 — Modular Interiors -->
+            <div class="custom-card">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="4" rx="1"/><rect x="2" y="10" width="20" height="4" rx="1"/><rect x="2" y="17" width="20" height="4" rx="1"/>
+                </svg>
+                <h4>Modular Interiors</h4>
+                <p>Jewellery trays, watch winders, document slots — configured to your needs</p>
+            </div>
+            <!-- Card 3 — Bespoke Finishes -->
+            <div class="custom-card">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="13.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="10.5" r="2.5"/><circle cx="8.5" cy="7.5" r="2.5"/><circle cx="6.5" cy="12.5" r="2.5"/>
+                    <path d="M12 20v-8.5"/><path d="M5 20h14"/><path d="M5 20c0-2.76 3.13-5 7-5s7 2.24 7 5"/>
+                </svg>
+                <h4>Bespoke Finishes</h4>
+                <p>High-gloss paints, hardwoods, and premium Ultrasuede interior lining</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== SECTION 9: CHOOSE YOUR SAFE ===================== -->
+<section class="bg-darker section-padding">
+    <div class="container reveal-up" style="padding:5rem 1rem; text-align:center;">
+        <h2 class="sub-title" style="margin-bottom:0.75rem;">Choose Your Perfect Wardrobe Safe</h2>
+        <p style="color:var(--color-silver); font-size:0.95rem;">
+            Models selected for optimal wardrobe integration — compact depth and controlled weight.
+        </p>
+
+        <div class="model-grid">
+            <!-- Minitreasure -->
+            <div class="model-card">
+                <img
+                    src="Products/Luxury Safes/Brawny/Photoshoot/Collectors-Choice-1.jpg"
+                    alt="Minitreasure Safe"
+                >
+                <div class="model-card-body" style="text-align:left;">
+                    <h3>Minitreasure</h3>
+                    <p>Compact and discreet — the ideal wardrobe safe.</p>
+                    <a href="single-safe-Minitreasure.html">Explore &rarr;</a>
+                </div>
+            </div>
+            <!-- Prestige -->
+            <div class="model-card">
+                <img
+                    src="Products/Luxury Safes/Brawny/Photoshoot/Collectors-Choice-2.jpg"
+                    alt="Prestige Safe"
+                >
+                <div class="model-card-body" style="text-align:left;">
+                    <h3>Prestige</h3>
+                    <p>Refined storage within perfect wardrobe dimensions.</p>
+                    <a href="single-safe-Prestige.html">Explore &rarr;</a>
+                </div>
+            </div>
+            <!-- Brawny -->
+            <div class="model-card">
+                <img
+                    src="Products/Luxury Safes/Brawny/Photoshoot/Brawny-Hero-img.jpg"
+                    alt="Brawny Safe"
+                >
+                <div class="model-card-body" style="text-align:left;">
+                    <h3>Brawny</h3>
+                    <p>Premium security optimised for wardrobe installation.</p>
+                    <a href="single-safe-Brawny.html">Explore &rarr;</a>
+                </div>
+            </div>
+            <!-- Bastion -->
+            <div class="model-card">
+                <img
+                    src="Products/Luxury Safes/Brawny/Photoshoot/Collectors-Choice-3.jpg"
+                    alt="Bastion Safe"
+                >
+                <div class="model-card-body" style="text-align:left;">
+                    <h3>Bastion</h3>
+                    <p>Maximum security — available with custom wardrobe build.</p>
+                    <a href="single-safe-Bastion.html">Explore &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <p class="model-note">* Bastion model may require a custom wardrobe build at 65–70 cm depth. Contact us for details.</p>
+    </div>
+</section>
+
+<!-- ===================== SECTION 10: CTA ===================== -->
+<section class="bg-black section-padding">
+    <div class="container reveal-up" style="text-align:center; padding:5rem 1rem;">
+        <h2 class="sub-title" style="margin-bottom:1.25rem;">Experience the Luxuria Difference</h2>
+        <p style="color:var(--color-silver); font-size:0.975rem; max-width:640px; margin:0 auto; line-height:1.85;">
+            With the Wardrobe Friendly Estate Safe Series, security becomes an integral part of your lifestyle — discreet, elegant, and uncompromising. Speak with our specialists to find the right model for your wardrobe.
+        </p>
+        <div class="cta-buttons">
+            <a href="collections.html" class="btn btn-primary btn-gold">Explore the Collection</a>
+            <a href="contact.html" class="btn-outline hover-fill">Contact Us</a>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer id="colophon" class="site-footer">
+    <div class="footer-widgets container">
+        <div class="footer-column brand-col">
+            <h3>Luxuria Safes</h3>
+            <p>Uncompromising Security, Bespoke Elegance.</p>
+        </div>
+
+        <div class="footer-column links-col">
+            <h4>Explore</h4>
+            <ul>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="standards.html">Standards &amp; Certifications</a></li>
+                <li><a href="locks.html">Locking Systems</a></li>
+                <li><a href="story.html">Our Story</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column links-col">
+            <h4>Bespoke Series</h4>
+            <ul>
+                <li><a href="jewellery-safe.html">Jewellery Safes</a></li>
+                <li><a href="watch-safe.html">Watch Safes</a></li>
+                <li><a href="wardrobe-safe.html" class="gold-text">Wardrobe Safes</a></li>
+                <li><a href="multipurpose-safe.html">Multipurpose Estate Safes</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column contact-col">
+            <h4>Contact Us</h4>
+            <p>info@luxuriasafes.com</p>
+        </div>
+    </div>
+    <div class="site-info container">
+        <p>&copy; 2026 Luxuria Safes. All Rights Reserved.</p>
+        <div class="legal-links">
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Return Policy</a> |
+            <a href="#">Cancellation Policy</a>
+        </div>
+    </div>
+</footer>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

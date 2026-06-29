@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Safes | Luxury Bespoke Watch Safe Storage | Luxuria Safes</title>
+    <meta name="description" content="Discover Luxuria's bespoke watch safe series — engineered with Chronovision and Heisse &amp; Söhne winding technology, Ultrasuede interiors and biometric access for the serious horologist.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Watch Safes | Luxury Bespoke Watch Safe Storage | Luxuria Safes">
+    <meta property="og:description" content="Discover Luxuria's bespoke watch safe series — engineered with Chronovision and Heisse &amp; Söhne winding technology, Ultrasuede interiors and biometric access for the serious horologist.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        /* ── Hero & Feature Images ── */
+        .hero-img-full {
+            width: 100%;
+            height: 65vh;
+            object-fit: cover;
+            display: block;
+        }
+        .feature-img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* ── Feature List ── */
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 0.925rem;
+            color: var(--color-silver);
+            line-height: 1.6;
+        }
+        .feature-list li svg {
+            flex-shrink: 0;
+            margin-top: 2px;
+            color: var(--color-gold);
+        }
+
+        /* ── Customisation Grid ── */
+        .custom-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+        .custom-card {
+            background: var(--color-darker);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            padding: 2rem;
+            text-align: center;
+            transition: border-color 0.3s;
+        }
+        .custom-card:hover {
+            border-color: rgba(212, 175, 55, 0.5);
+        }
+        .custom-card svg {
+            color: var(--color-gold);
+            margin-bottom: 1rem;
+        }
+        .custom-card h4 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        .custom-card p {
+            font-size: 0.875rem;
+            color: var(--color-silver);
+            margin: 0;
+        }
+
+        /* ── Model Grid ── */
+        .model-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+        .model-card {
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            overflow: hidden;
+            transition: all 0.35s ease;
+        }
+        .model-card:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+            transform: translateY(-6px);
+        }
+        .model-card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            object-position: top;
+            display: block;
+        }
+        .model-card-body {
+            padding: 1.5rem;
+        }
+        .model-card-body h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        .model-card-body p {
+            font-size: 0.9rem;
+            color: var(--color-silver);
+            margin-bottom: 1.2rem;
+        }
+        .model-card-body a {
+            font-size: 0.8rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            text-decoration: none;
+        }
+        .model-card-body a:hover {
+            color: var(--color-gold-hover);
+        }
+
+        /* ── Gold Rule Divider ── */
+        .gold-rule {
+            width: 60px;
+            height: 1px;
+            background: var(--color-gold);
+            margin: 2rem auto;
+        }
+
+        /* ── CTA Buttons ── */
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        /* ── Product Info Padding ── */
+        .product-info {
+            padding: 3rem;
+        }
+
+        /* ── Intro Section ── */
+        .intro-centered {
+            max-width: 860px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* ── Customisation Section ── */
+        .custom-centered {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            .model-grid { grid-template-columns: repeat(2, 1fr); }
+            .custom-grid { grid-template-columns: 1fr; }
+            .feature-img { height: 360px; }
+            .product-info { padding: 2rem 1.5rem; }
+            .configurator-row.flex-split { flex-direction: column; }
+        }
+        @media (max-width: 480px) {
+            .model-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     HEADER
+══════════════════════════════════════ -->
+<header id="masthead" class="site-header scrolled">
+    <div class="header-inner container">
+        <div class="site-branding">
+            <h1 class="site-title">
+                <a href="index.html" style="display:flex;align-items:center;">
+                    <img src="Luxuria-Safes-logo.svg" alt="Luxuria Safes Logo" style="height:2rem;width:auto;">
+                </a>
+            </h1>
+        </div>
+        <div class="menu-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="collections.html">The Collections</a></li>
+                <li><a href="standards.html">Standards</a></li>
+                <li><a href="locks.html">Locks</a></li>
+                <li><a href="story.html">Our Story</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- ══════════════════════════════════════
+     PAGE HERO
+══════════════════════════════════════ -->
+<section class="page-header bg-black pt-xl">
+    <div class="container reveal-up" style="text-align:center; padding-bottom: 3rem;">
+        <p class="eyebrow gold-text">Watch Safe Series</p>
+        <h1 class="page-title">The Ultimate Watch Safe</h1>
+        <p class="sub-title" style="max-width:640px; margin:1.25rem auto 0; color:var(--color-silver); font-size:1.1rem; line-height:1.7;">
+            Precision storage for your most prized timepieces — where mechanical excellence meets bespoke craftsmanship.
+        </p>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     FULL-WIDTH HERO IMAGE
+══════════════════════════════════════ -->
+<div class="reveal-up">
+    <img
+        src="Products/Luxury Safes/Brawny/Photoshoot/Brawny-Hero-img.jpg"
+        alt="Luxuria Brawny Watch Safe — Hero"
+        class="hero-img-full"
+    >
+</div>
+
+<!-- ══════════════════════════════════════
+     INTRO SECTION
+══════════════════════════════════════ -->
+<section class="bg-dark section-padding">
+    <div class="container reveal-up">
+        <div class="intro-centered">
+            <h2 style="font-family:'Playfair Display',serif; font-size:2.25rem; margin-bottom:1.5rem; color:var(--color-white);">
+                Elevating Your Watch Experience
+            </h2>
+            <p style="color:var(--color-silver); line-height:1.8; font-size:1rem;">
+                For those who demand nothing but the best, the Luxuria Watch Safe Series is the ultimate choice. With its handcrafted watch chests and superior mechanical engineering, it provides a secure and convenient storage solution for your most valuable timepieces. Whether you're safeguarding family heirlooms or high-end designer pieces, the Luxuria Watch Safe Series ensures that your watches are always protected.
+            </p>
+            <div class="gold-rule"></div>
+            <p style="color:var(--color-silver); line-height:1.8; font-size:1rem;">
+                From fingerprint reading entries to customised interiors, each safe is equipped with smartly designed features to meet the needs of even the most discerning collector. With soft Ultrasuede lined interiors and optional accessories such as watch winders and LED interior lighting, the Luxuria Watch Safe Series offers both style and functionality. Choose from a variety of high-gloss paint finishes, hand-picked hardwoods, and luxurious interior fabrics.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CHRONOVISION SECTION
+══════════════════════════════════════ -->
+<section class="bg-darker section-padding">
+    <div class="container">
+        <div class="configurator-row flex-split align-center reveal-up">
+
+            <!-- Text Side (left on desktop) -->
+            <div class="flex-1 product-info">
+                <p class="eyebrow gold-text">Winding Technology</p>
+                <h2 style="font-family:'Playfair Display',serif; font-size:2rem; margin-bottom:1.25rem; color:var(--color-white);">
+                    Chronovision — The Pinnacle of Watch Winding
+                </h2>
+                <p style="color:var(--color-silver); line-height:1.8; font-size:0.975rem;">
+                    Experience the pinnacle of watch winding technology with Chronovision. Through the seamless control of modules via a Bluetooth app, customers embark on a truly extraordinary journey. The system boasts up to 64 individually controllable motors, presenting an unparalleled level of customisation. Crafted with precision and pride, our watch winders exclusively employ premium components fully made in Germany for superior performance and reliability.
+                </p>
+                <ul class="feature-list">
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Individually adjustable motors, tailored to your watch's unique needs
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        App control with an integrated watch database of ~5,000 movement settings
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Gearbox protection through slip control
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        12-hour stop position during rest periods
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Freely selectable rotation: left, right, or alternating
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Rotations per day adjustable from 500 to 2,650 in increments of 50
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Intelligent programmable sleep phase up to 14 hours
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Patented synchronous running for harmonised winding
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        3 years warranty
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Image Side (right on desktop) -->
+            <div class="flex-1">
+                <img
+                    src="Products/Luxury Safes/Brawny/Photoshoot/Collectors-Choice-1.jpg"
+                    alt="Chronovision watch winding technology inside Luxuria safe"
+                    class="feature-img"
+                >
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     HEISSE & SÖHNE SECTION
+══════════════════════════════════════ -->
+<section class="bg-dark section-padding">
+    <div class="container">
+        <div class="configurator-row flex-split align-center desktop-text-first reveal-up">
+
+            <!-- Image Side (left on desktop via desktop-text-first reversal) -->
+            <div class="flex-1">
+                <img
+                    src="Products/Luxury Safes/Brawny/Photoshoot/Brawny-Details-img.jpg"
+                    alt="Heisse &amp; Söhne precision watch winder detail"
+                    class="feature-img"
+                >
+            </div>
+
+            <!-- Text Side (right on desktop) -->
+            <div class="flex-1 product-info">
+                <p class="eyebrow gold-text">German Engineering</p>
+                <h2 style="font-family:'Playfair Display',serif; font-size:2rem; margin-bottom:1.25rem; color:var(--color-white);">
+                    Heisse &amp; Söhne — The Height of Precision
+                </h2>
+                <p style="color:var(--color-silver); line-height:1.8; font-size:0.975rem;">
+                    Immerse yourself in the world of precision and luxury with the Heisse &amp; Söhne Basic Watch Winder. With the ability to connect, program, and effortlessly control up to 24 motors via a single control unit with LCD and touch display, you can indulge your cherished timepieces in a truly exceptional experience. The rotating drum adorned with multiple bearings delivers smooth, gentle rotation, while the telescopic clock clasp accommodates various bracelet sizes.
+                </p>
+                <ul class="feature-list">
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Individually adjustable motors
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        12-hour stop position in rest periods
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Freely selectable rotation direction: left, right, alternating
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Rotations per day: 450 / 550 / 650 / 750 / 850 / 950 / 1,200 / 1,500
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Switchable sleep phase (22:00–11:00)
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Integrated illumination
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Expandable up to 24 modules
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CUSTOMISATION SECTION
+══════════════════════════════════════ -->
+<section class="bg-darker section-padding">
+    <div class="container reveal-up">
+        <div class="custom-centered">
+            <h2 style="font-family:'Playfair Display',serif; font-size:2.25rem; margin-bottom:1.25rem; color:var(--color-white);">
+                Tailored to Your Collection
+            </h2>
+            <p style="color:var(--color-silver); line-height:1.8; font-size:1rem;">
+                Choose from a variety of high-gloss paint finishes, hand-picked hardwoods, and luxurious interior fabrics to create a safe that perfectly complements your décor. Designer drawer organisation ensures that your collection is neatly organised and easily accessible.
+            </p>
+
+            <div class="custom-grid">
+
+                <!-- Card 1: Finish Choices -->
+                <div class="custom-card">
+                    <!-- Palette Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle>
+                        <circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle>
+                        <circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle>
+                        <circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle>
+                        <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path>
+                    </svg>
+                    <h4 style="font-family:'Playfair Display',serif; color:var(--color-white);">Finish Choices</h4>
+                    <p>High-gloss paints, hand-picked hardwoods and bespoke veneers</p>
+                </div>
+
+                <!-- Card 2: Interior Fabrics -->
+                <div class="custom-card">
+                    <!-- Layers Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                        <polyline points="2 17 12 22 22 17"></polyline>
+                        <polyline points="2 12 12 17 22 12"></polyline>
+                    </svg>
+                    <h4 style="font-family:'Playfair Display',serif; color:var(--color-white);">Interior Fabrics</h4>
+                    <p>Premium Ultrasuede, leather, and fabric-lined compartments</p>
+                </div>
+
+                <!-- Card 3: Module Options -->
+                <div class="custom-card">
+                    <!-- Sliders Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="4" y1="21" x2="4" y2="14"></line>
+                        <line x1="4" y1="10" x2="4" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12" y2="3"></line>
+                        <line x1="20" y1="21" x2="20" y2="16"></line>
+                        <line x1="20" y1="12" x2="20" y2="3"></line>
+                        <line x1="1" y1="14" x2="7" y2="14"></line>
+                        <line x1="9" y1="8" x2="15" y2="8"></line>
+                        <line x1="17" y1="16" x2="23" y2="16"></line>
+                    </svg>
+                    <h4 style="font-family:'Playfair Display',serif; color:var(--color-white);">Module Options</h4>
+                    <p>Watch winders, LED lighting, necklace racks and drawer dividers</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CHOOSE YOUR SAFE — MODEL GRID
+══════════════════════════════════════ -->
+<section class="bg-dark section-padding">
+    <div class="container reveal-up">
+        <div style="text-align:center; margin-bottom:0.5rem;">
+            <h2 style="font-family:'Playfair Display',serif; font-size:2.25rem; color:var(--color-white);">
+                Choose Your Perfect Safe
+            </h2>
+            <p style="color:var(--color-silver); margin-top:0.75rem; font-size:1rem;">
+                Four flagship watch safe models, each available across different protection rating levels.
+            </p>
+        </div>
+
+        <div class="model-grid">
+
+            <!-- Minitreasure -->
+            <div class="model-card">
+                <img
+                    src="Products/Luxury Safes/Brawny/Photoshoot/Collectors-Choice-1.jpg"
+                    alt="Minitreasure Watch Safe"
+                >
+                <div class="model-card-body">
+                    <h3 style="font-family:'Playfair Display',serif; color:var(--color-white);">Minitreasure</h3>
+                    <p>Compact precision for the devoted horologist.</p>
+                    <a href="single-safe-Minitreasure.html">Explore &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Prestige -->
+            <div class="model-card">
+                <img
+                    src="Products/Luxury Safes/Brawny/Photoshoot/Collectors-Choice-2.jpg"
+                    alt="Prestige Watch Safe"
+                >
+                <div class="model-card-body">
+                    <h3 style="font-family:'Playfair Display',serif; color:var(--color-white);">Prestige</h3>
+                    <p>Elevated craftsmanship for a curated timepiece collection.</p>
+                    <a href="single-safe-Prestige.html">Explore &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Brawny -->
+            <div class="model-card">
+                <img
+                    src="Products/Luxury Safes/Brawny/Photoshoot/Brawny-Hero-img.jpg"
+                    alt="Brawny Watch Safe"
+                >
+                <div class="model-card-body">
+                    <h3 style="font-family:'Playfair Display',serif; color:var(--color-white);">Brawny</h3>
+                    <p>Robust security with a refined bespoke interior.</p>
+                    <a href="single-safe-Brawny.html">Explore &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Bastion -->
+            <div class="model-card">
+                <img
+                    src="Products/Luxury Safes/Brawny/Photoshoot/Collectors-Choice-3.jpg"
+                    alt="Bastion Watch Safe"
+                >
+                <div class="model-card-body">
+                    <h3 style="font-family:'Playfair Display',serif; color:var(--color-white);">Bastion</h3>
+                    <p>The ultimate fortress for your watch collection.</p>
+                    <a href="single-safe-Bastion.html">Explore &rarr;</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CTA SECTION
+══════════════════════════════════════ -->
+<section class="bg-darker section-padding">
+    <div class="container reveal-up" style="text-align:center; padding-top:4rem; padding-bottom:4rem;">
+        <h2 style="font-family:'Playfair Display',serif; font-size:2.25rem; color:var(--color-white); margin-bottom:1.25rem;">
+            Experience the Luxuria Difference
+        </h2>
+        <p style="color:var(--color-silver); max-width:620px; margin:0 auto; line-height:1.8; font-size:1rem;">
+            Elevate your watch storage experience with Luxuria Safes — where luxury meets unmatched security. Our specialists are ready to help you design the perfect watch safe.
+        </p>
+        <div class="cta-buttons">
+            <a href="collections.html" class="btn btn-primary btn-gold">Explore the Collection</a>
+            <a href="contact.html" class="btn-outline hover-fill" style="border-color:var(--color-gold); color:var(--color-gold);">Contact Us</a>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     FOOTER
+══════════════════════════════════════ -->
+<footer id="colophon" class="site-footer">
+    <div class="footer-widgets container">
+        <div class="footer-column brand-col">
+            <h3>Luxuria Safes</h3>
+            <p>Uncompromising Security, Bespoke Elegance.</p>
+        </div>
+
+        <div class="footer-column links-col">
+            <h4>Explore</h4>
+            <ul>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="standards.html">Standards &amp; Certifications</a></li>
+                <li><a href="locks.html">Locking Systems</a></li>
+                <li><a href="story.html">Our Story</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column links-col">
+            <h4>Bespoke Series</h4>
+            <ul>
+                <li><a href="jewellery-safe.html">Jewellery Safes</a></li>
+                <li><a href="watch-safe.html" class="gold-text">Watch Safes</a></li>
+                <li><a href="wardrobe-safe.html">Wardrobe Safes</a></li>
+                <li><a href="multipurpose-safe.html">Multipurpose Estate Safes</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column contact-col">
+            <h4>Contact Us</h4>
+            <p>info@luxuriasafes.com</p>
+        </div>
+    </div>
+    <div class="site-info container">
+        <p>&copy; 2026 Luxuria Safes. All Rights Reserved.</p>
+        <div class="legal-links">
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Return Policy</a> |
+            <a href="#">Cancellation Policy</a>
+        </div>
+    </div>
+</footer>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
