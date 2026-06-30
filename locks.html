@@ -24,11 +24,28 @@
         .story-content p {
             margin-bottom: 2rem;
         }
+
+        /* ── Intro strip ── */
+        .intro-strip {
+            background: var(--color-dark);
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+            padding: 4rem 0;
+        }
+
+        .intro-strip p {
+            font-size: 1.1rem;
+            color: var(--color-silver);
+            line-height: 1.8;
+        }
+
+        .product-info {
+            padding: 3rem;
+        }
     </style>
 </head>
 
 <body>
-    <header id="masthead" class="site-header scrolled">
+        <header id="masthead" class="site-header scrolled">
         <div class="header-inner container">
             <div class="site-branding">
                 <p class="site-title" style="margin: 0;">
@@ -63,7 +80,18 @@
         </div>
     </main>
 
-    <section class="section-padding bg-dark">
+    <!-- ══════════════════════════════════════════ INTRO ══════════════════════════════════════════ -->
+    <div class="intro-strip">
+        <div class="container reveal-up" style="max-width: 820px; text-align: center;">
+            <p style="margin-bottom: 2rem;">
+                Every Luxuria Safe is built around one fundamental principle: uncompromising security. While the strength of a safe begins with its construction, its true integrity lies in the quality of its locking system.
+           
+                For this reason, Luxuria Safes are equipped exclusively with internationally certified locking systems that have been independently tested and approved by the world’s leading certification bodies.
+            </p>
+        </div>
+    </div>
+
+    <section id="a2p-intro" class="section-padding bg-darker">
         <div class="container configurator-row flex-split align-center desktop-text-first">
            <div class="flex-1 flex-center">
                <img class=""
@@ -80,7 +108,7 @@
         </div>
     </section>
 
-    <section class="section-padding bg-darker">
+    <section id="lock-types" class="section-padding bg-dark">
         <div class="container">
             <div class="responsive-tabs">
                 
@@ -254,7 +282,7 @@
         </div>
     </section>
 
-    <footer id="colophon" class="site-footer">
+        <footer id="colophon" class="site-footer">
         <div class="footer-widgets container">
             <div class="footer-column brand-col">
                 <h3>Luxuria Safes</h3>

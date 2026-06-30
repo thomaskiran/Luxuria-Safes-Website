@@ -316,7 +316,7 @@ a:hover {
 .placeholder-img {
     background: linear-gradient(45deg, var(--color-darker), #1a1a1a);
     width: 100%;
-    min-height: 400px;
+    aspect-ratio: 4 / 5;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1074,4 +1074,33 @@ ul.spec-list li {
 
 .table-toggle-container {
     margin-top: 2rem;
+}
+
+/* ==========================================================================
+   Standardized Image Ratios (Portrait Mode Focus)
+   ========================================================================== */
+
+/* Model selector images on product detail pages */
+.model-card img {
+    aspect-ratio: 4 / 5 !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+}
+
+/* Feature showcase row images */
+.feature-img {
+    aspect-ratio: 3 / 4 !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+}
+
+/* Locks detail tab images */
+.tab_row img {
+    aspect-ratio: 1 / 1 !important;
+    width: 100% !important;
+    max-width: 250px !important;
+    height: auto !important;
+    object-fit: contain !important;
 }
