@@ -550,7 +550,7 @@ a:hover {
 .hero-section {
     position: relative;
     width: 100%;
-    aspect-ratio: 2 / 1;
+    aspect-ratio: 16 / 9; /* Changed from 2/1 to 16/9 for better responsiveness on various devices */
     min-height: 480px; /* Prevents text crowding on standard desktop/laptop displays */
     padding-top: 80px; /* Accounts for the fixed header */
     display: flex;
