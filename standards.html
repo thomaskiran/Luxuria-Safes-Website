@@ -33,6 +33,13 @@
             max-width: var(--container-width);
             width: 90%;
             margin: 0 auto;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none; /* Hide scrollbar for Firefox */
+        }
+
+        .cert-nav-inner::-webkit-scrollbar {
+            display: none; /* Hide scrollbar for Chrome, Safari, Opera */
         }
 
         .cert-nav-btn {
@@ -50,6 +57,8 @@
             border-bottom: 2px solid transparent;
             cursor: pointer;
             transition: all 0.3s ease;
+            flex-shrink: 0;
+            white-space: nowrap;
         }
 
         .cert-nav-btn svg {
@@ -323,13 +332,135 @@
             }
         }
 
-        @media (max-width: 480px) {
-            .cert-nav-inner {
-                flex-wrap: wrap;
-            }
-        }
+        /* Auto-scrolling handles mobile view natively without wrapping */
         .footer-widgets {
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+        }
+
+        /* ── Quick Reference Matrix ── */
+        .matrix-wrapper {
+            position: relative;
+            margin: 3rem 0 5rem;
+            background: rgba(18, 18, 18, 0.4);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 4px;
+            padding: 1px;
+            overflow: hidden;
+        }
+
+        .matrix-table-scroll {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .matrix-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 850px;
+            text-align: left;
+        }
+
+        .matrix-table th {
+            background: rgba(10, 10, 10, 0.95);
+            font-family: var(--font-primary);
+            font-size: 0.72rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--color-gold);
+            padding: 1.25rem 1.5rem;
+            border-bottom: 2px solid rgba(212, 175, 55, 0.25);
+        }
+
+        .matrix-table td {
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            font-size: 0.9rem;
+            color: var(--color-text-main);
+            vertical-align: middle;
+            transition: all 0.3s ease;
+        }
+
+        .matrix-table tr {
+            background: rgba(5, 5, 5, 0.2);
+            transition: background 0.3s ease;
+        }
+
+        .matrix-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .matrix-table tr:hover {
+            background: rgba(212, 175, 55, 0.03);
+        }
+
+        .matrix-table tr:hover td {
+            color: var(--color-text-light);
+        }
+
+        .matrix-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-family: var(--font-primary);
+            font-size: 0.68rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 0.25rem 0.65rem;
+            border-radius: 2px;
+        }
+
+        .badge-burglary {
+            background: rgba(212, 175, 55, 0.08);
+            color: var(--color-gold);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+        }
+
+        .badge-fire {
+            background: rgba(230, 92, 0, 0.08);
+            color: #ff9e59;
+            border: 1px solid rgba(230, 92, 0, 0.25);
+        }
+
+        .badge-locks-eu {
+            background: rgba(135, 206, 235, 0.08);
+            color: #87ceeb;
+            border: 1px solid rgba(135, 206, 235, 0.25);
+        }
+
+        .badge-locks-us {
+            background: rgba(160, 160, 255, 0.08);
+            color: #a0a0ff;
+            border: 1px solid rgba(160, 160, 255, 0.25);
+        }
+
+        .matrix-code {
+            font-family: var(--font-primary);
+            font-weight: 600;
+            color: var(--color-text-light);
+        }
+
+        .matrix-scope {
+            font-family: var(--font-primary);
+            font-size: 0.85rem;
+            color: var(--color-silver);
+        }
+
+        .matrix-scroll-hint {
+            display: none;
+            text-align: right;
+            font-size: 0.72rem;
+            color: #666;
+            margin-top: 0.5rem;
+            letter-spacing: 0.5px;
+            font-family: var(--font-primary);
+        }
+
+        @media (max-width: 991px) {
+            .matrix-scroll-hint {
+                display: block;
+            }
         }
     </style>
 </head>
@@ -393,6 +524,15 @@
                 </svg>
                 Fire Resistance
             </button>
+            <button class="cert-nav-btn" onclick="scrollToSection('explosion')" id="nav-explosion">
+                <!-- explosion icon -->
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 3v3M12 18v3M3 12h3M18 12h3"/>
+                    <path d="M18.36 5.64l-2.12 2.12M7.76 16.24l-2.12 2.12M18.36 18.36l-2.12-2.12M7.76 7.76L5.64 5.64"/>
+                    <path d="M12 9l1.5 1.5L15 12l-1.5 1.5L12 15l-1.5-1.5L9 12l1.5-1.5z"/>
+                </svg>
+                Explosion Resistance
+            </button>
             <button class="cert-nav-btn" onclick="scrollToSection('serrures')" id="nav-serrures">
                 <!-- lock icon -->
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -407,10 +547,258 @@
     <!-- ══════════════════════════════════════════ INTRO -->
     <div class="intro-strip">
         <div class="container">
-            <p>
+            <div class="cert-section-header reveal-up">
+                <div>
+                    <h2>Quick Reference Matrix</h2>
+                    <p>A consolidated overview of the leading international security standards, their primary objectives, and rating scopes.</p>
+                </div>
+            </div>
+
+            <div class="matrix-wrapper reveal-up">
+                <div class="matrix-table-scroll">
+                    <table class="matrix-table">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Standard Code</th>
+                                <th>Main Protection Objective</th>
+                                <th>Scope of Grades / Classes / Types</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="matrix-badge badge-burglary">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                        </svg>
+                                        Burglary
+                                    </span>
+                                </td>
+                                <td><span class="matrix-code">EN 1143-1 / -2</span></td>
+                                <td>Safes, Vault Doors & Strongrooms</td>
+                                <td class="matrix-scope">Grade 0 up to Grade XIII</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="matrix-badge badge-burglary">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                        </svg>
+                                        Burglary
+                                    </span>
+                                </td>
+                                <td><span class="matrix-code">EN 14450</span></td>
+                                <td>Domestic Security Cabinets</td>
+                                <td class="matrix-scope">Level S1 and Level S2</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="matrix-badge badge-burglary">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                        </svg>
+                                        Burglary
+                                    </span>
+                                </td>
+                                <td><span class="matrix-code">UL 687</span></td>
+                                <td>American Safe/Vault Mechanical Attack</td>
+                                <td class="matrix-scope">TL-15 up to TRTL-30X6; Vault Class M to 3</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="matrix-badge badge-fire">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M12 2c0 0-5 5.5-5 10a5 5 0 0010 0C17 7.5 12 2 12 2z"/>
+                                            <path d="M12 12c0 0-2.5 2.5-2.5 4a2.5 2.5 0 005 0C14.5 14.5 12 12 12 12z"/>
+                                        </svg>
+                                        Fire
+                                    </span>
+                                </td>
+                                <td><span class="matrix-code">EN 1047-1</span></td>
+                                <td>Premium Paper & Digital Insulation</td>
+                                <td class="matrix-scope">S 60 P / DIS to S 120 P / DIS</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="matrix-badge badge-fire">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M12 2c0 0-5 5.5-5 10a5 5 0 0010 0C17 7.5 12 2 12 2z"/>
+                                            <path d="M12 12c0 0-2.5 2.5-2.5 4a2.5 2.5 0 005 0C14.5 14.5 12 12 12 12z"/>
+                                        </svg>
+                                        Fire
+                                    </span>
+                                </td>
+                                <td><span class="matrix-code">UL 72</span></td>
+                                <td>American Document Protection</td>
+                                <td class="matrix-scope">Class 350 (1-hour & 2-hour)</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="matrix-badge badge-locks-eu">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                            <path d="M7 11V7a5 5 0 0110 0v4"/>
+                                        </svg>
+                                        Locks (EU)
+                                    </span>
+                                </td>
+                                <td><span class="matrix-code">EN 1300</span></td>
+                                <td>High-Security Lock Auditing</td>
+                                <td class="matrix-scope">Class A down to Class D</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="matrix-badge badge-locks-us">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                            <path d="M7 11V7a5 5 0 0110 0v4"/>
+                                        </svg>
+                                        Locks (US)
+                                    </span>
+                                </td>
+                                <td><span class="matrix-code">UL 2058</span></td>
+                                <td>Electronic Safe Lock Defenses</td>
+                                <td class="matrix-scope">Type 1 and Type 2</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="matrix-badge badge-locks-us">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                            <path d="M7 11V7a5 5 0 0110 0v4"/>
+                                        </svg>
+                                        Locks (US)
+                                    </span>
+                                </td>
+                                <td><span class="matrix-code">UL Mechanical</span></td>
+                                <td>Dial Manipulation Resistances</td>
+                                <td class="matrix-scope">Group 1R, Group 1, Group 2M, Group 2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="matrix-scroll-hint">Swipe left/right to view full matrix &rarr;</div>
+
+            <div class="cert-section-header reveal-up" style="margin-top: 5rem;">
+                <div>
+                    <h2>Certification Bodies</h2>
+                    <p>Independent, accredited laboratories and institutes that test and certify security products.</p>
+                </div>
+            </div>
+            <p style="margin-bottom: 2rem;">
                 Our certifications are issued by accredited, independent European and international testing laboratories.
                 Each standard defines precise attack scenarios, tools, and time thresholds — so when a Luxuria safe carries a grade, it is a guarantee backed by science, not marketing.
             </p>
+            <div class="cert-grid">
+                <!-- ECB-S -->
+                <div class="cert-card reveal-up" style="transition-delay:0.1s;">
+                    <div class="cert-card-badge">
+                        <div class="cert-logo">
+                            <div class="cert-logo-text"><img class="" src="Ecb-s-logo-150x150.jpg" alt="ECB-S Certified" style="height: 70px;"></div>
+                        </div>
+                        <div class="cert-badge-meta">
+                            <span class="cert-standard-code">European Certification Board</span>
+                            <h3>ECB·S</h3>
+                        </div>
+                    </div>
+                    <div class="cert-card-body">
+                        <p>
+                            The European Certification Board for Security Systems (ECB·S) is one of Europe's most respected independent certification bodies. ECB·S certifies products across the full EN 1143-1 grade range and is recognised by major insurance underwriters throughout the continent.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- UL -->
+                <div class="cert-card reveal-up" style="transition-delay:0.2s;">
+                    <div class="cert-card-badge">
+                        <div class="cert-logo">
+                            <div class="cert-logo-text"><img class="" src="CERTIFIED-UL-300x294.webp" alt="UL Certified" style="height: 70px;"></div>
+                        </div>
+                        <div class="cert-badge-meta">
+                            <span class="cert-standard-code">Underwriters Laboratories</span>
+                            <h3>UL</h3>
+                        </div>
+                    </div>
+                    <div class="cert-card-body">
+                        <p>
+                            Underwriters Laboratories As a US-based institute, Underwriters Laboratories is one of the world's leading independent safety organizations. UL certifications verify that products meet strict standards for security, durability and fire resistance through rigorous laboratory testing. UL 687 UL 72 Class 350
+                        </p>
+                    </div>
+                </div>
+
+                <!-- RI.SE -->
+                <div class="cert-card reveal-up" style="transition-delay:0.3s;">
+                    <div class="cert-card-badge">
+                        <div class="cert-logo">
+                            <div class="cert-logo-text"><img src="rise_research_institutes_of_sweden.png" alt="RI.SE Certified" style="height: 70px;"></div>
+                        </div>
+                        <div class="cert-badge-meta">
+                            <span class="cert-standard-code">The Research Institutes of Sweden</span>
+                            <h3>RI.SE</h3>
+                        </div>
+                    </div>
+                    <div class="cert-card-body">
+                        <p>
+                            RI.SE is Sweden’s independent research and certification institute. With any safe, vault or cabinet adorned with the RI.SE recognised mark, you can be assured that the product will operate to the highest level, ensuring maximum protection for the long haul.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- BIS -->
+                <div class="cert-card reveal-up" style="transition-delay:0.3s;">
+                    <div class="cert-card-badge">
+                        <div class="cert-logo">
+                            <div class="cert-logo-text"><img src="bis-logo-19843.png" alt="BIS Certified" style="height: 70px;"></div>
+                        </div>
+                        <div class="cert-badge-meta">
+                            <span class="cert-standard-code">Bureau of Indian Standards</span>
+                            <h3>BIS</h3>
+                        </div>
+                    </div>
+                    <div class="cert-card-body">
+                        <p>
+                            Bureau of Indian Standards BIS is India's National Standard Body, renowned for its quality and commitment to rigorous product testing and development. Their mission is to deliver safe, highly reliable products that keep personal, corporate, and high-risk business assets completely secure. IS 11188 (Part 1) IS 11188 (Part 2) IS 14512
+                        </p>
+                    </div>
+                </div>
+
+                <!-- SABS -->
+                <div class="cert-card reveal-up" style="transition-delay:0.4s;">
+                    <div class="cert-card-badge">
+                        <div class="cert-logo">
+                            <div class="cert-logo-text"><img src="SABS_logo.png" alt="SABS Certified" style="height: 70px;"></div>
+                        </div>
+                        <div class="cert-badge-meta">
+                            <span class="cert-standard-code">South African Bureau of Standards</span>
+                            <h3>SABS</h3>
+                        </div>
+                    </div>
+                    <div class="cert-card-body">
+                        <p>
+                            SABS is the South African Bureau of Standards certification. As an organisation, they focus heavily on product performance, safety and longevity, focusing on robust testing procedures in line with national regulations. Trusted, reliable, and independent.
+                        </p>
+                    </div>
+                </div>
+                <!-- A2P -->
+                <div class="cert-card reveal-up" style="transition-delay:0.4s;">
+                    <div class="cert-card-badge">
+                        <div class="cert-logo">
+                            <div class="cert-logo-text"><img src="a2p-savoir-faire.jpg" alt="A2P Certified" style="height: 70px;"></div>
+                        </div>
+                        <div class="cert-badge-meta">
+                            <span class="cert-standard-code">French Certification / CNPP</span>
+                            <h3>A2P - Assurance Prévention Protection</h3>
+                        </div>
+                    </div>
+                    <div class="cert-card-body">
+                        <p>
+                            Issued by the CNPP (National Centre for Prevention and Protection), A2P certification classifies safes into three star levels based on resistance to burglary attempts. It is mandatory for insurance-recognised security in France and widely adopted across French-speaking markets.
+                    </div>
+                </div>
+
+            </div><!-- /.cert-grid -->
         </div>
     </div>
 
@@ -439,143 +827,122 @@
                             <div class="cert-logo-text">EN<br>1143-1</div>
                         </div>
                         <div class="cert-badge-meta">
-                            <span class="cert-standard-code">European Standard</span>
+                            <span class="cert-standard-code">ECB-S</span>
                             <h3>EN 1143-1 — Secure Storage Units</h3>
                         </div>
                     </div>
                     <div class="cert-card-body">
                         <p>
-                            The cornerstone European standard for attack-resistant safes, strongrooms, and vault doors. It defines a series of grades based on resistance time against tool attack, measured in resistance units (RU). An independent, accredited laboratory carries out all tests under strict conditions.
+                            Europe's leading certification for high-security safes, vault doors and strongrooms. Products are tested against professional burglary tools and assigned a security grade based on the level of protection achieved. Security grades are determined using internationally standardized testing methods carried out by independent laboratories.
                         </p>
-                        <div class="achieves-strip">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Luxuria safes are certified to Grades <strong>I through IV</strong> depending on model.</span>
-                        </div>
                         <div class="cert-grades">
                             <span class="cert-grades-label">Available Grades</span>
-                            <span class="grade-pill">Grade 0</span>
-                            <span class="grade-pill highlight">Grade I</span>
-                            <span class="grade-pill highlight">Grade II</span>
-                            <span class="grade-pill highlight">Grade III</span>
-                            <span class="grade-pill highlight">Grade IV</span>
-                            <span class="grade-pill">Grade V</span>
-                            <span class="grade-pill">Grade VI</span>
+                            <span class="grade-pill highlight">Safes Grade 0-VI</span>
+                            <span class="grade-pill highlight">Vault Doors Grade 0-XIII</span>
+                            <span class="grade-pill highlight">Modular Vault Rooms Grade 0-XIII</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- ECB-S -->
+                <!-- EN 14450 -->
                 <div class="cert-card reveal-up" style="transition-delay:0.1s;">
                     <div class="cert-card-badge">
                         <div class="cert-logo">
-                            <div class="cert-logo-text">ECB·S</div>
+                            <div class="cert-logo-text">EN<br>14450</div>
                         </div>
                         <div class="cert-badge-meta">
-                            <span class="cert-standard-code">European Certification Board</span>
-                            <h3>ECB·S — Security Systems Certification</h3>
+                            <span class="cert-standard-code">ECB-S</span>
+                            <h3>EN 14450 — Secure Storage Cabinets</h3>
                         </div>
                     </div>
                     <div class="cert-card-body">
                         <p>
-                            The European Certification Board for Security Systems (ECB·S) is one of Europe's most respected independent certification bodies. ECB·S certifies products across the full EN 1143-1 grade range and is recognised by major insurance underwriters throughout the continent.
+                            Designed primarily for domestic environments or lower-risk commercial settings, this standard tests light security cabinets against forced entries using lighter hand tools. It bridges the gap between basic, unrated lockboxes and heavy-duty graded safes.
                         </p>
-                        <div class="achieves-strip">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Select Luxuria models carry the <strong>ECB·S Grade II</strong> and <strong>Grade III</strong> marks.</span>
-                        </div>
                         <div class="cert-grades">
-                            <span class="cert-grades-label">Certification Classes</span>
-                            <span class="grade-pill highlight">Grade I</span>
-                            <span class="grade-pill highlight">Grade II</span>
-                            <span class="grade-pill highlight">Grade III</span>
-                            <span class="grade-pill">Grade IV+</span>
+                            <span class="cert-grades-label">Available Classes</span>
+                            <span class="grade-pill highlight">Level S1</span>
+                            <span class="grade-pill highlight">Level S2</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- VdS -->
+                <!-- UL 687 -->
                 <div class="cert-card reveal-up" style="transition-delay:0.2s;">
                     <div class="cert-card-badge">
                         <div class="cert-logo">
-                            <div class="cert-logo-text">VdS</div>
+                            <div class="cert-logo-text">UL 687</div>
                         </div>
                         <div class="cert-badge-meta">
-                            <span class="cert-standard-code">German Institute</span>
-                            <h3>VdS — Vertrauen durch Sicherheit</h3>
+                            <span class="cert-standard-code">UL Standards</span>
+                            <h3>UL 687 — Security Cabinets</h3>
                         </div>
                     </div>
                     <div class="cert-card-body">
                         <p>
-                            VdS Schadenverhütung is Germany's foremost institute for loss prevention. A VdS certificate is required by many German and European insurance companies when specifying approved security products. Their classification system mirrors EN 1143-1 grades while applying additional proprietary test protocols.
+                            UL 687 certifies burglary-resistant safes and vault doors by testing how well they withstand professional attack using a range of specialized tools.
                         </p>
-                        <div class="achieves-strip">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Our premium models are <strong>VdS Class II</strong> and <strong>Class III</strong> approved.</span>
+                        <div class="cert-grades">
+                            <span class="cert-grades-label">Available Safe Classes</span>
+                            <span class="grade-pill highlight">Class TL-15 / TL-30 </span>
+                            <span class="grade-pill highlight">Class TRTL-30 </span>
+                            <span class="grade-pill highlight">Class TL-15X6 / TL-30X6</span>
+                            <span class="grade-pill highlight">Class TRTL-30X6 / TRTL-60X6 </span>
                         </div>
                         <div class="cert-grades">
-                            <span class="cert-grades-label">VdS Classes</span>
-                            <span class="grade-pill">Class I</span>
-                            <span class="grade-pill highlight">Class II</span>
-                            <span class="grade-pill highlight">Class III</span>
+                            <span class="cert-grades-label">Available Vault Door & Modular Panel Classes</span>
+                            <span class="grade-pill highlight">Class M (¼ hour attack resistance)</span>
+                            <span class="grade-pill highlight">Class 1 (½ hour attack resistance)</span>
+                            <span class="grade-pill highlight">Class 2 (1 hour attack resistance)</span>
+                            <span class="grade-pill highlight">Class 3 (2 hours attack resistance)</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- A2P -->
+                <!-- IS 11188 & 14512 -->
                 <div class="cert-card reveal-up" style="transition-delay:0.3s;">
                     <div class="cert-card-badge">
                         <div class="cert-logo">
-                            <div class="cert-logo-text">A2P<br>★★★</div>
+                            <div class="cert-logo-text">IS<br>11188 &<br>14512</div>
                         </div>
                         <div class="cert-badge-meta">
-                            <span class="cert-standard-code">French Certification / CNPP</span>
-                            <h3>A2P — Assurance Prévention Protection</h3>
+                            <span class="cert-standard-code">BIS</span>
+                            <h3>IS 11188 & 14512 — Vault Doors and Modular Panels</h3>
                         </div>
                     </div>
                     <div class="cert-card-body">
                         <p>
-                            Issued by the CNPP (National Centre for Prevention and Protection), A2P certification classifies safes into three star levels based on resistance to burglary attempts. It is mandatory for insurance-recognised security in France and widely adopted across French-speaking markets.
+                            Regulated by the Bureau of Indian Standards (BIS), these codes monitor manufacturing parameters and structural attack resistances for high-security commercial environments, institutional vaults, and locker units.
                         </p>
-                        <div class="achieves-strip">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Our A2P-certified range holds the <strong>three-star (★★★)</strong> designation — the highest available level.</span>
-                        </div>
                         <div class="cert-grades">
-                            <span class="cert-grades-label">Star Levels</span>
-                            <span class="grade-pill">★ One Star</span>
-                            <span class="grade-pill">★★ Two Stars</span>
-                            <span class="grade-pill highlight">★★★ Three Stars</span>
+                            <span class="cert-grades-label">Available Classes</span>
+                            <span class="grade-pill highlight">IS 11188 Part 1 (Vaults & Strongrooms: Grades 0 to 10)</span>
+                            <span class="grade-pill highlight">IS 11188 Part 2 (Combined Burglary and Fire Resistance)</span>
+                            <span class="grade-pill highlight">IS 14512 (Deposit Lockers)</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- LPS 1183 -->
+                <!-- SANS 953 & SANS 949 -->
                 <div class="cert-card reveal-up" style="transition-delay:0.4s;">
                     <div class="cert-card-badge">
                         <div class="cert-logo">
-                            <div class="cert-logo-text">LPS<br>1183</div>
+                            <div class="cert-logo-text">SANS<br>953 & 949</div>
                         </div>
                         <div class="cert-badge-meta">
-                            <span class="cert-standard-code">Loss Prevention Standard — UK</span>
-                            <h3>LPS 1183 — Attack-Resistant Containers</h3>
+                            <span class="cert-standard-code">SABS</span>
+                            <h3>SANS 953 & 949 — Security Requirements for Safes and Locks</h3>
                         </div>
                     </div>
                     <div class="cert-card-body">
                         <p>
-                            Developed by the Loss Prevention Certification Board (LPCB) in the United Kingdom, LPS 1183 specifies rigorous performance requirements for attack-resistant safes and cabinets. LPCB-listed products are recognised by insurers across the UK and Commonwealth markets.
+                            Administered by the South African Bureau of Standards (SABS), these standards outline rigorous local defense codes optimizing physical builds to mitigate high-threat criminal tactics.
                         </p>
-                        <div class="achieves-strip">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Certain Luxuria models carry <strong>LPS 1183 Grade A &amp; B</strong> listing.</span>
-                        </div>
                         <div class="cert-grades">
-                            <span class="cert-grades-label">LPCB Grades</span>
-                            <span class="grade-pill highlight">Grade A</span>
-                            <span class="grade-pill highlight">Grade B</span>
-                            <span class="grade-pill">Grade C</span>
-                            <span class="grade-pill">Grade D</span>
-                            <span class="grade-pill">Grade E</span>
-                            <span class="grade-pill">Grade F</span>
+                            <span class="cert-grades-label">Available Classes</span>
+                            <span class="grade-pill highlight">SANS 953-1 (Firearm Safes)</span>
+                            <span class="grade-pill highlight">SANS 953-3 (Strongrooms and Secure Enclosures)</span>
+                            <span class="grade-pill highlight">SANS 949 (General Security Requirements)</span>
                         </div>
                     </div>
                 </div>
@@ -685,12 +1052,100 @@
                         </div>
                     </div>
                 </div>
+                <!-- UL Fire -->
+                <div class="cert-card reveal-up" style="transition-delay:0.2s;">
+                    <div class="cert-card-badge">
+                        <div class="cert-logo">
+                            <div class="cert-logo-text">UL 72</div>
+                        </div>
+                        <div class="cert-badge-meta">
+                            <span class="cert-standard-code">Underwriters Laboratories</span>
+                            <h3>UL 72 - Fire Resistance of Record Protection Equipment</h3>
+                        </div>
+                    </div>
+                    <div class="cert-card-body">
+                        <p>
+                            The foundational American thermal benchmark certifying safe interiors against high external temperatures while continuously monitoring relative humidity metrics inside the safe. Class 350 corresponds to tested and certified to conditions where the interior temperature remains below 350°F / 177°C for Paper Documents and rated for 1-hour or 2-hour variants.
+                        </p>
+                        <div class="cert-grades">
+                            <span class="cert-grades-label">Available Core Classifications</span>
+                            <span class="grade-pill highlight">Class 350</span>
+                        </div>
+                    </div>
+                </div>
 
             </div><!-- /.cert-grid -->
         </div>
     </section>
+    <!-- ══════════════════════════════════════════ SECTION 3: Explosive -->
+    <span class="section-anchor" id="explosion"></span>
+    <section class="cert-section">
+        <div class="container">
+            <div class="cert-section-header reveal-up">
+                <div class="cert-section-icon">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 3v3M12 18v3M3 12h3M18 12h3"/>
+                        <path d="M18.36 5.64l-2.12 2.12M7.76 16.24l-2.12 2.12M18.36 18.36l-2.12-2.12M7.76 7.76L5.64 5.64"/>
+                        <path d="M12 9l1.5 1.5L15 12l-1.5 1.5L12 15l-1.5-1.5L9 12l1.5-1.5z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2>EXPLOSIVES & ADVANCED T2 ATTACKS</h2>
+                    <p>Protection against advanced attacks.</p>
+                </div>
+            </div>
 
-    <!-- ══════════════════════════════════════════ SECTION 3: LOCKS -->
+            <div class="cert-grid">
+
+                <!-- EN 1143-1 EX -->
+                <div class="cert-card reveal-up">
+                    <div class="cert-card-badge">
+                        <div class="cert-logo">
+                            <div class="cert-logo-text">EN<br>1143-1 EX</div>
+                        </div>
+                        <div class="cert-badge-meta">
+                            <span class="cert-standard-code">ECB-S</span>
+                            <h3>EN 1143-1 EX — Secure Storage Units (Explosives)</h3>
+                        </div>
+                    </div>
+                    <div class="cert-card-body">
+                        <p>
+                            An elite sub-classification added to the baseline EN 1143-1 burglary grade. Units must withstand a live blast attack using high explosives without compromising the locking mechanism or creating an interior breach.
+                        </p>
+                        <div class="cert-grades">
+                            <span class="cert-grades-label">Available Classes</span>
+                            <span class="grade-pill highlight">Grade I EX to Grade VI EX </span>
+                            <span class="grade-pill highlight">Grade I EX to Grade XIII EX for Vaults</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- T2 ATTACKS -->
+                <div class="cert-card reveal-up" style="transition-delay:0.1s;">
+                    <div class="cert-card-badge">
+                        <div class="cert-logo">
+                            <div class="cert-logo-text">T2</div>
+                        </div>
+                        <div class="cert-badge-meta">
+                            <span class="cert-standard-code">ECB-S</span>
+                            <h3>T2 - Advanced Tooling Resistance Standard</h3>
+                        </div>
+                    </div>
+                    <div class="cert-card-body">
+                        <p>
+                            An upgraded certification tier under EN 1143-1 applied to modern high-security safes. This standard updates baseline testing to include defense against newly developed, highly destructive tools frequently deployed by modern sophisticated crime syndicates.
+                        </p>
+                        <div class="cert-grades">
+                            <span class="cert-grades-label">Available T2 Statuses</span>
+                            <span class="grade-pill highlight">Validated across high-tier Graded Safes, ATM modules, and Strongrooms.</span>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.cert-grid -->
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════ SECTION 4: LOCKS -->
     <span class="section-anchor" id="serrures"></span>
     <section class="cert-section">
         <div class="container">
@@ -833,10 +1288,11 @@
 
         // Highlight active nav button on scroll
         (function () {
-            const sections = ['cambriolage', 'feu', 'serrures'];
+            const sections = ['cambriolage', 'feu', 'explosion','serrures'];
             const navBtns = {
                 cambriolage: document.getElementById('nav-cambriolage'),
                 feu: document.getElementById('nav-feu'),
+                explosion: document.getElementById('nav-explosion'),
                 serrures: document.getElementById('nav-serrures'),
             };
 
