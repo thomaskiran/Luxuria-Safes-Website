@@ -41,6 +41,460 @@
         .product-info {
             padding: 3rem;
         }
+        
+        /* ── Section anchors offset for fixed header ── */
+        .section-anchor {
+            display: block;
+            height: 100px;
+            margin-top: -100px;
+            visibility: hidden;
+        }
+
+        /* ── Sticky category nav ── */
+        .cert-nav {
+            position: sticky;
+            top: 72px;
+            z-index: 100;
+            background: rgba(10,10,10,0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(212,175,55,0.18);
+        }
+
+        .cert-nav-inner {
+            display: flex;
+            gap: 0;
+            max-width: var(--container-width);
+            width: 90%;
+            margin: 0 auto;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none; /* Hide scrollbar for Firefox */
+        }
+
+        .cert-nav-inner::-webkit-scrollbar {
+            display: none; /* Hide scrollbar for Chrome, Safari, Opera */
+        }
+
+        .cert-nav-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 1.1rem 2rem;
+            font-family: var(--font-primary);
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--color-text-main);
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+            white-space: nowrap;
+        }
+
+        .cert-nav-btn svg {
+            flex-shrink: 0;
+            opacity: 0.6;
+            transition: opacity 0.3s ease;
+        }
+
+        .cert-nav-btn:hover,
+        .cert-nav-btn.active {
+            color: var(--color-gold);
+            border-bottom-color: var(--color-gold);
+        }
+
+        .cert-nav-btn:hover svg,
+        .cert-nav-btn.active svg {
+            opacity: 1;
+        }
+
+        /* ── Intro strip ── */
+        .intro-strip {
+            background: var(--color-dark);
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+            padding: 4rem 0;
+        }
+
+        .intro-strip p {
+            font-size: 1.1rem;
+            color: var(--color-silver);
+            line-height: 1.8;
+            max-width: 820px;
+        }
+
+        /* ── Category section ── */
+        .cert-section {
+            padding: 5rem 0;
+        }
+
+        .cert-section:nth-child(odd) {
+            background: var(--color-darker);
+        }
+
+        .cert-section:nth-child(even) {
+            background: var(--color-dark);
+        }
+
+        .cert-section-header {
+            display: flex;
+            align-items: flex-end;
+            gap: 1.5rem;
+            margin-bottom: 3.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(212,175,55,0.2);
+        }
+
+        .cert-section-icon {
+            width: 56px;
+            height: 56px;
+            border: 1px solid rgba(212,175,55,0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .cert-section-header h2 {
+            font-size: clamp(1.8rem, 3vw, 2.8rem);
+            margin-bottom: 0.3rem;
+        }
+
+        .cert-section-header p {
+            color: var(--color-silver);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        /* ── Certification cards grid ── */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* ── Single cert card ── */
+        .cert-card {
+            background: var(--color-black);
+            border: 1px solid rgba(255,255,255,0.06);
+            display: flex;
+            flex-direction: column;
+            transition: border-color 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cert-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .cert-card:hover {
+            border-color: rgba(212,175,55,0.3);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .cert-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .cert-card-badge {
+            padding: 2rem 2rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .cert-logo {
+            width: 72px;
+            height: 72px;
+            border: 1px solid rgba(212,175,55,0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            background: rgba(212,175,55,0.04);
+        }
+
+        .cert-logo-text {
+            font-family: var(--font-secondary);
+            font-size: 0.85rem;
+            color: var(--color-gold);
+            text-align: center;
+            line-height: 1.3;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            padding: 0 4px;
+        }
+
+        .cert-badge-meta {
+            flex: 1;
+        }
+
+        .cert-standard-code {
+            font-family: var(--font-primary);
+            font-size: 0.72rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            margin-bottom: 0.4rem;
+            display: block;
+        }
+
+        .cert-card-badge h3 {
+            font-size: 1.1rem;
+            line-height: 1.3;
+            color: var(--color-text-light);
+        }
+
+        .cert-card-body {
+            padding: 1.5rem 2rem 2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .cert-card-body p {
+            font-size: 0.925rem;
+            color: var(--color-text-main);
+            line-height: 1.75;
+            margin: 0;
+        }
+
+        /* ── Grade pills ── */
+        .cert-grades {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: auto;
+        }
+
+        .cert-grades-label {
+            font-size: 0.72rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #666;
+            width: 100%;
+            margin-bottom: 0.2rem;
+        }
+
+        .grade-pill {
+            font-family: var(--font-primary);
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 0.3rem 0.75rem;
+            border: 1px solid rgba(212,175,55,0.35);
+            color: var(--color-gold);
+            background: rgba(212,175,55,0.06);
+        }
+
+        .grade-pill.highlight {
+            background: var(--color-gold);
+            color: var(--color-black);
+            border-color: var(--color-gold);
+        }
+
+        /* ── What our safes achieve ── */
+        .achieves-strip {
+            background: rgba(212,175,55,0.05);
+            border: 1px solid rgba(212,175,55,0.15);
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-top: 0.5rem;
+        }
+
+        .achieves-strip svg {
+            flex-shrink: 0;
+        }
+
+        .achieves-strip span {
+            font-size: 0.82rem;
+            color: var(--color-gold-hover);
+            line-height: 1.5;
+        }
+
+        /* ── Closing CTA ── */
+        .cert-cta {
+            background: var(--color-black);
+            padding: 6rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.04);
+        }
+
+        .cert-cta p {
+            color: var(--color-silver);
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin: 1.5rem auto 2.5rem;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            .cert-nav-btn {
+                padding: 0.9rem 1rem;
+                font-size: 0.7rem;
+                letter-spacing: 1px;
+            }
+
+            .cert-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cert-section-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            .intro-strip p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Auto-scrolling handles mobile view natively without wrapping */
+        .footer-widgets {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+        }
+
+        /* ── Quick Reference Matrix ── */
+        .matrix-wrapper {
+            position: relative;
+            margin: 3rem 0 5rem;
+            background: rgba(18, 18, 18, 0.4);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 4px;
+            padding: 1px;
+            overflow: hidden;
+        }
+
+        .matrix-table-scroll {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .matrix-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 850px;
+            text-align: left;
+        }
+
+        .matrix-table th {
+            background: rgba(10, 10, 10, 0.95);
+            font-family: var(--font-primary);
+            font-size: 0.72rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--color-gold);
+            padding: 1.25rem 1.5rem;
+            border-bottom: 2px solid rgba(212, 175, 55, 0.25);
+        }
+
+        .matrix-table td {
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            font-size: 0.9rem;
+            color: var(--color-text-main);
+            vertical-align: middle;
+            transition: all 0.3s ease;
+        }
+
+        .matrix-table tr {
+            background: rgba(5, 5, 5, 0.2);
+            transition: background 0.3s ease;
+        }
+
+        .matrix-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .matrix-table tr:hover {
+            background: rgba(212, 175, 55, 0.03);
+        }
+
+        .matrix-table tr:hover td {
+            color: var(--color-text-light);
+        }
+
+        .matrix-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-family: var(--font-primary);
+            font-size: 0.68rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 0.25rem 0.65rem;
+            border-radius: 2px;
+        }
+
+        .badge-burglary {
+            background: rgba(212, 175, 55, 0.08);
+            color: var(--color-gold);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+        }
+
+        .badge-fire {
+            background: rgba(230, 92, 0, 0.08);
+            color: #ff9e59;
+            border: 1px solid rgba(230, 92, 0, 0.25);
+        }
+
+        .badge-locks-eu {
+            background: rgba(135, 206, 235, 0.08);
+            color: #87ceeb;
+            border: 1px solid rgba(135, 206, 235, 0.25);
+        }
+
+        .badge-locks-us {
+            background: rgba(160, 160, 255, 0.08);
+            color: #a0a0ff;
+            border: 1px solid rgba(160, 160, 255, 0.25);
+        }
+
+        .matrix-code {
+            font-family: var(--font-primary);
+            font-weight: 600;
+            color: var(--color-text-light);
+        }
+
+        .matrix-scope {
+            font-family: var(--font-primary);
+            font-size: 0.85rem;
+            color: var(--color-silver);
+        }
+
+        .matrix-scroll-hint {
+            display: none;
+            text-align: right;
+            font-size: 0.72rem;
+            color: #666;
+            margin-top: 0.5rem;
+            letter-spacing: 0.5px;
+            font-family: var(--font-primary);
+        }
+
+        @media (max-width: 991px) {
+            .matrix-scroll-hint {
+                display: block;
+            }
+        }
     </style>
 </head>
 
@@ -81,30 +535,86 @@
     </main>
 
     <!-- ══════════════════════════════════════════ INTRO ══════════════════════════════════════════ -->
-    <div class="intro-strip">
-        <div class="container reveal-up" style="max-width: 820px; text-align: center;">
+    <section class="cert-section bg-dark">
+        <div class="container">
+            <div class="cert-section-header reveal-up">
+                <div class="cert-section-icon">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="1.5">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                        <path d="M7 11V7a5 5 0 0110 0v4"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2>Lock Standards</h2>
+                    <p>Every locking mechanism certified to European high-security lock standards.</p>
+                </div>
+            </div>
+            
             <p style="margin-bottom: 2rem;">
-                Every Luxuria Safe is built around one fundamental principle: uncompromising security. While the strength of a safe begins with its construction, its true integrity lies in the quality of its locking system.
-           
-                For this reason, Luxuria Safes are equipped exclusively with internationally certified locking systems that have been independently tested and approved by the world’s leading certification bodies.
+                    Every Luxuria Safe is built around one fundamental principle: uncompromising security. While the strength of a safe begins with its construction, its true integrity lies in the quality of its locking system.
+            
+                    For this reason, Luxuria Safes are equipped exclusively with internationally certified locking systems that have been independently tested and approved by the world’s leading certification bodies.
             </p>
-        </div>
-    </div>
+            
 
-    <section id="a2p-intro" class="section-padding bg-darker">
-        <div class="container configurator-row flex-split align-center desktop-text-first">
-           <div class="flex-1 flex-center">
-               <img class=""
-                   src="a2p-savoir-faire.jpg"
-                   alt="Certified burglary resistant">
-           </div>
-           <div class="product-info flex-1 flex-center">
-               <h3>A2P-Certified Locks</h3>
-               <p style="text-align: justify; text-justify: distribute;">All our safe locks are certified A2P in accordance with the European standard EN 1300, a standard dedicated to high-security locks for safes.
-                   EN 1300 classifies locks into 4 levels of security against break-ins: A, B, C, and D (D being the highest level of resistance to break-ins).
-                   The classification is based on the observed resistance following intrusion tests conducted by the laboratory of the National Center for Prevention and Protection (CNPP).
-               </p>
-           </div>          
+            <div class="cert-grid">
+
+                <!-- EN 1300 -->
+                <div class="cert-card reveal-up">
+                    <div class="cert-card-badge">
+                        <div class="cert-logo">
+                            <div class="cert-logo-text"><img class="" src="Ecb-s-logo-150x150.jpg" alt="ECB-S Certified" style="height: 70px;"></div>
+                        </div>
+                        <div class="cert-badge-meta">
+                            <span class="cert-standard-code">European Standard</span>
+                            <h3>EN 1300 — High-Security Locks</h3>
+                        </div>
+                    </div>
+                    <div class="cert-card-body">
+                        <p>
+                            EN 1300 is the definitive European standard for evaluating and classifying high-security locks for safes and strongrooms. Locks are tested for manipulation, covert attack, and forced entry, and classified into four grades — A through D — with D representing the highest resistance.
+                        </p>
+                        <div class="achieves-strip">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>All Luxuria lock mechanisms are certified to <strong>EN 1300 Grade B and Grade C</strong>.</span>
+                        </div>
+                        <div class="cert-grades">
+                            <span class="cert-grades-label">Security Grades</span>
+                            <span class="grade-pill">Grade A</span>
+                            <span class="grade-pill highlight">Grade B</span>
+                            <span class="grade-pill highlight">Grade C</span>
+                            <span class="grade-pill">Grade D</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- A2P Locks -->
+                <div class="cert-card reveal-up" style="transition-delay:0.1s;">
+                    <div class="cert-card-badge">
+                        <div class="cert-logo">
+                            <div class="cert-logo-text"><img src="a2p-savoir-faire.jpg" alt="A2P Certified" style="height: 70px;"></div>
+                        </div>
+                        <div class="cert-badge-meta">
+                            <span class="cert-standard-code">French Certification / CNPP</span>
+                            <h3>A2P — Certified Safe Locks</h3>
+                        </div>
+                    </div>
+                    <div class="cert-card-body">
+                        <p>
+                            Complementing the A2P safe certification, the A2P lock certificate specifically validates the locking mechanism in isolation. Tested by CNPP laboratories against manipulation and forced attack, A2P-certified locks are a prerequisite for any safe seeking the three-star A2P product mark.
+                        </p>
+                        <div class="achieves-strip">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>All Luxuria locks are individually <strong>A2P certified</strong> prior to integration.</span>
+                        </div>
+                        <div class="cert-grades">
+                            <span class="cert-grades-label">Certification</span>
+                            <span class="grade-pill highlight">A2P Certified</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /.cert-grid -->
         </div>
     </section>
 
@@ -115,33 +625,35 @@
                 <button class="tab_btn active" onclick="toggleTab(event, 'keyLock')">Key Lock</button>
                 <div id="keyLock" class="tab_content tab_active">
                     <div class="tab_inner_content">
-                        <h3>Key Locks (Grade A)</h3>
+                        <h3 style="margin-bottom: 20px;">Wittkopp OPTIMA 2648 Key Lock (Grade A / VdS Class 1)</h3>
                         <div class="tab_row">
                             <img src="Locks/keyLock.jpg" alt="Certified burglary resistant">
                             <div class="tab_text">
                                 <p><strong>Description:</strong></p>
                                 <p>
-                                    Crafted with precision engineering, this mechanical lock uses a uniquely designed double-bitted key, 
-                                    which provides a higher level of security than conventional single-bitted designs. The symmetrical, 
-                                    double-bladed key engages with multiple internal levers, making the lock resistant to common manipulation 
-                                    techniques such as picking or decoding.
+                                    The OPTIMA 2648 is a masterpiece of German physical engineering designed specifically 
+                                    for mounting directly onto high-security safe boltworks. Relying on robust, low-wear 
+                                    mechanical components, it stands as a classic VdS Class 1 / EN 1300 Class A high-security 
+                                    safe lock. It employs a heavy-duty, die-cast zinc block bolt driven by a precise 8-lever 
+                                    system. A uniquely formatted symmetrical double-bitted key interfaces with the internal 
+                                    mechanism, yielding over 800,000 theoretical key code variations to surpass rigorous 
+                                    anti-picking criteria.
                                 </p>
+                                <p><strong>Security Feature:</strong></p>
+                                <ul>
+                                    <li>Integrated Tamper Protection: Engineered with built-in scanning and mechanical breakdown protection to foil professional picking, manipulation, and physical drilling attempts.</li>
+                                    <li>Sealed Armor Profile: Features a fully screwed, tamper-resistant lock cover that secures internal levers from unauthorized external observation or casting manipulation.</li>
+                                    <li>True Mechanical Reliability: Purely mechanical architecture that remains immune to all electronic tampering, signal bypass, or environmental power interruptions.</li>
+                                </ul>
                             </div>
                         </div> 
-                        <div class="tab_text_full">
-                            <p><strong>Security Feature:</strong></p>
-                            <ul>
-                                <li>Option for delayed opening (from 0 to 99 minutes)</li>
-                                <li>Temporary blockage in case of entering a wrong code</li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
 
                 <button class="tab_btn" onclick="toggleTab(event, 'combinationLock')">Combination Lock</button>
                 <div id="combinationLock" class="tab_content">
                     <div class="tab_inner_content">
-                        <h3>Combination Locks (Grade B)</h3>
+                        <h3 style="margin-bottom: 20px;">6700 Series Combination Locks (Grade B)</h3>
                         <div class="tab_row">
                             <img src="Locks/combinationLock.jpg" alt="Certified burglary resistant">
                             <div class="tab_text">
@@ -151,17 +663,18 @@
                                     applications like ATMs, gun safes, bank locks and other demanding commercial settings. These UL-Group 2 
                                     mechanical safe locks offer advanced security features to deter attacks and keep assets secure.
                                 </p>
+                                <p><strong>Security Feature:</strong></p>
+                                <ul>
+                                    <li>Highly resistant to electronic tampering or EMP attacks</li>
+                                    <li>Aluminum wheel cases.</li>
+                                    <li>Left-right-left dialing.</li>
+                                    <li>Key-changeable wheel design.</li>
+                                    <li>Internal relock trigger.</li>
+                                </ul>
                             </div>
                         </div> 
                         <div class="tab_text_full">
-                            <p><strong>Security Feature:</strong></p>
-                            <ul>
-                                <li>Highly resistant to electronic tampering or EMP attacks</li>
-                                <li>Aluminum wheel cases.</li>
-                                <li>Left-right-left dialing.</li>
-                                <li>Key-changeable wheel design.</li>
-                                <li>Internal relock trigger.</li>
-                            </ul>
+                            
                         </div>
                     </div>
                 </div>
@@ -169,7 +682,62 @@
                 <button class="tab_btn" onclick="toggleTab(event, 'electronicLock')">Electronic Locks</button>
                 <div id="electronicLock" class="tab_content">
                     <div class="tab_inner_content">
-                        <h3>Tecnosicurezza Pulse Electronic Locks (Grade B)</h3>
+                        <h3 style="margin: 20px 0px;">Sargent & Greenleaf (S&G) Titan Lock (Grade B / VdS Class 2)</h3>
+                        <div class="tab_row">
+                            <img src="Locks/S&G_Spartan.jpg" alt="S&G Spartan Lock">
+                            <div class="tab_text">
+                                <p><strong>Description:</strong></p>
+                                <p>
+                                    The Titan™ Series represents a rugged, high-durability electronic safe lock designed to withstand heavy, continuous use in residential and demanding commercial applications. Built around a motor-driven locking mechanism with a heavy-duty motorized blocking device, the Titan withstands over 225 lbs. of aggressive end and side bolt pressure. It features an advanced, exclusive no-twist cable design running through a protective channel in the spindle to prevent pinching or wire damage over years of keypad rotation. Engineered to meet the highest security standards, it has been independently tested and proven resistant to military-grade EMP (Electromagnetic Pulse) attacks following strict military standards (MIL-STD461F).
+                                </p>
+                                <p><strong>Security Feature:</strong></p>
+                                <ul>
+                                    <li>10-User Code Capacity: Manages 1 Master, 1 Supervisor, 1 Time Delay Override, and up to 7 or 8 independent User Codes.</li>
+                                    <li>Three Selectable Operating Modes: Configurable via keypad to Single Control, Dual Control (requiring two separate codes within one minute to open), or Manager/Employee mode.</li>
+                                    <li>Holdup & Tamper Defense: Integrated 1 to 99-minute programmable time delay (with 1 to 15-minute open windows) and a 10-minute penalty lockout if 5 consecutive wrong codes are entered.</li>
+                                    <li>External Battery Maintenance: Features a low-profile, sure-grip keypad housing an efficient 9V battery compartment accessible entirely from the outside.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <h3 style="margin: 20px 0px;">Gunnebo Encry Electronic Lock (Grade C / VdS Class 3)</h3>
+                        <div class="tab_row">
+                            <img src="Locks/encry-1.jpg.webp" alt="Certified burglary resistant">
+                            <div class="tab_text">
+                                <p><strong>Description:</strong></p>
+                                <p>
+                                    The Gunnebo Encry™ is an enterprise-tier, ultra-high-security electronic locking ecosystem engineered for heavy-duty safes, commercial strongrooms, and vault doors. Acting as a vanguard against modern electronic attacks, the Encry relies on a smart push-pull motor-driven deadbolt and features fully authenticated hardware and software modules. Utilizing specialized cryptographic keys, it employs advanced communication encryption between its terminal points. In a testament to its zero-trust design, if any hardware component is physically intercepted or falsified, all internal encryption keys are instantly wiped from the system's memory to completely lock down the asset.
+                                </p>
+                                <p><strong>Security Feature:</strong></p>
+                                <ul>
+                                    <li>One-Time-Code (OTC) Algorithm: Supports dynamic, synchronized OTC generation alongside traditional fixed codes, heavily utilized in high-risk Cash-in-Transit (CIT) and commercial banking networks.</li>
+                                    <li>Scalable Network Architecture: Can operate as a standalone secure unit or scale into an integrated network connecting up to 15 secure locks managed centrally via SafeControl Manager software.</li>
+                                    <li>Massive User & Schedule Matrix: Manages up to 50 distinct user codes with customizable profiles, featuring 4 separate time-delay windows (1–99 minutes), 4 opening windows, and up to 30 fully programmable calendar blocking days.</li>
+                                    <li>Hardened Audit Trail: Automatically logs up to 2,000 secure, non-volatile event logs stamped with exact real-time dates and times for absolute audit accountability.</li>
+                                </ul>
+                            </div>
+                        </div> 
+                        <h3 style="margin: 20px 0px;">SecuRam SafeLogic Basic Direct-Drive Locks</h3>
+                        <div class="tab_row">
+                            <img src="Locks/SafeLogicDDrive.jpg" alt="Certified burglary resistant">
+                            <div class="tab_text">
+                                <p><strong>Description:</strong></p>
+                                <p>
+                                    Ideal for safes with direct-drive boltwork, the SafeLogic Basic Direct Drive lock provides robust 
+                                    performance with minimal complexity. It supports one Manager code and one 6-digit User code. It 
+                                    features a powerful motorized bolt mechanism that retracts automatically after a valid code is 
+                                    entered. A no‑twist cable design enhances durability, and a single 9‑volt battery powers approximately 
+                                    10,000 openings. The lock is fully field-programmable and features a standard footprint for seamless 
+                                    retrofitting.
+                                </p>
+                                <p><strong>Security Feature:</strong></p>
+                                <ul>
+                                    <li>Engages a 5-minute lockout penalty if the wrong combination is entered 4 consecutive times.</li>
+                                    <li>Supports up to 2 codes (1 Manager Code and 1 User Code).</li>
+                                    <li>Temporary penalty in case of entering a wrong code</li>
+                                </ul>
+                            </div>
+                        </div> 
+                        <h3 style="margin: 20px 0px;">Tecnosicurezza Pulse Electronic Locks (Grade B)</h3>
                         <div class="tab_row">
                             <img src="Locks/electronicLock.jpg" alt="Certified burglary resistant">
                             <div class="tab_text">
@@ -180,40 +748,18 @@
                                     The opening in dual mode, the Dallas key reader integrated in the keypad and the possibility of interfacing with an 
                                     alarm system, complete the features.
                                 </p>
+                                <p><strong>Security Feature:</strong></p>
+                                <ul>
+                                    <li>Option for delayed opening (from 1 to 99 minutes)</li>
+                                    <li>Open window (1-19 minutes)</li>
+                                    <li>Temporary penalty in case of entering a wrong code</li>
+                                </ul>
                             </div>
-                        </div> 
-                        <div class="tab_text_full">
-                            <p><strong>Security Feature:</strong></p>
-                            <ul>
-                                <li>Option for delayed opening (from 1 to 99 minutes)</li>
-                                <li>Open window (1-19 minutes)</li>
-                                <li>Temporary penalty in case of entering a wrong code</li>
-                            </ul>
-                        </div>
-                        <h3 style="margin-top: 20px;">Sargent & Greenleaf Spartan Electronic Lock (EN 1300 Class B)</h3>
-                        <div class="tab_row">
-                            <img src="Locks/S&G_Spartan.jpg" alt="S&G Spartan Lock">
-                            <div class="tab_text">
-                                <p><strong>Description:</strong></p>
-                                <p>
-                                    The Sargent & Greenleaf (S&G) Spartan is a rugged, EMP-resistant electronic safe lock designed for home and commercial use. 
-                                    It supports two users, features a motorized lock-blocking mechanism capable of withstanding 225 pounds of pressure, and comes 
-                                    in PivotBolt (automatically relocking) or Direct Drive (manually locking) models.
-                                </p>
-                            </div>
-                        </div> 
-                        <div class="tab_text_full">
-                            <p><strong>Security Feature:</strong></p>
-                            <ul>
-                                <li>EMP Resistant</li>
-                                <li>Open window (1-19 minutes)</li>
-                                <li>Temporary penalty in case of entering a wrong code</li>
-                            </ul>
                         </div>
                     </div>
                 </div>
 
-                <button class="tab_btn" onclick="toggleTab(event, 'biometricLock')">Keypad + Biometric Lock</button>
+                <!--button class="tab_btn" onclick="toggleTab(event, 'biometricLock')">Keypad + Biometric Lock</button>
                 <div id="biometricLock" class="tab_content">
                     <div class="tab_inner_content">
                         <h3>SecuRam ScanLogic Basic Biometric Lock (Grade C)</h3>
@@ -240,12 +786,33 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div-->
 
                 <button class="tab_btn" onclick="toggleTab(event, 'timeDelayLock')">Biometric Lock</button>
                 <div id="timeDelayLock" class="tab_content">
                     <div class="tab_inner_content">
-                        <h3>Biometric Wittkopp FINKEY 7000 Lock</h3>
+                        <h3 style="margin: 20px 0px;">SecuRam ScanLogic Basic Biometric Lock (Grade C)</h3>
+                        <div class="tab_row">
+                            <img src="Locks/securamscanlogicbasicfingerprintsafelockwithswingbolt.webp" alt="Certified burglary resistant">
+                            <div class="tab_text">
+                                <p><strong>Description:</strong></p>
+                                <p>
+                                    The ScanLogic Basic combines advanced biometric access with simplicity and reliability. 
+                                    It supports up to 3 six-digit access codes, each accommodating up to 5 stored fingerprints—for 
+                                    a total of 15. The RF sensor reads fingerprints in approximately one second, ensuring fast, 
+                                    secure entry. After successful authentication, the user must manually operate the safe handle 
+                                    to open. Powered by a 9-volt battery, the lock offers around 4,000 openings. Its standard 
+                                    mounting footprint ensures compatibility with most safe installations.
+                                </p>
+                                <p><strong>Security Feature:</strong></p>
+                                <ul>
+                                    <li>Stores up to 15 unique fingerprints and 3 different User Codes (1 Management Code and 2 User Codes).</li>
+                                    <li>Runs on a single 9-volt alkaline battery, providing over 4,000+ openings.</li>
+                                    <li>The battery compartment drops down directly below the keypad for quick and easy replacement.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <h3 style="margin: 20px 0px;">Biometric Wittkopp FINKEY 7000 Lock</h3>
                         <div class="tab_row">
                             <img src="Locks/WittkoppBiometricLock.jpg" alt="Certified burglary resistant">
                             <div class="tab_text">
@@ -256,21 +823,19 @@
                                     authentication with a single finger swipe but also integrates state-of-the-art, certified lock 
                                     technology. The additional key function ensures fast access, especially in emergency situations.
                                 </p>
+                                <p><strong>Security Feature:</strong></p>
+                                <ul>
+                                    <li>VdS 1 / ECB•S: 3 master fingers / 97 user fingers</li>
+                                    <li>VdS 2: 3 master fingers / 97 user or alarm fingers</li>
+                                    <li>FINKEY APP: 6 master fingers / 97 user fingers</li>
+                                    <li>Fingerprint identification time: Approx. 10 ms per comparison</li>
+                                </ul>
                             </div>
-                        </div> 
-                        <div class="tab_text_full">
-                            <p><strong>Security Feature:</strong></p>
-                            <ul>
-                                <li>VdS 1 / ECB•S: 3 master fingers / 97 user fingers</li>
-                                <li>VdS 2: 3 master fingers / 97 user or alarm fingers</li>
-                                <li>FINKEY APP: 6 master fingers / 97 user fingers</li>
-                                <li>Fingerprint identification time: Approx. 10 ms per comparison</li>
-                            </ul>
                         </div>
                     </div>
                 </div>
 
-                <button class="tab_btn" onclick="toggleTab(event, 'dualKeyLock')">Direct Drive Lock</button>
+                <!--button class="tab_btn" onclick="toggleTab(event, 'dualKeyLock')">Direct Drive Lock</button>
                 <div id="dualKeyLock" class="tab_content">
                     <div class="tab_inner_content">
                         <h3>SecuRam SafeLogic Basic Direct-Drive Locks</h3>
@@ -296,7 +861,7 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div-->
 
             </div>
         </div>
