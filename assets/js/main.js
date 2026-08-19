@@ -46,7 +46,7 @@ function updateGallery(mainImage, element, src) {
             mainImage.src = src;
             mainImage.style.opacity = 1;
             mainImage.style.transition = 'opacity 0.3s ease';
-        }, 150);
+        }, 300);
     }
 
     document.querySelectorAll('.gallery-thumbnails .thumbnail').forEach(thumb => {
