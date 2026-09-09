@@ -60,6 +60,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const btn = document.getElementById("toggleTable");
     const accordion = document.getElementById("specAccordion");
 
+    // These only exist on product pages. Without this guard the listener throws
+    // on every other page and stops the rest of this handler running.
+    if (!btn || !accordion) return;
+
     btn.addEventListener("click", function () {
 
         accordion.classList.toggle("open");
