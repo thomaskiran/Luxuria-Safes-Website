@@ -216,17 +216,44 @@ export default async function handler(req, res) {
       return res.status(200).json({ ok: true, duplicate: true });
     }
 
-    const createRes = await zohoFetch('/crm/v8/Leads', token, {
-      method: 'POST',
-      body: JSON.stringify({
-        data: [record],
-        trigger: ['workflow'],
-        // Round-robin assignment goes here as `lar_id: '<assignment rule id>'`.
-        // NOT `apply_feature_execution` - Zoho rejects that for assignment rules.
-      }),
-    });
-    const created = await createRes.json();
-    const row = created && created.data && created.data[0];
+    // Round-robin the enquiry between the Sales Team users.
+    //
+    // Zoho does NOT apply assignment rules automatically to records created
+    // through the API - only to its own web forms and imports. The rule has to
+    // be named explicitly with `lar_id`. (`apply_feature_execution` does not do
+    // this; using it took the form down on 14 Sep 2026.)
+    //
+    // Rule: 'Website enquiry round robin', Chris and Kevin.
+    const ASSIGNMENT_RULE_ID = '7470322000002353017';
+
+    const createLead = async (withAssignment) => {
+      const payload = { data: [record], trigger: ['workflow'] };
+      if (withAssignment) payload.lar_id = ASSIGNMENT_RULE_ID;
+      const res = await zohoFetch('/crm/v8/Leads', token, {
+        method: 'POST',
+        body: JSON.stringify(payload),
+      });
+      const json = await res.json();
+      return { res, json, row: json && json.data && json.data[0] };
+    };
+
+    let attempt = await createLead(true);
+
+    // Never lose an enquiry because of the assignment parameter. If Zoho
+    // rejects it for any reason, create the lead without it and let someone
+    // assign the owner by hand.
+    const duplicate = attempt.row && attempt.row.code === 'DUPLICATE_DATA';
+    if (!attempt.res.ok && !duplicate) {
+      console.error(
+        'Zoho rejected the assignment rule - retrying without it',
+        JSON.stringify(attempt.json)
+      );
+      attempt = await createLead(false);
+    }
+
+    const createRes = attempt.res;
+    const created = attempt.json;
+    const row = attempt.row;
 
     // The unique Form_Submission_ID means a double-click or a retry lands here.
     // That is the guard working, not a failure — tell the browser it succeeded.
