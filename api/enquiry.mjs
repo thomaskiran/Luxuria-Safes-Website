@@ -102,7 +102,11 @@ async function findExistingLead(token, { email, phone, whatsapp }) {
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
-    return res.status(405).json({ ok: false, error: 'method_not_allowed' });
+    return res.status(405).json({
+      ok: false,
+      error: 'method_not_allowed',
+      message: 'This endpoint only accepts form submissions.',
+    });
   }
 
   let payload = req.body;
@@ -217,9 +221,8 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         data: [record],
         trigger: ['workflow'],
-        // Round-robin the enquiry between the Sales Team users. Without this the
-        // assignment rule exists but never fires on API-created records.
-        apply_feature_execution: [{ name: 'assignment_rules' }],
+        // Round-robin assignment goes here as `lar_id: '<assignment rule id>'`.
+        // NOT `apply_feature_execution` - Zoho rejects that for assignment rules.
       }),
     });
     const created = await createRes.json();
