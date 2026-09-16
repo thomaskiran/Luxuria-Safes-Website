@@ -1,219 +1,203 @@
 <!DOCTYPE html>
+
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <title>Luxuria Safes - EVD-1 Door</title>
+
+    <script>
+        (function () {
+            try {
+                var l = localStorage.getItem('luxuria_lang') || 'en';
+                document.documentElement.lang = l;
+                document.documentElement.dir = l === 'ar' ? 'rtl' : 'ltr';
+            } catch (e) {}
+        })();
+    </script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<title data-i18n="single_security_door_evd_1_title">Luxuria Safes - EVD-1 Door</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/main.css" rel="stylesheet"/>
+<script defer="" src="https://cdn.vercel-insights.com/v1/script.js"></script>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Noto+Kufi+Arabic:wght@400;500;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
+    <link rel="stylesheet" href="assets/css/i18n.css">
+
 </head>
-
 <body>
-
-        <header id="masthead" class="site-header scrolled">
-        <div class="header-inner container">
-            <div class="site-branding">
-                <p class="site-title" style="margin: 0;">
-                    <a href="index.html" style="display: flex; align-items: center;">
-                        <img src="Luxuria-Safes-logo.svg" alt="Luxuria Safes Logo"
-                            style="height: 3rem; width: auto;">
-                    </a>
-                </p>
-            </div>
-            <div class="menu-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <nav class="main-navigation">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="collections.html">The Collections</a></li>
-                    <li><a href="standards.html">Standards</a></li>
-                    <li><a href="locks.html">Locks</a></li>
-                    <li><a href="story.html">Our Story</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main class="page-header pt-xl bg-black">
-        <section class="product-hero flex-split align-stretch  configurator-row">
-            <div class="product-gallery flex-1 flex-center bg-darker">
-                <!-- Main Image -->
-                <div class="main-image-display mb-md">
-                    <img id="mainGalleryImage" src="Products/Security Doors/EVD-1/Product Photos/EVD-1-hero-img.avif"
-                        alt="EVD-1" style="width: 60%; height: auto; object-fit: cover;" loading="lazy">
-                </div>
-                <!-- Thumbnails -->
-                <div class="gallery-thumbnails grid" style="grid-template-columns: repeat(3, 1fr); gap: 10px; width: 25%; height:25%; margin: auto;">
-                    <div class="thumbnail active" onclick="updateGallery(document.getElementById('mainGalleryImage'),this, 'Products/Security Doors/EVD-1/Product Photos/EVD-1-hero-img.avif')">
-                        <img src="Products/Security Doors/EVD-1/Product Photos/EVD-1-hero-img.avif" alt="Thumb 1" loading="lazy">
-                    </div>
-                    <div class="thumbnail" onclick="updateGallery(document.getElementById('mainGalleryImage'),this, 'Products/Security Doors/EVD-1/Product Photos/EVD-1-Door.avif')">
-                        <img src="Products/Security Doors/EVD-1/Product Photos/EVD-1-Door.avif" alt="Thumb 2" loading="lazy">
-                    </div>
-                    <div class="thumbnail" onclick="updateGallery(document.getElementById('mainGalleryImage'),this, 'Products/Security Doors/EVD-1/Product Photos/EVD-1-Gate.avif')">
-                        <img src="Products/Security Doors/EVD-1/Product Photos/EVD-1-Gate.avif" alt="Thumb 3" loading="lazy">
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-info flex-1 flex-center section-padding pt-xl">
-                <div class="info-inner reveal-up">
-                    <span class="eyebrow gold-text">Security Doors</span>
-                    <h1 class="product-title accent-title" style="font-size: 4rem;">EVD-1 Door</h1>
-
-                    <div class="product-description mt-md text-block">
-                        <p>The Promet EVD1 Security Door is a high-security vault door designed for maximum protection of secure rooms such as panic rooms, safe rooms, and gun rooms. It combines strength and durability with reliable locking technology.</p>
-                    </div>
-
-                    <div class="container" id="gamme-icons">
-                        <div class="flex-center">
-                            <img class=""
-                                src="effraction-light.png"
-                                alt="Certified burglary resistant"
-                                loading="lazy">
-                            <span class="">
-                                Burglary</span>
-                        </div>
-                        <div class="flex-center">
-                            <img class=""
-                                src="resistant-au-feu.avif"
-                                alt="Certified fire resistant"
-                                loading="lazy">
-                            <span class="">
-                                Fire</span>
-                        </div>
-                        <div class="flex-center">
-                            <img class="" src="Ecb-s-logo-150x150.jpg" alt="ECB-S Certified" style="height: 70px;" loading="lazy">
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Product Features SECTION -->
-        <section id="collections" class="section-padding bg-dark">
-            <div class="container">
-                <div class="grid grid-3">
-                    <!-- Protection -->
-                    <div class="collection-card reveal-up">
-                        <div class="card-content">
-                            <h3 class="gold-text"
-                                style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
-                                <img src="icon-shield.avif"
-                                    alt="" style="height: 32px;" loading="lazy">
+<header class="site-header scrolled" id="masthead">
+<div class="header-inner container">
+<div class="site-branding">
+<p class="site-title" style="margin: 0;">
+<a href="index.html" style="display: flex; align-items: center;">
+<img alt="Luxuria Safes Logo" data-i18n-attr="alt:single_security_door_evd_11" src="Luxuria-Safes-logo.svg" style="height: 3rem; width: auto;"/>
+</a>
+</p>
+</div>
+<div aria-label="Toggle navigation" class="menu-toggle" data-i18n-attr="aria-label:single_security_door_evd_12">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<nav class="main-navigation">
+<ul>
+<li><a href="index.html"><span data-i18n="single_security_door_evd_13">Home</span></a></li>
+<li><a href="collections.html"><span data-i18n="single_security_door_evd_14">The Collections</span></a></li>
+<li><a href="standards.html"><span data-i18n="single_security_door_evd_15">Standards</span></a></li>
+<li><a href="locks.html"><span data-i18n="single_security_door_evd_16">Locks</span></a></li>
+<li><a href="story.html"><span data-i18n="single_security_door_evd_17">Our Story</span></a></li>
+<li><a href="contact.html"><span data-i18n="single_security_door_evd_18">Contact</span></a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main class="page-header pt-xl bg-black">
+<section class="product-hero flex-split align-stretch configurator-row">
+<div class="product-gallery flex-1 flex-center bg-darker">
+<!-- Main Image -->
+<div class="main-image-display mb-md">
+<img alt="EVD-1" data-i18n-attr="alt:single_security_door_evd_19" id="mainGalleryImage" loading="lazy" src="Products/Security Doors/EVD-1/Product Photos/EVD-1-hero-img.avif" style="width: 60%; height: auto; object-fit: cover;"/>
+</div>
+<!-- Thumbnails -->
+<div class="gallery-thumbnails grid" style="grid-template-columns: repeat(3, 1fr); gap: 10px; width: 25%; height:25%; margin: auto;">
+<div class="thumbnail active" onclick="updateGallery(document.getElementById('mainGalleryImage'),this, 'Products/Security Doors/EVD-1/Product Photos/EVD-1-hero-img.avif')">
+<img alt="Thumb 1" data-i18n-attr="alt:single_security_door_evd_110" loading="lazy" src="Products/Security Doors/EVD-1/Product Photos/EVD-1-hero-img.avif"/>
+</div>
+<div class="thumbnail" onclick="updateGallery(document.getElementById('mainGalleryImage'),this, 'Products/Security Doors/EVD-1/Product Photos/EVD-1-Door.avif')">
+<img alt="Thumb 2" data-i18n-attr="alt:single_security_door_evd_111" loading="lazy" src="Products/Security Doors/EVD-1/Product Photos/EVD-1-Door.avif"/>
+</div>
+<div class="thumbnail" onclick="updateGallery(document.getElementById('mainGalleryImage'),this, 'Products/Security Doors/EVD-1/Product Photos/EVD-1-Gate.avif')">
+<img alt="Thumb 3" data-i18n-attr="alt:single_security_door_evd_112" loading="lazy" src="Products/Security Doors/EVD-1/Product Photos/EVD-1-Gate.avif"/>
+</div>
+</div>
+</div>
+<div class="product-info flex-1 flex-center section-padding pt-xl">
+<div class="info-inner reveal-up">
+<span class="eyebrow gold-text"><span data-i18n="single_security_door_evd_113">Security Doors</span></span>
+<h1 class="product-title accent-title" style="font-size: 4rem;"><span data-i18n="single_security_door_evd_114">EVD-1 Door</span></h1>
+<div class="product-description mt-md text-block">
+<p><span data-i18n="single_security_door_evd_115">The Promet EVD1 Security Door is a high-security vault door designed for maximum protection of secure rooms such as panic rooms, safe rooms, and gun rooms. It combines strength and durability with reliable locking technology.</span></p>
+</div>
+<div class="container" id="gamme-icons">
+<div class="flex-center">
+<img alt="Certified burglary resistant" class="" data-i18n-attr="alt:single_security_door_evd_116" loading="lazy" src="effraction-light.png"/>
+<span class=""><span data-i18n="single_security_door_evd_117">
+                                Burglary</span></span>
+</div>
+<div class="flex-center">
+<img alt="Certified fire resistant" class="" data-i18n-attr="alt:single_security_door_evd_118" loading="lazy" src="resistant-au-feu.avif"/>
+<span class=""><span data-i18n="single_security_door_evd_119">
+                                Fire</span></span>
+</div>
+<div class="flex-center">
+<img alt="ECB-S Certified" class="" data-i18n-attr="alt:single_security_door_evd_120" loading="lazy" src="Ecb-s-logo-150x150.jpg" style="height: 70px;"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Features SECTION -->
+<section class="section-padding bg-dark" id="collections">
+<div class="container">
+<div class="grid grid-3">
+<!-- Protection -->
+<div class="collection-card reveal-up">
+<div class="card-content">
+<h3 class="gold-text" style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+<img alt="" loading="lazy" src="icon-shield.avif" style="height: 32px;"/><span data-i18n="single_security_door_evd_121">
                                 Key Features
-                            </h3>
-                            <ul class="option-list" style="text-align: left; padding-top: 1rem;">
-                                <li><strong class="gold-text">Operational Ease</strong><br>Features a user-friendly operation for daily use.</li>
-                                <li><strong class="gold-text">Versatile Access</strong><br>Supports integration with alarm systems and access control.</li>
-                                <li><strong class="gold-text">System Integration</strong><br>Can include a grille gate (day gate) for ventilation and controlled access.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!--Key Features-->
-                    <div class="collection-card reveal-up" style="transition-delay: 0.2s;">
-                        <div class="card-content">
-                            <h3 class="gold-text"
-                                style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
-                                <img src="icon-cube.avif" alt=""
-                                    style="height: 32px;" loading="lazy">
+                            </span></h3>
+<ul class="option-list" style="text-align: left; padding-top: 1rem;">
+<li><strong class="gold-text"><span data-i18n="single_security_door_evd_123">Operational Ease</span></strong><br/><span data-i18n="single_security_door_evd_122">Features a user-friendly operation for daily use.</span></li>
+<li><strong class="gold-text"><span data-i18n="single_security_door_evd_125">Versatile Access</span></strong><br/><span data-i18n="single_security_door_evd_124">Supports integration with alarm systems and access control.</span></li>
+<li><strong class="gold-text"><span data-i18n="single_security_door_evd_127">System Integration</span></strong><br/><span data-i18n="single_security_door_evd_126">Can include a grille gate (day gate) for ventilation and controlled access.</span></li>
+</ul>
+</div>
+</div>
+<!--Key Features-->
+<div class="collection-card reveal-up" style="transition-delay: 0.2s;">
+<div class="card-content">
+<h3 class="gold-text" style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+<img alt="" loading="lazy" src="icon-cube.avif" style="height: 32px;"/><span data-i18n="single_security_door_evd_128">
                                 Construction
-                            </h3>
-                            <ul class="option-list" style="text-align: left; padding-top: 1rem;">
-                                <li><strong class="gold-text">Archive Protection</strong><br>Equipped with a glass relocker and drill-resistant protection plates.</li>
-                                <li><strong class="gold-text">Day Access Control</strong><br>Can include a grille gate (day gate) for ventilation and controlled access.</li>
-                                <li><strong class="gold-text">Robust Boltwork</strong><br>Features a comprehensive multi-directional bolt system for maximum door-to-frame integrity.</li>
-                            </ul>
-
-                        </div>
-                    </div>
-                    <!-- Applications -->
-                    <div class="collection-card reveal-up" style="transition-delay: 0.2s;">
-                        <div class="card-content">
-                            <h3 class="gold-text"
-                                style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
-                                <img src="icon-diamond-2.avif" alt=""
-                                    style="height: 32px;" loading="lazy">
+                            </span></h3>
+<ul class="option-list" style="text-align: left; padding-top: 1rem;">
+<li><strong class="gold-text"><span data-i18n="single_security_door_evd_130">Archive Protection</span></strong><br/><span data-i18n="single_security_door_evd_129">Equipped with a glass relocker and drill-resistant protection plates.</span></li>
+<li><strong class="gold-text"><span data-i18n="single_security_door_evd_132">Day Access Control</span></strong><br/><span data-i18n="single_security_door_evd_131">Can include a grille gate (day gate) for ventilation and controlled access.</span></li>
+<li><strong class="gold-text"><span data-i18n="single_security_door_evd_134">Robust Boltwork</span></strong><br/><span data-i18n="single_security_door_evd_133">Features a comprehensive multi-directional bolt system for maximum door-to-frame integrity.</span></li>
+</ul>
+</div>
+</div>
+<!-- Applications -->
+<div class="collection-card reveal-up" style="transition-delay: 0.2s;">
+<div class="card-content">
+<h3 class="gold-text" style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+<img alt="" loading="lazy" src="icon-diamond-2.avif" style="height: 32px;"/><span data-i18n="single_security_door_evd_135">
                                 Applications
-                            </h3>
-                            <ul class="option-list" style="text-align: left; padding-top: 1rem;">
-                                <li><strong class="gold-text">Archive & Record Rooms</strong><br>Designed for secure storage of important records and archives.</li>
-                                <li><strong class="gold-text">Corporate File Storage</strong><br>Ideal for storing confidential documents and data in corporate environments.</li>
-                                <li><strong class="gold-text">Government Facilities</strong><br>Provides secure storage for sensitive documents and valuables in various settings.</li>
-                            </ul>
+                            </span></h3>
+<ul class="option-list" style="text-align: left; padding-top: 1rem;">
+<li><strong class="gold-text"><span data-i18n="single_security_door_evd_137">Archive &amp; Record Rooms</span></strong><br/><span data-i18n="single_security_door_evd_136">Designed for secure storage of important records and archives.</span></li>
+<li><strong class="gold-text"><span data-i18n="single_security_door_evd_139">Corporate File Storage</span></strong><br/><span data-i18n="single_security_door_evd_138">Ideal for storing confidential documents and data in corporate environments.</span></li>
+<li><strong class="gold-text"><span data-i18n="single_security_door_evd_141">Government Facilities</span></strong><br/><span data-i18n="single_security_door_evd_140">Provides secure storage for sensitive documents and valuables in various settings.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Specifications -->
+<section class="section-padding bg-black" id="specifications">
+<div class="container">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem;">
+<div>
+<h2 class="accent-title" style="font-size: 3rem;"><span data-i18n="single_security_door_evd_142">Technical Specifications</span></h2>
+</div>
+<a class="btn btn-outline hover-fill" href="Products/Security Doors/EVD-1/EVD1_Product_Sheet.pdf" target="_blank"><span data-i18n="single_security_door_evd_143">See Product Sheet</span></a>
+</div>
+<div class="table-wrapper">
+<table class="table-luxury">
+<thead>
+<tr>
+<th style="font-size: larger;"><span data-i18n="single_security_door_evd_144">Features</span></th>
+<th style="font-size: larger; text-align: right;"><span data-i18n="single_security_door_evd_145">Details</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th style="width: 50%; text-align: left; padding: 1rem;"><span data-i18n="single_security_door_evd_146">Boltwork System</span></th>
+<td style="width: 50%; text-align: right; padding: 1rem;"><span data-i18n="single_security_door_evd_147">Multi-bolt locking mechanism </span></td>
+</tr>
+<tr>
+<th style="width: 50%; text-align: left; padding: 1rem;"><span data-i18n="single_security_door_evd_148">Construction</span></th>
+<td style="width: 50%; text-align: right; padding: 1rem;"><span data-i18n="single_security_door_evd_149">Durable for high-frequency access </span></td>
+</tr>
+<tr>
+<th style="width: 50%; text-align: left; padding: 1rem;"><span data-i18n="single_security_door_evd_150">Standard Locking</span></th>
+<td style="width: 50%; text-align: right; padding: 1rem;"><span data-i18n="single_security_door_evd_151">Combination + key lock options </span></td>
+</tr>
+<tr>
+<th style="width: 50%; text-align: left; padding: 1rem;"><span data-i18n="single_security_door_evd_152">Optional Security</span></th>
+<td style="width: 50%; text-align: right; padding: 1rem;"><span data-i18n="single_security_door_evd_153">Day gate secured with mortice locks </span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- CTA -->
+<div class="config-card flex-center mb-0" style="border: 1px solid var(--color-gold); background: rgba(212, 175, 55, 0.05);">
+<h3 style="margin-bottom: 1rem;"><span data-i18n="single_security_door_evd_154">Ready to Commission?</span></h3>
+<p class="text-center" style="margin-bottom: 2rem;"><span data-i18n="single_security_door_evd_155">Work directly with our artisans to review these finishes
+                via physical material samples.</span></p>
+<a class="btn btn-primary btn-gold" href="contact.html"><span data-i18n="single_security_door_evd_156">Contact Sales Advisor</span></a>
+</div>
 
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
-        <!-- Technical Specifications -->
-        <section id="specifications" class="section-padding bg-black">
-            <div class="container">
-                <div
-                    style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem;">
-                    <div>
-                        <h2 class="accent-title" style="font-size: 3rem;">Technical Specifications</h2>
-                    </div>
-                    <a href="Products/Security Doors/EVD-1/EVD1_Product_Sheet.pdf" class="btn btn-outline hover-fill" target="_blank">See Product Sheet</a>
-                </div>
-                <div class="table-wrapper">
-                    <table class="table-luxury">
-                        <thead>
-                            <tr>
-                                <th style="font-size: larger;">Features</th>
-                                <th style="font-size: larger; text-align: right;">Details</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th style="width: 50%; text-align: left; padding: 1rem;">Boltwork System</th>
-                                <td style="width: 50%; text-align: right; padding: 1rem;">Multi-bolt locking mechanism </td>
-                            </tr>
-                            <tr>
-                                <th style="width: 50%; text-align: left; padding: 1rem;">Construction</th>
-                                <td style="width: 50%; text-align: right; padding: 1rem;">Durable for high-frequency access </td>
-                            </tr>
-                            <tr>
-                                <th style="width: 50%; text-align: left; padding: 1rem;">Standard Locking</th>
-                                <td style="width: 50%; text-align: right; padding: 1rem;">Combination + key lock options </td>
-                            </tr>
-                            <tr>
-                                <th style="width: 50%; text-align: left; padding: 1rem;">Optional Security</th>
-                                <td style="width: 50%; text-align: right; padding: 1rem;">Day gate secured with mortice locks </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-        <!-- CTA -->
-        <div class="config-card flex-center mb-0"
-            style="border: 1px solid var(--color-gold); background: rgba(212, 175, 55, 0.05);">
-            <h3 style="margin-bottom: 1rem;">Ready to Commission?</h3>
-            <p class="text-center" style="margin-bottom: 2rem;">Work directly with our artisans to review these finishes
-                via physical material samples.</p>
-            <a href="contact.html" class="btn btn-primary btn-gold">Contact Sales Advisor</a>
-        </div>
-        </div>
-        </section>
 
-        <!-- DRAWINGS SECTION>
+<!-- DRAWINGS SECTION>
         <section class="product-hero flex-row align-stretch border-top-gold section-padding bg-darker">
             <div class="product-gallery flex-1 flex-center bg-darker" style="width: 100%; height: 100%; margin: auto;">
                 <img src="Products/Luxury Safes/Minitreasure/Product Photos/MiniTreasure Size Sketch.jpg"
@@ -226,51 +210,50 @@
                     style="width: 60%; height: 60%; margin: auto; overflow-clip-margin: content-box; border: 50px solid var(--color-text-light);">
             </div>
         </section-->
-    </main>
+</main>
+<footer class="site-footer" id="colophon">
+<div class="footer-widgets container">
+<div class="footer-column brand-col">
+<h3><span data-i18n="single_security_door_evd_157">Luxuria Safes</span></h3>
+<p><span data-i18n="single_security_door_evd_158">Uncompromising Security, Bespoke Elegance.</span></p>
+</div>
+<div class="footer-column links-col">
+<h4><span data-i18n="single_security_door_evd_159">Explore</span></h4>
+<ul>
+<li><a href="collections.html"><span data-i18n="single_security_door_evd_160">Collections</span></a></li>
+<li><a href="standards.html"><span data-i18n="single_security_door_evd_161">Standards &amp; Certifications</span></a></li>
+<li><a href="locks.html"><span data-i18n="single_security_door_evd_162">Locking Systems</span></a></li>
+<li><a href="story.html"><span data-i18n="single_security_door_evd_163">Our Story</span></a></li>
+</ul>
+</div>
+<div class="footer-column links-col">
+<h4><span data-i18n="single_security_door_evd_164">Bespoke Series</span></h4>
+<ul>
+<li><a href="jewellery-safe.html"><span data-i18n="single_security_door_evd_165">Jewellery Safes</span></a></li>
+<li><a href="watch-safe.html"><span data-i18n="single_security_door_evd_166">Watch Safes</span></a></li>
+<li><a href="wardrobe-safe.html"><span data-i18n="single_security_door_evd_167">Wardrobe Safes</span></a></li>
+<li><a href="multipurpose-safe.html"><span data-i18n="single_security_door_evd_168">Multipurpose Estate Safes</span></a></li>
+</ul>
+</div>
+<div class="footer-column contact-col">
+<h4><span data-i18n="single_security_door_evd_169">Contact Us</span></h4>
+<p><span data-i18n="single_security_door_evd_170">info@luxuriasafes.com</span></p>
+</div>
+</div>
+<div class="site-info container">
+<p><span data-i18n="single_security_door_evd_171">© 2026 Luxuria Safes. All Rights Reserved.</span></p>
+<div class="legal-links">
+<a href="#"><span data-i18n="single_security_door_evd_172">Privacy Policy</span></a> |
+                <a href="#"><span data-i18n="single_security_door_evd_173">Return Policy</span></a> |
+                <a href="#"><span data-i18n="single_security_door_evd_174">Cancellation Policy</span></a>
+</div>
+</div>
+</footer>
+<script src="assets/js/main.js"></script>
+    <script id="page-i18n">
+        window.PAGE_I18N = {"single_security_door_evd_1_title": {"en": "Luxuria Safes - EVD-1 Door", "ar": "خزائن Luxuria - باب EVD-1"}, "single_security_door_evd_11": {"en": "Luxuria Safes Logo", "ar": "شعار خزائن Luxuria"}, "single_security_door_evd_12": {"en": "Toggle navigation", "ar": "تبديل شريط التنقل"}, "single_security_door_evd_13": {"en": "Home", "ar": "الرئيسية"}, "single_security_door_evd_14": {"en": "The Collections", "ar": "المجموعات"}, "single_security_door_evd_15": {"en": "Standards", "ar": "المعايير"}, "single_security_door_evd_16": {"en": "Locks", "ar": "الأقفال"}, "single_security_door_evd_17": {"en": "Our Story", "ar": "قصتنا"}, "single_security_door_evd_18": {"en": "Contact", "ar": "تواصل معنا"}, "single_security_door_evd_19": {"en": "EVD-1", "ar": "EVD-1"}, "single_security_door_evd_110": {"en": "Thumb 1", "ar": "صورة مصغرة 1"}, "single_security_door_evd_111": {"en": "Thumb 2", "ar": "صورة مصغرة 2"}, "single_security_door_evd_112": {"en": "Thumb 3", "ar": "صورة مصغرة 3"}, "single_security_door_evd_113": {"en": "Security Doors", "ar": "أبواب الأمان"}, "single_security_door_evd_114": {"en": "EVD-1 Door", "ar": "باب EVD-1"}, "single_security_door_evd_115": {"en": "The Promet EVD1 Security Door is a high-security vault door designed for maximum protection of secure rooms such as panic rooms, safe rooms, and gun rooms. It combines strength and durability with reliable locking technology.", "ar": "باب الأمان Promet EVD1 هو باب خزنة عالي الأمان صُمم لأقصى حماية للغرف الآمنة مثل غرف الذعر، والغرف الآمنة، وغرف الأسلحة. ويجمع بين القوة والمتانة وتقنية إقفال موثوقة."}, "single_security_door_evd_116": {"en": "Certified burglary resistant", "ar": "معتمدة كمقاومة للسرقة"}, "single_security_door_evd_117": {"en": "\n                                Burglary", "ar": "\n                                السرقة"}, "single_security_door_evd_118": {"en": "Certified fire resistant", "ar": "معتمدة كمقاومة للحريق"}, "single_security_door_evd_119": {"en": "\n                                Fire", "ar": "\n                                الحريق"}, "single_security_door_evd_120": {"en": "ECB-S Certified", "ar": "معتمدة من ECB-S"}, "single_security_door_evd_121": {"en": "\n                                Key Features\n                            ", "ar": "\n                                الميزات الرئيسية\n                            "}, "single_security_door_evd_122": {"en": "Features a user-friendly operation for daily use.", "ar": "تتميز بتشغيل سهل الاستخدام للاستعمال اليومي."}, "single_security_door_evd_123": {"en": "Operational Ease", "ar": "سهولة التشغيل"}, "single_security_door_evd_124": {"en": "Supports integration with alarm systems and access control.", "ar": "تدعم التكامل مع أنظمة الإنذار والتحكم بالدخول."}, "single_security_door_evd_125": {"en": "Versatile Access", "ar": "دخول متعدد الاستخدامات"}, "single_security_door_evd_126": {"en": "Can include a grille gate (day gate) for ventilation and controlled access.", "ar": "يمكن أن يشمل بابًا شبكيًا (بوابة نهارية) للتهوية والدخول المتحكم فيه."}, "single_security_door_evd_127": {"en": "System Integration", "ar": "تكامل الأنظمة"}, "single_security_door_evd_128": {"en": "\n                                Construction\n                            ", "ar": "\n                                البنية\n                            "}, "single_security_door_evd_129": {"en": "Equipped with a glass relocker and drill-resistant protection plates.", "ar": "مزودة بآلية إعادة إقفال زجاجية وصفائح حماية مقاومة للحفر."}, "single_security_door_evd_130": {"en": "Archive Protection", "ar": "حماية الأرشيف"}, "single_security_door_evd_131": {"en": "Can include a grille gate (day gate) for ventilation and controlled access.", "ar": "يمكن أن يشمل بابًا شبكيًا (بوابة نهارية) للتهوية والدخول المتحكم فيه."}, "single_security_door_evd_132": {"en": "Day Access Control", "ar": "التحكم بالدخول النهاري"}, "single_security_door_evd_133": {"en": "Features a comprehensive multi-directional bolt system for maximum door-to-frame integrity.", "ar": "تتميز بنظام مزاليج متعدد الاتجاهات وشامل لأقصى تماسك بين الباب والإطار."}, "single_security_door_evd_134": {"en": "Robust Boltwork", "ar": "نظام مزاليج متين"}, "single_security_door_evd_135": {"en": "\n                                Applications\n                            ", "ar": "\n                                الاستخدامات\n                            "}, "single_security_door_evd_136": {"en": "Designed for secure storage of important records and archives.", "ar": "مصممة للتخزين الآمن للسجلات والأرشيف المهم."}, "single_security_door_evd_137": {"en": "Archive & Record Rooms", "ar": "غرف الأرشيف والسجلات"}, "single_security_door_evd_138": {"en": "Ideal for storing confidential documents and data in corporate environments.", "ar": "مثالية لتخزين الوثائق والبيانات السرية في البيئات المؤسسية."}, "single_security_door_evd_139": {"en": "Corporate File Storage", "ar": "تخزين الملفات المؤسسية"}, "single_security_door_evd_140": {"en": "Provides secure storage for sensitive documents and valuables in various settings.", "ar": "توفر تخزينًا آمنًا للوثائق الحساسة والمقتنيات القيّمة في بيئات متنوعة."}, "single_security_door_evd_141": {"en": "Government Facilities", "ar": "المرافق الحكومية"}, "single_security_door_evd_142": {"en": "Technical Specifications", "ar": "المواصفات التقنية"}, "single_security_door_evd_143": {"en": "See Product Sheet", "ar": "عرض ورقة المنتج"}, "single_security_door_evd_144": {"en": "Features", "ar": "الميزات"}, "single_security_door_evd_145": {"en": "Details", "ar": "التفاصيل"}, "single_security_door_evd_146": {"en": "Boltwork System", "ar": "نظام المزاليج"}, "single_security_door_evd_147": {"en": "Multi-bolt locking mechanism ", "ar": "آلية إقفال متعددة المزاليج "}, "single_security_door_evd_148": {"en": "Construction", "ar": "البنية"}, "single_security_door_evd_149": {"en": "Durable for high-frequency access ", "ar": "متينة للاستخدام المتكرر "}, "single_security_door_evd_150": {"en": "Standard Locking", "ar": "إقفال قياسي"}, "single_security_door_evd_151": {"en": "Combination + key lock options ", "ar": "خيارات قفل بمجموعة أرقام + مفتاح "}, "single_security_door_evd_152": {"en": "Optional Security", "ar": "أمان اختياري"}, "single_security_door_evd_153": {"en": "Day gate secured with mortice locks ", "ar": "بوابة نهارية مؤمّنة بأقفال غائرة "}, "single_security_door_evd_154": {"en": "Ready to Commission?", "ar": "مستعدون للتنفيذ؟"}, "single_security_door_evd_155": {"en": "Work directly with our artisans to review these finishes\n                via physical material samples.", "ar": "تعاونوا مباشرة مع حرفيينا لمراجعة هذه التشطيبات من خلال عينات مواد فعلية."}, "single_security_door_evd_156": {"en": "Contact Sales Advisor", "ar": "تواصل مع مستشار المبيعات"}, "single_security_door_evd_157": {"en": "Luxuria Safes", "ar": "خزائن Luxuria"}, "single_security_door_evd_158": {"en": "Uncompromising Security, Bespoke Elegance.", "ar": "أمان لا يقبل التنازل، وأناقة مصممة خصيصًا."}, "single_security_door_evd_159": {"en": "Explore", "ar": "استكشف"}, "single_security_door_evd_160": {"en": "Collections", "ar": "المجموعات"}, "single_security_door_evd_161": {"en": "Standards & Certifications", "ar": "المعايير والاعتمادات"}, "single_security_door_evd_162": {"en": "Locking Systems", "ar": "أنظمة الإقفال"}, "single_security_door_evd_163": {"en": "Our Story", "ar": "قصتنا"}, "single_security_door_evd_164": {"en": "Bespoke Series", "ar": "سلسلة مخصصة"}, "single_security_door_evd_165": {"en": "Jewellery Safes", "ar": "خزائن المجوهرات"}, "single_security_door_evd_166": {"en": "Watch Safes", "ar": "خزائن الساعات"}, "single_security_door_evd_167": {"en": "Wardrobe Safes", "ar": "خزائن خزانة الملابس"}, "single_security_door_evd_168": {"en": "Multipurpose Estate Safes", "ar": "الخزائن العقارية متعددة الأغراض"}, "single_security_door_evd_169": {"en": "Contact Us", "ar": "تواصل معنا"}, "single_security_door_evd_170": {"en": "info@luxuriasafes.com", "ar": "info@luxuriasafes.com"}, "single_security_door_evd_171": {"en": "© 2026 Luxuria Safes. All Rights Reserved.", "ar": "© 2026 خزائن Luxuria. جميع الحقوق محفوظة."}, "single_security_door_evd_172": {"en": "Privacy Policy", "ar": "سياسة الخصوصية"}, "single_security_door_evd_173": {"en": "Return Policy", "ar": "سياسة الاسترجاع"}, "single_security_door_evd_174": {"en": "Cancellation Policy", "ar": "سياسة الإلغاء"}};
+    </script>
+    <script src="assets/js/i18n.js"></script>
 
-        <footer id="colophon" class="site-footer">
-        <div class="footer-widgets container">
-            <div class="footer-column brand-col">
-                <h3>Luxuria Safes</h3>
-                <p>Uncompromising Security, Bespoke Elegance.</p>
-            </div>
-
-            <div class="footer-column links-col">
-                <h4>Explore</h4>
-                <ul>
-                    <li><a href="collections.html">Collections</a></li>
-                    <li><a href="standards.html">Standards &amp; Certifications</a></li>
-                    <li><a href="locks.html">Locking Systems</a></li>
-                    <li><a href="story.html">Our Story</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column links-col">
-                <h4>Bespoke Series</h4>
-                <ul>
-                    <li><a href="jewellery-safe.html">Jewellery Safes</a></li>
-                    <li><a href="watch-safe.html">Watch Safes</a></li>
-                    <li><a href="wardrobe-safe.html">Wardrobe Safes</a></li>
-                    <li><a href="multipurpose-safe.html">Multipurpose Estate Safes</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column contact-col">
-                <h4>Contact Us</h4>
-                <p>info@luxuriasafes.com</p>
-            </div>
-        </div>
-        <div class="site-info container">
-            <p>&copy; 2026 Luxuria Safes. All Rights Reserved.</p>
-            <div class="legal-links">
-                <a href="#">Privacy Policy</a> |
-                <a href="#">Return Policy</a> |
-                <a href="#">Cancellation Policy</a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="assets/js/main.js"></script>
 </body>
-
 </html>

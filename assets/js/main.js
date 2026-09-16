@@ -64,15 +64,21 @@ document.addEventListener("DOMContentLoaded", function () {
     // on every other page and stops the rest of this handler running.
     if (!btn || !accordion) return;
 
+    var SPEC_TOGGLE_LABELS = {
+        en: { open: "Hide Specifications", closed: "View Full Specifications" },
+        ar: { open: "إخفاء المواصفات", closed: "عرض المواصفات الكاملة" }
+    };
+
+    function currentLuxuriaLang() {
+        try { return localStorage.getItem('luxuria_lang') || 'en'; } catch (e) { return 'en'; }
+    }
+
     btn.addEventListener("click", function () {
 
         accordion.classList.toggle("open");
 
-        if (accordion.classList.contains("open")) {
-            btn.innerHTML = "Hide Specifications";
-        } else {
-            btn.innerHTML = "View Full Specifications";
-        }
+        var labels = SPEC_TOGGLE_LABELS[currentLuxuriaLang()] || SPEC_TOGGLE_LABELS.en;
+        btn.innerHTML = accordion.classList.contains("open") ? labels.open : labels.closed;
 
     });
 

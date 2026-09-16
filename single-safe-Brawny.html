@@ -1,371 +1,318 @@
 <!DOCTYPE html>
+
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <title>Luxuria Safes - Brawny</title>
+
+    <script>
+        (function () {
+            try {
+                var l = localStorage.getItem('luxuria_lang') || 'en';
+                document.documentElement.lang = l;
+                document.documentElement.dir = l === 'ar' ? 'rtl' : 'ltr';
+            } catch (e) {}
+        })();
+    </script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<title data-i18n="single_safe_brawny_title">Luxuria Safes - Brawny</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/main.css" rel="stylesheet"/>
+<script defer="" src="https://cdn.vercel-insights.com/v1/script.js"></script>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Noto+Kufi+Arabic:wght@400;500;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
+    <link rel="stylesheet" href="assets/css/i18n.css">
+
 </head>
-
 <body>
-
-        <header id="masthead" class="site-header scrolled">
-        <div class="header-inner container">
-            <div class="site-branding">
-                <p class="site-title" style="margin: 0;">
-                    <a href="index.html" style="display: flex; align-items: center;">
-                        <img src="Luxuria-Safes-logo.svg" alt="Luxuria Safes Logo"
-                            style="height: 3rem; width: auto;">
-                    </a>
-                </p>
-            </div>
-            <div class="menu-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <nav class="main-navigation">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="collections.html">The Collections</a></li>
-                    <li><a href="standards.html">Standards</a></li>
-                    <li><a href="locks.html">Locks</a></li>
-                    <li><a href="story.html">Our Story</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main class="page-header pt-xl bg-black">
-        <section class="product-hero flex-split align-stretch configurator-row">
-            <div class="product-gallery flex-1 flex-center bg-darker">
-                <!-- Main Image -->
-                <div class="main-image-display mb-md">
-                    <img id="mainGalleryImage" src="Products/Luxury Safes/Brawny/Photoshoot/Brawny-Hero-img.avif"
-                        alt="Brawny Safe" style="width:100%; height:auto; object-fit: cover;">
-                </div>
-            </div>
-
-            <div class="product-info flex-1 flex-center section-padding pt-xl">
-                <div class="info-inner reveal-up">
-                    <span class="eyebrow gold-text">Luxury Safe Collection</span>
-                    <h1 class="product-title accent-title" style="font-size: 4rem;">Brawny</h1>
-
-                    <div class="product-description mt-md text-block">
-                        <p>A high-performance luxury safe designed for those who require elevated protection without
+<header class="site-header scrolled" id="masthead">
+<div class="header-inner container">
+<div class="site-branding">
+<p class="site-title" style="margin: 0;">
+<a href="index.html" style="display: flex; align-items: center;">
+<img alt="Luxuria Safes Logo" data-i18n-attr="alt:single_safe_brawny1" src="Luxuria-Safes-logo.svg" style="height: 3rem; width: auto;"/>
+</a>
+</p>
+</div>
+<div aria-label="Toggle navigation" class="menu-toggle" data-i18n-attr="aria-label:single_safe_brawny2">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<nav class="main-navigation">
+<ul>
+<li><a href="index.html"><span data-i18n="single_safe_brawny3">Home</span></a></li>
+<li><a href="collections.html"><span data-i18n="single_safe_brawny4">The Collections</span></a></li>
+<li><a href="standards.html"><span data-i18n="single_safe_brawny5">Standards</span></a></li>
+<li><a href="locks.html"><span data-i18n="single_safe_brawny6">Locks</span></a></li>
+<li><a href="story.html"><span data-i18n="single_safe_brawny7">Our Story</span></a></li>
+<li><a href="contact.html"><span data-i18n="single_safe_brawny8">Contact</span></a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main class="page-header pt-xl bg-black">
+<section class="product-hero flex-split align-stretch configurator-row">
+<div class="product-gallery flex-1 flex-center bg-darker">
+<!-- Main Image -->
+<div class="main-image-display mb-md">
+<img alt="Brawny Safe" data-i18n-attr="alt:single_safe_brawny9" id="mainGalleryImage" src="Products/Luxury Safes/Brawny/Photoshoot/Brawny-Hero-img.avif" style="width:100%; height:auto; object-fit: cover;"/>
+</div>
+</div>
+<div class="product-info flex-1 flex-center section-padding pt-xl">
+<div class="info-inner reveal-up">
+<span class="eyebrow gold-text"><span data-i18n="single_safe_brawny10">Luxury Safe Collection</span></span>
+<h1 class="product-title accent-title" style="font-size: 4rem;"><span data-i18n="single_safe_brawny11">Brawny</span></h1>
+<div class="product-description mt-md text-block">
+<p><span data-i18n="single_safe_brawny12">A high-performance luxury safe designed for those who require elevated protection without
                             compromising on design. Engineered with reinforced steel construction and certified against
                             burglary and fire, it safeguards high-value assets in residential, commercial, and private
-                            vault environments..</p>
-                    </div>
-
-                    <div class="container" id="gamme-icons">
-                        <div class="flex-center">
-                            <img class=""
-                                src="effraction-light.png"
-                                alt="Certified burglary resistant"
-                                loading="lazy">
-                            <span class="">
-                                Burglary</span>
-                        </div>
-                        <div class="flex-center">
-                            <img class=""
-                                src="resistant-au-feu.avif"
-                                alt="Certified fire resistant"
-                                loading="lazy">
-                            <span class="">
-                                Fire</span>
-                        </div>
-                        <div class="flex-center">
-                            <img class="" src="Ecb-s-logo-150x150.jpg" alt="ECB-S Certified" style="height: 70px;" loading="lazy">
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-         <!-- Product Features SECTION -->
-        <section id="collections" class="section-padding bg-dark">
-            <div class="container">
-                <div class="grid grid-3">
-                    <!-- Protection -->
-                    <div class="collection-card reveal-up">
-                        <div class="card-content">
-                            <h3 class="gold-text"
-                                style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
-                                <img src="icon-shield.avif"
-                                    alt="" style="height: 32px;" loading="lazy">
+                            vault environments..</span></p>
+</div>
+<div class="container" id="gamme-icons">
+<div class="flex-center">
+<img alt="Certified burglary resistant" class="" data-i18n-attr="alt:single_safe_brawny13" loading="lazy" src="effraction-light.png"/>
+<span class=""><span data-i18n="single_safe_brawny14">
+                                Burglary</span></span>
+</div>
+<div class="flex-center">
+<img alt="Certified fire resistant" class="" data-i18n-attr="alt:single_safe_brawny15" loading="lazy" src="resistant-au-feu.avif"/>
+<span class=""><span data-i18n="single_safe_brawny16">
+                                Fire</span></span>
+</div>
+<div class="flex-center">
+<img alt="ECB-S Certified" class="" data-i18n-attr="alt:single_safe_brawny17" loading="lazy" src="Ecb-s-logo-150x150.jpg" style="height: 70px;"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Features SECTION -->
+<section class="section-padding bg-dark" id="collections">
+<div class="container">
+<div class="grid grid-3">
+<!-- Protection -->
+<div class="collection-card reveal-up">
+<div class="card-content">
+<h3 class="gold-text" style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+<img alt="" loading="lazy" src="icon-shield.avif" style="height: 32px;"/><span data-i18n="single_safe_brawny18">
                                 Protections
-                            </h3>
-                            <ul class="option-list" style="text-align: left; padding-top: 1rem;">
-                                <li><strong class="gold-text">Burglary Resistance</strong><br>ECB.S certified to EN
-                                    14450 – S2</li>
-                                <li><strong class="gold-text">Fire Protection</strong><br>ECB.S certified to EN 15659 –
-                                    60 mins</li>
-                                <li><strong class="gold-text">Anchoring</strong><br>Securely anchored to the floor</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Volumes -->
-                    <div class="collection-card reveal-up" style="transition-delay: 0.2s;">
-                        <div class="card-content">
-                            <h3 class="gold-text"
-                                style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
-                                <img src="icon-cube.avif " alt=""
-                                    style="height: 32px;" loading="lazy">
+                            </span></h3>
+<ul class="option-list" style="text-align: left; padding-top: 1rem;">
+<li><strong class="gold-text"><span data-i18n="single_safe_brawny20">Burglary Resistance</span></strong><br/><span data-i18n="single_safe_brawny19">ECB.S certified to EN
+                                    14450 – S2</span></li>
+<li><strong class="gold-text"><span data-i18n="single_safe_brawny22">Fire Protection</span></strong><br/><span data-i18n="single_safe_brawny21">ECB.S certified to EN 15659 –
+                                    60 mins</span></li>
+<li><strong class="gold-text"><span data-i18n="single_safe_brawny24">Anchoring</span></strong><br/><span data-i18n="single_safe_brawny23">Securely anchored to the floor</span></li>
+</ul>
+</div>
+</div>
+<!-- Volumes -->
+<div class="collection-card reveal-up" style="transition-delay: 0.2s;">
+<div class="card-content">
+<h3 class="gold-text" style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+<img alt="" loading="lazy" src="icon-cube.avif " style="height: 32px;"/><span data-i18n="single_safe_brawny25">
                                 Volumes
-                            </h3>
-                            <ul class="option-list" style="padding-top: 1rem;">
-                                <li>75 Liters</li>
-                                <li>132 Liters</li>
-                                <li>181 Liters</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Construction  -->
-                    <div class="collection-card reveal-up" style="transition-delay: 0.4s;">
-                        <div class="card-content">
-                            <h3 class="gold-text"
-                                style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
-                                <img src="icon-diamond-2.avif"
-                                    alt="" style="height: 32px;" loading="lazy">
+                            </span></h3>
+<ul class="option-list" style="padding-top: 1rem;">
+<li><span data-i18n="single_safe_brawny26">75 Liters</span></li>
+<li><span data-i18n="single_safe_brawny27">132 Liters</span></li>
+<li><span data-i18n="single_safe_brawny28">181 Liters</span></li>
+</ul>
+</div>
+</div>
+<!-- Construction  -->
+<div class="collection-card reveal-up" style="transition-delay: 0.4s;">
+<div class="card-content">
+<h3 class="gold-text" style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+<img alt="" loading="lazy" src="icon-diamond-2.avif" style="height: 32px;"/><span data-i18n="single_safe_brawny29">
                                 Construction
-                            </h3>
-                            <ul class="option-list" style="text-align: left; padding-top: 1rem;">
-                                <li>65 mm thick reinforced body</li>
-                                <li>Composite Chubbsafes barrier material</li>
-                                <li>35 mm thick solid composite door</li>
-                                <li>Additional protection plates in locking areas</li>
-                                <li>Solid steel moving bolts (28.5 mm diameter)</li>
-                                <li>Anti-healing bolts for pry resistance</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Technical Specifications -->
-        <section id="specifications" class="section-padding bg-black">
-            <div class="container">
-                <div
-                    style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem;">
-                    <div>
-                        <h2 class="accent-title" style="font-size: 3rem;">Technical Specifications</h2>
-                    </div>
-                    <a href="Products/Luxury Safes/Brawny/Brawny_Product_Sheet.pdf" class="btn btn-outline hover-fill" target="_blank">See Product Sheet</a>
-                </div>
-
-                <div class="mb-xl"
-                    style="text-align: center; border: 1px solid rgba(255,255,255,0.05); background: var(--color-darker); padding: 2rem;">
-                    <img width="100%" src="Products/Luxury Safes/Brawny/Brawny_Sizes.avif" alt="Technical Drawing Brawny 35L to 90L"
-                        style="max-width: 1500px; opacity: 0.8;" loading="lazy" />
-                </div>
-
-                <div class="premium-accordion" id="details-specifications">
-
-                    <div class="table-toggle-container">
-
-                        <button class="btn btn-outline hover-fill table-toggle-btn" id="toggleTable">
+                            </span></h3>
+<ul class="option-list" style="text-align: left; padding-top: 1rem;">
+<li><span data-i18n="single_safe_brawny30">65 mm thick reinforced body</span></li>
+<li><span data-i18n="single_safe_brawny31">Composite Chubbsafes barrier material</span></li>
+<li><span data-i18n="single_safe_brawny32">35 mm thick solid composite door</span></li>
+<li><span data-i18n="single_safe_brawny33">Additional protection plates in locking areas</span></li>
+<li><span data-i18n="single_safe_brawny34">Solid steel moving bolts (28.5 mm diameter)</span></li>
+<li><span data-i18n="single_safe_brawny35">Anti-healing bolts for pry resistance</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Specifications -->
+<section class="section-padding bg-black" id="specifications">
+<div class="container">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem;">
+<div>
+<h2 class="accent-title" style="font-size: 3rem;"><span data-i18n="single_safe_brawny36">Technical Specifications</span></h2>
+</div>
+<a class="btn btn-outline hover-fill" href="Products/Luxury Safes/Brawny/Brawny_Product_Sheet.pdf" target="_blank"><span data-i18n="single_safe_brawny37">See Product Sheet</span></a>
+</div>
+<div class="mb-xl" style="text-align: center; border: 1px solid rgba(255,255,255,0.05); background: var(--color-darker); padding: 2rem;">
+<img alt="Technical Drawing Brawny 35L to 90L" data-i18n-attr="alt:single_safe_brawny38" loading="lazy" src="Products/Luxury Safes/Brawny/Brawny_Sizes.avif" style="max-width: 1500px; opacity: 0.8;" width="100%">
+</img></div>
+<div class="premium-accordion" id="details-specifications">
+<div class="table-toggle-container">
+<button class="btn btn-outline hover-fill table-toggle-btn" id="toggleTable"><span data-i18n="single_safe_brawny39">
                             View Full Specifications
-                        </button>
-
-                        <div class="accordion-body" id="specAccordion">
-
-                            <div class="table-wrapper">
-                                <table class="table-luxury">
-
-                                    <thead>
-                                        <tr>
-                                            <th>Models</th>
-                                            <th>Brawny RMK3</th>
-                                            <th>Brawny RMK4</th>
-                                            <th>Brawny RMK5</th>
-                                        </tr>
-                                    </thead>
-
-                                    <tbody>
-                                        <tr>
-                                            <th>Height</th>
-                                            <td>75 cm</td>
-                                            <td>75 cm</td>
-                                            <td>98 cm</td>
-                                        </tr>
-
-                                        <tr>
-                                            <th>Width</th>
-                                            <td>50 cm</td>
-                                            <td>63 cm</td>
-                                            <td>63 cm</td>
-                                        </tr>
-
-                                        <tr>
-                                            <th>Depth</th>
-                                            <td>56 cm</td>
-                                            <td>66 cm</td>
-                                            <td>66 cm</td>
-                                        </tr>
-
-                                        <tr>
-                                            <th>Weight</th>
-                                            <td>255 kg</td>
-                                            <td>341 kg</td>
-                                            <td>421 kg</td>
-                                        </tr>
-
-                                        <tr>
-                                            <th>Max. No of Drawers</th>
-                                            <td>8</td>
-                                            <td>8</td>
-                                            <td>16</td>
-                                        </tr>
-
-                                        <tr>
-                                            <th>No of Watch Winders</th>
-                                            <td>3-12</td>
-                                            <td>4-24</td>
-                                            <td>24</td>
-                                        </tr>
-
-                                        <tr>
-                                            <th>Gun Drawers</th>
-                                            <td>Possible</td>
-                                            <td>Possible</td>
-                                            <td>Possible</td>
-                                        </tr>
-
-                                        <tr>
-                                            <th>Jewellery Drawers</th>
-                                            <td>Possible</td>
-                                            <td>Possible</td>
-                                            <td>Possible</td>
-                                        </tr>
-
-                                        <tr>
-                                            <th>Fire Resistance</th>
-                                            <td>60 minutes</td>
-                                            <td>60 minutes</td>
-                                            <td>60 minutes</td>
-                                        </tr>
-
-                                    </tbody>
-
-                                </table>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <div class="configurator-wrapper">
-
-            <!-- Pair 1: Bespoke Customization -->
-            <div class="configurator-row desktop-text-first">
-                <div class="product-gallery flex-1 flex-center bg-darker">
-                    <!-- Interior Drawer Color Image -->
-                    <div class="main-image-display mb-md">
-                        <img id="colorBrawnyGalleryImage"
-                            src="Products/Luxury Safes/Brawny/Photoshoot/Brawny-Details-img.avif" alt="Brawny Safe"
-                            style="width:100%; height:auto; object-fit: cover;" loading="lazy">
-                    </div>
-                </div>
-                <div class="product-info flex-1 flex-center text-center">
-                    <!--span class="eyebrow gold-text">Total Operational Control</span-->
-                    <h2 class="accent-title" style="font-size: 3rem;">Bespoke Customization</h2>
-                    <p style="color: var(--color-silver); max-width: 600px; margin: 0 auto;">Preserve the legacy of your
+                        </span></button>
+<div class="accordion-body" id="specAccordion">
+<div class="table-wrapper">
+<table class="table-luxury">
+<thead>
+<tr>
+<th><span data-i18n="single_safe_brawny40">Models</span></th>
+<th><span data-i18n="single_safe_brawny41">Brawny RMK3</span></th>
+<th><span data-i18n="single_safe_brawny42">Brawny RMK4</span></th>
+<th><span data-i18n="single_safe_brawny43">Brawny RMK5</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th><span data-i18n="single_safe_brawny44">Height</span></th>
+<td><span data-i18n="single_safe_brawny45">75 cm</span></td>
+<td><span data-i18n="single_safe_brawny46">75 cm</span></td>
+<td><span data-i18n="single_safe_brawny47">98 cm</span></td>
+</tr>
+<tr>
+<th><span data-i18n="single_safe_brawny48">Width</span></th>
+<td><span data-i18n="single_safe_brawny49">50 cm</span></td>
+<td><span data-i18n="single_safe_brawny50">63 cm</span></td>
+<td><span data-i18n="single_safe_brawny51">63 cm</span></td>
+</tr>
+<tr>
+<th><span data-i18n="single_safe_brawny52">Depth</span></th>
+<td><span data-i18n="single_safe_brawny53">56 cm</span></td>
+<td><span data-i18n="single_safe_brawny54">66 cm</span></td>
+<td><span data-i18n="single_safe_brawny55">66 cm</span></td>
+</tr>
+<tr>
+<th><span data-i18n="single_safe_brawny56">Weight</span></th>
+<td><span data-i18n="single_safe_brawny57">255 kg</span></td>
+<td><span data-i18n="single_safe_brawny58">341 kg</span></td>
+<td><span data-i18n="single_safe_brawny59">421 kg</span></td>
+</tr>
+<tr>
+<th><span data-i18n="single_safe_brawny60">Max. No of Drawers</span></th>
+<td>8</td>
+<td>8</td>
+<td>16</td>
+</tr>
+<tr>
+<th><span data-i18n="single_safe_brawny61">No of Watch Winders</span></th>
+<td>3-12</td>
+<td>4-24</td>
+<td>24</td>
+</tr>
+<tr>
+<th><span data-i18n="single_safe_brawny62">Gun Drawers</span></th>
+<td><span data-i18n="single_safe_brawny63">Possible</span></td>
+<td><span data-i18n="single_safe_brawny64">Possible</span></td>
+<td><span data-i18n="single_safe_brawny65">Possible</span></td>
+</tr>
+<tr>
+<th><span data-i18n="single_safe_brawny66">Jewellery Drawers</span></th>
+<td><span data-i18n="single_safe_brawny67">Possible</span></td>
+<td><span data-i18n="single_safe_brawny68">Possible</span></td>
+<td><span data-i18n="single_safe_brawny69">Possible</span></td>
+</tr>
+<tr>
+<th><span data-i18n="single_safe_brawny70">Fire Resistance</span></th>
+<td><span data-i18n="single_safe_brawny71">60 minutes</span></td>
+<td><span data-i18n="single_safe_brawny72">60 minutes</span></td>
+<td><span data-i18n="single_safe_brawny73">60 minutes</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="configurator-wrapper">
+<!-- Pair 1: Bespoke Customization -->
+<div class="configurator-row desktop-text-first">
+<div class="product-gallery flex-1 flex-center bg-darker">
+<!-- Interior Drawer Color Image -->
+<div class="main-image-display mb-md">
+<img alt="Brawny Safe" data-i18n-attr="alt:single_safe_brawny74" id="colorBrawnyGalleryImage" loading="lazy" src="Products/Luxury Safes/Brawny/Photoshoot/Brawny-Details-img.avif" style="width:100%; height:auto; object-fit: cover;"/>
+</div>
+</div>
+<div class="product-info flex-1 flex-center text-center">
+<!--span class="eyebrow gold-text">Total Operational Control</span-->
+<h2 class="accent-title" style="font-size: 3rem;"><span data-i18n="single_safe_brawny75">Bespoke Customization</span></h2>
+<p style="color: var(--color-silver); max-width: 600px; margin: 0 auto;"><span data-i18n="single_safe_brawny76">Preserve the legacy of your
                         family, protect your most meaningful pieces, and enjoy lasting peace of mind with a safe
-                        designed for what you treasure most.</p>
-                </div>
-            </div>
-
-            <!-- Pair 2: Exterior Finish -->
-            <div class="configurator-row">
-                <div class="product-gallery flex-1 flex-center bg-darker">
-                    <!-- Interior Drawer Color Image -->
-                    <div class="main-image-display mb-md" style="background-color: #ffffff;">
-                        <img id="colorBrawnyImage"
-                            src="Products/Luxury Safes/Brawny/Product Photos/Brawny RMK4/Colour Variants/Rhino Mk Size 4 Gold.avif"
-                            alt="Brawny Safe" style="width:100%; height:auto; object-fit: cover;" loading="lazy">
-                    </div>
-                </div>
-                <div class="product-info flex-1 flex-center text-center mb-xl">
-                    <h2 class="accent-title" style="font-size: 3rem;">Exterior Finish</h2>
-                    <p>Choose from our premium powder-coated high gloss palette.</p>
-                    <div class="swatch-container" style="justify-content: center;">
-                        <div class="swatch" style="background-color: #d2af26;" title="Gold"
-                            onclick="updateGallery(document.getElementById('colorBrawnyImage'), this, 'Products/Luxury Safes/Brawny/Product Photos/Brawny RMK4/Colour Variants/Rhino Mk Size 4 Gold.avif')">
-                            <button class="swatch-button" style="opacity: 0;"></button>
-                        </div>
-                        <div class="swatch" style="background-color: #121A2F;" title="Royal Blue"
-                            onclick="updateGallery(document.getElementById('colorBrawnyImage'), this, 'Products/Luxury Safes/Brawny/Product Photos/Brawny RMK4/Colour Variants/Rhino Mk Size 4 dark blue.avif')">
-                            <button class="swatch-button" style="opacity: 0;"></button>
-                        </div>
-                        <div class="swatch" style="background-color: #8C1515;" title="Red"
-                            onclick="updateGallery(document.getElementById('colorBrawnyImage'), this, 'Products/Luxury Safes/Brawny/Product Photos/Brawny RMK4/Colour Variants/Rhino Mk Size 4 red.avif')">
-                            <button class="swatch-button" style="opacity: 0;"></button>
-                        </div>
-                        <div class="swatch" style="background-color: #CC5500;" title="Orange"
-                            onclick="updateGallery(document.getElementById('colorBrawnyImage'), this, 'Products/Luxury Safes/Brawny/Product Photos/Brawny RMK4/Colour Variants/Rhino Mk Size 4 orange.avif')">
-                            <button class="swatch-button" style="opacity: 0;"></button>
-                        </div>
-                        <div class="swatch" style="background-color: #FFFFFF;" title="White"
-                            onclick="updateGallery(document.getElementById('colorBrawnyImage'), this, 'Products/Luxury Safes/Brawny/Product Photos/Brawny RMK4/Colour Variants/Rhino Mk Size 4 white.avif')">
-                            <button class="swatch-button" style="opacity: 0;"></button>
-                        </div>
-                        <div class="swatch" style="background-color: #000000;" title="Black"
-                            onclick="updateGallery(document.getElementById('colorBrawnyImage'), this, 'Products/Luxury Safes/Brawny/Product Photos/Brawny RMK4/Colour Variants/Rhino Mk Size 4 black.avif')">
-                            <button class="swatch-button" style="opacity: 0;"></button>
-                        </div>
-                    </div>
-                    <p style="padding-top: 1rem;">Opt for hand-stitched luxury leather full cladding.</p>
-                    <div class="swatch-container" style="justify-content: center;">
-                        <div class="swatch texture-leather" style="background-color: #98694F;"
-                            title="Golden Brown Leather"></div>
-                        <div class="swatch texture-leather" style="background-color: #1F1F1F;" title="Black Leather">
-                        </div>
-                        <div class="swatch texture-leather" style="background-color: #006039;" title="Green Leather">
-                        </div>
-                        <div class="swatch texture-leather" style="background-color: #624a2e;" title="Tanned Leather">
-                        </div>
-                        <div class="swatch texture-leather" style="background-color: #808080;" title="Grey Leather">
-                        </div>
-                        <div class="swatch texture-leather" style="background-color: #8C1515;" title="Red Leather">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Pair 3: The Collector's Choice -->
-            <div class="configurator-row desktop-text-first">
-                <div class="product-gallery flex-1 flex-center bg-darker">
-                    <!-- Interior Drawer Color Image -->
-                    <div class="main-image-display mb-md">
-                        <img id="interiorGalleryImage"
-                            src="Products/Luxury Safes/Brawny/Photoshoot/Collectors-Choice-1.avif" alt="Brawny Safe"
-                            style="width:100%; height:auto; object-fit: cover;" loading="lazy">
-                    </div>
-                </div>
-                <div class="product-info flex-1 flex-center section-padding pt-xl">
-                    <div class="info-inner reveal-up">
-                        <div class="product-specs mt-lg border-top-gold pt-md mb-lg">
-                            <h2 class="accent-title" style="font-size: 3rem;">The Collector's Choice</h2>
-                            <p class="text-sm pb-md">
+                        designed for what you treasure most.</span></p>
+</div>
+</div>
+<!-- Pair 2: Exterior Finish -->
+<div class="configurator-row">
+<div class="product-gallery flex-1 flex-center bg-darker">
+<!-- Interior Drawer Color Image -->
+<div class="main-image-display mb-md" style="background-color: #ffffff;">
+<img alt="Brawny Safe" data-i18n-attr="alt:single_safe_brawny77" id="colorBrawnyImage" loading="lazy" src="Products/Luxury Safes/Brawny/Product Photos/Brawny RMK4/Colour Variants/Rhino Mk Size 4 Gold.avif" style="width:100%; height:auto; object-fit: cover;"/>
+</div>
+</div>
+<div class="product-info flex-1 flex-center text-center mb-xl">
+<h2 class="accent-title" style="font-size: 3rem;"><span data-i18n="single_safe_brawny78">Exterior Finish</span></h2>
+<p><span data-i18n="single_safe_brawny79">Choose from our premium powder-coated high gloss palette.</span></p>
+<div class="swatch-container" style="justify-content: center;">
+<div class="swatch" data-i18n-attr="title:single_safe_brawny80" onclick="updateGallery(document.getElementById('colorBrawnyImage'), this, 'Products/Luxury Safes/Brawny/Product Photos/Brawny RMK4/Colour Variants/Rhino Mk Size 4 Gold.avif')" style="background-color: #d2af26;" title="Gold">
+<button class="swatch-button" style="opacity: 0;"></button>
+</div>
+<div class="swatch" data-i18n-attr="title:single_safe_brawny81" onclick="updateGallery(document.getElementById('colorBrawnyImage'), this, 'Products/Luxury Safes/Brawny/Product Photos/Brawny RMK4/Colour Variants/Rhino Mk Size 4 dark blue.avif')" style="background-color: #121A2F;" title="Royal Blue">
+<button class="swatch-button" style="opacity: 0;"></button>
+</div>
+<div class="swatch" data-i18n-attr="title:single_safe_brawny82" onclick="updateGallery(document.getElementById('colorBrawnyImage'), this, 'Products/Luxury Safes/Brawny/Product Photos/Brawny RMK4/Colour Variants/Rhino Mk Size 4 red.avif')" style="background-color: #8C1515;" title="Red">
+<button class="swatch-button" style="opacity: 0;"></button>
+</div>
+<div class="swatch" data-i18n-attr="title:single_safe_brawny83" onclick="updateGallery(document.getElementById('colorBrawnyImage'), this, 'Products/Luxury Safes/Brawny/Product Photos/Brawny RMK4/Colour Variants/Rhino Mk Size 4 orange.avif')" style="background-color: #CC5500;" title="Orange">
+<button class="swatch-button" style="opacity: 0;"></button>
+</div>
+<div class="swatch" data-i18n-attr="title:single_safe_brawny84" onclick="updateGallery(document.getElementById('colorBrawnyImage'), this, 'Products/Luxury Safes/Brawny/Product Photos/Brawny RMK4/Colour Variants/Rhino Mk Size 4 white.avif')" style="background-color: #FFFFFF;" title="White">
+<button class="swatch-button" style="opacity: 0;"></button>
+</div>
+<div class="swatch" data-i18n-attr="title:single_safe_brawny85" onclick="updateGallery(document.getElementById('colorBrawnyImage'), this, 'Products/Luxury Safes/Brawny/Product Photos/Brawny RMK4/Colour Variants/Rhino Mk Size 4 black.avif')" style="background-color: #000000;" title="Black">
+<button class="swatch-button" style="opacity: 0;"></button>
+</div>
+</div>
+<p style="padding-top: 1rem;"><span data-i18n="single_safe_brawny86">Opt for hand-stitched luxury leather full cladding.</span></p>
+<div class="swatch-container" style="justify-content: center;">
+<div class="swatch texture-leather" data-i18n-attr="title:single_safe_brawny87" style="background-color: #98694F;" title="Golden Brown Leather"></div>
+<div class="swatch texture-leather" data-i18n-attr="title:single_safe_brawny88" style="background-color: #1F1F1F;" title="Black Leather">
+</div>
+<div class="swatch texture-leather" data-i18n-attr="title:single_safe_brawny89" style="background-color: #006039;" title="Green Leather">
+</div>
+<div class="swatch texture-leather" data-i18n-attr="title:single_safe_brawny90" style="background-color: #624a2e;" title="Tanned Leather">
+</div>
+<div class="swatch texture-leather" data-i18n-attr="title:single_safe_brawny91" style="background-color: #808080;" title="Grey Leather">
+</div>
+<div class="swatch texture-leather" data-i18n-attr="title:single_safe_brawny92" style="background-color: #8C1515;" title="Red Leather">
+</div>
+</div>
+</div>
+</div>
+<!-- Pair 3: The Collector's Choice -->
+<div class="configurator-row desktop-text-first">
+<div class="product-gallery flex-1 flex-center bg-darker">
+<!-- Interior Drawer Color Image -->
+<div class="main-image-display mb-md">
+<img alt="Brawny Safe" data-i18n-attr="alt:single_safe_brawny93" id="interiorGalleryImage" loading="lazy" src="Products/Luxury Safes/Brawny/Photoshoot/Collectors-Choice-1.avif" style="width:100%; height:auto; object-fit: cover;"/>
+</div>
+</div>
+<div class="product-info flex-1 flex-center section-padding pt-xl">
+<div class="info-inner reveal-up">
+<div class="product-specs mt-lg border-top-gold pt-md mb-lg">
+<h2 class="accent-title" style="font-size: 3rem;"><span data-i18n="single_safe_brawny94">The Collector's Choice</span></h2>
+<p class="text-sm pb-md"><span data-i18n="single_safe_brawny95">
                                 The Brawny safe from Luxuria features customizable drawer configurations that bring
                                 structure
                                 and sophistication to your collection. Engineered for both security and practicality, it
@@ -375,15 +322,14 @@
                                 designed layouts tailored to different jewellery types, it delivers effortless
                                 accessibility paired
                                 with elevated protection.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Pair 4: Interior Velvet Finish -->
-            <div class="configurator-row">
-                <!--div class="product-gallery flex-1 flex-center bg-darker">
+                            </span></p>
+</div>
+</div>
+</div>
+</div>
+<!-- Pair 4: Interior Velvet Finish -->
+<div class="configurator-row">
+<!--div class="product-gallery flex-1 flex-center bg-darker">
                     <!-- Interior Drawer Color Image 
                     <div class="main-image-display mb-md">
                         <img id="velvetGalleryImage"
@@ -408,12 +354,11 @@
                         </div>
                     </div>
                 </div-->
-                <div class="product-info flex-1 flex-center section-padding pt-xl">
-                    <div class="info-inner reveal-up">
-                        <div class="product-specs mt-lg border-top-gold pt-md mb-lg">
-                            <h2 class="accent-title" style="font-size: 3rem;">Interior Finish</h2>
-                            <p class="text-sm pb-md"
-                                style="max-width:1200px; margin: 0 auto; color: var(--color-silver);">
+<div class="product-info flex-1 flex-center section-padding pt-xl">
+<div class="info-inner reveal-up">
+<div class="product-specs mt-lg border-top-gold pt-md mb-lg">
+<h2 class="accent-title" style="font-size: 3rem;"><span data-i18n="single_safe_brawny96">Interior Finish</span></h2>
+<p class="text-sm pb-md" style="max-width:1200px; margin: 0 auto; color: var(--color-silver);"><span data-i18n="single_safe_brawny97">
                                 For the collector who demands both strength and elegance, the Brawny safe from Luxuria
                                 offers a sanctuary of
                                 refined security. Built with advanced certified protection and complemented by interiors
@@ -421,85 +366,47 @@
                                 taste, each safe becomes a thoughtfully curated space where heirlooms and modern
                                 valuables are safeguarded with
                                 confidence and distinction.
-                            </p>
+                            </span></p>
+<!-- Compartments Slider -->
+<div class="compartment-slider-wrapper">
+<button aria-label="Previous options" class="slider-btn prev-btn" data-i18n-attr="aria-label:single_safe_brawny98" onclick="slideCompartments(-1)">‹</button>
+<div class="compartment-slider-viewport">
+<div class="compartment-slider-track" id="compartmentTrack">
+<div class="slider-item"><img loading="lazy" src="Drawer Details/Big Safes/Duo Guard 450 01.avif"/><span class="caption"><span data-i18n="single_safe_brawny99">L1 – Necklace Set and Rings</span></span></div>
+<div class="slider-item"><img loading="lazy" src="Drawer Details/Big Safes/Duo Guard 450 10.avif"/><span class="caption"><span data-i18n="single_safe_brawny100">L2 – Watches</span></span></div>
+<div class="slider-item"><img loading="lazy" src="Drawer Details/Big Safes/Duo Guard 450 14.avif"/><span class="caption"><span data-i18n="single_safe_brawny101">L3 – Ring and Earrings</span></span></div>
+<div class="slider-item"><img loading="lazy" src="Drawer Details/Big Safes/Duo Guard 450 03.avif"/><span class="caption"><span data-i18n="single_safe_brawny102">L4 – Long Chains</span></span></div>
+<div class="slider-item"><img loading="lazy" src="Drawer Details/Big Safes/Duo Guard 450 12.avif"/><span class="caption"><span data-i18n="single_safe_brawny103">L5 – Necklace Sets</span></span></div>
+<div class="slider-item"><img loading="lazy" src="Drawer Details/Big Safes/Duo Guard 450 21.avif"/><span class="caption"><span data-i18n="single_safe_brawny104">L6 – Rings</span></span></div>
+<div class="slider-item"><img loading="lazy" src="Drawer Details/Big Safes/Duo Guard 450 18.avif"/><span class="caption"><span data-i18n="single_safe_brawny105">L7 – Earrings</span></span></div>
+<div class="slider-item"><img loading="lazy" src="Drawer Details/Big Safes/Duo Guard 450 15.avif"/><span class="caption"><span data-i18n="single_safe_brawny106">L8 – Pens</span></span></div>
+<div class="slider-item"><img loading="lazy" src="Drawer Details/Big Safes/Duo Guard 450 09.avif"/><span class="caption"><span data-i18n="single_safe_brawny107">L9 – Small Partitions</span></span></div>
+<div class="slider-item"><img loading="lazy" src="Drawer Details/Big Safes/Duo Guard 450 06.avif"/><span class="caption"><span data-i18n="single_safe_brawny108">L10 – 4 Partitions</span></span></div>
+<div class="slider-item"><img loading="lazy" src="Drawer Details/Big Safes/Duo Guard 450 16.avif"/><span class="caption"><span data-i18n="single_safe_brawny109">L11 – Vertical Partition</span></span></div>
+<div class="slider-item"><img loading="lazy" src="Drawer Details/Big Safes/Duo Guard 450 20.avif"/><span class="caption"><span data-i18n="single_safe_brawny110">L12 – Small Watches</span></span></div>
+<div class="slider-item"><img loading="lazy" src="Drawer Details/Big Safes/Duo Guard 450 07.avif"/><span class="caption"><span data-i18n="single_safe_brawny111">L13 – Extra Small Partitions</span></span></div>
+<div class="slider-item"><img loading="lazy" src="Drawer Details/Big Safes/Duo Guard 450 04.avif"/><span class="caption"><span data-i18n="single_safe_brawny112">L14 – 2 Partitions</span></span></div>
+<div class="slider-item"><img loading="lazy" src="Drawer Details/Big Safes/Duo Guard 450 13.avif"/><span class="caption"><span data-i18n="single_safe_brawny113">L15 – Lighter Collection</span></span></div>
+<div class="slider-item"><img loading="lazy" src="Drawer Details/Big Safes/Duo Guard 450 02.avif"/><span class="caption"><span data-i18n="single_safe_brawny114">L16 – Plain Drawer</span></span></div>
+</div>
+</div>
+<button aria-label="Next options" class="slider-btn next-btn" data-i18n-attr="aria-label:single_safe_brawny115" onclick="slideCompartments(1)">›</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- CTA -->
+<div class="config-card flex-center mb-0" style="border: 1px solid var(--color-gold); background: rgba(212, 175, 55, 0.05);">
+<h3 style="margin-bottom: 1rem;"><span data-i18n="single_safe_brawny116">Ready to Commission?</span></h3>
+<p class="text-center" style="margin-bottom: 2rem;"><span data-i18n="single_safe_brawny117">Work directly with our artisans to review these finishes
+                via physical material samples.</span></p>
+<a class="btn btn-primary btn-gold" href="contact.html"><span data-i18n="single_safe_brawny118">Contact Sales Advisor</span></a>
+</div>
 
-                            <!-- Compartments Slider -->
-                            <div class="compartment-slider-wrapper">
-                                <button class="slider-btn prev-btn" onclick="slideCompartments(-1)"
-                                    aria-label="Previous options">&lsaquo;</button>
-                                <div class="compartment-slider-viewport">
-                                    <div class="compartment-slider-track" id="compartmentTrack">
-                                        <div class="slider-item"><img
-                                                src="Drawer Details/Big Safes/Duo Guard 450 01.avif" loading="lazy"><span
-                                                class="caption">L1 – Necklace Set and Rings</span></div>
-                                        <div class="slider-item"><img
-                                                src="Drawer Details/Big Safes/Duo Guard 450 10.avif" loading="lazy"><span
-                                                class="caption">L2 – Watches</span></div>
-                                        <div class="slider-item"><img
-                                                src="Drawer Details/Big Safes/Duo Guard 450 14.avif" loading="lazy"><span
-                                                class="caption">L3 – Ring and Earrings</span></div>
-                                        <div class="slider-item"><img
-                                                src="Drawer Details/Big Safes/Duo Guard 450 03.avif" loading="lazy"><span
-                                                class="caption">L4 – Long Chains</span></div>
-                                        <div class="slider-item"><img
-                                                src="Drawer Details/Big Safes/Duo Guard 450 12.avif" loading="lazy"><span
-                                                class="caption">L5 – Necklace Sets</span></div>
-                                        <div class="slider-item"><img
-                                                src="Drawer Details/Big Safes/Duo Guard 450 21.avif" loading="lazy"><span
-                                                class="caption">L6 – Rings</span></div>
-                                        <div class="slider-item"><img
-                                                src="Drawer Details/Big Safes/Duo Guard 450 18.avif" loading="lazy"><span
-                                                class="caption">L7 – Earrings</span></div>
-                                        <div class="slider-item"><img
-                                                src="Drawer Details/Big Safes/Duo Guard 450 15.avif" loading="lazy"><span
-                                                class="caption">L8 – Pens</span></div>
-                                        <div class="slider-item"><img
-                                                src="Drawer Details/Big Safes/Duo Guard 450 09.avif" loading="lazy"><span
-                                                class="caption">L9 – Small Partitions</span></div>
-                                        <div class="slider-item"><img
-                                                src="Drawer Details/Big Safes/Duo Guard 450 06.avif" loading="lazy"><span
-                                                class="caption">L10 – 4 Partitions</span></div>
-                                        <div class="slider-item"><img
-                                                src="Drawer Details/Big Safes/Duo Guard 450 16.avif" loading="lazy"><span
-                                                class="caption">L11 – Vertical Partition</span></div>
-                                        <div class="slider-item"><img
-                                                src="Drawer Details/Big Safes/Duo Guard 450 20.avif" loading="lazy"><span
-                                                class="caption">L12 – Small Watches</span></div>
-                                        <div class="slider-item"><img
-                                                src="Drawer Details/Big Safes/Duo Guard 450 07.avif" loading="lazy"><span
-                                                class="caption">L13 – Extra Small Partitions</span></div>
-                                        <div class="slider-item"><img
-                                                src="Drawer Details/Big Safes/Duo Guard 450 04.avif" loading="lazy"><span
-                                                class="caption">L14 – 2 Partitions</span></div>
-                                        <div class="slider-item"><img
-                                                src="Drawer Details/Big Safes/Duo Guard 450 13.avif" loading="lazy"><span
-                                                class="caption">L15 – Lighter Collection</span></div>
-                                        <div class="slider-item"><img
-                                                src="Drawer Details/Big Safes/Duo Guard 450 02.avif" loading="lazy"><span
-                                                class="caption">L16 – Plain Drawer</span></div>
-                                    </div>
-                                </div>
-                                <button class="slider-btn next-btn" onclick="slideCompartments(1)"
-                                    aria-label="Next options">&rsaquo;</button>
-                            </div>
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- CTA -->
-        <div class="config-card flex-center mb-0"
-            style="border: 1px solid var(--color-gold); background: rgba(212, 175, 55, 0.05);">
-            <h3 style="margin-bottom: 1rem;">Ready to Commission?</h3>
-            <p class="text-center" style="margin-bottom: 2rem;">Work directly with our artisans to review these finishes
-                via physical material samples.</p>
-            <a href="contact.html" class="btn btn-primary btn-gold">Contact Sales Advisor</a>
-        </div>
-        </div>
-        </section>
-
-        <!-- DRAWINGS SECTION>
+<!-- DRAWINGS SECTION>
         <section class="product-hero flex-row align-stretch border-top-gold section-padding bg-darker">
             <div class="product-gallery flex-1 flex-center bg-darker" style="width: 100%; height: 100%; margin: auto;">
                 <img src="Products/Luxury Safes/Minitreasure/Product Photos/MiniTreasure Size Sketch.jpg"
@@ -512,51 +419,50 @@
                     style="width: 60%; height: 60%; margin: auto; overflow-clip-margin: content-box; border: 50px solid var(--color-text-light);">
             </div>
         </section-->
-    </main>
+</main>
+<footer class="site-footer" id="colophon">
+<div class="footer-widgets container">
+<div class="footer-column brand-col">
+<h3><span data-i18n="single_safe_brawny119">Luxuria Safes</span></h3>
+<p><span data-i18n="single_safe_brawny120">Uncompromising Security, Bespoke Elegance.</span></p>
+</div>
+<div class="footer-column links-col">
+<h4><span data-i18n="single_safe_brawny121">Explore</span></h4>
+<ul>
+<li><a href="collections.html"><span data-i18n="single_safe_brawny122">Collections</span></a></li>
+<li><a href="standards.html"><span data-i18n="single_safe_brawny123">Standards &amp; Certifications</span></a></li>
+<li><a href="locks.html"><span data-i18n="single_safe_brawny124">Locking Systems</span></a></li>
+<li><a href="story.html"><span data-i18n="single_safe_brawny125">Our Story</span></a></li>
+</ul>
+</div>
+<div class="footer-column links-col">
+<h4><span data-i18n="single_safe_brawny126">Bespoke Series</span></h4>
+<ul>
+<li><a href="jewellery-safe.html"><span data-i18n="single_safe_brawny127">Jewellery Safes</span></a></li>
+<li><a href="watch-safe.html"><span data-i18n="single_safe_brawny128">Watch Safes</span></a></li>
+<li><a href="wardrobe-safe.html"><span data-i18n="single_safe_brawny129">Wardrobe Safes</span></a></li>
+<li><a href="multipurpose-safe.html"><span data-i18n="single_safe_brawny130">Multipurpose Estate Safes</span></a></li>
+</ul>
+</div>
+<div class="footer-column contact-col">
+<h4><span data-i18n="single_safe_brawny131">Contact Us</span></h4>
+<p><span data-i18n="single_safe_brawny132">info@luxuriasafes.com</span></p>
+</div>
+</div>
+<div class="site-info container">
+<p><span data-i18n="single_safe_brawny133">© 2026 Luxuria Safes. All Rights Reserved.</span></p>
+<div class="legal-links">
+<a href="#"><span data-i18n="single_safe_brawny134">Privacy Policy</span></a> |
+                <a href="#"><span data-i18n="single_safe_brawny135">Return Policy</span></a> |
+                <a href="#"><span data-i18n="single_safe_brawny136">Cancellation Policy</span></a>
+</div>
+</div>
+</footer>
+<script src="assets/js/main.js"></script>
+    <script id="page-i18n">
+        window.PAGE_I18N = {"single_safe_brawny_title": {"en": "Luxuria Safes - Brawny", "ar": "خزائن Luxuria - Brawny"}, "single_safe_brawny1": {"en": "Luxuria Safes Logo", "ar": "شعار خزائن Luxuria"}, "single_safe_brawny2": {"en": "Toggle navigation", "ar": "تبديل شريط التنقل"}, "single_safe_brawny3": {"en": "Home", "ar": "الرئيسية"}, "single_safe_brawny4": {"en": "The Collections", "ar": "المجموعات"}, "single_safe_brawny5": {"en": "Standards", "ar": "المعايير"}, "single_safe_brawny6": {"en": "Locks", "ar": "الأقفال"}, "single_safe_brawny7": {"en": "Our Story", "ar": "قصتنا"}, "single_safe_brawny8": {"en": "Contact", "ar": "تواصل معنا"}, "single_safe_brawny9": {"en": "Brawny Safe", "ar": "خزنة Brawny"}, "single_safe_brawny10": {"en": "Luxury Safe Collection", "ar": "مجموعة الخزائن الفاخرة"}, "single_safe_brawny11": {"en": "Brawny", "ar": "Brawny"}, "single_safe_brawny12": {"en": "A high-performance luxury safe designed for those who require elevated protection without\n                            compromising on design. Engineered with reinforced steel construction and certified against\n                            burglary and fire, it safeguards high-value assets in residential, commercial, and private\n                            vault environments..", "ar": "خزنة فاخرة وعالية الأداء صُممت لمن يطلبون حماية رفيعة دون التنازل عن التصميم. مصنوعة ببنية فولاذية معززة ومعتمدة ضد السرقة والحريق، لتحمي الأصول عالية القيمة في البيئات السكنية والتجارية والخزنات الخاصة."}, "single_safe_brawny13": {"en": "Certified burglary resistant", "ar": "معتمدة كمقاومة للسرقة"}, "single_safe_brawny14": {"en": "\n                                Burglary", "ar": "\n                                السرقة"}, "single_safe_brawny15": {"en": "Certified fire resistant", "ar": "معتمدة كمقاومة للحريق"}, "single_safe_brawny16": {"en": "\n                                Fire", "ar": "\n                                الحريق"}, "single_safe_brawny17": {"en": "ECB-S Certified", "ar": "معتمدة من ECB-S"}, "single_safe_brawny18": {"en": "\n                                Protections\n                            ", "ar": "\n                                أنواع الحماية\n                            "}, "single_safe_brawny19": {"en": "ECB.S certified to EN\n                                    14450 – S2", "ar": "معتمدة من ECB.S وفق EN 14450 – S2"}, "single_safe_brawny20": {"en": "Burglary Resistance", "ar": "مقاومة السرقة"}, "single_safe_brawny21": {"en": "ECB.S certified to EN 15659 –\n                                    60 mins", "ar": "معتمدة من ECB.S وفق EN 15659 لمدة 60 دقيقة"}, "single_safe_brawny22": {"en": "Fire Protection", "ar": "الحماية من الحريق"}, "single_safe_brawny23": {"en": "Securely anchored to the floor", "ar": "مثبّتة بشكل آمن في الأرض"}, "single_safe_brawny24": {"en": "Anchoring", "ar": "التثبيت"}, "single_safe_brawny25": {"en": "\n                                Volumes\n                            ", "ar": "\n                                الأحجام\n                            "}, "single_safe_brawny26": {"en": "75 Liters", "ar": "75 لترًا"}, "single_safe_brawny27": {"en": "132 Liters", "ar": "132 لترًا"}, "single_safe_brawny28": {"en": "181 Liters", "ar": "181 لترًا"}, "single_safe_brawny29": {"en": "\n                                Construction\n                            ", "ar": "\n                                البنية\n                            "}, "single_safe_brawny30": {"en": "65 mm thick reinforced body", "ar": "هيكل معزز بسماكة 65 مم"}, "single_safe_brawny31": {"en": "Composite Chubbsafes barrier material", "ar": "مادة حاجزة مركبة من Chubbsafes"}, "single_safe_brawny32": {"en": "35 mm thick solid composite door", "ar": "باب مركب صلب بسماكة 35 مم"}, "single_safe_brawny33": {"en": "Additional protection plates in locking areas", "ar": "صفائح حماية إضافية في مناطق الإقفال"}, "single_safe_brawny34": {"en": "Solid steel moving bolts (28.5 mm diameter)", "ar": "مزاليج فولاذية صلبة متحركة (قطر 28.5 مم)"}, "single_safe_brawny35": {"en": "Anti-healing bolts for pry resistance", "ar": "مزاليج مضادة للانزلاق لمقاومة الرفع بالعتلة"}, "single_safe_brawny36": {"en": "Technical Specifications", "ar": "المواصفات التقنية"}, "single_safe_brawny37": {"en": "See Product Sheet", "ar": "عرض ورقة المنتج"}, "single_safe_brawny38": {"en": "Technical Drawing Brawny 35L to 90L", "ar": "رسم تقني Brawny من 35 لترًا إلى 90 لترًا"}, "single_safe_brawny39": {"en": "\n                            View Full Specifications\n                        ", "ar": "\n                            عرض المواصفات الكاملة\n                        "}, "single_safe_brawny40": {"en": "Models", "ar": "الطرازات"}, "single_safe_brawny41": {"en": "Brawny RMK3", "ar": "Brawny RMK3"}, "single_safe_brawny42": {"en": "Brawny RMK4", "ar": "Brawny RMK4"}, "single_safe_brawny43": {"en": "Brawny RMK5", "ar": "Brawny RMK5"}, "single_safe_brawny44": {"en": "Height", "ar": "الارتفاع"}, "single_safe_brawny45": {"en": "75 cm", "ar": "75 سم"}, "single_safe_brawny46": {"en": "75 cm", "ar": "75 سم"}, "single_safe_brawny47": {"en": "98 cm", "ar": "98 سم"}, "single_safe_brawny48": {"en": "Width", "ar": "العرض"}, "single_safe_brawny49": {"en": "50 cm", "ar": "50 سم"}, "single_safe_brawny50": {"en": "63 cm", "ar": "63 سم"}, "single_safe_brawny51": {"en": "63 cm", "ar": "63 سم"}, "single_safe_brawny52": {"en": "Depth", "ar": "العمق"}, "single_safe_brawny53": {"en": "56 cm", "ar": "56 سم"}, "single_safe_brawny54": {"en": "66 cm", "ar": "66 سم"}, "single_safe_brawny55": {"en": "66 cm", "ar": "66 سم"}, "single_safe_brawny56": {"en": "Weight", "ar": "الوزن"}, "single_safe_brawny57": {"en": "255 kg", "ar": "255 كجم"}, "single_safe_brawny58": {"en": "341 kg", "ar": "341 كجم"}, "single_safe_brawny59": {"en": "421 kg", "ar": "421 كجم"}, "single_safe_brawny60": {"en": "Max. No of Drawers", "ar": "الحد الأقصى لعدد الأدراج"}, "single_safe_brawny61": {"en": "No of Watch Winders", "ar": "عدد موزّعات الساعات"}, "single_safe_brawny62": {"en": "Gun Drawers", "ar": "أدراج الأسلحة"}, "single_safe_brawny63": {"en": "Possible", "ar": "ممكن"}, "single_safe_brawny64": {"en": "Possible", "ar": "ممكن"}, "single_safe_brawny65": {"en": "Possible", "ar": "ممكن"}, "single_safe_brawny66": {"en": "Jewellery Drawers", "ar": "أدراج المجوهرات"}, "single_safe_brawny67": {"en": "Possible", "ar": "ممكن"}, "single_safe_brawny68": {"en": "Possible", "ar": "ممكن"}, "single_safe_brawny69": {"en": "Possible", "ar": "ممكن"}, "single_safe_brawny70": {"en": "Fire Resistance", "ar": "مقاومة الحريق"}, "single_safe_brawny71": {"en": "60 minutes", "ar": "60 دقيقة"}, "single_safe_brawny72": {"en": "60 minutes", "ar": "60 دقيقة"}, "single_safe_brawny73": {"en": "60 minutes", "ar": "60 دقيقة"}, "single_safe_brawny74": {"en": "Brawny Safe", "ar": "خزنة Brawny"}, "single_safe_brawny75": {"en": "Bespoke Customization", "ar": "تخصيص حسب الطلب"}, "single_safe_brawny76": {"en": "Preserve the legacy of your\n                        family, protect your most meaningful pieces, and enjoy lasting peace of mind with a safe\n                        designed for what you treasure most.", "ar": "حافظوا على تراث أسرتكم، واحموا أثمن مقتنياتكم، واستمتعوا براحة بال دائمة مع خزنة صُممت لكل ما تكنزونه."}, "single_safe_brawny77": {"en": "Brawny Safe", "ar": "خزنة Brawny"}, "single_safe_brawny78": {"en": "Exterior Finish", "ar": "التشطيب الخارجي"}, "single_safe_brawny79": {"en": "Choose from our premium powder-coated high gloss palette.", "ar": "اختر من لوحة ألواننا الفاخرة اللامعة المطلية بالمسحوق."}, "single_safe_brawny80": {"en": "Gold", "ar": "ذهبي"}, "single_safe_brawny81": {"en": "Royal Blue", "ar": "أزرق ملكي"}, "single_safe_brawny82": {"en": "Red", "ar": "أحمر"}, "single_safe_brawny83": {"en": "Orange", "ar": "برتقالي"}, "single_safe_brawny84": {"en": "White", "ar": "أبيض"}, "single_safe_brawny85": {"en": "Black", "ar": "أسود"}, "single_safe_brawny86": {"en": "Opt for hand-stitched luxury leather full cladding.", "ar": "اختاروا التغليف الكامل بالجلد الفاخر المخيّط يدويًا."}, "single_safe_brawny87": {"en": "Golden Brown Leather", "ar": "جلد بني ذهبي"}, "single_safe_brawny88": {"en": "Black Leather", "ar": "جلد أسود"}, "single_safe_brawny89": {"en": "Green Leather", "ar": "جلد أخضر"}, "single_safe_brawny90": {"en": "Tanned Leather", "ar": "جلد مدبوغ"}, "single_safe_brawny91": {"en": "Grey Leather", "ar": "جلد رمادي"}, "single_safe_brawny92": {"en": "Red Leather", "ar": "جلد أحمر"}, "single_safe_brawny93": {"en": "Brawny Safe", "ar": "خزنة Brawny"}, "single_safe_brawny94": {"en": "The Collector's Choice", "ar": "اختيار الهاوي"}, "single_safe_brawny95": {"en": "\n                                The Brawny safe from Luxuria features customizable drawer configurations that bring\n                                structure\n                                and sophistication to your collection. Engineered for both security and practicality, it\n                                ensures your\n                                valuable pieces are systematically arranged within a refined environment. With a range\n                                of intelligently\n                                designed layouts tailored to different jewellery types, it delivers effortless\n                                accessibility paired\n                                with elevated protection.\n                            ", "ar": "\n                                تتميز خزنة Brawny من Luxuria بتكوينات أدراج قابلة للتخصيص تضفي تنظيمًا ورقيًا على مجموعتكم. مصممة للأمان والعملية معًا، تضمن ترتيب مقتنياتكم الثمينة بشكل منظم ضمن بيئة رفيعة. وبمجموعة من التصاميم المصممة بذكاء لأنواع المجوهرات المختلفة، توفر سهولة وصول لا مثيل لها إلى جانب حماية رفيعة.\n                            "}, "single_safe_brawny96": {"en": "Interior Finish", "ar": "التشطيب الداخلي"}, "single_safe_brawny97": {"en": "\n                                For the collector who demands both strength and elegance, the Brawny safe from Luxuria\n                                offers a sanctuary of\n                                refined security. Built with advanced certified protection and complemented by interiors\n                                tailored to your personal\n                                taste, each safe becomes a thoughtfully curated space where heirlooms and modern\n                                valuables are safeguarded with\n                                confidence and distinction.\n                            ", "ar": "\n                                لهواة الجمع الذين يطالبون بالقوة والأناقة معًا، تقدم خزنة Brawny من Luxuria ملاذًا من الأمان الرفيع. مبنية بحماية معتمدة متقدمة ومكمَّلة بتصاميم داخلية مخصصة لذوقكم الشخصي، تصبح كل خزنة فضاءً منسّقًا بعناية تُحفظ فيه التحف العائلية والمقتنيات الحديثة بثقة وتميّز.\n                            "}, "single_safe_brawny98": {"en": "Previous options", "ar": "الخيارات السابقة"}, "single_safe_brawny99": {"en": "L1 – Necklace Set and Rings", "ar": "L1 – طقم قلادة وخواتم"}, "single_safe_brawny100": {"en": "L2 – Watches", "ar": "L2 – ساعات"}, "single_safe_brawny101": {"en": "L3 – Ring and Earrings", "ar": "L3 – خاتم وأقراط"}, "single_safe_brawny102": {"en": "L4 – Long Chains", "ar": "L4 – سلاسل طويلة"}, "single_safe_brawny103": {"en": "L5 – Necklace Sets", "ar": "L5 – أطقم قلادات"}, "single_safe_brawny104": {"en": "L6 – Rings", "ar": "L6 – خواتم"}, "single_safe_brawny105": {"en": "L7 – Earrings", "ar": "L7 – أقراط"}, "single_safe_brawny106": {"en": "L8 – Pens", "ar": "L8 – أقلام"}, "single_safe_brawny107": {"en": "L9 – Small Partitions", "ar": "L9 – فواصل صغيرة"}, "single_safe_brawny108": {"en": "L10 – 4 Partitions", "ar": "L10 – 4 فواصل"}, "single_safe_brawny109": {"en": "L11 – Vertical Partition", "ar": "L11 – فاصل عمودي"}, "single_safe_brawny110": {"en": "L12 – Small Watches", "ar": "L12 – ساعات صغيرة"}, "single_safe_brawny111": {"en": "L13 – Extra Small Partitions", "ar": "L13 – فواصل صغيرة جدًا"}, "single_safe_brawny112": {"en": "L14 – 2 Partitions", "ar": "L14 – فاصلان"}, "single_safe_brawny113": {"en": "L15 – Lighter Collection", "ar": "L15 – مجموعة الولاعات"}, "single_safe_brawny114": {"en": "L16 – Plain Drawer", "ar": "L16 – درج عادي"}, "single_safe_brawny115": {"en": "Next options", "ar": "الخيارات التالية"}, "single_safe_brawny116": {"en": "Ready to Commission?", "ar": "مستعدون للتنفيذ؟"}, "single_safe_brawny117": {"en": "Work directly with our artisans to review these finishes\n                via physical material samples.", "ar": "تعاونوا مباشرة مع حرفيينا لمراجعة هذه التشطيبات من خلال عينات مواد فعلية."}, "single_safe_brawny118": {"en": "Contact Sales Advisor", "ar": "تواصل مع مستشار المبيعات"}, "single_safe_brawny119": {"en": "Luxuria Safes", "ar": "خزائن Luxuria"}, "single_safe_brawny120": {"en": "Uncompromising Security, Bespoke Elegance.", "ar": "أمان لا يقبل التنازل، وأناقة مصممة خصيصًا."}, "single_safe_brawny121": {"en": "Explore", "ar": "استكشف"}, "single_safe_brawny122": {"en": "Collections", "ar": "المجموعات"}, "single_safe_brawny123": {"en": "Standards & Certifications", "ar": "المعايير والاعتمادات"}, "single_safe_brawny124": {"en": "Locking Systems", "ar": "أنظمة الإقفال"}, "single_safe_brawny125": {"en": "Our Story", "ar": "قصتنا"}, "single_safe_brawny126": {"en": "Bespoke Series", "ar": "سلسلة مخصصة"}, "single_safe_brawny127": {"en": "Jewellery Safes", "ar": "خزائن المجوهرات"}, "single_safe_brawny128": {"en": "Watch Safes", "ar": "خزائن الساعات"}, "single_safe_brawny129": {"en": "Wardrobe Safes", "ar": "خزائن خزانة الملابس"}, "single_safe_brawny130": {"en": "Multipurpose Estate Safes", "ar": "الخزائن العقارية متعددة الأغراض"}, "single_safe_brawny131": {"en": "Contact Us", "ar": "تواصل معنا"}, "single_safe_brawny132": {"en": "info@luxuriasafes.com", "ar": "info@luxuriasafes.com"}, "single_safe_brawny133": {"en": "© 2026 Luxuria Safes. All Rights Reserved.", "ar": "© 2026 خزائن Luxuria. جميع الحقوق محفوظة."}, "single_safe_brawny134": {"en": "Privacy Policy", "ar": "سياسة الخصوصية"}, "single_safe_brawny135": {"en": "Return Policy", "ar": "سياسة الاسترجاع"}, "single_safe_brawny136": {"en": "Cancellation Policy", "ar": "سياسة الإلغاء"}};
+    </script>
+    <script src="assets/js/i18n.js"></script>
 
-        <footer id="colophon" class="site-footer">
-        <div class="footer-widgets container">
-            <div class="footer-column brand-col">
-                <h3>Luxuria Safes</h3>
-                <p>Uncompromising Security, Bespoke Elegance.</p>
-            </div>
-
-            <div class="footer-column links-col">
-                <h4>Explore</h4>
-                <ul>
-                    <li><a href="collections.html">Collections</a></li>
-                    <li><a href="standards.html">Standards &amp; Certifications</a></li>
-                    <li><a href="locks.html">Locking Systems</a></li>
-                    <li><a href="story.html">Our Story</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column links-col">
-                <h4>Bespoke Series</h4>
-                <ul>
-                    <li><a href="jewellery-safe.html">Jewellery Safes</a></li>
-                    <li><a href="watch-safe.html">Watch Safes</a></li>
-                    <li><a href="wardrobe-safe.html">Wardrobe Safes</a></li>
-                    <li><a href="multipurpose-safe.html">Multipurpose Estate Safes</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column contact-col">
-                <h4>Contact Us</h4>
-                <p>info@luxuriasafes.com</p>
-            </div>
-        </div>
-        <div class="site-info container">
-            <p>&copy; 2026 Luxuria Safes. All Rights Reserved.</p>
-            <div class="legal-links">
-                <a href="#">Privacy Policy</a> |
-                <a href="#">Return Policy</a> |
-                <a href="#">Cancellation Policy</a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="assets/js/main.js"></script>
 </body>
-
 </html>

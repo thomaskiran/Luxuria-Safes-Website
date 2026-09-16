@@ -1,223 +1,207 @@
 <!DOCTYPE html>
+
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <title>Luxuria Safes - Chubb 3.5" Strongroom Door</title>
+
+    <script>
+        (function () {
+            try {
+                var l = localStorage.getItem('luxuria_lang') || 'en';
+                document.documentElement.lang = l;
+                document.documentElement.dir = l === 'ar' ? 'rtl' : 'ltr';
+            } catch (e) {}
+        })();
+    </script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<title data-i18n="single_vault_door_chubb_3_5_strongroom_title">Luxuria Safes - Chubb 3.5" Strongroom Door</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/main.css" rel="stylesheet"/>
+<script defer="" src="https://cdn.vercel-insights.com/v1/script.js"></script>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Noto+Kufi+Arabic:wght@400;500;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
+    <link rel="stylesheet" href="assets/css/i18n.css">
+
 </head>
-
 <body>
-
-        <header id="masthead" class="site-header scrolled">
-        <div class="header-inner container">
-            <div class="site-branding">
-                <p class="site-title" style="margin: 0;">
-                    <a href="index.html" style="display: flex; align-items: center;">
-                        <img src="Luxuria-Safes-logo.svg" alt="Luxuria Safes Logo"
-                            style="height: 3rem; width: auto;">
-                    </a>
-                </p>
-            </div>
-            <div class="menu-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <nav class="main-navigation">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="collections.html">The Collections</a></li>
-                    <li><a href="standards.html">Standards</a></li>
-                    <li><a href="locks.html">Locks</a></li>
-                    <li><a href="story.html">Our Story</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main class="page-header pt-xl bg-black">
-        <section class="product-hero flex-split align-stretch  configurator-row">
-            <div class="product-gallery flex-1 flex-center bg-darker">
-                <!-- Main Image -->
-                <div class="main-image-display mb-md">
-                    <img id="mainGalleryImage" src="Products/Vault Doors/3.5inch Strongroom Door/Product Photos/3.5inch-hero-img.avif"
-                        alt="3.5inch Strongroom Door" style="width: 60%; height: auto; object-fit: cover;" loading="lazy">
-                </div>
-                <!-- Thumbnails -->
-                <div class="gallery-thumbnails grid" style="grid-template-columns: repeat(3, 1fr); gap: 10px; width: 25%; height:25%; margin: auto;">
-                    <div class="thumbnail active" onclick="updateGallery(document.getElementById('mainGalleryImage'),this, 'Products/Vault Doors/3.5inch Strongroom Door/Product Photos/3.5inch-hero-img.avif')">
-                        <img src="Products/Vault Doors/3.5inch Strongroom Door/Product Photos/3.5inch-hero-img.avif" alt="Thumb 1" loading="lazy">
-                    </div>
-                    <div class="thumbnail" onclick="updateGallery(document.getElementById('mainGalleryImage'),this, 'Products/Vault Doors/3.5inch Strongroom Door/Product Photos/3.5inch-Strongroom-Door.avif')">
-                        <img src="Products/Vault Doors/3.5inch Strongroom Door/Product Photos/3.5inch-Strongroom-Door.avif" alt="Thumb 2" loading="lazy">
-                    </div>
-                    <div class="thumbnail" onclick="updateGallery(document.getElementById('mainGalleryImage'),this, 'Products/Vault Doors/3.5inch Strongroom Door/Product Photos/3.5inch-lock-img.avif')">
-                        <img src="Products/Vault Doors/3.5inch Strongroom Door/Product Photos/3.5inch-lock-img.avif" alt="Thumb 3" loading="lazy">
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-info flex-1 flex-center section-padding pt-xl">
-                <div class="info-inner reveal-up">
-                    <span class="eyebrow gold-text">Security Vault Doors</span>
-                    <h1 class="product-title accent-title" style="font-size: 4rem;">Chubb 3.5" Strongroom Door</h1>
-
-                    <div class="product-description mt-md text-block">
-                        <p>A higher-security solution engineered for environments requiring increased resistance against modern attack methods. It offers enhanced barrier thickness, stronger boltwork, and upgraded locking protection.</p>
-                    </div>
-
-                    <div class="container" id="gamme-icons">
-                        <div class="flex-center">
-                            <img class=""
-                                src="effraction-light.png"
-                                alt="Certified burglary resistant"
-                                loading="lazy">
-                            <span class="">
-                                Burglary</span>
-                        </div>
-                        <div class="flex-center">
-                            <img class=""
-                                src="resistant-au-feu.avif"
-                                alt="Certified fire resistant"
-                                loading="lazy">
-                            <span class="">
-                                Fire</span>
-                        </div>
-                        <div class="flex-center">
-                            <img class="" src="Ecb-s-logo-150x150.jpg" alt="ECB-S Certified" style="height: 70px;" loading="lazy">
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Features SECTION -->
-        <section id="collections" class="section-padding bg-dark">
-            <div class="container">
-                <div class="grid grid-3">
-                    <!-- Key Features -->
-                    <div class="collection-card reveal-up">
-                        <div class="card-content">
-                            <h3 class="gold-text"
-                                style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
-                                <img src="icon-shield.avif"
-                                    alt="" style="height: 32px;" loading="lazy">
+<header class="site-header scrolled" id="masthead">
+<div class="header-inner container">
+<div class="site-branding">
+<p class="site-title" style="margin: 0;">
+<a href="index.html" style="display: flex; align-items: center;">
+<img alt="Luxuria Safes Logo" data-i18n-attr="alt:single_vault_door_chubb_3_5_strongroom1" src="Luxuria-Safes-logo.svg" style="height: 3rem; width: auto;"/>
+</a>
+</p>
+</div>
+<div aria-label="Toggle navigation" class="menu-toggle" data-i18n-attr="aria-label:single_vault_door_chubb_3_5_strongroom2">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<nav class="main-navigation">
+<ul>
+<li><a href="index.html"><span data-i18n="single_vault_door_chubb_3_5_strongroom3">Home</span></a></li>
+<li><a href="collections.html"><span data-i18n="single_vault_door_chubb_3_5_strongroom4">The Collections</span></a></li>
+<li><a href="standards.html"><span data-i18n="single_vault_door_chubb_3_5_strongroom5">Standards</span></a></li>
+<li><a href="locks.html"><span data-i18n="single_vault_door_chubb_3_5_strongroom6">Locks</span></a></li>
+<li><a href="story.html"><span data-i18n="single_vault_door_chubb_3_5_strongroom7">Our Story</span></a></li>
+<li><a href="contact.html"><span data-i18n="single_vault_door_chubb_3_5_strongroom8">Contact</span></a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main class="page-header pt-xl bg-black">
+<section class="product-hero flex-split align-stretch configurator-row">
+<div class="product-gallery flex-1 flex-center bg-darker">
+<!-- Main Image -->
+<div class="main-image-display mb-md">
+<img alt="3.5inch Strongroom Door" data-i18n-attr="alt:single_vault_door_chubb_3_5_strongroom9" id="mainGalleryImage" loading="lazy" src="Products/Vault Doors/3.5inch Strongroom Door/Product Photos/3.5inch-hero-img.avif" style="width: 60%; height: auto; object-fit: cover;"/>
+</div>
+<!-- Thumbnails -->
+<div class="gallery-thumbnails grid" style="grid-template-columns: repeat(3, 1fr); gap: 10px; width: 25%; height:25%; margin: auto;">
+<div class="thumbnail active" onclick="updateGallery(document.getElementById('mainGalleryImage'),this, 'Products/Vault Doors/3.5inch Strongroom Door/Product Photos/3.5inch-hero-img.avif')">
+<img alt="Thumb 1" data-i18n-attr="alt:single_vault_door_chubb_3_5_strongroom10" loading="lazy" src="Products/Vault Doors/3.5inch Strongroom Door/Product Photos/3.5inch-hero-img.avif"/>
+</div>
+<div class="thumbnail" onclick="updateGallery(document.getElementById('mainGalleryImage'),this, 'Products/Vault Doors/3.5inch Strongroom Door/Product Photos/3.5inch-Strongroom-Door.avif')">
+<img alt="Thumb 2" data-i18n-attr="alt:single_vault_door_chubb_3_5_strongroom11" loading="lazy" src="Products/Vault Doors/3.5inch Strongroom Door/Product Photos/3.5inch-Strongroom-Door.avif"/>
+</div>
+<div class="thumbnail" onclick="updateGallery(document.getElementById('mainGalleryImage'),this, 'Products/Vault Doors/3.5inch Strongroom Door/Product Photos/3.5inch-lock-img.avif')">
+<img alt="Thumb 3" data-i18n-attr="alt:single_vault_door_chubb_3_5_strongroom12" loading="lazy" src="Products/Vault Doors/3.5inch Strongroom Door/Product Photos/3.5inch-lock-img.avif"/>
+</div>
+</div>
+</div>
+<div class="product-info flex-1 flex-center section-padding pt-xl">
+<div class="info-inner reveal-up">
+<span class="eyebrow gold-text"><span data-i18n="single_vault_door_chubb_3_5_strongroom13">Security Vault Doors</span></span>
+<h1 class="product-title accent-title" style="font-size: 4rem;"><span data-i18n="single_vault_door_chubb_3_5_strongroom14">Chubb 3.5" Strongroom Door</span></h1>
+<div class="product-description mt-md text-block">
+<p><span data-i18n="single_vault_door_chubb_3_5_strongroom15">A higher-security solution engineered for environments requiring increased resistance against modern attack methods. It offers enhanced barrier thickness, stronger boltwork, and upgraded locking protection.</span></p>
+</div>
+<div class="container" id="gamme-icons">
+<div class="flex-center">
+<img alt="Certified burglary resistant" class="" data-i18n-attr="alt:single_vault_door_chubb_3_5_strongroom16" loading="lazy" src="effraction-light.png"/>
+<span class=""><span data-i18n="single_vault_door_chubb_3_5_strongroom17">
+                                Burglary</span></span>
+</div>
+<div class="flex-center">
+<img alt="Certified fire resistant" class="" data-i18n-attr="alt:single_vault_door_chubb_3_5_strongroom18" loading="lazy" src="resistant-au-feu.avif"/>
+<span class=""><span data-i18n="single_vault_door_chubb_3_5_strongroom19">
+                                Fire</span></span>
+</div>
+<div class="flex-center">
+<img alt="ECB-S Certified" class="" data-i18n-attr="alt:single_vault_door_chubb_3_5_strongroom20" loading="lazy" src="Ecb-s-logo-150x150.jpg" style="height: 70px;"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Features SECTION -->
+<section class="section-padding bg-dark" id="collections">
+<div class="container">
+<div class="grid grid-3">
+<!-- Key Features -->
+<div class="collection-card reveal-up">
+<div class="card-content">
+<h3 class="gold-text" style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+<img alt="" loading="lazy" src="icon-shield.avif" style="height: 32px;"/><span data-i18n="single_vault_door_chubb_3_5_strongroom21">
                                 Key Features
-                            </h3>
-                            <ul class="option-list" style="text-align: left; padding-top: 1rem;">
-                                <li><strong class="gold-text">Modern Tool Resistance</strong><br>Designed specifically to resist high-speed drilling, mechanical force, and modern cutting tools.</li>
-                                <li><strong class="gold-text">Heavy-Duty Locking</strong><br>Upgraded 11-lever double-bitted key lock for higher manipulation resistance.</li>
-                                <li><strong class="gold-text">Redundant Safety</strong><br>Dual glass relockers provide enhanced anti-tamper protection.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!--Construction-->
-                    <div class="collection-card reveal-up" style="transition-delay: 0.2s;">
-                        <div class="card-content">
-                            <h3 class="gold-text"
-                                style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
-                                <img src="icon-cube.avif" alt=""
-                                    style="height: 32px;" loading="lazy">
+                            </span></h3>
+<ul class="option-list" style="text-align: left; padding-top: 1rem;">
+<li><strong class="gold-text"><span data-i18n="single_vault_door_chubb_3_5_strongroom23">Modern Tool Resistance</span></strong><br/><span data-i18n="single_vault_door_chubb_3_5_strongroom22">Designed specifically to resist high-speed drilling, mechanical force, and modern cutting tools.</span></li>
+<li><strong class="gold-text"><span data-i18n="single_vault_door_chubb_3_5_strongroom25">Heavy-Duty Locking</span></strong><br/><span data-i18n="single_vault_door_chubb_3_5_strongroom24">Upgraded 11-lever double-bitted key lock for higher manipulation resistance.</span></li>
+<li><strong class="gold-text"><span data-i18n="single_vault_door_chubb_3_5_strongroom27">Redundant Safety</span></strong><br/><span data-i18n="single_vault_door_chubb_3_5_strongroom26">Dual glass relockers provide enhanced anti-tamper protection.</span></li>
+</ul>
+</div>
+</div>
+<!--Construction-->
+<div class="collection-card reveal-up" style="transition-delay: 0.2s;">
+<div class="card-content">
+<h3 class="gold-text" style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+<img alt="" loading="lazy" src="icon-cube.avif" style="height: 32px;"/><span data-i18n="single_vault_door_chubb_3_5_strongroom28">
                                 Construction
-                            </h3>
-                            <ul class="option-list" style="text-align: left; padding-top: 1rem;">
-                                <li><strong class="gold-text">Enhanced Barrier</strong><br>Increased protective barrier thickness of 89 mm for superior physical defense.</li>
-                                <li><strong class="gold-text">Superior Bolt Strength</strong><br>Features larger 50 mm diameter bolts for massive resistance.</li>
-                                <li><strong class="gold-text">Reinforced Build</strong><br>Constructed with F80 barrier material plus steel fibers for increased density.</li>
-                            </ul>
-
-                        </div>
-                    </div>
-                    <!-- Applications -->
-                    <div class="collection-card reveal-up" style="transition-delay: 0.2s;">
-                        <div class="card-content">
-                            <h3 class="gold-text"
-                                style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
-                                <img src="icon-diamond-2.avif" alt=""
-                                    style="height: 32px;" loading="lazy">
+                            </span></h3>
+<ul class="option-list" style="text-align: left; padding-top: 1rem;">
+<li><strong class="gold-text"><span data-i18n="single_vault_door_chubb_3_5_strongroom30">Enhanced Barrier</span></strong><br/><span data-i18n="single_vault_door_chubb_3_5_strongroom29">Increased protective barrier thickness of 89 mm for superior physical defense.</span></li>
+<li><strong class="gold-text"><span data-i18n="single_vault_door_chubb_3_5_strongroom32">Superior Bolt Strength</span></strong><br/><span data-i18n="single_vault_door_chubb_3_5_strongroom31">Features larger 50 mm diameter bolts for massive resistance.</span></li>
+<li><strong class="gold-text"><span data-i18n="single_vault_door_chubb_3_5_strongroom34">Reinforced Build</span></strong><br/><span data-i18n="single_vault_door_chubb_3_5_strongroom33">Constructed with F80 barrier material plus steel fibers for increased density.</span></li>
+</ul>
+</div>
+</div>
+<!-- Applications -->
+<div class="collection-card reveal-up" style="transition-delay: 0.2s;">
+<div class="card-content">
+<h3 class="gold-text" style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+<img alt="" loading="lazy" src="icon-diamond-2.avif" style="height: 32px;"/><span data-i18n="single_vault_door_chubb_3_5_strongroom35">
                                 Applications
-                            </h3>
-                            <ul class="option-list" style="text-align: left; padding-top: 1rem;">
-                                <li><strong class="gold-text">High Value Commercial Vaults</strong><br>Ideal for high-value retail, and commercial environments requiring secure storage solutions.</li>
-                                <li><strong class="gold-text">Bank & Financial Institutions</strong><br>Designed for the secure storage of cash, checks, and other high-value items in banking and financial environments.</li>
-                                <li><strong class="gold-text">Jewelry Stores</strong><br>Specifically engineered for the secure storage of high-value jewelry and accessories.</li>
-                            </ul>
+                            </span></h3>
+<ul class="option-list" style="text-align: left; padding-top: 1rem;">
+<li><strong class="gold-text"><span data-i18n="single_vault_door_chubb_3_5_strongroom37">High Value Commercial Vaults</span></strong><br/><span data-i18n="single_vault_door_chubb_3_5_strongroom36">Ideal for high-value retail, and commercial environments requiring secure storage solutions.</span></li>
+<li><strong class="gold-text"><span data-i18n="single_vault_door_chubb_3_5_strongroom39">Bank &amp; Financial Institutions</span></strong><br/><span data-i18n="single_vault_door_chubb_3_5_strongroom38">Designed for the secure storage of cash, checks, and other high-value items in banking and financial environments.</span></li>
+<li><strong class="gold-text"><span data-i18n="single_vault_door_chubb_3_5_strongroom41">Jewelry Stores</span></strong><br/><span data-i18n="single_vault_door_chubb_3_5_strongroom40">Specifically engineered for the secure storage of high-value jewelry and accessories.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Specifications -->
+<section class="section-padding bg-black" id="specifications">
+<div class="container">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem;">
+<div>
+<h2 class="accent-title" style="font-size: 3rem;"><span data-i18n="single_vault_door_chubb_3_5_strongroom42">Technical Specifications</span></h2>
+</div>
+<a class="btn btn-outline hover-fill" href="Products/Vault Doors/3.5inch Strongroom Door/CHUBB_3.5inch_Vault_Door_Product_Sheet.pdf" target="_blank"><span data-i18n="single_vault_door_chubb_3_5_strongroom43">See Product Sheet</span></a>
+</div>
+<div class="table-wrapper">
+<table class="table-luxury">
+<thead>
+<tr>
+<th style="font-size: larger;"><span data-i18n="single_vault_door_chubb_3_5_strongroom44">Features</span></th>
+<th style="font-size: larger; text-align: right;"><span data-i18n="single_vault_door_chubb_3_5_strongroom45">Details</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th style="width: 50%; text-align: left; padding: 1rem;"><span data-i18n="single_vault_door_chubb_3_5_strongroom46">Protective Barrier Thickness</span></th>
+<td style="width: 50%; text-align: right; padding: 1rem;"><span data-i18n="single_vault_door_chubb_3_5_strongroom47">89 mm (3.5”)</span></td>
+</tr>
+<tr>
+<th style="width: 50%; text-align: left; padding: 1rem;"><span data-i18n="single_vault_door_chubb_3_5_strongroom48">Total Door Thickness</span></th>
+<td style="width: 50%; text-align: right; padding: 1rem;"><span data-i18n="single_vault_door_chubb_3_5_strongroom49">Approx. 226 mm</span></td>
+</tr>
+<tr>
+<th style="width: 50%; text-align: left; padding: 1rem;"><span data-i18n="single_vault_door_chubb_3_5_strongroom50">Boltwork System</span></th>
+<td style="width: 50%; text-align: right; padding: 1rem;"><span data-i18n="single_vault_door_chubb_3_5_strongroom51">Heavy duty 18-bolt multi-directional (7 front, 2 top, 2 bottom, 7 rear)</span></td>
+</tr>
+<tr>
+<th style="width: 50%; text-align: left; padding: 1rem;"><span data-i18n="single_vault_door_chubb_3_5_strongroom52">Bolt Diameter</span></th>
+<td style="width: 50%; text-align: right; padding: 1rem;"><span data-i18n="single_vault_door_chubb_3_5_strongroom53">Approx. 50 mm</span></td>
+</tr>
+<tr>
+<th style="width: 50%; text-align: left; padding: 1rem;"><span data-i18n="single_vault_door_chubb_3_5_strongroom54">Standard Locking</span></th>
+<td style="width: 50%; text-align: right; padding: 1rem;"><span data-i18n="single_vault_door_chubb_3_5_strongroom55">Certified combination lock + 11-lever double-bitted key lock </span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- CTA -->
+<div class="config-card flex-center mb-0" style="border: 1px solid var(--color-gold); background: rgba(212, 175, 55, 0.05);">
+<h3 style="margin-bottom: 1rem;"><span data-i18n="single_vault_door_chubb_3_5_strongroom56">Ready to Commission?</span></h3>
+<p class="text-center" style="margin-bottom: 2rem;"><span data-i18n="single_vault_door_chubb_3_5_strongroom57">Work directly with our artisans to review these finishes
+                via physical material samples.</span></p>
+<a class="btn btn-primary btn-gold" href="contact.html"><span data-i18n="single_vault_door_chubb_3_5_strongroom58">Contact Sales Advisor</span></a>
+</div>
 
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
-        <!-- Technical Specifications -->
-        <section id="specifications" class="section-padding bg-black">
-            <div class="container">
-                <div
-                    style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem;">
-                    <div>
-                        <h2 class="accent-title" style="font-size: 3rem;">Technical Specifications</h2>
-                    </div>
-                    <a href="Products/Vault Doors/3.5inch Strongroom Door/CHUBB_3.5inch_Vault_Door_Product_Sheet.pdf" class="btn btn-outline hover-fill" target="_blank">See Product Sheet</a>
-                </div>
-                <div class="table-wrapper">
-                    <table class="table-luxury">
-                        <thead>
-                            <tr>
-                                <th style="font-size: larger;">Features</th>
-                                <th style="font-size: larger; text-align: right;">Details</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th style="width: 50%; text-align: left; padding: 1rem;">Protective Barrier Thickness</th>
-                                <td style="width: 50%; text-align: right; padding: 1rem;">89 mm (3.5”)</td>
-                            </tr>
-                            <tr>
-                                <th style="width: 50%; text-align: left; padding: 1rem;">Total Door Thickness</th>
-                                <td style="width: 50%; text-align: right; padding: 1rem;">Approx. 226 mm</td>
-                            </tr>
-                            <tr>
-                                <th style="width: 50%; text-align: left; padding: 1rem;">Boltwork System</th>
-                                <td style="width: 50%; text-align: right; padding: 1rem;">Heavy duty 18-bolt multi-directional (7 front, 2 top, 2 bottom, 7 rear)</td>
-                            </tr>
-                            <tr>
-                                <th style="width: 50%; text-align: left; padding: 1rem;">Bolt Diameter</th>
-                                <td style="width: 50%; text-align: right; padding: 1rem;">Approx. 50 mm</td>
-                            </tr>
-                            <tr>
-                                <th style="width: 50%; text-align: left; padding: 1rem;">Standard Locking</th>
-                                <td style="width: 50%; text-align: right; padding: 1rem;">Certified combination lock + 11-lever double-bitted key lock </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-        <!-- CTA -->
-        <div class="config-card flex-center mb-0"
-            style="border: 1px solid var(--color-gold); background: rgba(212, 175, 55, 0.05);">
-            <h3 style="margin-bottom: 1rem;">Ready to Commission?</h3>
-            <p class="text-center" style="margin-bottom: 2rem;">Work directly with our artisans to review these finishes
-                via physical material samples.</p>
-            <a href="contact.html" class="btn btn-primary btn-gold">Contact Sales Advisor</a>
-        </div>
-        </div>
-        </section>
 
-        <!-- DRAWINGS SECTION>
+<!-- DRAWINGS SECTION>
         <section class="product-hero flex-row align-stretch border-top-gold section-padding bg-darker">
             <div class="product-gallery flex-1 flex-center bg-darker" style="width: 100%; height: 100%; margin: auto;">
                 <img src="Products/Luxury Safes/Minitreasure/Product Photos/MiniTreasure Size Sketch.jpg"
@@ -230,51 +214,50 @@
                     style="width: 60%; height: 60%; margin: auto; overflow-clip-margin: content-box; border: 50px solid var(--color-text-light);">
             </div>
         </section-->
-    </main>
+</main>
+<footer class="site-footer" id="colophon">
+<div class="footer-widgets container">
+<div class="footer-column brand-col">
+<h3><span data-i18n="single_vault_door_chubb_3_5_strongroom59">Luxuria Safes</span></h3>
+<p><span data-i18n="single_vault_door_chubb_3_5_strongroom60">Uncompromising Security, Bespoke Elegance.</span></p>
+</div>
+<div class="footer-column links-col">
+<h4><span data-i18n="single_vault_door_chubb_3_5_strongroom61">Explore</span></h4>
+<ul>
+<li><a href="collections.html"><span data-i18n="single_vault_door_chubb_3_5_strongroom62">Collections</span></a></li>
+<li><a href="standards.html"><span data-i18n="single_vault_door_chubb_3_5_strongroom63">Standards &amp; Certifications</span></a></li>
+<li><a href="locks.html"><span data-i18n="single_vault_door_chubb_3_5_strongroom64">Locking Systems</span></a></li>
+<li><a href="story.html"><span data-i18n="single_vault_door_chubb_3_5_strongroom65">Our Story</span></a></li>
+</ul>
+</div>
+<div class="footer-column links-col">
+<h4><span data-i18n="single_vault_door_chubb_3_5_strongroom66">Bespoke Series</span></h4>
+<ul>
+<li><a href="jewellery-safe.html"><span data-i18n="single_vault_door_chubb_3_5_strongroom67">Jewellery Safes</span></a></li>
+<li><a href="watch-safe.html"><span data-i18n="single_vault_door_chubb_3_5_strongroom68">Watch Safes</span></a></li>
+<li><a href="wardrobe-safe.html"><span data-i18n="single_vault_door_chubb_3_5_strongroom69">Wardrobe Safes</span></a></li>
+<li><a href="multipurpose-safe.html"><span data-i18n="single_vault_door_chubb_3_5_strongroom70">Multipurpose Estate Safes</span></a></li>
+</ul>
+</div>
+<div class="footer-column contact-col">
+<h4><span data-i18n="single_vault_door_chubb_3_5_strongroom71">Contact Us</span></h4>
+<p><span data-i18n="single_vault_door_chubb_3_5_strongroom72">info@luxuriasafes.com</span></p>
+</div>
+</div>
+<div class="site-info container">
+<p><span data-i18n="single_vault_door_chubb_3_5_strongroom73">© 2026 Luxuria Safes. All Rights Reserved.</span></p>
+<div class="legal-links">
+<a href="#"><span data-i18n="single_vault_door_chubb_3_5_strongroom74">Privacy Policy</span></a> |
+                <a href="#"><span data-i18n="single_vault_door_chubb_3_5_strongroom75">Return Policy</span></a> |
+                <a href="#"><span data-i18n="single_vault_door_chubb_3_5_strongroom76">Cancellation Policy</span></a>
+</div>
+</div>
+</footer>
+<script src="assets/js/main.js"></script>
+    <script id="page-i18n">
+        window.PAGE_I18N = {"single_vault_door_chubb_3_5_strongroom_title": {"en": "Luxuria Safes - Chubb 3.5\" Strongroom Door", "ar": "خزائن Luxuria - باب Chubb للخزنة المحصنة 3.5 بوصة"}, "single_vault_door_chubb_3_5_strongroom1": {"en": "Luxuria Safes Logo", "ar": "شعار خزائن Luxuria"}, "single_vault_door_chubb_3_5_strongroom2": {"en": "Toggle navigation", "ar": "تبديل شريط التنقل"}, "single_vault_door_chubb_3_5_strongroom3": {"en": "Home", "ar": "الرئيسية"}, "single_vault_door_chubb_3_5_strongroom4": {"en": "The Collections", "ar": "المجموعات"}, "single_vault_door_chubb_3_5_strongroom5": {"en": "Standards", "ar": "المعايير"}, "single_vault_door_chubb_3_5_strongroom6": {"en": "Locks", "ar": "الأقفال"}, "single_vault_door_chubb_3_5_strongroom7": {"en": "Our Story", "ar": "قصتنا"}, "single_vault_door_chubb_3_5_strongroom8": {"en": "Contact", "ar": "تواصل معنا"}, "single_vault_door_chubb_3_5_strongroom9": {"en": "3.5inch Strongroom Door", "ar": "باب الخزنة المحصنة 3.5 بوصة"}, "single_vault_door_chubb_3_5_strongroom10": {"en": "Thumb 1", "ar": "صورة مصغرة 1"}, "single_vault_door_chubb_3_5_strongroom11": {"en": "Thumb 2", "ar": "صورة مصغرة 2"}, "single_vault_door_chubb_3_5_strongroom12": {"en": "Thumb 3", "ar": "صورة مصغرة 3"}, "single_vault_door_chubb_3_5_strongroom13": {"en": "Security Vault Doors", "ar": "أبواب الخزنات المحصنة"}, "single_vault_door_chubb_3_5_strongroom14": {"en": "Chubb 3.5\" Strongroom Door", "ar": "باب Chubb للخزنة المحصنة 3.5 بوصة"}, "single_vault_door_chubb_3_5_strongroom15": {"en": "A higher-security solution engineered for environments requiring increased resistance against modern attack methods. It offers enhanced barrier thickness, stronger boltwork, and upgraded locking protection.", "ar": "حل أمني أعلى مستوى صُمم للبيئات التي تتطلب مقاومة متزايدة لأساليب الاعتداء الحديثة، ويوفر سماكة حاجز معززة، ونظام أقفال أقوى، وحماية إقفال محسّنة."}, "single_vault_door_chubb_3_5_strongroom16": {"en": "Certified burglary resistant", "ar": "معتمدة كمقاومة للسرقة"}, "single_vault_door_chubb_3_5_strongroom17": {"en": "\n                                Burglary", "ar": "\n                                السرقة"}, "single_vault_door_chubb_3_5_strongroom18": {"en": "Certified fire resistant", "ar": "معتمدة كمقاومة للحريق"}, "single_vault_door_chubb_3_5_strongroom19": {"en": "\n                                Fire", "ar": "\n                                الحريق"}, "single_vault_door_chubb_3_5_strongroom20": {"en": "ECB-S Certified", "ar": "معتمدة من ECB-S"}, "single_vault_door_chubb_3_5_strongroom21": {"en": "\n                                Key Features\n                            ", "ar": "\n                                الميزات الرئيسية\n                            "}, "single_vault_door_chubb_3_5_strongroom22": {"en": "Designed specifically to resist high-speed drilling, mechanical force, and modern cutting tools.", "ar": "مصممة خصيصًا لمقاومة الحفر عالي السرعة والقوة الميكانيكية وأدوات القطع الحديثة."}, "single_vault_door_chubb_3_5_strongroom23": {"en": "Modern Tool Resistance", "ar": "مقاومة الأدوات الحديثة"}, "single_vault_door_chubb_3_5_strongroom24": {"en": "Upgraded 11-lever double-bitted key lock for higher manipulation resistance.", "ar": "قفل مفتاح مزدوج السن محسَّن بأحد عشر عتلة لمقاومة أعلى للتلاعب."}, "single_vault_door_chubb_3_5_strongroom25": {"en": "Heavy-Duty Locking", "ar": "إقفال فائق التحمل"}, "single_vault_door_chubb_3_5_strongroom26": {"en": "Dual glass relockers provide enhanced anti-tamper protection.", "ar": "توفر أجهزة إعادة الإقفال الزجاجية المزدوجة حماية معززة من العبث."}, "single_vault_door_chubb_3_5_strongroom27": {"en": "Redundant Safety", "ar": "أمان احتياطي"}, "single_vault_door_chubb_3_5_strongroom28": {"en": "\n                                Construction\n                            ", "ar": "\n                                البنية\n                            "}, "single_vault_door_chubb_3_5_strongroom29": {"en": "Increased protective barrier thickness of 89 mm for superior physical defense.", "ar": "سماكة حاجز حماية متزايدة تبلغ 89 مم لدفاع فعلي فائق."}, "single_vault_door_chubb_3_5_strongroom30": {"en": "Enhanced Barrier", "ar": "حاجز معزز"}, "single_vault_door_chubb_3_5_strongroom31": {"en": "Features larger 50 mm diameter bolts for massive resistance.", "ar": "تتميز بمزاليج أكبر بقطر 50 مم لمقاومة هائلة."}, "single_vault_door_chubb_3_5_strongroom32": {"en": "Superior Bolt Strength", "ar": "قوة مزاليج فائقة"}, "single_vault_door_chubb_3_5_strongroom33": {"en": "Constructed with F80 barrier material plus steel fibers for increased density.", "ar": "مصنوعة من مادة الحاجز F80 مع ألياف فولاذية لزيادة الكثافة."}, "single_vault_door_chubb_3_5_strongroom34": {"en": "Reinforced Build", "ar": "بنية معززة"}, "single_vault_door_chubb_3_5_strongroom35": {"en": "\n                                Applications\n                            ", "ar": "\n                                الاستخدامات\n                            "}, "single_vault_door_chubb_3_5_strongroom36": {"en": "Ideal for high-value retail, and commercial environments requiring secure storage solutions.", "ar": "مثالية لبيئات البيع بالتجزئة عالية القيمة والبيئات التجارية التي تتطلب حلول تخزين آمنة."}, "single_vault_door_chubb_3_5_strongroom37": {"en": "High Value Commercial Vaults", "ar": "الخزنات التجارية عالية القيمة"}, "single_vault_door_chubb_3_5_strongroom38": {"en": "Designed for the secure storage of cash, checks, and other high-value items in banking and financial environments.", "ar": "مصممة للتخزين الآمن للنقد والشيكات والمقتنيات القيّمة الأخرى في البيئات المصرفية والمالية."}, "single_vault_door_chubb_3_5_strongroom39": {"en": "Bank & Financial Institutions", "ar": "البنوك والمؤسسات المالية"}, "single_vault_door_chubb_3_5_strongroom40": {"en": "Specifically engineered for the secure storage of high-value jewelry and accessories.", "ar": "مصممة خصيصًا للتخزين الآمن للمجوهرات والإكسسوارات عالية القيمة."}, "single_vault_door_chubb_3_5_strongroom41": {"en": "Jewelry Stores", "ar": "متاجر المجوهرات"}, "single_vault_door_chubb_3_5_strongroom42": {"en": "Technical Specifications", "ar": "المواصفات التقنية"}, "single_vault_door_chubb_3_5_strongroom43": {"en": "See Product Sheet", "ar": "عرض ورقة المنتج"}, "single_vault_door_chubb_3_5_strongroom44": {"en": "Features", "ar": "الميزات"}, "single_vault_door_chubb_3_5_strongroom45": {"en": "Details", "ar": "التفاصيل"}, "single_vault_door_chubb_3_5_strongroom46": {"en": "Protective Barrier Thickness", "ar": "سماكة الحاجز الحمائي"}, "single_vault_door_chubb_3_5_strongroom47": {"en": "89 mm (3.5”)", "ar": "89 مم (3.5 بوصة)"}, "single_vault_door_chubb_3_5_strongroom48": {"en": "Total Door Thickness", "ar": "السماكة الإجمالية للباب"}, "single_vault_door_chubb_3_5_strongroom49": {"en": "Approx. 226 mm", "ar": "نحو 226 مم"}, "single_vault_door_chubb_3_5_strongroom50": {"en": "Boltwork System", "ar": "نظام المزاليج"}, "single_vault_door_chubb_3_5_strongroom51": {"en": "Heavy duty 18-bolt multi-directional (7 front, 2 top, 2 bottom, 7 rear)", "ar": "18 مزلاجًا فائق التحمل ومتعدد الاتجاهات (7 أمامية، 2 علوية، 2 سفلية، 7 خلفية)"}, "single_vault_door_chubb_3_5_strongroom52": {"en": "Bolt Diameter", "ar": "قطر المزلاج"}, "single_vault_door_chubb_3_5_strongroom53": {"en": "Approx. 50 mm", "ar": "نحو 50 مم"}, "single_vault_door_chubb_3_5_strongroom54": {"en": "Standard Locking", "ar": "إقفال قياسي"}, "single_vault_door_chubb_3_5_strongroom55": {"en": "Certified combination lock + 11-lever double-bitted key lock ", "ar": "قفل مجموعة أرقام معتمد + قفل مفتاح مزدوج السن بأحد عشر عتلة "}, "single_vault_door_chubb_3_5_strongroom56": {"en": "Ready to Commission?", "ar": "مستعدون للتنفيذ؟"}, "single_vault_door_chubb_3_5_strongroom57": {"en": "Work directly with our artisans to review these finishes\n                via physical material samples.", "ar": "تعاونوا مباشرة مع حرفيينا لمراجعة هذه التشطيبات من خلال عينات مواد فعلية."}, "single_vault_door_chubb_3_5_strongroom58": {"en": "Contact Sales Advisor", "ar": "تواصل مع مستشار المبيعات"}, "single_vault_door_chubb_3_5_strongroom59": {"en": "Luxuria Safes", "ar": "خزائن Luxuria"}, "single_vault_door_chubb_3_5_strongroom60": {"en": "Uncompromising Security, Bespoke Elegance.", "ar": "أمان لا يقبل التنازل، وأناقة مصممة خصيصًا."}, "single_vault_door_chubb_3_5_strongroom61": {"en": "Explore", "ar": "استكشف"}, "single_vault_door_chubb_3_5_strongroom62": {"en": "Collections", "ar": "المجموعات"}, "single_vault_door_chubb_3_5_strongroom63": {"en": "Standards & Certifications", "ar": "المعايير والاعتمادات"}, "single_vault_door_chubb_3_5_strongroom64": {"en": "Locking Systems", "ar": "أنظمة الإقفال"}, "single_vault_door_chubb_3_5_strongroom65": {"en": "Our Story", "ar": "قصتنا"}, "single_vault_door_chubb_3_5_strongroom66": {"en": "Bespoke Series", "ar": "سلسلة مخصصة"}, "single_vault_door_chubb_3_5_strongroom67": {"en": "Jewellery Safes", "ar": "خزائن المجوهرات"}, "single_vault_door_chubb_3_5_strongroom68": {"en": "Watch Safes", "ar": "خزائن الساعات"}, "single_vault_door_chubb_3_5_strongroom69": {"en": "Wardrobe Safes", "ar": "خزائن خزانة الملابس"}, "single_vault_door_chubb_3_5_strongroom70": {"en": "Multipurpose Estate Safes", "ar": "الخزائن العقارية متعددة الأغراض"}, "single_vault_door_chubb_3_5_strongroom71": {"en": "Contact Us", "ar": "تواصل معنا"}, "single_vault_door_chubb_3_5_strongroom72": {"en": "info@luxuriasafes.com", "ar": "info@luxuriasafes.com"}, "single_vault_door_chubb_3_5_strongroom73": {"en": "© 2026 Luxuria Safes. All Rights Reserved.", "ar": "© 2026 خزائن Luxuria. جميع الحقوق محفوظة."}, "single_vault_door_chubb_3_5_strongroom74": {"en": "Privacy Policy", "ar": "سياسة الخصوصية"}, "single_vault_door_chubb_3_5_strongroom75": {"en": "Return Policy", "ar": "سياسة الاسترجاع"}, "single_vault_door_chubb_3_5_strongroom76": {"en": "Cancellation Policy", "ar": "سياسة الإلغاء"}};
+    </script>
+    <script src="assets/js/i18n.js"></script>
 
-        <footer id="colophon" class="site-footer">
-        <div class="footer-widgets container">
-            <div class="footer-column brand-col">
-                <h3>Luxuria Safes</h3>
-                <p>Uncompromising Security, Bespoke Elegance.</p>
-            </div>
-
-            <div class="footer-column links-col">
-                <h4>Explore</h4>
-                <ul>
-                    <li><a href="collections.html">Collections</a></li>
-                    <li><a href="standards.html">Standards &amp; Certifications</a></li>
-                    <li><a href="locks.html">Locking Systems</a></li>
-                    <li><a href="story.html">Our Story</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column links-col">
-                <h4>Bespoke Series</h4>
-                <ul>
-                    <li><a href="jewellery-safe.html">Jewellery Safes</a></li>
-                    <li><a href="watch-safe.html">Watch Safes</a></li>
-                    <li><a href="wardrobe-safe.html">Wardrobe Safes</a></li>
-                    <li><a href="multipurpose-safe.html">Multipurpose Estate Safes</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column contact-col">
-                <h4>Contact Us</h4>
-                <p>info@luxuriasafes.com</p>
-            </div>
-        </div>
-        <div class="site-info container">
-            <p>&copy; 2026 Luxuria Safes. All Rights Reserved.</p>
-            <div class="legal-links">
-                <a href="#">Privacy Policy</a> |
-                <a href="#">Return Policy</a> |
-                <a href="#">Cancellation Policy</a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="assets/js/main.js"></script>
 </body>
-
 </html>

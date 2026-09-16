@@ -1,477 +1,386 @@
 <!DOCTYPE html>
+
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <title>Luxuria Safes - MiniTreasure</title>
+
+    <script>
+        (function () {
+            try {
+                var l = localStorage.getItem('luxuria_lang') || 'en';
+                document.documentElement.lang = l;
+                document.documentElement.dir = l === 'ar' ? 'rtl' : 'ltr';
+            } catch (e) {}
+        })();
+    </script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<title data-i18n="single_safe_minitreasure_title">Luxuria Safes - MiniTreasure</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/main.css" rel="stylesheet"/>
+<script defer="" src="https://cdn.vercel-insights.com/v1/script.js"></script>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Noto+Kufi+Arabic:wght@400;500;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
+    <link rel="stylesheet" href="assets/css/i18n.css">
+
 </head>
-
 <body>
-
-        <header id="masthead" class="site-header scrolled">
-        <div class="header-inner container">
-            <div class="site-branding">
-                <p class="site-title" style="margin: 0;">
-                    <a href="index.html" style="display: flex; align-items: center;">
-                        <img src="Luxuria-Safes-logo.svg" alt="Luxuria Safes Logo"
-                            style="height: 3rem; width: auto;">
-                    </a>
-                </p>
-            </div>
-            <div class="menu-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <nav class="main-navigation">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="collections.html">The Collections</a></li>
-                    <li><a href="standards.html">Standards</a></li>
-                    <li><a href="locks.html">Locks</a></li>
-                    <li><a href="story.html">Our Story</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main class="page-header pt-xl bg-black">
-        <section class="product-hero flex-split align-stretch configurator-row">
-            <div class="product-gallery flex-1 flex-center bg-darker">
-                <!-- Main Image -->
-                <div class="main-image-display mb-md">
-                    <img id="mainGalleryImage"
-                        src="Products/Luxury Safes/Minitreasure/Photoshoot/MiniTreasure-Hero-img.avif"
-                        alt="MiniTreasure Safe" style="width:100%; height:auto; object-fit: cover;" loading="lazy">
-                </div>
-            </div>
-
-            <div class="product-info flex-1 flex-center section-padding pt-xl">
-                <div class="info-inner reveal-up">
-                    <span class="eyebrow gold-text">Luxury Safe Collection</span>
-                    <h1 class="product-title accent-title" style="font-size: 4rem;">MiniTreasure</h1>
-
-                    <div class="product-description mt-md text-block">
-                        <p>A certified luxury home safe created for collectors of jewellery, watches, and valuable
+<header class="site-header scrolled" id="masthead">
+<div class="header-inner container">
+<div class="site-branding">
+<p class="site-title" style="margin: 0;">
+<a href="index.html" style="display: flex; align-items: center;">
+<img alt="Luxuria Safes Logo" data-i18n-attr="alt:single_safe_minitreasure1" src="Luxuria-Safes-logo.svg" style="height: 3rem; width: auto;"/>
+</a>
+</p>
+</div>
+<div aria-label="Toggle navigation" class="menu-toggle" data-i18n-attr="aria-label:single_safe_minitreasure2">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<nav class="main-navigation">
+<ul>
+<li><a href="index.html"><span data-i18n="single_safe_minitreasure3">Home</span></a></li>
+<li><a href="collections.html"><span data-i18n="single_safe_minitreasure4">The Collections</span></a></li>
+<li><a href="standards.html"><span data-i18n="single_safe_minitreasure5">Standards</span></a></li>
+<li><a href="locks.html"><span data-i18n="single_safe_minitreasure6">Locks</span></a></li>
+<li><a href="story.html"><span data-i18n="single_safe_minitreasure7">Our Story</span></a></li>
+<li><a href="contact.html"><span data-i18n="single_safe_minitreasure8">Contact</span></a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main class="page-header pt-xl bg-black">
+<section class="product-hero flex-split align-stretch configurator-row">
+<div class="product-gallery flex-1 flex-center bg-darker">
+<!-- Main Image -->
+<div class="main-image-display mb-md">
+<img alt="MiniTreasure Safe" data-i18n-attr="alt:single_safe_minitreasure9" id="mainGalleryImage" loading="lazy" src="Products/Luxury Safes/Minitreasure/Photoshoot/MiniTreasure-Hero-img.avif" style="width:100%; height:auto; object-fit: cover;"/>
+</div>
+</div>
+<div class="product-info flex-1 flex-center section-padding pt-xl">
+<div class="info-inner reveal-up">
+<span class="eyebrow gold-text"><span data-i18n="single_safe_minitreasure10">Luxury Safe Collection</span></span>
+<h1 class="product-title accent-title" style="font-size: 4rem;"><span data-i18n="single_safe_minitreasure11">MiniTreasure</span></h1>
+<div class="product-description mt-md text-block">
+<p><span data-i18n="single_safe_minitreasure12">A certified luxury home safe created for collectors of jewellery, watches, and valuable
                             personal items.
                             Combining tested security with handcrafted interiors, it integrates seamlessly into
                             wardrobes, dressing rooms, and luxury interiors while
-                            offering reliable protection against burglary and fire.</p>
-                    </div>
-
-                    <div class="container" id="gamme-icons">
-                        <div class="flex-center">
-                            <img class=""
-                                src="effraction-light.png"
-                                alt="Certified burglary resistant" loading="lazy">
-                            <span class="">
-                                Burglary</span>
-                        </div>
-                        <div class="flex-center">
-                            <img class=""
-                                src="resistant-au-feu.avif"
-                                alt="Certified fire resistant" loading="lazy">
-                            <span class="">
-                                Fire</span>
-                        </div>
-                        <div class="flex-center">
-                            <img class="" src="Ecb-s-logo-150x150.jpg" alt="ECB-S Certified" style="height: 70px;" loading="lazy">
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Product Features SECTION -->
-        <section id="collections" class="section-padding bg-dark">
-            <div class="container">
-                <div class="grid grid-3">
-                    <!-- Protection -->
-                    <div class="collection-card reveal-up">
-                        <div class="card-content">
-                            <h3 class="gold-text"
-                                style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
-                                <img src="icon-shield.avif"
-                                    alt="" style="height: 32px;">
+                            offering reliable protection against burglary and fire.</span></p>
+</div>
+<div class="container" id="gamme-icons">
+<div class="flex-center">
+<img alt="Certified burglary resistant" class="" data-i18n-attr="alt:single_safe_minitreasure13" loading="lazy" src="effraction-light.png"/>
+<span class=""><span data-i18n="single_safe_minitreasure14">
+                                Burglary</span></span>
+</div>
+<div class="flex-center">
+<img alt="Certified fire resistant" class="" data-i18n-attr="alt:single_safe_minitreasure15" loading="lazy" src="resistant-au-feu.avif"/>
+<span class=""><span data-i18n="single_safe_minitreasure16">
+                                Fire</span></span>
+</div>
+<div class="flex-center">
+<img alt="ECB-S Certified" class="" data-i18n-attr="alt:single_safe_minitreasure17" loading="lazy" src="Ecb-s-logo-150x150.jpg" style="height: 70px;"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Features SECTION -->
+<section class="section-padding bg-dark" id="collections">
+<div class="container">
+<div class="grid grid-3">
+<!-- Protection -->
+<div class="collection-card reveal-up">
+<div class="card-content">
+<h3 class="gold-text" style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+<img alt="" src="icon-shield.avif" style="height: 32px;"/><span data-i18n="single_safe_minitreasure18">
                                 Protections
-                            </h3>
-                            <ul class="option-list" style="text-align: left; padding-top: 1rem;">
-                                <li><strong class="gold-text">Burglary Resistance</strong><br>ECB.S certified to EN
-                                    14450 – S2</li>
-                                <li><strong class="gold-text">Fire Protection</strong><br>ECB.S certified to EN 15659 –
-                                    30 mins</li>
-                                <li><strong class="gold-text">Anchoring</strong><br>Securely anchored to the floor</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Volumes -->
-                    <div class="collection-card reveal-up" style="transition-delay: 0.2s;">
-                        <div class="card-content">
-                            <h3 class="gold-text"
-                                style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
-                                <img src="icon-cube.avif" alt=""
-                                    style="height: 32px;">
+                            </span></h3>
+<ul class="option-list" style="text-align: left; padding-top: 1rem;">
+<li><strong class="gold-text"><span data-i18n="single_safe_minitreasure20">Burglary Resistance</span></strong><br/><span data-i18n="single_safe_minitreasure19">ECB.S certified to EN
+                                    14450 – S2</span></li>
+<li><strong class="gold-text"><span data-i18n="single_safe_minitreasure22">Fire Protection</span></strong><br/><span data-i18n="single_safe_minitreasure21">ECB.S certified to EN 15659 –
+                                    30 mins</span></li>
+<li><strong class="gold-text"><span data-i18n="single_safe_minitreasure24">Anchoring</span></strong><br/><span data-i18n="single_safe_minitreasure23">Securely anchored to the floor</span></li>
+</ul>
+</div>
+</div>
+<!-- Volumes -->
+<div class="collection-card reveal-up" style="transition-delay: 0.2s;">
+<div class="card-content">
+<h3 class="gold-text" style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+<img alt="" src="icon-cube.avif" style="height: 32px;"/><span data-i18n="single_safe_minitreasure25">
                                 Volumes
-                            </h3>
-                            <ul class="option-list" style="padding-top: 1rem;">
-                                <li>35 Liters</li>
-                                <li>50 Liters</li>
-                                <li>70 Liters</li>
-                                <li>90 Liters</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Construction  -->
-                    <div class="collection-card reveal-up" style="transition-delay: 0.4s;">
-                        <div class="card-content">
-                            <h3 class="gold-text"
-                                style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
-                                <img src="icon-diamond-2.avif"
-                                    alt="" style="height: 32px;">
+                            </span></h3>
+<ul class="option-list" style="padding-top: 1rem;">
+<li><span data-i18n="single_safe_minitreasure26">35 Liters</span></li>
+<li><span data-i18n="single_safe_minitreasure27">50 Liters</span></li>
+<li><span data-i18n="single_safe_minitreasure28">70 Liters</span></li>
+<li><span data-i18n="single_safe_minitreasure29">90 Liters</span></li>
+</ul>
+</div>
+</div>
+<!-- Construction  -->
+<div class="collection-card reveal-up" style="transition-delay: 0.4s;">
+<div class="card-content">
+<h3 class="gold-text" style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+<img alt="" src="icon-diamond-2.avif" style="height: 32px;"/><span data-i18n="single_safe_minitreasure30">
                                 Construction
-                            </h3>
-                            <ul class="option-list" style="text-align: left; padding-top: 1rem;">
-                                <li>Multi-layer steel body</li>
-                                <li>Fire resistant core</li>
-                                <li>Lightweight structural composition</li>
-                                <li>Suitable for inside cabinetry</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Technical Specifications -->
-        <section id="specifications" class="section-padding bg-black">
-            <div class="container">
-                <div
-                    style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem;">
-                    <div>
-                        <h2 class="accent-title" style="font-size: 3rem;">Technical Specifications</h2>
-                    </div>
-                    <a href="Products/Luxury Safes/Minitreasure/Minitreasure_Product_Sheet.pdf" class="btn btn-outline hover-fill" target="_blank">See Product Sheet</a>
-                </div>
-
-                <div class="mb-xl"
-                    style="text-align: center; border: 1px solid rgba(255,255,255,0.05); background: var(--color-darker); padding: 2rem;">
-                    <img width="100%" src="Products/Luxury Safes/Minitreasure/Minitreasure_Sizes.avif"
-                        alt="Technical Drawing MiniTreasure 35L to 90L" style="max-width: 1500px; opacity: 0.8;" loading="lazy"/>
-                </div>
-
-                <div class="premium-accordion" id="details-specifications">
-
-                    <div class="table-toggle-container">
-
-                        <button class="btn btn-outline hover-fill table-toggle-btn" id="toggleTable">
+                            </span></h3>
+<ul class="option-list" style="text-align: left; padding-top: 1rem;">
+<li><span data-i18n="single_safe_minitreasure31">Multi-layer steel body</span></li>
+<li><span data-i18n="single_safe_minitreasure32">Fire resistant core</span></li>
+<li><span data-i18n="single_safe_minitreasure33">Lightweight structural composition</span></li>
+<li><span data-i18n="single_safe_minitreasure34">Suitable for inside cabinetry</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Specifications -->
+<section class="section-padding bg-black" id="specifications">
+<div class="container">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem;">
+<div>
+<h2 class="accent-title" style="font-size: 3rem;"><span data-i18n="single_safe_minitreasure35">Technical Specifications</span></h2>
+</div>
+<a class="btn btn-outline hover-fill" href="Products/Luxury Safes/Minitreasure/Minitreasure_Product_Sheet.pdf" target="_blank"><span data-i18n="single_safe_minitreasure36">See Product Sheet</span></a>
+</div>
+<div class="mb-xl" style="text-align: center; border: 1px solid rgba(255,255,255,0.05); background: var(--color-darker); padding: 2rem;">
+<img alt="Technical Drawing MiniTreasure 35L to 90L" data-i18n-attr="alt:single_safe_minitreasure37" loading="lazy" src="Products/Luxury Safes/Minitreasure/Minitreasure_Sizes.avif" style="max-width: 1500px; opacity: 0.8;" width="100%">
+</img></div>
+<div class="premium-accordion" id="details-specifications">
+<div class="table-toggle-container">
+<button class="btn btn-outline hover-fill table-toggle-btn" id="toggleTable"><span data-i18n="single_safe_minitreasure38">
                             View Full Specifications
-                        </button>
-
-                        <div class="accordion-body" id="specAccordion">
-
-                            <div class="table-wrapper">
-                                <table class="table-luxury">
-
-                                    <thead>
-                                        <tr>
-                                            <th>Models</th>
-                                            <th>MiniTreasure 35</th>
-                                            <th>MiniTreasure 50</th>
-                                            <th>MiniTreasure 70</th>
-                                            <th>MiniTreasure 90</th>                                                                                        
-                                        </tr>
-                                    </thead>
-
-                                    <tbody>
-                                        <tr>
-                                            <th>Height</th>
-                                            <td>45 cm</td>
-                                            <td>60 cm</td>
-                                            <td>80 cm</td>
-                                            <td>100 cm</td>
-                                        </tr>
-
-                                        <tr>
-                                            <th>Width</th>
-                                            <td>44.5 cm</td>
-                                            <td>44.5 cm</td>
-                                            <td>44.5 cm</td>
-                                            <td>44.5 cm</td>
-                                        </tr>
-
-                                        <tr>
-                                            <th>Depth</th>
-                                            <td>39 cm</td>
-                                            <td>39 cm</td>
-                                            <td>39 cm</td>
-                                            <td>39 cm</td>
-                                        </tr>
-
-                                        <tr>
-                                            <th>Volume</th>
-                                            <td>35 L</td>
-                                            <td>50 L</td>
-                                            <td>70 L</td>
-                                            <td>90 L</td>
-                                        </tr>
-
-                                        <tr>
-                                            <th>Weight</th>
-                                            <td>41 kg</td>
-                                            <td>54 kg</td>
-                                            <td>62 kg</td>
-                                            <td>72 kg</td>
-                                        </tr>
-
-                                        <tr>
-                                            <th>Number of Drawers</th>
-                                            <td>4</td>
-                                            <td>6</td>
-                                            <td>8</td>
-                                            <td>10</td>
-                                        </tr>
-
-                                        <tr>
-                                            <th>Gun Drawers</th>
-                                            <td>Possible</td>
-                                            <td>Possible</td>
-                                            <td>Possible</td>
-                                            <td>Possible</td>
-                                        </tr>
-
-                                        <tr>
-                                            <th>Jewellery Drawers</th>
-                                            <td>Possible</td>
-                                            <td>Possible</td>
-                                            <td>Possible</td>
-                                            <td>Possible</td>
-                                        </tr>
-
-                                        <tr>
-                                            <th>Fire Resistance</th>
-                                            <td>30 minutes</td>
-                                            <td>30 minutes</td>
-                                            <td>30 minutes</td>
-                                            <td>30 minutes</td>
-                                        </tr>
-
-                                    </tbody>
-
-                                </table>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <div class="configurator-wrapper">
-
-            <!-- Pair 1: Bespoke Customization -->
-            <div class="configurator-row desktop-text-first">
-                <div class="product-gallery flex-1 flex-center bg-darker">
-                    <!-- Interior Drawer Color Image -->
-                    <div class="main-image-display mb-md">
-                        <img id="colorGalleryImage"
-                            src="Products/Luxury Safes/Minitreasure/Photoshoot/LeatherSafeOpenDrawers.avif"
-                            alt="MiniTreasure Safe" style="width:100%; height:auto; object-fit: cover;" loading="lazy">
-                    </div>
-                </div>
-                <div class="product-info flex-1 flex-center text-center">
-                    <!--span class="eyebrow gold-text">Total Operational Control</span-->
-                    <h2 class="accent-title" style="font-size: 3rem;">Bespoke Customization</h2>
-                    <p style="color: var(--color-silver); max-width: 600px; margin: 0 auto;">Preserve the legacy of your
+                        </span></button>
+<div class="accordion-body" id="specAccordion">
+<div class="table-wrapper">
+<table class="table-luxury">
+<thead>
+<tr>
+<th><span data-i18n="single_safe_minitreasure39">Models</span></th>
+<th><span data-i18n="single_safe_minitreasure40">MiniTreasure 35</span></th>
+<th><span data-i18n="single_safe_minitreasure41">MiniTreasure 50</span></th>
+<th><span data-i18n="single_safe_minitreasure42">MiniTreasure 70</span></th>
+<th><span data-i18n="single_safe_minitreasure43">MiniTreasure 90</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th><span data-i18n="single_safe_minitreasure44">Height</span></th>
+<td><span data-i18n="single_safe_minitreasure45">45 cm</span></td>
+<td><span data-i18n="single_safe_minitreasure46">60 cm</span></td>
+<td><span data-i18n="single_safe_minitreasure47">80 cm</span></td>
+<td><span data-i18n="single_safe_minitreasure48">100 cm</span></td>
+</tr>
+<tr>
+<th><span data-i18n="single_safe_minitreasure49">Width</span></th>
+<td><span data-i18n="single_safe_minitreasure50">44.5 cm</span></td>
+<td><span data-i18n="single_safe_minitreasure51">44.5 cm</span></td>
+<td><span data-i18n="single_safe_minitreasure52">44.5 cm</span></td>
+<td><span data-i18n="single_safe_minitreasure53">44.5 cm</span></td>
+</tr>
+<tr>
+<th><span data-i18n="single_safe_minitreasure54">Depth</span></th>
+<td><span data-i18n="single_safe_minitreasure55">39 cm</span></td>
+<td><span data-i18n="single_safe_minitreasure56">39 cm</span></td>
+<td><span data-i18n="single_safe_minitreasure57">39 cm</span></td>
+<td><span data-i18n="single_safe_minitreasure58">39 cm</span></td>
+</tr>
+<tr>
+<th><span data-i18n="single_safe_minitreasure59">Volume</span></th>
+<td><span data-i18n="single_safe_minitreasure60">35 L</span></td>
+<td><span data-i18n="single_safe_minitreasure61">50 L</span></td>
+<td><span data-i18n="single_safe_minitreasure62">70 L</span></td>
+<td><span data-i18n="single_safe_minitreasure63">90 L</span></td>
+</tr>
+<tr>
+<th><span data-i18n="single_safe_minitreasure64">Weight</span></th>
+<td><span data-i18n="single_safe_minitreasure65">41 kg</span></td>
+<td><span data-i18n="single_safe_minitreasure66">54 kg</span></td>
+<td><span data-i18n="single_safe_minitreasure67">62 kg</span></td>
+<td><span data-i18n="single_safe_minitreasure68">72 kg</span></td>
+</tr>
+<tr>
+<th><span data-i18n="single_safe_minitreasure69">Number of Drawers</span></th>
+<td>4</td>
+<td>6</td>
+<td>8</td>
+<td>10</td>
+</tr>
+<tr>
+<th><span data-i18n="single_safe_minitreasure70">Gun Drawers</span></th>
+<td><span data-i18n="single_safe_minitreasure71">Possible</span></td>
+<td><span data-i18n="single_safe_minitreasure72">Possible</span></td>
+<td><span data-i18n="single_safe_minitreasure73">Possible</span></td>
+<td><span data-i18n="single_safe_minitreasure74">Possible</span></td>
+</tr>
+<tr>
+<th><span data-i18n="single_safe_minitreasure75">Jewellery Drawers</span></th>
+<td><span data-i18n="single_safe_minitreasure76">Possible</span></td>
+<td><span data-i18n="single_safe_minitreasure77">Possible</span></td>
+<td><span data-i18n="single_safe_minitreasure78">Possible</span></td>
+<td><span data-i18n="single_safe_minitreasure79">Possible</span></td>
+</tr>
+<tr>
+<th><span data-i18n="single_safe_minitreasure80">Fire Resistance</span></th>
+<td><span data-i18n="single_safe_minitreasure81">30 minutes</span></td>
+<td><span data-i18n="single_safe_minitreasure82">30 minutes</span></td>
+<td><span data-i18n="single_safe_minitreasure83">30 minutes</span></td>
+<td><span data-i18n="single_safe_minitreasure84">30 minutes</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="configurator-wrapper">
+<!-- Pair 1: Bespoke Customization -->
+<div class="configurator-row desktop-text-first">
+<div class="product-gallery flex-1 flex-center bg-darker">
+<!-- Interior Drawer Color Image -->
+<div class="main-image-display mb-md">
+<img alt="MiniTreasure Safe" data-i18n-attr="alt:single_safe_minitreasure85" id="colorGalleryImage" loading="lazy" src="Products/Luxury Safes/Minitreasure/Photoshoot/LeatherSafeOpenDrawers.avif" style="width:100%; height:auto; object-fit: cover;"/>
+</div>
+</div>
+<div class="product-info flex-1 flex-center text-center">
+<!--span class="eyebrow gold-text">Total Operational Control</span-->
+<h2 class="accent-title" style="font-size: 3rem;"><span data-i18n="single_safe_minitreasure86">Bespoke Customization</span></h2>
+<p style="color: var(--color-silver); max-width: 600px; margin: 0 auto;"><span data-i18n="single_safe_minitreasure87">Preserve the legacy of your
                         family, protect your most meaningful pieces, and enjoy lasting peace of mind with a safe
-                        designed for what you treasure most.</p>
-                </div>
-            </div>
-
-            <!-- Pair 2: Exterior Finish -->
-            <div class="configurator-row">
-                <div class="product-gallery flex-1 flex-center bg-darker">
-                    <!-- Interior Drawer Color Image -->
-                    <div class="main-image-display mb-md" style="background-color: #ffffff;">
-                        <img id="color1GalleryImage"
-                            src="Products\Luxury Safes\Minitreasure\Product Photos\Colour Variants\Minitreasure HS90\Homesafe 90 Gold .avif"
-                            alt="MiniTreasure Safe" style="width:100%; height:auto; object-fit: cover;" loading="lazy">
-                    </div>
-                </div>
-                <div class="product-info flex-1 flex-center text-center mb-xl">
-                    <h2 class="accent-title" style="font-size: 3rem;">Exterior Finish</h2>
-                    <p>Choose from our premium powder-coated high gloss palette.</p>
-                    <div class="swatch-container" style="justify-content: center;">
-                        <div class="swatch" style="background-color: #d2af26;" title="Gold"
-                            onclick="updateGallery(document.getElementById('color1GalleryImage'), this, 'Products/Luxury Safes/Minitreasure/Product Photos/Colour Variants/Minitreasure HS90/Homesafe 90 Gold .avif')">
-                            <button class="swatch-button" style="opacity: 0;"></button>
-                        </div>
-                        <div class="swatch" style="background-color: #121A2F;" title="Royal Blue"
-                            onclick="updateGallery(document.getElementById('color1GalleryImage'), this, 'Products/Luxury Safes/Minitreasure/Product Photos/Colour Variants/Minitreasure HS90/Homesafe 90 Dark Blue .avif')">
-                            <button class="swatch-button" style="opacity: 0;"></button>
-                        </div>
-                        <div class="swatch" style="background-color: #8C1515;" title="Red"
-                            onclick="updateGallery(document.getElementById('color1GalleryImage'), this, 'Products/Luxury Safes/Minitreasure/Product Photos/Colour Variants/Minitreasure HS90/Homesafe 90 red .avif')">
-                            <button class="swatch-button" style="opacity: 0;"></button>
-                        </div>
-                        <div class="swatch" style="background-color: #CC5500;" title="Orange"
-                            onclick="updateGallery(document.getElementById('color1GalleryImage'), this, 'Products/Luxury Safes/Minitreasure/Product Photos/Colour Variants/Minitreasure HS90/Homesafe 90 orange .avif')">
-                            <button class="swatch-button" style="opacity: 0;"></button>
-                        </div>
-                        <div class="swatch" style="background-color: #FFFFFF;" title="White"
-                            onclick="updateGallery(document.getElementById('color1GalleryImage'), this, 'Products/Luxury Safes/Minitreasure/Product Photos/Colour Variants/Minitreasure HS90/Homesafe 90 white .avif')">
-                            <button class="swatch-button" style="opacity: 0;"></button>
-                        </div>
-                        <div class="swatch" style="background-color: #000000;" title="Black"
-                            onclick="updateGallery(document.getElementById('color1GalleryImage'), this, 'Products/Luxury Safes/Minitreasure/Product Photos/Colour Variants/Minitreasure HS90/Homesafe 90 black .avif')">
-                            <button class="swatch-button" style="opacity: 0;"></button>
-                        </div>
-                    </div>
-                    <p style="padding-top: 1rem;">Opt for hand-stitched luxury leather full cladding.</p>
-                    <div class="swatch-container" style="justify-content: center;">
-                        <div class="swatch texture-leather" style="background-color: #98694F;"
-                            title="Golden Brown Leather"></div>
-                        <div class="swatch texture-leather" style="background-color: #1F1F1F;" title="Black Leather">
-                        </div>
-                        <div class="swatch texture-leather" style="background-color: #006039;" title="Green Leather">
-                        </div>
-                        <div class="swatch texture-leather" style="background-color: #624a2e;" title="Tanned Leather">
-                        </div>
-                        <div class="swatch texture-leather" style="background-color: #808080;" title="Grey Leather">
-                        </div>
-                        <div class="swatch texture-leather" style="background-color: #8C1515;" title="Red Leather">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Pair 3: The Collector's Choice -->
-            <div class="configurator-row desktop-text-first">
-                <div class="product-gallery flex-1 flex-center bg-darker">
-                    <!-- Interior Drawer Color Image -->
-                    <div class="main-image-display mb-md">
-                        <img id="interiorGalleryImage"
-                            src="Products/Luxury Safes/MiniGuard/Photoshoot/Collectors Choice 1a.avif"
-                            alt="MiniTreasure Safe" style="width:100%; height:auto; object-fit: cover;">
-                    </div>
-                </div>
-                <div class="product-info flex-1 flex-center text-center">
-                    <h2 class="accent-title" style="font-size: 3rem;">The Collector's Choice</h2>
-                    <p class="text-sm pb-md">
+                        designed for what you treasure most.</span></p>
+</div>
+</div>
+<!-- Pair 2: Exterior Finish -->
+<div class="configurator-row">
+<div class="product-gallery flex-1 flex-center bg-darker">
+<!-- Interior Drawer Color Image -->
+<div class="main-image-display mb-md" style="background-color: #ffffff;">
+<img alt="MiniTreasure Safe" data-i18n-attr="alt:single_safe_minitreasure88" id="color1GalleryImage" loading="lazy" src="Products\Luxury Safes\Minitreasure\Product Photos\Colour Variants\Minitreasure HS90\Homesafe 90 Gold .avif" style="width:100%; height:auto; object-fit: cover;"/>
+</div>
+</div>
+<div class="product-info flex-1 flex-center text-center mb-xl">
+<h2 class="accent-title" style="font-size: 3rem;"><span data-i18n="single_safe_minitreasure89">Exterior Finish</span></h2>
+<p><span data-i18n="single_safe_minitreasure90">Choose from our premium powder-coated high gloss palette.</span></p>
+<div class="swatch-container" style="justify-content: center;">
+<div class="swatch" data-i18n-attr="title:single_safe_minitreasure91" onclick="updateGallery(document.getElementById('color1GalleryImage'), this, 'Products/Luxury Safes/Minitreasure/Product Photos/Colour Variants/Minitreasure HS90/Homesafe 90 Gold .avif')" style="background-color: #d2af26;" title="Gold">
+<button class="swatch-button" style="opacity: 0;"></button>
+</div>
+<div class="swatch" data-i18n-attr="title:single_safe_minitreasure92" onclick="updateGallery(document.getElementById('color1GalleryImage'), this, 'Products/Luxury Safes/Minitreasure/Product Photos/Colour Variants/Minitreasure HS90/Homesafe 90 Dark Blue .avif')" style="background-color: #121A2F;" title="Royal Blue">
+<button class="swatch-button" style="opacity: 0;"></button>
+</div>
+<div class="swatch" data-i18n-attr="title:single_safe_minitreasure93" onclick="updateGallery(document.getElementById('color1GalleryImage'), this, 'Products/Luxury Safes/Minitreasure/Product Photos/Colour Variants/Minitreasure HS90/Homesafe 90 red .avif')" style="background-color: #8C1515;" title="Red">
+<button class="swatch-button" style="opacity: 0;"></button>
+</div>
+<div class="swatch" data-i18n-attr="title:single_safe_minitreasure94" onclick="updateGallery(document.getElementById('color1GalleryImage'), this, 'Products/Luxury Safes/Minitreasure/Product Photos/Colour Variants/Minitreasure HS90/Homesafe 90 orange .avif')" style="background-color: #CC5500;" title="Orange">
+<button class="swatch-button" style="opacity: 0;"></button>
+</div>
+<div class="swatch" data-i18n-attr="title:single_safe_minitreasure95" onclick="updateGallery(document.getElementById('color1GalleryImage'), this, 'Products/Luxury Safes/Minitreasure/Product Photos/Colour Variants/Minitreasure HS90/Homesafe 90 white .avif')" style="background-color: #FFFFFF;" title="White">
+<button class="swatch-button" style="opacity: 0;"></button>
+</div>
+<div class="swatch" data-i18n-attr="title:single_safe_minitreasure96" onclick="updateGallery(document.getElementById('color1GalleryImage'), this, 'Products/Luxury Safes/Minitreasure/Product Photos/Colour Variants/Minitreasure HS90/Homesafe 90 black .avif')" style="background-color: #000000;" title="Black">
+<button class="swatch-button" style="opacity: 0;"></button>
+</div>
+</div>
+<p style="padding-top: 1rem;"><span data-i18n="single_safe_minitreasure97">Opt for hand-stitched luxury leather full cladding.</span></p>
+<div class="swatch-container" style="justify-content: center;">
+<div class="swatch texture-leather" data-i18n-attr="title:single_safe_minitreasure98" style="background-color: #98694F;" title="Golden Brown Leather"></div>
+<div class="swatch texture-leather" data-i18n-attr="title:single_safe_minitreasure99" style="background-color: #1F1F1F;" title="Black Leather">
+</div>
+<div class="swatch texture-leather" data-i18n-attr="title:single_safe_minitreasure100" style="background-color: #006039;" title="Green Leather">
+</div>
+<div class="swatch texture-leather" data-i18n-attr="title:single_safe_minitreasure101" style="background-color: #624a2e;" title="Tanned Leather">
+</div>
+<div class="swatch texture-leather" data-i18n-attr="title:single_safe_minitreasure102" style="background-color: #808080;" title="Grey Leather">
+</div>
+<div class="swatch texture-leather" data-i18n-attr="title:single_safe_minitreasure103" style="background-color: #8C1515;" title="Red Leather">
+</div>
+</div>
+</div>
+</div>
+<!-- Pair 3: The Collector's Choice -->
+<div class="configurator-row desktop-text-first">
+<div class="product-gallery flex-1 flex-center bg-darker">
+<!-- Interior Drawer Color Image -->
+<div class="main-image-display mb-md">
+<img alt="MiniTreasure Safe" data-i18n-attr="alt:single_safe_minitreasure104" id="interiorGalleryImage" src="Products/Luxury Safes/MiniGuard/Photoshoot/Collectors Choice 1a.avif" style="width:100%; height:auto; object-fit: cover;"/>
+</div>
+</div>
+<div class="product-info flex-1 flex-center text-center">
+<h2 class="accent-title" style="font-size: 3rem;"><span data-i18n="single_safe_minitreasure105">The Collector's Choice</span></h2>
+<p class="text-sm pb-md"><span data-i18n="single_safe_minitreasure106">
                         For the collector who values beauty as much as security, the Minitreasure safe from
                         Luxuria offers a sanctuary of elegance. Featuring advanced certified security technology
                         and interiors that reflect your personal style, each safe is a curated space where
                         treasured heirlooms and contemporary pieces are protected with grace and intention.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Pair 4: Interior Velvet Finish -->
-            <div class="configurator-row">
-                <div class="product-info flex-1 flex-center section-padding pt-xl">
-                    <div class="info-inner reveal-up">
-                        <div class="product-specs mt-lg border-top-gold pt-md mb-lg">
-                            <h2 class="accent-title" style="font-size: 3rem;">Interior Finish</h2>
-                            <p class="text-sm pb-md" style="max-width: 1200px; margin: 0 auto;">
+                    </span></p>
+</div>
+</div>
+<!-- Pair 4: Interior Velvet Finish -->
+<div class="configurator-row">
+<div class="product-info flex-1 flex-center section-padding pt-xl">
+<div class="info-inner reveal-up">
+<div class="product-specs mt-lg border-top-gold pt-md mb-lg">
+<h2 class="accent-title" style="font-size: 3rem;"><span data-i18n="single_safe_minitreasure107">Interior Finish</span></h2>
+<p class="text-sm pb-md" style="max-width: 1200px; margin: 0 auto;"><span data-i18n="single_safe_minitreasure108">
                                 The MiniTreasure offers customizable drawer dividers for effortless organization and
                                 elegant presentation of your collection. Designed for both security and ease, it keeps
                                 your cherished pieces neatly arranged in one refined space. Choose from a variety of
                                 thoughtfully designed layouts tailored to specific jewelry types—ensuring both seamless
                                 access and stylish protection.
-                            </p>
+                            </span></p>
+<!-- Compartments Slider -->
+<div class="compartment-slider-wrapper">
+<button aria-label="Previous options" class="slider-btn prev-btn" data-i18n-attr="aria-label:single_safe_minitreasure109" onclick="slideCompartments(-1)">‹</button>
+<div class="compartment-slider-viewport">
+<div class="compartment-slider-track" id="compartmentTrack">
+<div class="slider-item"><img loading="lazy" src="Drawer Details/Small Safes/Home Safe Top 01.avif"/><span class="caption"><span data-i18n="single_safe_minitreasure110">L1 – Plain Drawer</span></span></div>
+<div class="slider-item"><img loading="lazy" src="Drawer Details/Small Safes/Home Safe Top 02.avif"/><span class="caption"><span data-i18n="single_safe_minitreasure111">L2 – 2 Partitions</span></span></div>
+<div class="slider-item"><img loading="lazy" src="Drawer Details/Small Safes/Home Safe Top 03.avif"/><span class="caption"><span data-i18n="single_safe_minitreasure112">L3 – Ring and Plain Partition</span></span></div>
+<div class="slider-item"><img loading="lazy" src="Drawer Details/Small Safes/Home Safe Top 04.avif"/><span class="caption"><span data-i18n="single_safe_minitreasure113">L4 – Long Chains</span></span></div>
+<div class="slider-item"><img loading="lazy" src="Drawer Details/Small Safes/Home Safe Top 05.avif"/><span class="caption"><span data-i18n="single_safe_minitreasure114">L5 – Rings and Earrings</span></span></div>
+<div class="slider-item"><img loading="lazy" src="Drawer Details/Small Safes/Home Safe Top 06.avif"/><span class="caption"><span data-i18n="single_safe_minitreasure115">L6 – Necklace Set</span></span></div>
+<div class="slider-item"><img loading="lazy" src="Drawer Details/Small Safes/Home Safe Top 07.avif"/><span class="caption"><span data-i18n="single_safe_minitreasure116">L7 – Earrings</span></span></div>
+<div class="slider-item"><img loading="lazy" src="Drawer Details/Small Safes/Home Safe Top 08.avif"/><span class="caption"><span data-i18n="single_safe_minitreasure117">L8 – Rings</span></span></div>
+<div class="slider-item"><img loading="lazy" src="Drawer Details/Small Safes/Home Safe Top 09.avif"/><span class="caption"><span data-i18n="single_safe_minitreasure118">L9 – Bangles</span></span></div>
+<div class="slider-item"><img loading="lazy" src="Drawer Details/Small Safes/Home Safe Top 17.avif"/><span class="caption"><span data-i18n="single_safe_minitreasure119">L10 – Pens</span></span></div>
+<div class="slider-item"><img loading="lazy" src="Drawer Details/Small Safes/Home Safe Top 11.avif"/><span class="caption"><span data-i18n="single_safe_minitreasure120">L11 – Vertical Partition</span></span></div>
+<div class="slider-item"><img loading="lazy" src="Drawer Details/Small Safes/Home Safe Top 12.avif"/><span class="caption"><span data-i18n="single_safe_minitreasure121">L12 – 4 Partitions</span></span></div>
+<div class="slider-item"><img loading="lazy" src="Drawer Details/Small Safes/Home Safe Top 13.avif"/><span class="caption"><span data-i18n="single_safe_minitreasure122">L13 – Small Partitions</span></span></div>
+<div class="slider-item"><img loading="lazy" src="Drawer Details/Small Safes/Home Safe Top 14.avif"/><span class="caption"><span data-i18n="single_safe_minitreasure123">L14 – Pens</span></span></div>
+<div class="slider-item"><img loading="lazy" src="Drawer Details/Small Safes/Home Safe Top 15.avif"/><span class="caption"><span data-i18n="single_safe_minitreasure124">L15 – Watches</span></span></div>
+<div class="slider-item"><img loading="lazy" src="Drawer Details/Small Safes/Home Safe Top 16.avif"/><span class="caption"><span data-i18n="single_safe_minitreasure125">L16 – Medium Partitions</span></span></div>
+</div>
+</div>
+<button aria-label="Next options" class="slider-btn next-btn" data-i18n-attr="aria-label:single_safe_minitreasure126" onclick="slideCompartments(1)">›</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- CTA -->
+<div class="config-card flex-center mb-0" style="border: 1px solid var(--color-gold); background: rgba(212, 175, 55, 0.05);">
+<h3 style="margin-bottom: 1rem;"><span data-i18n="single_safe_minitreasure127">Ready to Commission?</span></h3>
+<p class="text-center" style="margin-bottom: 2rem;"><span data-i18n="single_safe_minitreasure128">Work directly with our artisans to review these finishes
+                via physical material samples.</span></p>
+<a class="btn btn-primary btn-gold" href="contact.html"><span data-i18n="single_safe_minitreasure129">Contact Sales Advisor</span></a>
+</div>
 
-                            <!-- Compartments Slider -->
-                            <div class="compartment-slider-wrapper">
-                                <button class="slider-btn prev-btn" onclick="slideCompartments(-1)"
-                                    aria-label="Previous options">&lsaquo;</button>
-                                <div class="compartment-slider-viewport">
-                                    <div class="compartment-slider-track" id="compartmentTrack">
-                                        <div class="slider-item"><img
-                                                src="Drawer Details/Small Safes/Home Safe Top 01.avif" loading="lazy"><span
-                                                class="caption">L1 – Plain Drawer</span></div>
-                                        <div class="slider-item"><img
-                                                src="Drawer Details/Small Safes/Home Safe Top 02.avif" loading="lazy"><span
-                                                class="caption">L2 – 2 Partitions</span></div>
-                                        <div class="slider-item"><img
-                                                src="Drawer Details/Small Safes/Home Safe Top 03.avif" loading="lazy"><span
-                                                class="caption">L3 – Ring and Plain Partition</span></div>
-                                        <div class="slider-item"><img
-                                                src="Drawer Details/Small Safes/Home Safe Top 04.avif" loading="lazy"><span
-                                                class="caption">L4 – Long Chains</span></div>
-                                        <div class="slider-item"><img
-                                                src="Drawer Details/Small Safes/Home Safe Top 05.avif" loading="lazy"><span
-                                                class="caption">L5 – Rings and Earrings</span></div>
-                                        <div class="slider-item"><img
-                                                src="Drawer Details/Small Safes/Home Safe Top 06.avif" loading="lazy"><span
-                                                class="caption">L6 – Necklace Set</span></div>
-                                        <div class="slider-item"><img
-                                                src="Drawer Details/Small Safes/Home Safe Top 07.avif" loading="lazy"><span
-                                                class="caption">L7 – Earrings</span></div>
-                                        <div class="slider-item"><img
-                                                src="Drawer Details/Small Safes/Home Safe Top 08.avif" loading="lazy"><span
-                                                class="caption">L8 – Rings</span></div>
-                                        <div class="slider-item"><img
-                                                src="Drawer Details/Small Safes/Home Safe Top 09.avif" loading="lazy"><span
-                                                class="caption">L9 – Bangles</span></div>
-                                        <div class="slider-item"><img
-                                                src="Drawer Details/Small Safes/Home Safe Top 17.avif" loading="lazy"><span
-                                                class="caption">L10 – Pens</span></div>
-                                        <div class="slider-item"><img
-                                                src="Drawer Details/Small Safes/Home Safe Top 11.avif" loading="lazy"><span
-                                                class="caption">L11 – Vertical Partition</span></div>
-                                        <div class="slider-item"><img
-                                                src="Drawer Details/Small Safes/Home Safe Top 12.avif" loading="lazy"><span
-                                                class="caption">L12 – 4 Partitions</span></div>
-                                        <div class="slider-item"><img
-                                                src="Drawer Details/Small Safes/Home Safe Top 13.avif" loading="lazy"><span
-                                                class="caption">L13 – Small Partitions</span></div>
-                                        <div class="slider-item"><img
-                                                src="Drawer Details/Small Safes/Home Safe Top 14.avif" loading="lazy"><span
-                                                class="caption">L14 – Pens</span></div>
-                                        <div class="slider-item"><img
-                                                src="Drawer Details/Small Safes/Home Safe Top 15.avif" loading="lazy"><span
-                                                class="caption">L15 – Watches</span></div>
-                                        <div class="slider-item"><img
-                                                src="Drawer Details/Small Safes/Home Safe Top 16.avif" loading="lazy"><span
-                                                class="caption">L16 – Medium Partitions</span></div>
-                                    </div>
-                                </div>
-                                <button class="slider-btn next-btn" onclick="slideCompartments(1)"
-                                    aria-label="Next options">&rsaquo;</button>
-                            </div>
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- CTA -->
-        <div class="config-card flex-center mb-0"
-            style="border: 1px solid var(--color-gold); background: rgba(212, 175, 55, 0.05);">
-            <h3 style="margin-bottom: 1rem;">Ready to Commission?</h3>
-            <p class="text-center" style="margin-bottom: 2rem;">Work directly with our artisans to review these finishes
-                via physical material samples.</p>
-            <a href="contact.html" class="btn btn-primary btn-gold">Contact Sales Advisor</a>
-        </div>
-        </div>
-        </section>
-
-        <!-- DRAWINGS SECTION>
+<!-- DRAWINGS SECTION>
         <section class="product-hero flex-row align-stretch border-top-gold section-padding bg-darker">
             <div class="product-gallery flex-1 flex-center bg-darker" style="width: 100%; height: 100%; margin: auto;">
                 <img src="Products/Luxury Safes/Minitreasure/Product Photos/MiniTreasure Size Sketch.jpg"
@@ -484,51 +393,50 @@
                     style="width: 60%; height: 60%; margin: auto; overflow-clip-margin: content-box; border: 50px solid var(--color-text-light);">
             </div>
         </section-->
-    </main>
+</main>
+<footer class="site-footer" id="colophon">
+<div class="footer-widgets container">
+<div class="footer-column brand-col">
+<h3><span data-i18n="single_safe_minitreasure130">Luxuria Safes</span></h3>
+<p><span data-i18n="single_safe_minitreasure131">Uncompromising Security, Bespoke Elegance.</span></p>
+</div>
+<div class="footer-column links-col">
+<h4><span data-i18n="single_safe_minitreasure132">Explore</span></h4>
+<ul>
+<li><a href="collections.html"><span data-i18n="single_safe_minitreasure133">Collections</span></a></li>
+<li><a href="standards.html"><span data-i18n="single_safe_minitreasure134">Standards &amp; Certifications</span></a></li>
+<li><a href="locks.html"><span data-i18n="single_safe_minitreasure135">Locking Systems</span></a></li>
+<li><a href="story.html"><span data-i18n="single_safe_minitreasure136">Our Story</span></a></li>
+</ul>
+</div>
+<div class="footer-column links-col">
+<h4><span data-i18n="single_safe_minitreasure137">Bespoke Series</span></h4>
+<ul>
+<li><a href="jewellery-safe.html"><span data-i18n="single_safe_minitreasure138">Jewellery Safes</span></a></li>
+<li><a href="watch-safe.html"><span data-i18n="single_safe_minitreasure139">Watch Safes</span></a></li>
+<li><a href="wardrobe-safe.html"><span data-i18n="single_safe_minitreasure140">Wardrobe Safes</span></a></li>
+<li><a href="multipurpose-safe.html"><span data-i18n="single_safe_minitreasure141">Multipurpose Estate Safes</span></a></li>
+</ul>
+</div>
+<div class="footer-column contact-col">
+<h4><span data-i18n="single_safe_minitreasure142">Contact Us</span></h4>
+<p><span data-i18n="single_safe_minitreasure143">info@luxuriasafes.com</span></p>
+</div>
+</div>
+<div class="site-info container">
+<p><span data-i18n="single_safe_minitreasure144">© 2026 Luxuria Safes. All Rights Reserved.</span></p>
+<div class="legal-links">
+<a href="#"><span data-i18n="single_safe_minitreasure145">Privacy Policy</span></a> |
+                <a href="#"><span data-i18n="single_safe_minitreasure146">Return Policy</span></a> |
+                <a href="#"><span data-i18n="single_safe_minitreasure147">Cancellation Policy</span></a>
+</div>
+</div>
+</footer>
+<script src="assets/js/main.js"></script>
+    <script id="page-i18n">
+        window.PAGE_I18N = {"single_safe_minitreasure_title": {"en": "Luxuria Safes - MiniTreasure", "ar": "خزائن Luxuria - MiniTreasure"}, "single_safe_minitreasure1": {"en": "Luxuria Safes Logo", "ar": "شعار خزائن Luxuria"}, "single_safe_minitreasure2": {"en": "Toggle navigation", "ar": "تبديل شريط التنقل"}, "single_safe_minitreasure3": {"en": "Home", "ar": "الرئيسية"}, "single_safe_minitreasure4": {"en": "The Collections", "ar": "المجموعات"}, "single_safe_minitreasure5": {"en": "Standards", "ar": "المعايير"}, "single_safe_minitreasure6": {"en": "Locks", "ar": "الأقفال"}, "single_safe_minitreasure7": {"en": "Our Story", "ar": "قصتنا"}, "single_safe_minitreasure8": {"en": "Contact", "ar": "تواصل معنا"}, "single_safe_minitreasure9": {"en": "MiniTreasure Safe", "ar": "خزنة MiniTreasure"}, "single_safe_minitreasure10": {"en": "Luxury Safe Collection", "ar": "مجموعة الخزائن الفاخرة"}, "single_safe_minitreasure11": {"en": "MiniTreasure", "ar": "MiniTreasure"}, "single_safe_minitreasure12": {"en": "A certified luxury home safe created for collectors of jewellery, watches, and valuable\n                            personal items.\n                            Combining tested security with handcrafted interiors, it integrates seamlessly into\n                            wardrobes, dressing rooms, and luxury interiors while\n                            offering reliable protection against burglary and fire.", "ar": "خزنة منزلية فاخرة ومعتمدة صُممت لهواة جمع المجوهرات والساعات والمقتنيات القيّمة. تجمع بين أمان مُختبَر وتصميم داخلي مصنوع يدويًا، وتتكامل بسلاسة مع خزائن الملابس وغرف الملابس والديكورات الفاخرة، مع توفير حماية موثوقة من السرقة والحريق."}, "single_safe_minitreasure13": {"en": "Certified burglary resistant", "ar": "معتمدة كمقاومة للسرقة"}, "single_safe_minitreasure14": {"en": "\n                                Burglary", "ar": "\n                                السرقة"}, "single_safe_minitreasure15": {"en": "Certified fire resistant", "ar": "معتمدة كمقاومة للحريق"}, "single_safe_minitreasure16": {"en": "\n                                Fire", "ar": "\n                                الحريق"}, "single_safe_minitreasure17": {"en": "ECB-S Certified", "ar": "معتمدة من ECB-S"}, "single_safe_minitreasure18": {"en": "\n                                Protections\n                            ", "ar": "\n                                أنواع الحماية\n                            "}, "single_safe_minitreasure19": {"en": "ECB.S certified to EN\n                                    14450 – S2", "ar": "معتمدة من ECB.S وفق EN 14450 – S2"}, "single_safe_minitreasure20": {"en": "Burglary Resistance", "ar": "مقاومة السرقة"}, "single_safe_minitreasure21": {"en": "ECB.S certified to EN 15659 –\n                                    30 mins", "ar": "معتمدة من ECB.S وفق EN 15659 لمدة 30 دقيقة"}, "single_safe_minitreasure22": {"en": "Fire Protection", "ar": "الحماية من الحريق"}, "single_safe_minitreasure23": {"en": "Securely anchored to the floor", "ar": "مثبّتة بشكل آمن في الأرض"}, "single_safe_minitreasure24": {"en": "Anchoring", "ar": "التثبيت"}, "single_safe_minitreasure25": {"en": "\n                                Volumes\n                            ", "ar": "\n                                الأحجام\n                            "}, "single_safe_minitreasure26": {"en": "35 Liters", "ar": "35 لترًا"}, "single_safe_minitreasure27": {"en": "50 Liters", "ar": "50 لترًا"}, "single_safe_minitreasure28": {"en": "70 Liters", "ar": "70 لترًا"}, "single_safe_minitreasure29": {"en": "90 Liters", "ar": "90 لترًا"}, "single_safe_minitreasure30": {"en": "\n                                Construction\n                            ", "ar": "\n                                البنية\n                            "}, "single_safe_minitreasure31": {"en": "Multi-layer steel body", "ar": "هيكل فولاذي متعدد الطبقات"}, "single_safe_minitreasure32": {"en": "Fire resistant core", "ar": "نواة مقاومة للحريق"}, "single_safe_minitreasure33": {"en": "Lightweight structural composition", "ar": "تركيبة إنشائية خفيفة الوزن"}, "single_safe_minitreasure34": {"en": "Suitable for inside cabinetry", "ar": "مناسبة للتركيب داخل الخزائن الجدارية"}, "single_safe_minitreasure35": {"en": "Technical Specifications", "ar": "المواصفات التقنية"}, "single_safe_minitreasure36": {"en": "See Product Sheet", "ar": "عرض ورقة المنتج"}, "single_safe_minitreasure37": {"en": "Technical Drawing MiniTreasure 35L to 90L", "ar": "رسم تقني MiniTreasure من 35 لترًا إلى 90 لترًا"}, "single_safe_minitreasure38": {"en": "\n                            View Full Specifications\n                        ", "ar": "\n                            عرض المواصفات الكاملة\n                        "}, "single_safe_minitreasure39": {"en": "Models", "ar": "الطرازات"}, "single_safe_minitreasure40": {"en": "MiniTreasure 35", "ar": "MiniTreasure 35"}, "single_safe_minitreasure41": {"en": "MiniTreasure 50", "ar": "MiniTreasure 50"}, "single_safe_minitreasure42": {"en": "MiniTreasure 70", "ar": "MiniTreasure 70"}, "single_safe_minitreasure43": {"en": "MiniTreasure 90", "ar": "MiniTreasure 90"}, "single_safe_minitreasure44": {"en": "Height", "ar": "الارتفاع"}, "single_safe_minitreasure45": {"en": "45 cm", "ar": "45 سم"}, "single_safe_minitreasure46": {"en": "60 cm", "ar": "60 سم"}, "single_safe_minitreasure47": {"en": "80 cm", "ar": "80 سم"}, "single_safe_minitreasure48": {"en": "100 cm", "ar": "100 سم"}, "single_safe_minitreasure49": {"en": "Width", "ar": "العرض"}, "single_safe_minitreasure50": {"en": "44.5 cm", "ar": "44.5 سم"}, "single_safe_minitreasure51": {"en": "44.5 cm", "ar": "44.5 سم"}, "single_safe_minitreasure52": {"en": "44.5 cm", "ar": "44.5 سم"}, "single_safe_minitreasure53": {"en": "44.5 cm", "ar": "44.5 سم"}, "single_safe_minitreasure54": {"en": "Depth", "ar": "العمق"}, "single_safe_minitreasure55": {"en": "39 cm", "ar": "39 سم"}, "single_safe_minitreasure56": {"en": "39 cm", "ar": "39 سم"}, "single_safe_minitreasure57": {"en": "39 cm", "ar": "39 سم"}, "single_safe_minitreasure58": {"en": "39 cm", "ar": "39 سم"}, "single_safe_minitreasure59": {"en": "Volume", "ar": "الحجم"}, "single_safe_minitreasure60": {"en": "35 L", "ar": "35 لترًا"}, "single_safe_minitreasure61": {"en": "50 L", "ar": "50 لترًا"}, "single_safe_minitreasure62": {"en": "70 L", "ar": "70 لترًا"}, "single_safe_minitreasure63": {"en": "90 L", "ar": "90 لترًا"}, "single_safe_minitreasure64": {"en": "Weight", "ar": "الوزن"}, "single_safe_minitreasure65": {"en": "41 kg", "ar": "41 كجم"}, "single_safe_minitreasure66": {"en": "54 kg", "ar": "54 كجم"}, "single_safe_minitreasure67": {"en": "62 kg", "ar": "62 كجم"}, "single_safe_minitreasure68": {"en": "72 kg", "ar": "72 كجم"}, "single_safe_minitreasure69": {"en": "Number of Drawers", "ar": "عدد الأدراج"}, "single_safe_minitreasure70": {"en": "Gun Drawers", "ar": "أدراج الأسلحة"}, "single_safe_minitreasure71": {"en": "Possible", "ar": "ممكن"}, "single_safe_minitreasure72": {"en": "Possible", "ar": "ممكن"}, "single_safe_minitreasure73": {"en": "Possible", "ar": "ممكن"}, "single_safe_minitreasure74": {"en": "Possible", "ar": "ممكن"}, "single_safe_minitreasure75": {"en": "Jewellery Drawers", "ar": "أدراج المجوهرات"}, "single_safe_minitreasure76": {"en": "Possible", "ar": "ممكن"}, "single_safe_minitreasure77": {"en": "Possible", "ar": "ممكن"}, "single_safe_minitreasure78": {"en": "Possible", "ar": "ممكن"}, "single_safe_minitreasure79": {"en": "Possible", "ar": "ممكن"}, "single_safe_minitreasure80": {"en": "Fire Resistance", "ar": "مقاومة الحريق"}, "single_safe_minitreasure81": {"en": "30 minutes", "ar": "30 دقيقة"}, "single_safe_minitreasure82": {"en": "30 minutes", "ar": "30 دقيقة"}, "single_safe_minitreasure83": {"en": "30 minutes", "ar": "30 دقيقة"}, "single_safe_minitreasure84": {"en": "30 minutes", "ar": "30 دقيقة"}, "single_safe_minitreasure85": {"en": "MiniTreasure Safe", "ar": "خزنة MiniTreasure"}, "single_safe_minitreasure86": {"en": "Bespoke Customization", "ar": "تخصيص حسب الطلب"}, "single_safe_minitreasure87": {"en": "Preserve the legacy of your\n                        family, protect your most meaningful pieces, and enjoy lasting peace of mind with a safe\n                        designed for what you treasure most.", "ar": "حافظوا على تراث أسرتكم، واحموا أثمن مقتنياتكم، واستمتعوا براحة بال دائمة مع خزنة صُممت لكل ما تكنزونه."}, "single_safe_minitreasure88": {"en": "MiniTreasure Safe", "ar": "خزنة MiniTreasure"}, "single_safe_minitreasure89": {"en": "Exterior Finish", "ar": "التشطيب الخارجي"}, "single_safe_minitreasure90": {"en": "Choose from our premium powder-coated high gloss palette.", "ar": "اختر من لوحة ألواننا الفاخرة اللامعة المطلية بالمسحوق."}, "single_safe_minitreasure91": {"en": "Gold", "ar": "ذهبي"}, "single_safe_minitreasure92": {"en": "Royal Blue", "ar": "أزرق ملكي"}, "single_safe_minitreasure93": {"en": "Red", "ar": "أحمر"}, "single_safe_minitreasure94": {"en": "Orange", "ar": "برتقالي"}, "single_safe_minitreasure95": {"en": "White", "ar": "أبيض"}, "single_safe_minitreasure96": {"en": "Black", "ar": "أسود"}, "single_safe_minitreasure97": {"en": "Opt for hand-stitched luxury leather full cladding.", "ar": "اختاروا التغليف الكامل بالجلد الفاخر المخيّط يدويًا."}, "single_safe_minitreasure98": {"en": "Golden Brown Leather", "ar": "جلد بني ذهبي"}, "single_safe_minitreasure99": {"en": "Black Leather", "ar": "جلد أسود"}, "single_safe_minitreasure100": {"en": "Green Leather", "ar": "جلد أخضر"}, "single_safe_minitreasure101": {"en": "Tanned Leather", "ar": "جلد مدبوغ"}, "single_safe_minitreasure102": {"en": "Grey Leather", "ar": "جلد رمادي"}, "single_safe_minitreasure103": {"en": "Red Leather", "ar": "جلد أحمر"}, "single_safe_minitreasure104": {"en": "MiniTreasure Safe", "ar": "خزنة MiniTreasure"}, "single_safe_minitreasure105": {"en": "The Collector's Choice", "ar": "اختيار الهاوي"}, "single_safe_minitreasure106": {"en": "\n                        For the collector who values beauty as much as security, the Minitreasure safe from\n                        Luxuria offers a sanctuary of elegance. Featuring advanced certified security technology\n                        and interiors that reflect your personal style, each safe is a curated space where\n                        treasured heirlooms and contemporary pieces are protected with grace and intention.\n                    ", "ar": "\n                        لهواة الجمع الذين يقدّرون الجمال بقدر الأمان، تقدم خزنة Minitreasure من Luxuria ملاذًا من الأناقة. وبتقنية أمان معتمدة متقدمة وتصاميم داخلية تعكس أسلوبكم الشخصي، تُعد كل خزنة فضاءً منسّقًا بعناية تُحفظ فيه التحف العائلية العزيزة والمقتنيات المعاصرة برقي وقصد.\n                    "}, "single_safe_minitreasure107": {"en": "Interior Finish", "ar": "التشطيب الداخلي"}, "single_safe_minitreasure108": {"en": "\n                                The MiniTreasure offers customizable drawer dividers for effortless organization and\n                                elegant presentation of your collection. Designed for both security and ease, it keeps\n                                your cherished pieces neatly arranged in one refined space. Choose from a variety of\n                                thoughtfully designed layouts tailored to specific jewelry types—ensuring both seamless\n                                access and stylish protection.\n                            ", "ar": "\n                                توفر MiniTreasure فواصل أدراج قابلة للتخصيص لتنظيم سهل وعرض أنيق لمجموعتكم. مصممة للأمان والسهولة معًا، تحافظ على ترتيب مقتنياتكم العزيزة بشكل أنيق في فضاء واحد رفيع. اختاروا من بين مجموعة من التصاميم المدروسة المخصصة لأنواع المجوهرات المحددة — لضمان سهولة الوصول والحماية الأنيقة معًا.\n                            "}, "single_safe_minitreasure109": {"en": "Previous options", "ar": "الخيارات السابقة"}, "single_safe_minitreasure110": {"en": "L1 – Plain Drawer", "ar": "L1 – درج عادي"}, "single_safe_minitreasure111": {"en": "L2 – 2 Partitions", "ar": "L2 – فاصلان"}, "single_safe_minitreasure112": {"en": "L3 – Ring and Plain Partition", "ar": "L3 – خاتم وفاصل عادي"}, "single_safe_minitreasure113": {"en": "L4 – Long Chains", "ar": "L4 – سلاسل طويلة"}, "single_safe_minitreasure114": {"en": "L5 – Rings and Earrings", "ar": "L5 – خواتم وأقراط"}, "single_safe_minitreasure115": {"en": "L6 – Necklace Set", "ar": "L6 – طقم قلادة"}, "single_safe_minitreasure116": {"en": "L7 – Earrings", "ar": "L7 – أقراط"}, "single_safe_minitreasure117": {"en": "L8 – Rings", "ar": "L8 – خواتم"}, "single_safe_minitreasure118": {"en": "L9 – Bangles", "ar": "L9 – أساور"}, "single_safe_minitreasure119": {"en": "L10 – Pens", "ar": "L10 – أقلام"}, "single_safe_minitreasure120": {"en": "L11 – Vertical Partition", "ar": "L11 – فاصل عمودي"}, "single_safe_minitreasure121": {"en": "L12 – 4 Partitions", "ar": "L12 – 4 فواصل"}, "single_safe_minitreasure122": {"en": "L13 – Small Partitions", "ar": "L13 – فواصل صغيرة"}, "single_safe_minitreasure123": {"en": "L14 – Pens", "ar": "L14 – أقلام"}, "single_safe_minitreasure124": {"en": "L15 – Watches", "ar": "L15 – ساعات"}, "single_safe_minitreasure125": {"en": "L16 – Medium Partitions", "ar": "L16 – فواصل متوسطة"}, "single_safe_minitreasure126": {"en": "Next options", "ar": "الخيارات التالية"}, "single_safe_minitreasure127": {"en": "Ready to Commission?", "ar": "مستعدون للتنفيذ؟"}, "single_safe_minitreasure128": {"en": "Work directly with our artisans to review these finishes\n                via physical material samples.", "ar": "تعاونوا مباشرة مع حرفيينا لمراجعة هذه التشطيبات من خلال عينات مواد فعلية."}, "single_safe_minitreasure129": {"en": "Contact Sales Advisor", "ar": "تواصل مع مستشار المبيعات"}, "single_safe_minitreasure130": {"en": "Luxuria Safes", "ar": "خزائن Luxuria"}, "single_safe_minitreasure131": {"en": "Uncompromising Security, Bespoke Elegance.", "ar": "أمان لا يقبل التنازل، وأناقة مصممة خصيصًا."}, "single_safe_minitreasure132": {"en": "Explore", "ar": "استكشف"}, "single_safe_minitreasure133": {"en": "Collections", "ar": "المجموعات"}, "single_safe_minitreasure134": {"en": "Standards & Certifications", "ar": "المعايير والاعتمادات"}, "single_safe_minitreasure135": {"en": "Locking Systems", "ar": "أنظمة الإقفال"}, "single_safe_minitreasure136": {"en": "Our Story", "ar": "قصتنا"}, "single_safe_minitreasure137": {"en": "Bespoke Series", "ar": "سلسلة مخصصة"}, "single_safe_minitreasure138": {"en": "Jewellery Safes", "ar": "خزائن المجوهرات"}, "single_safe_minitreasure139": {"en": "Watch Safes", "ar": "خزائن الساعات"}, "single_safe_minitreasure140": {"en": "Wardrobe Safes", "ar": "خزائن خزانة الملابس"}, "single_safe_minitreasure141": {"en": "Multipurpose Estate Safes", "ar": "الخزائن العقارية متعددة الأغراض"}, "single_safe_minitreasure142": {"en": "Contact Us", "ar": "تواصل معنا"}, "single_safe_minitreasure143": {"en": "info@luxuriasafes.com", "ar": "info@luxuriasafes.com"}, "single_safe_minitreasure144": {"en": "© 2026 Luxuria Safes. All Rights Reserved.", "ar": "© 2026 خزائن Luxuria. جميع الحقوق محفوظة."}, "single_safe_minitreasure145": {"en": "Privacy Policy", "ar": "سياسة الخصوصية"}, "single_safe_minitreasure146": {"en": "Return Policy", "ar": "سياسة الاسترجاع"}, "single_safe_minitreasure147": {"en": "Cancellation Policy", "ar": "سياسة الإلغاء"}};
+    </script>
+    <script src="assets/js/i18n.js"></script>
 
-        <footer id="colophon" class="site-footer">
-        <div class="footer-widgets container">
-            <div class="footer-column brand-col">
-                <h3>Luxuria Safes</h3>
-                <p>Uncompromising Security, Bespoke Elegance.</p>
-            </div>
-
-            <div class="footer-column links-col">
-                <h4>Explore</h4>
-                <ul>
-                    <li><a href="collections.html">Collections</a></li>
-                    <li><a href="standards.html">Standards &amp; Certifications</a></li>
-                    <li><a href="locks.html">Locking Systems</a></li>
-                    <li><a href="story.html">Our Story</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column links-col">
-                <h4>Bespoke Series</h4>
-                <ul>
-                    <li><a href="jewellery-safe.html">Jewellery Safes</a></li>
-                    <li><a href="watch-safe.html">Watch Safes</a></li>
-                    <li><a href="wardrobe-safe.html">Wardrobe Safes</a></li>
-                    <li><a href="multipurpose-safe.html">Multipurpose Estate Safes</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column contact-col">
-                <h4>Contact Us</h4>
-                <p>info@luxuriasafes.com</p>
-            </div>
-        </div>
-        <div class="site-info container">
-            <p>&copy; 2026 Luxuria Safes. All Rights Reserved.</p>
-            <div class="legal-links">
-                <a href="#">Privacy Policy</a> |
-                <a href="#">Return Policy</a> |
-                <a href="#">Cancellation Policy</a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="assets/js/main.js"></script>
 </body>
-
 </html>

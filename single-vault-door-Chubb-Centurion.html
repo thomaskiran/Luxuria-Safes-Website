@@ -1,219 +1,204 @@
 <!DOCTYPE html>
+
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <title>Luxuria Safes - Chubb Centurion Door</title>
+
+    <script>
+        (function () {
+            try {
+                var l = localStorage.getItem('luxuria_lang') || 'en';
+                document.documentElement.lang = l;
+                document.documentElement.dir = l === 'ar' ? 'rtl' : 'ltr';
+            } catch (e) {}
+        })();
+    </script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<title data-i18n="single_vault_door_chubb_centurion_title">Luxuria Safes - Chubb Centurion Door</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/main.css" rel="stylesheet"/>
+<script defer="" src="https://cdn.vercel-insights.com/v1/script.js"></script>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Noto+Kufi+Arabic:wght@400;500;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
+    <link rel="stylesheet" href="assets/css/i18n.css">
+
 </head>
-
 <body>
-
-        <header id="masthead" class="site-header scrolled">
-        <div class="header-inner container">
-            <div class="site-branding">
-                <p class="site-title" style="margin: 0;">
-                    <a href="index.html" style="display: flex; align-items: center;">
-                        <img src="Luxuria-Safes-logo.svg" alt="Luxuria Safes Logo"
-                            style="height: 3rem; width: auto;">
-                    </a>
-                </p>
-            </div>
-            <div class="menu-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <nav class="main-navigation">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="collections.html">The Collections</a></li>
-                    <li><a href="standards.html">Standards</a></li>
-                    <li><a href="locks.html">Locks</a></li>
-                    <li><a href="story.html">Our Story</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main class="page-header pt-xl bg-black">
-        <section class="product-hero flex-split align-stretch  configurator-row">
-            <div class="product-gallery flex-1 flex-center bg-darker">
-                <!-- Main Image -->
-                <div class="main-image-display mb-md">
-                    <img id="mainGalleryImage" src="Products/Vault Doors/Centurion Door/Product Photos/Centurion-hero-img.avif"
-                        alt="Centurion Door" style="width: 60%; height: auto; object-fit: cover;" loading="lazy">
-                </div>
-                <!-- Thumbnails -->
-                <div class="gallery-thumbnails grid" style="grid-template-columns: repeat(2, 1fr); gap: 10px; width: 25%; height:25%; margin: auto;">
-                    <div class="thumbnail active" onclick="updateGallery(document.getElementById('mainGalleryImage'),this, 'Products/Vault Doors/Centurion Door/Product Photos/Centurion-hero-img.avif')">
-                        <img src="Products/Vault Doors/Centurion Door/Product Photos/Centurion-hero-img.avif" alt="Thumb 1" loading="lazy">
-                    </div>
-                    <div class="thumbnail" onclick="updateGallery(document.getElementById('mainGalleryImage'),this, 'Products/Vault Doors/Centurion Door/Product Photos/Centurion-Door.avif')">
-                        <img src="Products/Vault Doors/Centurion Door/Product Photos/Centurion-Door.avif" alt="Thumb 2" loading="lazy">
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-info flex-1 flex-center section-padding pt-xl">
-                <div class="info-inner reveal-up">
-                    <span class="eyebrow gold-text">Security Vault Doors</span>
-                    <h1 class="product-title accent-title" style="font-size: 4rem;">Chubb Centurion Door</h1>
-
-                    <div class="product-description mt-md text-block">
-                        <p>A certified high-security solution combining advanced burglary resistance with operational convenience. The integrated “door-in-door” feature provides controlled access without opening the main vault.</p>
-                    </div>
-
-                    <div class="container" id="gamme-icons">
-                        <div class="flex-center">
-                            <img class=""
-                                src="effraction-light.png"
-                                alt="Certified burglary resistant"
-                                loading="lazy">
-                            <span class="">
-                                Burglary</span>
-                        </div>
-                        <div class="flex-center">
-                            <img class=""
-                                src="resistant-au-feu.avif"
-                                alt="Certified fire resistant"
-                                loading="lazy">
-                            <span class="">
-                                Fire</span>
-                        </div>
-                        <div class="flex-center">
-                            <img class="" src="Ecb-s-logo-150x150.jpg" alt="ECB-S Certified" style="height: 70px;" loading="lazy">
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Features SECTION -->
-        <section id="collections" class="section-padding bg-dark">
-            <div class="container">
-                <div class="grid grid-3">
-                    <!-- Key Features -->
-                    <div class="collection-card reveal-up">
-                        <div class="card-content">
-                            <h3 class="gold-text"
-                                style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
-                                <img src="icon-shield.avif"
-                                    alt="" style="height: 32px;" loading="lazy">
+<header class="site-header scrolled" id="masthead">
+<div class="header-inner container">
+<div class="site-branding">
+<p class="site-title" style="margin: 0;">
+<a href="index.html" style="display: flex; align-items: center;">
+<img alt="Luxuria Safes Logo" data-i18n-attr="alt:single_vault_door_chubb_centurion1" src="Luxuria-Safes-logo.svg" style="height: 3rem; width: auto;"/>
+</a>
+</p>
+</div>
+<div aria-label="Toggle navigation" class="menu-toggle" data-i18n-attr="aria-label:single_vault_door_chubb_centurion2">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<nav class="main-navigation">
+<ul>
+<li><a href="index.html"><span data-i18n="single_vault_door_chubb_centurion3">Home</span></a></li>
+<li><a href="collections.html"><span data-i18n="single_vault_door_chubb_centurion4">The Collections</span></a></li>
+<li><a href="standards.html"><span data-i18n="single_vault_door_chubb_centurion5">Standards</span></a></li>
+<li><a href="locks.html"><span data-i18n="single_vault_door_chubb_centurion6">Locks</span></a></li>
+<li><a href="story.html"><span data-i18n="single_vault_door_chubb_centurion7">Our Story</span></a></li>
+<li><a href="contact.html"><span data-i18n="single_vault_door_chubb_centurion8">Contact</span></a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main class="page-header pt-xl bg-black">
+<section class="product-hero flex-split align-stretch configurator-row">
+<div class="product-gallery flex-1 flex-center bg-darker">
+<!-- Main Image -->
+<div class="main-image-display mb-md">
+<img alt="Centurion Door" data-i18n-attr="alt:single_vault_door_chubb_centurion9" id="mainGalleryImage" loading="lazy" src="Products/Vault Doors/Centurion Door/Product Photos/Centurion-hero-img.avif" style="width: 60%; height: auto; object-fit: cover;"/>
+</div>
+<!-- Thumbnails -->
+<div class="gallery-thumbnails grid" style="grid-template-columns: repeat(2, 1fr); gap: 10px; width: 25%; height:25%; margin: auto;">
+<div class="thumbnail active" onclick="updateGallery(document.getElementById('mainGalleryImage'),this, 'Products/Vault Doors/Centurion Door/Product Photos/Centurion-hero-img.avif')">
+<img alt="Thumb 1" data-i18n-attr="alt:single_vault_door_chubb_centurion10" loading="lazy" src="Products/Vault Doors/Centurion Door/Product Photos/Centurion-hero-img.avif"/>
+</div>
+<div class="thumbnail" onclick="updateGallery(document.getElementById('mainGalleryImage'),this, 'Products/Vault Doors/Centurion Door/Product Photos/Centurion-Door.avif')">
+<img alt="Thumb 2" data-i18n-attr="alt:single_vault_door_chubb_centurion11" loading="lazy" src="Products/Vault Doors/Centurion Door/Product Photos/Centurion-Door.avif"/>
+</div>
+</div>
+</div>
+<div class="product-info flex-1 flex-center section-padding pt-xl">
+<div class="info-inner reveal-up">
+<span class="eyebrow gold-text"><span data-i18n="single_vault_door_chubb_centurion12">Security Vault Doors</span></span>
+<h1 class="product-title accent-title" style="font-size: 4rem;"><span data-i18n="single_vault_door_chubb_centurion13">Chubb Centurion Door</span></h1>
+<div class="product-description mt-md text-block">
+<p><span data-i18n="single_vault_door_chubb_centurion14">A certified high-security solution combining advanced burglary resistance with operational convenience. The integrated “door-in-door” feature provides controlled access without opening the main vault.</span></p>
+</div>
+<div class="container" id="gamme-icons">
+<div class="flex-center">
+<img alt="Certified burglary resistant" class="" data-i18n-attr="alt:single_vault_door_chubb_centurion15" loading="lazy" src="effraction-light.png"/>
+<span class=""><span data-i18n="single_vault_door_chubb_centurion16">
+                                Burglary</span></span>
+</div>
+<div class="flex-center">
+<img alt="Certified fire resistant" class="" data-i18n-attr="alt:single_vault_door_chubb_centurion17" loading="lazy" src="resistant-au-feu.avif"/>
+<span class=""><span data-i18n="single_vault_door_chubb_centurion18">
+                                Fire</span></span>
+</div>
+<div class="flex-center">
+<img alt="ECB-S Certified" class="" data-i18n-attr="alt:single_vault_door_chubb_centurion19" loading="lazy" src="Ecb-s-logo-150x150.jpg" style="height: 70px;"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Features SECTION -->
+<section class="section-padding bg-dark" id="collections">
+<div class="container">
+<div class="grid grid-3">
+<!-- Key Features -->
+<div class="collection-card reveal-up">
+<div class="card-content">
+<h3 class="gold-text" style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+<img alt="" loading="lazy" src="icon-shield.avif" style="height: 32px;"/><span data-i18n="single_vault_door_chubb_centurion20">
                                 Key Features
-                            </h3>
-                            <ul class="option-list" style="text-align: left; padding-top: 1rem;">
-                                <li><strong class="gold-text">Elite Certification</strong><br>Certified to EN 1143-1 Grade V burglary resistance standard.</li>
-                                <li><strong class="gold-text">Operational Flexibility</strong><br>Integrated “door-in-door” feature for internal access.</li>
-                                <li><strong class="gold-text">Advanced Integration</strong><br>Fully compatible with multi-user access systems and time locks.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!--Construction-->
-                    <div class="collection-card reveal-up" style="transition-delay: 0.2s;">
-                        <div class="card-content">
-                            <h3 class="gold-text"
-                                style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
-                                <img src="icon-cube.avif" alt=""
-                                    style="height: 32px;" loading="lazy">
+                            </span></h3>
+<ul class="option-list" style="text-align: left; padding-top: 1rem;">
+<li><strong class="gold-text"><span data-i18n="single_vault_door_chubb_centurion22">Elite Certification</span></strong><br/><span data-i18n="single_vault_door_chubb_centurion21">Certified to EN 1143-1 Grade V burglary resistance standard.</span></li>
+<li><strong class="gold-text"><span data-i18n="single_vault_door_chubb_centurion24">Operational Flexibility</span></strong><br/><span data-i18n="single_vault_door_chubb_centurion23">Integrated “door-in-door” feature for internal access.</span></li>
+<li><strong class="gold-text"><span data-i18n="single_vault_door_chubb_centurion26">Advanced Integration</span></strong><br/><span data-i18n="single_vault_door_chubb_centurion25">Fully compatible with multi-user access systems and time locks.</span></li>
+</ul>
+</div>
+</div>
+<!--Construction-->
+<div class="collection-card reveal-up" style="transition-delay: 0.2s;">
+<div class="card-content">
+<h3 class="gold-text" style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+<img alt="" loading="lazy" src="icon-cube.avif" style="height: 32px;"/><span data-i18n="single_vault_door_chubb_centurion27">
                                 Construction
-                            </h3>
-                            <ul class="option-list" style="text-align: left; padding-top: 1rem;">
-                                <li><strong class="gold-text">Armoured Frame</strong><br>Armoured door frame for additional protection.</li>
-                                <li><strong class="gold-text">Explosive Resistance</strong><br>Optional EX rating for protection against explosives.</li>
-                                <li><strong class="gold-text">Grille Gate</strong><br>Optional integrated grille gate.</li>
-                            </ul>
-
-                        </div>
-                    </div>
-                    <!-- Applications -->
-                    <div class="collection-card reveal-up" style="transition-delay: 0.2s;">
-                        <div class="card-content">
-                            <h3 class="gold-text"
-                                style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
-                                <img src="icon-diamond-2.avif" alt=""
-                                    style="height: 32px;" loading="lazy">
+                            </span></h3>
+<ul class="option-list" style="text-align: left; padding-top: 1rem;">
+<li><strong class="gold-text"><span data-i18n="single_vault_door_chubb_centurion29">Armoured Frame</span></strong><br/><span data-i18n="single_vault_door_chubb_centurion28">Armoured door frame for additional protection.</span></li>
+<li><strong class="gold-text"><span data-i18n="single_vault_door_chubb_centurion31">Explosive Resistance</span></strong><br/><span data-i18n="single_vault_door_chubb_centurion30">Optional EX rating for protection against explosives.</span></li>
+<li><strong class="gold-text"><span data-i18n="single_vault_door_chubb_centurion33">Grille Gate</span></strong><br/><span data-i18n="single_vault_door_chubb_centurion32">Optional integrated grille gate.</span></li>
+</ul>
+</div>
+</div>
+<!-- Applications -->
+<div class="collection-card reveal-up" style="transition-delay: 0.2s;">
+<div class="card-content">
+<h3 class="gold-text" style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+<img alt="" loading="lazy" src="icon-diamond-2.avif" style="height: 32px;"/><span data-i18n="single_vault_door_chubb_centurion34">
                                 Applications
-                            </h3>
-                            <ul class="option-list" style="text-align: left; padding-top: 1rem;">
-                                <li><strong class="gold-text">Bank Vaults</strong><br>Designed for the secure storage of cash, checks, and other high-value items in central banking environments.</li>
-                                <li><strong class="gold-text">Bullion Storage</strong><br>Specifically designed for the secure storage of gold, silver, and other precious metals.</li>
-                                <li><strong class="gold-text">High-security Government Facilities </strong><br>Ideal for the secure storage of sensitive documents and equipment.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
-        <!-- Technical Specifications -->
-        <section id="specifications" class="section-padding bg-black">
-            <div class="container">
-                <div
-                    style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem;">
-                    <div>
-                        <h2 class="accent-title" style="font-size: 3rem;">Technical Specifications</h2>
-                    </div>
-                    <a href="Products/Vault Doors/Centurion Door/Chubb_Centurion_Door_Product_Sheet.pdf" class="btn btn-outline hover-fill" target="_blank">See Product Sheet</a>
-                </div>
-                <div class="table-wrapper">
-                    <table class="table-luxury">
-                        <thead>
-                            <tr>
-                                <th style="font-size: larger;">Features</th>
-                                <th style="font-size: larger; text-align: right;">Details</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th style="width: 50%; text-align: left; padding: 1rem;">Burglary Grade</th>
-                                <td style="width: 50%; text-align: right; padding: 1rem;">EN 1143-1 Grade V</td>
-                            </tr>
-                            <tr>
-                                <th style="width: 50%; text-align: left; padding: 1rem;">Frame Type</th>
-                                <td style="width: 50%; text-align: right; padding: 1rem;">Armoured door frame</td>
-                            </tr>
-                            <tr>
-                                <th style="width: 50%; text-align: left; padding: 1rem;">Special Resistance</th>
-                                <td style="width: 50%; text-align: right; padding: 1rem;">Explosives (optional), Diamond core drilling (higher grades) </td>
-                            </tr>
-                            <tr>
-                                <th style="width: 50%; text-align: left; padding: 1rem;">Standard Locking</th>
-                                <td style="width: 50%; text-align: right; padding: 1rem;">Certified 1 key lock + 1 combination lock (Grade V-IX)</td>
-                            </tr>
-                            <tr>
-                                <th style="width: 50%; text-align: left; padding: 1rem;">Optional Locks</th>
-                                <td style="width: 50%; text-align: right; padding: 1rem;">Electronic locks, time locks, multi-user systems </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-        <!-- CTA -->
-        <div class="config-card flex-center mb-0"
-            style="border: 1px solid var(--color-gold); background: rgba(212, 175, 55, 0.05);">
-            <h3 style="margin-bottom: 1rem;">Ready to Commission?</h3>
-            <p class="text-center" style="margin-bottom: 2rem;">Work directly with our artisans to review these finishes
-                via physical material samples.</p>
-            <a href="contact.html" class="btn btn-primary btn-gold">Contact Sales Advisor</a>
-        </div>
-        </div>
-        </section>
+                            </span></h3>
+<ul class="option-list" style="text-align: left; padding-top: 1rem;">
+<li><strong class="gold-text"><span data-i18n="single_vault_door_chubb_centurion36">Bank Vaults</span></strong><br/><span data-i18n="single_vault_door_chubb_centurion35">Designed for the secure storage of cash, checks, and other high-value items in central banking environments.</span></li>
+<li><strong class="gold-text"><span data-i18n="single_vault_door_chubb_centurion38">Bullion Storage</span></strong><br/><span data-i18n="single_vault_door_chubb_centurion37">Specifically designed for the secure storage of gold, silver, and other precious metals.</span></li>
+<li><strong class="gold-text"><span data-i18n="single_vault_door_chubb_centurion40">High-security Government Facilities </span></strong><br/><span data-i18n="single_vault_door_chubb_centurion39">Ideal for the secure storage of sensitive documents and equipment.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Specifications -->
+<section class="section-padding bg-black" id="specifications">
+<div class="container">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem;">
+<div>
+<h2 class="accent-title" style="font-size: 3rem;"><span data-i18n="single_vault_door_chubb_centurion41">Technical Specifications</span></h2>
+</div>
+<a class="btn btn-outline hover-fill" href="Products/Vault Doors/Centurion Door/Chubb_Centurion_Door_Product_Sheet.pdf" target="_blank"><span data-i18n="single_vault_door_chubb_centurion42">See Product Sheet</span></a>
+</div>
+<div class="table-wrapper">
+<table class="table-luxury">
+<thead>
+<tr>
+<th style="font-size: larger;"><span data-i18n="single_vault_door_chubb_centurion43">Features</span></th>
+<th style="font-size: larger; text-align: right;"><span data-i18n="single_vault_door_chubb_centurion44">Details</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th style="width: 50%; text-align: left; padding: 1rem;"><span data-i18n="single_vault_door_chubb_centurion45">Burglary Grade</span></th>
+<td style="width: 50%; text-align: right; padding: 1rem;"><span data-i18n="single_vault_door_chubb_centurion46">EN 1143-1 Grade V</span></td>
+</tr>
+<tr>
+<th style="width: 50%; text-align: left; padding: 1rem;"><span data-i18n="single_vault_door_chubb_centurion47">Frame Type</span></th>
+<td style="width: 50%; text-align: right; padding: 1rem;"><span data-i18n="single_vault_door_chubb_centurion48">Armoured door frame</span></td>
+</tr>
+<tr>
+<th style="width: 50%; text-align: left; padding: 1rem;"><span data-i18n="single_vault_door_chubb_centurion49">Special Resistance</span></th>
+<td style="width: 50%; text-align: right; padding: 1rem;"><span data-i18n="single_vault_door_chubb_centurion50">Explosives (optional), Diamond core drilling (higher grades) </span></td>
+</tr>
+<tr>
+<th style="width: 50%; text-align: left; padding: 1rem;"><span data-i18n="single_vault_door_chubb_centurion51">Standard Locking</span></th>
+<td style="width: 50%; text-align: right; padding: 1rem;"><span data-i18n="single_vault_door_chubb_centurion52">Certified 1 key lock + 1 combination lock (Grade V-IX)</span></td>
+</tr>
+<tr>
+<th style="width: 50%; text-align: left; padding: 1rem;"><span data-i18n="single_vault_door_chubb_centurion53">Optional Locks</span></th>
+<td style="width: 50%; text-align: right; padding: 1rem;"><span data-i18n="single_vault_door_chubb_centurion54">Electronic locks, time locks, multi-user systems </span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- CTA -->
+<div class="config-card flex-center mb-0" style="border: 1px solid var(--color-gold); background: rgba(212, 175, 55, 0.05);">
+<h3 style="margin-bottom: 1rem;"><span data-i18n="single_vault_door_chubb_centurion55">Ready to Commission?</span></h3>
+<p class="text-center" style="margin-bottom: 2rem;"><span data-i18n="single_vault_door_chubb_centurion56">Work directly with our artisans to review these finishes
+                via physical material samples.</span></p>
+<a class="btn btn-primary btn-gold" href="contact.html"><span data-i18n="single_vault_door_chubb_centurion57">Contact Sales Advisor</span></a>
+</div>
 
-        <!-- DRAWINGS SECTION>
+
+<!-- DRAWINGS SECTION>
         <section class="product-hero flex-row align-stretch border-top-gold section-padding bg-darker">
             <div class="product-gallery flex-1 flex-center bg-darker" style="width: 100%; height: 100%; margin: auto;">
                 <img src="Products/Luxury Safes/Minitreasure/Product Photos/MiniTreasure Size Sketch.jpg"
@@ -226,51 +211,50 @@
                     style="width: 60%; height: 60%; margin: auto; overflow-clip-margin: content-box; border: 50px solid var(--color-text-light);">
             </div>
         </section-->
-    </main>
+</main>
+<footer class="site-footer" id="colophon">
+<div class="footer-widgets container">
+<div class="footer-column brand-col">
+<h3><span data-i18n="single_vault_door_chubb_centurion58">Luxuria Safes</span></h3>
+<p><span data-i18n="single_vault_door_chubb_centurion59">Uncompromising Security, Bespoke Elegance.</span></p>
+</div>
+<div class="footer-column links-col">
+<h4><span data-i18n="single_vault_door_chubb_centurion60">Explore</span></h4>
+<ul>
+<li><a href="collections.html"><span data-i18n="single_vault_door_chubb_centurion61">Collections</span></a></li>
+<li><a href="standards.html"><span data-i18n="single_vault_door_chubb_centurion62">Standards &amp; Certifications</span></a></li>
+<li><a href="locks.html"><span data-i18n="single_vault_door_chubb_centurion63">Locking Systems</span></a></li>
+<li><a href="story.html"><span data-i18n="single_vault_door_chubb_centurion64">Our Story</span></a></li>
+</ul>
+</div>
+<div class="footer-column links-col">
+<h4><span data-i18n="single_vault_door_chubb_centurion65">Bespoke Series</span></h4>
+<ul>
+<li><a href="jewellery-safe.html"><span data-i18n="single_vault_door_chubb_centurion66">Jewellery Safes</span></a></li>
+<li><a href="watch-safe.html"><span data-i18n="single_vault_door_chubb_centurion67">Watch Safes</span></a></li>
+<li><a href="wardrobe-safe.html"><span data-i18n="single_vault_door_chubb_centurion68">Wardrobe Safes</span></a></li>
+<li><a href="multipurpose-safe.html"><span data-i18n="single_vault_door_chubb_centurion69">Multipurpose Estate Safes</span></a></li>
+</ul>
+</div>
+<div class="footer-column contact-col">
+<h4><span data-i18n="single_vault_door_chubb_centurion70">Contact Us</span></h4>
+<p><span data-i18n="single_vault_door_chubb_centurion71">info@luxuriasafes.com</span></p>
+</div>
+</div>
+<div class="site-info container">
+<p><span data-i18n="single_vault_door_chubb_centurion72">© 2026 Luxuria Safes. All Rights Reserved.</span></p>
+<div class="legal-links">
+<a href="#"><span data-i18n="single_vault_door_chubb_centurion73">Privacy Policy</span></a> |
+                <a href="#"><span data-i18n="single_vault_door_chubb_centurion74">Return Policy</span></a> |
+                <a href="#"><span data-i18n="single_vault_door_chubb_centurion75">Cancellation Policy</span></a>
+</div>
+</div>
+</footer>
+<script src="assets/js/main.js"></script>
+    <script id="page-i18n">
+        window.PAGE_I18N = {"single_vault_door_chubb_centurion_title": {"en": "Luxuria Safes - Chubb Centurion Door", "ar": "خزائن Luxuria - باب Chubb Centurion"}, "single_vault_door_chubb_centurion1": {"en": "Luxuria Safes Logo", "ar": "شعار خزائن Luxuria"}, "single_vault_door_chubb_centurion2": {"en": "Toggle navigation", "ar": "تبديل شريط التنقل"}, "single_vault_door_chubb_centurion3": {"en": "Home", "ar": "الرئيسية"}, "single_vault_door_chubb_centurion4": {"en": "The Collections", "ar": "المجموعات"}, "single_vault_door_chubb_centurion5": {"en": "Standards", "ar": "المعايير"}, "single_vault_door_chubb_centurion6": {"en": "Locks", "ar": "الأقفال"}, "single_vault_door_chubb_centurion7": {"en": "Our Story", "ar": "قصتنا"}, "single_vault_door_chubb_centurion8": {"en": "Contact", "ar": "تواصل معنا"}, "single_vault_door_chubb_centurion9": {"en": "Centurion Door", "ar": "باب Centurion"}, "single_vault_door_chubb_centurion10": {"en": "Thumb 1", "ar": "صورة مصغرة 1"}, "single_vault_door_chubb_centurion11": {"en": "Thumb 2", "ar": "صورة مصغرة 2"}, "single_vault_door_chubb_centurion12": {"en": "Security Vault Doors", "ar": "أبواب الخزنات المحصنة"}, "single_vault_door_chubb_centurion13": {"en": "Chubb Centurion Door", "ar": "باب Chubb Centurion"}, "single_vault_door_chubb_centurion14": {"en": "A certified high-security solution combining advanced burglary resistance with operational convenience. The integrated “door-in-door” feature provides controlled access without opening the main vault.", "ar": "حل أمني معتمد وعالي الحماية يجمع بين مقاومة السرقة المتقدمة وسهولة الاستخدام. توفر ميزة \"الباب داخل الباب\" المدمجة دخولًا متحكمًا فيه دون فتح الخزنة الرئيسية."}, "single_vault_door_chubb_centurion15": {"en": "Certified burglary resistant", "ar": "معتمدة كمقاومة للسرقة"}, "single_vault_door_chubb_centurion16": {"en": "\n                                Burglary", "ar": "\n                                السرقة"}, "single_vault_door_chubb_centurion17": {"en": "Certified fire resistant", "ar": "معتمدة كمقاومة للحريق"}, "single_vault_door_chubb_centurion18": {"en": "\n                                Fire", "ar": "\n                                الحريق"}, "single_vault_door_chubb_centurion19": {"en": "ECB-S Certified", "ar": "معتمدة من ECB-S"}, "single_vault_door_chubb_centurion20": {"en": "\n                                Key Features\n                            ", "ar": "\n                                الميزات الرئيسية\n                            "}, "single_vault_door_chubb_centurion21": {"en": "Certified to EN 1143-1 Grade V burglary resistance standard.", "ar": "معتمدة وفق معيار مقاومة السرقة EN 1143-1 الفئة V."}, "single_vault_door_chubb_centurion22": {"en": "Elite Certification", "ar": "اعتماد متميز"}, "single_vault_door_chubb_centurion23": {"en": "Integrated “door-in-door” feature for internal access.", "ar": "ميزة \"الباب داخل الباب\" المدمجة للدخول الداخلي."}, "single_vault_door_chubb_centurion24": {"en": "Operational Flexibility", "ar": "مرونة تشغيلية"}, "single_vault_door_chubb_centurion25": {"en": "Fully compatible with multi-user access systems and time locks.", "ar": "متوافقة تمامًا مع أنظمة الدخول متعددة المستخدمين والأقفال الزمنية."}, "single_vault_door_chubb_centurion26": {"en": "Advanced Integration", "ar": "تكامل متقدم"}, "single_vault_door_chubb_centurion27": {"en": "\n                                Construction\n                            ", "ar": "\n                                البنية\n                            "}, "single_vault_door_chubb_centurion28": {"en": "Armoured door frame for additional protection.", "ar": "إطار باب مدرّع لحماية إضافية."}, "single_vault_door_chubb_centurion29": {"en": "Armoured Frame", "ar": "إطار مدرّع"}, "single_vault_door_chubb_centurion30": {"en": "Optional EX rating for protection against explosives.", "ar": "تصنيف EX اختياري للحماية من المتفجرات."}, "single_vault_door_chubb_centurion31": {"en": "Explosive Resistance", "ar": "مقاومة المتفجرات"}, "single_vault_door_chubb_centurion32": {"en": "Optional integrated grille gate.", "ar": "بوابة شبكية مدمجة اختيارية."}, "single_vault_door_chubb_centurion33": {"en": "Grille Gate", "ar": "بوابة شبكية"}, "single_vault_door_chubb_centurion34": {"en": "\n                                Applications\n                            ", "ar": "\n                                الاستخدامات\n                            "}, "single_vault_door_chubb_centurion35": {"en": "Designed for the secure storage of cash, checks, and other high-value items in central banking environments.", "ar": "مصممة للتخزين الآمن للنقد والشيكات والمقتنيات القيّمة الأخرى في بيئات المصارف المركزية."}, "single_vault_door_chubb_centurion36": {"en": "Bank Vaults", "ar": "الخزنات المصرفية"}, "single_vault_door_chubb_centurion37": {"en": "Specifically designed for the secure storage of gold, silver, and other precious metals.", "ar": "مصممة خصيصًا للتخزين الآمن للذهب والفضة والمعادن الثمينة الأخرى."}, "single_vault_door_chubb_centurion38": {"en": "Bullion Storage", "ar": "تخزين السبائك"}, "single_vault_door_chubb_centurion39": {"en": "Ideal for the secure storage of sensitive documents and equipment.", "ar": "مثالية للتخزين الآمن للوثائق الحساسة والمعدات."}, "single_vault_door_chubb_centurion40": {"en": "High-security Government Facilities ", "ar": "المرافق الحكومية عالية الأمان "}, "single_vault_door_chubb_centurion41": {"en": "Technical Specifications", "ar": "المواصفات التقنية"}, "single_vault_door_chubb_centurion42": {"en": "See Product Sheet", "ar": "عرض ورقة المنتج"}, "single_vault_door_chubb_centurion43": {"en": "Features", "ar": "الميزات"}, "single_vault_door_chubb_centurion44": {"en": "Details", "ar": "التفاصيل"}, "single_vault_door_chubb_centurion45": {"en": "Burglary Grade", "ar": "درجة مقاومة السرقة"}, "single_vault_door_chubb_centurion46": {"en": "EN 1143-1 Grade V", "ar": "EN 1143-1 الفئة V"}, "single_vault_door_chubb_centurion47": {"en": "Frame Type", "ar": "نوع الإطار"}, "single_vault_door_chubb_centurion48": {"en": "Armoured door frame", "ar": "إطار باب مدرّع"}, "single_vault_door_chubb_centurion49": {"en": "Special Resistance", "ar": "مقاومة خاصة"}, "single_vault_door_chubb_centurion50": {"en": "Explosives (optional), Diamond core drilling (higher grades) ", "ar": "متفجرات (اختياري)، حفر بلقمة ماسية (الفئات الأعلى) "}, "single_vault_door_chubb_centurion51": {"en": "Standard Locking", "ar": "إقفال قياسي"}, "single_vault_door_chubb_centurion52": {"en": "Certified 1 key lock + 1 combination lock (Grade V-IX)", "ar": "معتمد بقفل مفتاح واحد + قفل مجموعة أرقام واحد (الفئة V-IX)"}, "single_vault_door_chubb_centurion53": {"en": "Optional Locks", "ar": "أقفال اختيارية"}, "single_vault_door_chubb_centurion54": {"en": "Electronic locks, time locks, multi-user systems ", "ar": "أقفال إلكترونية، أقفال زمنية، أنظمة متعددة المستخدمين "}, "single_vault_door_chubb_centurion55": {"en": "Ready to Commission?", "ar": "مستعدون للتنفيذ؟"}, "single_vault_door_chubb_centurion56": {"en": "Work directly with our artisans to review these finishes\n                via physical material samples.", "ar": "تعاونوا مباشرة مع حرفيينا لمراجعة هذه التشطيبات من خلال عينات مواد فعلية."}, "single_vault_door_chubb_centurion57": {"en": "Contact Sales Advisor", "ar": "تواصل مع مستشار المبيعات"}, "single_vault_door_chubb_centurion58": {"en": "Luxuria Safes", "ar": "خزائن Luxuria"}, "single_vault_door_chubb_centurion59": {"en": "Uncompromising Security, Bespoke Elegance.", "ar": "أمان لا يقبل التنازل، وأناقة مصممة خصيصًا."}, "single_vault_door_chubb_centurion60": {"en": "Explore", "ar": "استكشف"}, "single_vault_door_chubb_centurion61": {"en": "Collections", "ar": "المجموعات"}, "single_vault_door_chubb_centurion62": {"en": "Standards & Certifications", "ar": "المعايير والاعتمادات"}, "single_vault_door_chubb_centurion63": {"en": "Locking Systems", "ar": "أنظمة الإقفال"}, "single_vault_door_chubb_centurion64": {"en": "Our Story", "ar": "قصتنا"}, "single_vault_door_chubb_centurion65": {"en": "Bespoke Series", "ar": "سلسلة مخصصة"}, "single_vault_door_chubb_centurion66": {"en": "Jewellery Safes", "ar": "خزائن المجوهرات"}, "single_vault_door_chubb_centurion67": {"en": "Watch Safes", "ar": "خزائن الساعات"}, "single_vault_door_chubb_centurion68": {"en": "Wardrobe Safes", "ar": "خزائن خزانة الملابس"}, "single_vault_door_chubb_centurion69": {"en": "Multipurpose Estate Safes", "ar": "الخزائن العقارية متعددة الأغراض"}, "single_vault_door_chubb_centurion70": {"en": "Contact Us", "ar": "تواصل معنا"}, "single_vault_door_chubb_centurion71": {"en": "info@luxuriasafes.com", "ar": "info@luxuriasafes.com"}, "single_vault_door_chubb_centurion72": {"en": "© 2026 Luxuria Safes. All Rights Reserved.", "ar": "© 2026 خزائن Luxuria. جميع الحقوق محفوظة."}, "single_vault_door_chubb_centurion73": {"en": "Privacy Policy", "ar": "سياسة الخصوصية"}, "single_vault_door_chubb_centurion74": {"en": "Return Policy", "ar": "سياسة الاسترجاع"}, "single_vault_door_chubb_centurion75": {"en": "Cancellation Policy", "ar": "سياسة الإلغاء"}};
+    </script>
+    <script src="assets/js/i18n.js"></script>
 
-        <footer id="colophon" class="site-footer">
-        <div class="footer-widgets container">
-            <div class="footer-column brand-col">
-                <h3>Luxuria Safes</h3>
-                <p>Uncompromising Security, Bespoke Elegance.</p>
-            </div>
-
-            <div class="footer-column links-col">
-                <h4>Explore</h4>
-                <ul>
-                    <li><a href="collections.html">Collections</a></li>
-                    <li><a href="standards.html">Standards &amp; Certifications</a></li>
-                    <li><a href="locks.html">Locking Systems</a></li>
-                    <li><a href="story.html">Our Story</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column links-col">
-                <h4>Bespoke Series</h4>
-                <ul>
-                    <li><a href="jewellery-safe.html">Jewellery Safes</a></li>
-                    <li><a href="watch-safe.html">Watch Safes</a></li>
-                    <li><a href="wardrobe-safe.html">Wardrobe Safes</a></li>
-                    <li><a href="multipurpose-safe.html">Multipurpose Estate Safes</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column contact-col">
-                <h4>Contact Us</h4>
-                <p>info@luxuriasafes.com</p>
-            </div>
-        </div>
-        <div class="site-info container">
-            <p>&copy; 2026 Luxuria Safes. All Rights Reserved.</p>
-            <div class="legal-links">
-                <a href="#">Privacy Policy</a> |
-                <a href="#">Return Policy</a> |
-                <a href="#">Cancellation Policy</a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="assets/js/main.js"></script>
 </body>
-
 </html>
