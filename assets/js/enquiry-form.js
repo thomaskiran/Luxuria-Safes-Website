@@ -91,6 +91,13 @@
 
   /* -------------------------------------------------------------- submit */
 
+  /* ------------------------------------------------------ Meta identifiers */
+
+  function readCookie(name) {
+    var m = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
+    return m ? decodeURIComponent(m[1]) : '';
+  }
+
   function submissionId() {
     if (window.crypto && window.crypto.randomUUID) return window.crypto.randomUUID();
     return 'lux-' + Date.now() + '-' + Math.random().toString(16).slice(2, 10);
@@ -130,7 +137,10 @@
         product_name: select && select.selectedIndex > 0 ? select.options[select.selectedIndex].text : '',
         company_website: data.get('company_website') || '',
         submission_id: token,
-        rendered_at: renderedAt
+        rendered_at: renderedAt,
+        page_url: window.location.href.slice(0, 450),
+        fbp: readCookie('_fbp'),
+        fbc: readCookie('_fbc')
       };
       ATTR_KEYS.concat(['landing_page']).forEach(function (key) {
         if (attribution[key]) payload[key] = attribution[key];
@@ -149,6 +159,11 @@
         })
         .then(function (result) {
           if (result.body && result.body.ok) {
+            // Browser half of the Lead event; the server sends the same
+            // event ID, so Meta counts one lead. No-op without the pixel.
+            if (window.fbq) {
+              window.fbq('track', 'Lead', {}, { eventID: payload.submission_id });
+            }
             form.reset();
             setStatus(
               'Thank you — your enquiry has reached our team. We will be in touch shortly.',

@@ -10,6 +10,17 @@
 (function () {
     'use strict';
 
+    // Meta Pixel lives in its own file; load it from here so every page gets
+    // it without editing 22 HTML files. Resolved relative to this script.
+    (function loadMetaPixel() {
+        var me = document.currentScript;
+        if (!me || !me.src) return;
+        var s = document.createElement('script');
+        s.src = me.src.replace(/i18n\.js(\?.*)?$/, 'meta-pixel.js');
+        s.async = true;
+        document.head.appendChild(s);
+    })();
+
     var STORAGE_KEY = 'luxuria_lang';
     var SOCIAL = {
         instagram: 'https://www.instagram.com/luxuriasafes/',

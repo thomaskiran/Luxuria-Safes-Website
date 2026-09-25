@@ -12,7 +12,11 @@
  *   ZOHO_REFRESH_TOKEN
  *   ZOHO_ACCOUNTS_HOST   e.g. accounts.zoho.com
  *   ZOHO_API_HOST        e.g. www.zohoapis.com
+ *
+ * Optional (Meta Conversions API — see lib/meta-capi.mjs):
+ *   META_DATASET_ID, META_CAPI_TOKEN, META_TEST_EVENT_CODE
  */
+import { buildUserData, fbcFromClickId, sendMetaEvent } from '../lib/meta-capi.mjs';
 
 const LEADS_LAYOUT_ID = '7470322000000769013'; // Customized Luxuria safe Lead form
 
@@ -97,6 +101,34 @@ async function findExistingLead(token, { email, phone, whatsapp }) {
   return null;
 }
 
+/**
+ * Server-side copy of the browser pixel's Lead event. Same event_id as the
+ * pixel (the form's submission ID), so Meta counts it once. Never blocks or
+ * fails the enquiry: sendMetaEvent swallows errors and times out quickly.
+ */
+function sendWebsiteLead(req, payload, fields, leadId) {
+  const ip = String(req.headers['x-forwarded-for'] || '').split(',')[0].trim();
+  return sendMetaEvent({
+    event_name: 'Lead',
+    event_time: Math.floor(Date.now() / 1000),
+    event_id: fields.submissionId,
+    action_source: 'website',
+    event_source_url: clean(payload.page_url, 450) || req.headers.referer || 'https://luxuriasafes.com/contact.html',
+    user_data: buildUserData({
+      email: fields.email,
+      phones: [fields.phone, fields.whatsapp],
+      firstName: fields.first,
+      lastName: fields.last,
+      externalId: leadId,
+      fbc: clean(payload.fbc) || fbcFromClickId(clean(payload.fbclid), Number(payload.rendered_at)),
+      fbp: clean(payload.fbp),
+      ip,
+      userAgent: req.headers['user-agent'],
+    }),
+    custom_data: fields.productName ? { content_name: fields.productName } : {},
+  }, { timeoutMs: 2500 });
+}
+
 /* ------------------------------------------------------------------ route */
 
 export default async function handler(req, res) {
@@ -179,6 +211,12 @@ export default async function handler(req, res) {
     Ad_ID: clean(payload.ad_id, 100) || undefined,
     Landing_Page_URL: clean(payload.landing_page, 450) || undefined,
     Form_Submission_ID: clean(payload.submission_id, 100) || undefined,
+    FBP: clean(payload.fbp) || undefined,
+  };
+
+  const metaFields = {
+    first, last, email, phone, whatsapp, productName,
+    submissionId: record.Form_Submission_ID,
   };
 
   if (productId) record.Product_Interested_In = { id: productId };
@@ -213,6 +251,7 @@ export default async function handler(req, res) {
         }),
       });
 
+      await sendWebsiteLead(req, payload, metaFields, existing.id);
       return res.status(200).json({ ok: true, duplicate: true });
     }
 
@@ -270,7 +309,9 @@ export default async function handler(req, res) {
       });
     }
 
-    return res.status(200).json({ ok: true, id: row.details && row.details.id });
+    const leadId = row.details && row.details.id;
+    await sendWebsiteLead(req, payload, metaFields, leadId);
+    return res.status(200).json({ ok: true, id: leadId });
   } catch (err) {
     console.error('Enquiry handler error', err);
     return res.status(502).json({
