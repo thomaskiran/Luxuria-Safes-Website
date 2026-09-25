@@ -26,6 +26,37 @@ const EVENTS = {
   Purchase: ['Deals'],
 };
 
+/**
+ * Zoho can send webhook parameters as JSON, form-urlencoded, multipart
+ * form-data, or on the query string, depending on how the webhook was set up.
+ * Accept all of them and merge (body wins over query).
+ */
+function readParams(req) {
+  const out = { ...(req.query || {}) };
+  let body = req.body;
+  const type = String(req.headers['content-type'] || '');
+
+  if (Buffer.isBuffer(body)) body = body.toString('utf8');
+
+  if (typeof body === 'string' && body) {
+    if (type.includes('multipart/form-data')) {
+      const boundary = (type.match(/boundary=("?)([^";]+)\1/) || [])[2];
+      if (boundary) {
+        for (const part of body.split('--' + boundary)) {
+          const m = part.match(/name="([^"]+)"\r?\n\r?\n([\s\S]*?)\r?\n?$/);
+          if (m) out[m[1]] = m[2].trim();
+        }
+      }
+    } else {
+      try { Object.assign(out, JSON.parse(body)); }
+      catch { Object.assign(out, Object.fromEntries(new URLSearchParams(body))); }
+    }
+  } else if (body && typeof body === 'object') {
+    Object.assign(out, body);
+  }
+  return out;
+}
+
 function secretOk(req) {
   const expected = process.env.CRM_WEBHOOK_SECRET || '';
   const given = String(req.headers['x-webhook-secret'] || (req.query && req.query.key) || '');
@@ -78,24 +109,31 @@ export default async function handler(req, res) {
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ ok: false, error: 'method_not_allowed' });
   }
-  if (!secretOk(req)) return res.status(401).json({ ok: false, error: 'unauthorised' });
-
-  let body = req.body || {};
-  if (typeof body === 'string') {
-    try { body = JSON.parse(body); } catch { body = Object.fromEntries(new URLSearchParams(body)); }
+  if (!secretOk(req)) {
+    console.warn('meta-capi unauthorised', req.headers['x-webhook-secret'] ? 'header present, value mismatch' : 'no x-webhook-secret header');
+    return res.status(401).json({ ok: false, error: 'unauthorised' });
   }
-  const module = String(body.module || '');
-  const recordId = String(body.record_id || '');
-  const eventName = String(body.event || '');
+
+  const params = readParams(req);
+  const module = String(params.module || '').trim();
+  const recordId = String(params.record_id || '').trim();
+  const eventName = String(params.event || '').trim();
 
   if (!EVENTS[eventName] || !EVENTS[eventName].includes(module) || !/^\d{6,}$/.test(recordId)) {
+    // Log what arrived (names and the fixed values only, no personal data) so a
+    // misconfigured Zoho webhook is easy to spot in the Vercel logs.
+    console.warn('meta-capi bad_request', JSON.stringify({
+      contentType: req.headers['content-type'] || null,
+      keys: Object.keys(params),
+      module, event: eventName, recordIdOk: /^\d{6,}$/.test(recordId),
+    }));
     return res.status(400).json({ ok: false, error: 'bad_request' });
   }
-  if (!metaEnabled()) return res.status(200).json({ ok: true, skipped: 'meta_not_configured' });
+  if (!metaEnabled()) { console.warn('meta-capi meta_not_configured'); return res.status(200).json({ ok: true, skipped: 'meta_not_configured' }); }
 
   try {
     const record = await getRecord(module, recordId);
-    if (!record) return res.status(200).json({ ok: true, skipped: 'record_not_found' });
+    if (!record) { console.warn('meta-capi record_not_found', module, recordId); return res.status(200).json({ ok: true, skipped: 'record_not_found' }); }
 
     // Once per record per event, whatever the workflow does.
     if (sentList(record.Meta_Events_Sent).includes(eventName)) {
@@ -105,6 +143,7 @@ export default async function handler(req, res) {
     const { user, custom } = await collect(module, record);
     const userData = buildUserData(user);
     if (!userData.em && !userData.ph && !userData.lead_id && !userData.fbc && !userData.fbp) {
+      console.warn('meta-capi no_identifiers', module, recordId);
       return res.status(200).json({ ok: true, skipped: 'no_identifiers' });
     }
 
@@ -123,6 +162,7 @@ export default async function handler(req, res) {
     const log = [record.Meta_Events_Sent, stamp].filter(Boolean).join('; ').slice(0, 255);
     await updateRecord(module, recordId, { Meta_Events_Sent: log });
 
+    console.log('meta-capi sent', eventName, module, recordId);
     return res.status(200).json({ ok: true, sent: eventName });
   } catch (err) {
     console.error('meta-capi handler error', err.message);
